@@ -1,0 +1,10 @@
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.GenerateResource.cache
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CoreCompileInputs.cache
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
