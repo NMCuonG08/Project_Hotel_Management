@@ -9,3 +9,18 @@ C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel
 C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
 C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.RoomInformation.resources
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.addroom_t.resources
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.RoomInformation.resources
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.GenerateResource.cache
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CoreCompileInputs.cache
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CopyComplete
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
+D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Customer_s.resources

@@ -44,6 +44,9 @@ namespace Hotel_Management
             {
                 roomInformation.Activate();
             }
+            addroom_t1.Visible = false;
+            customer_s1.Visible = false;
+            btn_Room.PerformClick();
         }
 
         private void RoomInformation_FormClosed(object sender, FormClosedEventArgs e)
@@ -107,6 +110,9 @@ namespace Hotel_Management
         private void btn_Room_Click(object sender, EventArgs e)
         {
             ChangeButtonAndPanelClick(btn_Room, panel_room);
+          addroom_t1.Visible = true;
+            addroom_t1.BringToFront();
+           
         }
 
         bool mainTransaction;
@@ -160,6 +166,22 @@ namespace Hotel_Management
             ChangeButtonAndPanelLeave(btn_cus_detail, panel_cus_detal);
         }
         #endregion
-        
+
+        private void btn_registration_Click(object sender, EventArgs e)
+        {
+
+            customer_s1.Visible = true;
+            customer_s1.BringToFront();
+        }
+
+        private void addroom_t1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
