@@ -8,3 +8,4 @@ C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel
 C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
 C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
+C:\cpp_Nam2\winform\HocTrenLop\Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.RoomInformation.resources

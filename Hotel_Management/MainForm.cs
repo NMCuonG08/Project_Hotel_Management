@@ -19,50 +19,36 @@ namespace Hotel_Management
 
         }
 
+        RoomInformation roomInformation;
+        public void ShowForm(Form form)
+        {
+
+            form.MdiParent = this;
+            form.Show();
+            form.Dock = DockStyle.Fill;
+            form.TopLevel = false;
+            form.ControlBox = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void ChangeButtonAndPanelHover(Button button, Panel panel)
-        {
-            button.BackColor = Color.LightBlue;
-            button.ForeColor = Color.Black;
-            panel.BackColor = Color.White;
-        }
-        private void ChangeButtonAndPanelLeave(Button button, Panel panel)
-        {
-            button.BackColor = Color.Black;
-            button.ForeColor = Color.White;
-            panel.BackColor = Color.Black;
-        }
-        private void ChangeButtonAndPanelClick(Button button, Panel panel)
-        {
-            button.BackColor = Color.White;
-            button.ForeColor = Color.Black;
-            panel.BackColor = Color.White;
-        }
-
-        private void btn_Room_MouseHover(object sender, EventArgs e)
-        {
-            ChangeButtonAndPanelHover(btn_Room, panel_room);
-        }
-
-        private void btn_Room_MouseLeave(object sender, EventArgs e)
-        {
-            ChangeButtonAndPanelLeave(btn_Room, panel_room);
-        }
-
-        private void btn_Room_Click(object sender, EventArgs e)
-        {
             ChangeButtonAndPanelClick(btn_Room, panel_room);
+            if (roomInformation == null)
+            {
+                roomInformation = new RoomInformation();
+                roomInformation.FormClosed += RoomInformation_FormClosed;
+                ShowForm(roomInformation);
+            }
+            else
+            {
+                roomInformation.Activate();
+            }
         }
 
-        bool mainTransaction;
-
-        private void btn_menu_Click(object sender, EventArgs e)
+        private void RoomInformation_FormClosed(object sender, FormClosedEventArgs e)
         {
-            main_transaction.Start();
+            roomInformation = null;
         }
 
         private void main_transaction_Tick(object sender, EventArgs e)
@@ -89,7 +75,46 @@ namespace Hotel_Management
                 }
             }
         }
+        #region
+        private void ChangeButtonAndPanelHover(Button button, Panel panel)
+        {
+            button.BackColor = Color.LightBlue;
+            button.ForeColor = Color.Black;
+            panel.BackColor = Color.White;
+        }
+        private void ChangeButtonAndPanelLeave(Button button, Panel panel)
+        {
+            button.BackColor = Color.Black;
+            button.ForeColor = Color.White;
+            panel.BackColor = Color.Black;
+        }
+        private void ChangeButtonAndPanelClick(Button button, Panel panel)
+        {
+            button.BackColor = Color.White;
+            button.ForeColor = Color.Black;
+            panel.BackColor = Color.White;
+        }
 
+        private void btn_Room_MouseHover(object sender, EventArgs e)
+        {
+            ChangeButtonAndPanelHover(btn_Room, panel_room);
+        }
+        private void btn_Room_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeButtonAndPanelLeave(btn_Room, panel_room);
+        }
+
+        private void btn_Room_Click(object sender, EventArgs e)
+        {
+            ChangeButtonAndPanelClick(btn_Room, panel_room);
+        }
+
+        bool mainTransaction;
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            main_transaction.Start();
+        }
         private void btn_registration_MouseHover(object sender, EventArgs e)
         {
             ChangeButtonAndPanelHover(btn_registration, panel_customer_reg);
@@ -134,10 +159,7 @@ namespace Hotel_Management
         {
             ChangeButtonAndPanelLeave(btn_cus_detail, panel_cus_detal);
         }
-
-        private void panel_main_MouseHover(object sender, EventArgs e)
-        {
-            main_transaction.Start();
-        }
+        #endregion
+        
     }
 }
