@@ -20,6 +20,7 @@ namespace Hotel_Management
         }
 
         RoomInformation roomInformation;
+        FCustomerRegistration fCustomerRegistration;
         public void ShowForm(Form form)
         {
 
@@ -31,9 +32,12 @@ namespace Hotel_Management
             form.FormBorderStyle = FormBorderStyle.None;
         }
 
+       
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            ChangeButtonAndPanelClick(btn_Room, panel_room);
+            
             if (roomInformation == null)
             {
                 roomInformation = new RoomInformation();
@@ -44,9 +48,8 @@ namespace Hotel_Management
             {
                 roomInformation.Activate();
             }
-            addroom_t1.Visible = false;
-            customer_s1.Visible = false;
-            btn_Room.PerformClick();
+            
+           
         }
 
         private void RoomInformation_FormClosed(object sender, FormClosedEventArgs e)
@@ -110,9 +113,9 @@ namespace Hotel_Management
         private void btn_Room_Click(object sender, EventArgs e)
         {
             ChangeButtonAndPanelClick(btn_Room, panel_room);
-          addroom_t1.Visible = true;
-            addroom_t1.BringToFront();
-           
+            // Form1_Load(sender,e);
+            Form1_Load(sender, e);
+
         }
 
         bool mainTransaction;
@@ -167,11 +170,28 @@ namespace Hotel_Management
         }
         #endregion
 
+
+
+
         private void btn_registration_Click(object sender, EventArgs e)
         {
+            if (fCustomerRegistration == null)
+            {
+                 fCustomerRegistration = new FCustomerRegistration();
+                fCustomerRegistration.FormClosed += FCustomerRegistration_FormClosed;
+                ShowForm(fCustomerRegistration);
+            }
+            else
+            {
+                fCustomerRegistration.Activate();
+            }
+            
 
-            customer_s1.Visible = true;
-            customer_s1.BringToFront();
+        }
+
+        private void FCustomerRegistration_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           fCustomerRegistration = null;
         }
 
         private void addroom_t1_Load(object sender, EventArgs e)
@@ -183,5 +203,8 @@ namespace Hotel_Management
         {
            
         }
-    }
+       
+        }
+       
+    
 }

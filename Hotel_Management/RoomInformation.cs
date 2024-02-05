@@ -45,5 +45,13 @@ namespace Hotel_Management
 
             }
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            FAddRoom fAddRoom = new FAddRoom();
+             (this.MdiParent as MainForm)?.ShowForm(fAddRoom);
+
+            //fAddRoom.Show();
+        }
     }
 }
