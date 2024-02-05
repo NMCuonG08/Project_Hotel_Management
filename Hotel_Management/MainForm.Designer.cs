@@ -50,12 +50,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.customer_s1 = new Hotel_Management.Customer_s();
-            this.addroom_t1 = new Hotel_Management.addroom_t();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_room.SuspendLayout();
@@ -67,7 +63,6 @@
             this.flowLayoutPanel5.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -81,7 +76,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1885, 113);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1604, 113);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // panel1
@@ -105,7 +100,7 @@
             this.btn_menu.Location = new System.Drawing.Point(-3, -9);
             this.btn_menu.Margin = new System.Windows.Forms.Padding(0);
             this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(203, 122);
+            this.btn_menu.Size = new System.Drawing.Size(215, 122);
             this.btn_menu.TabIndex = 2;
             this.btn_menu.Text = "        ";
             this.btn_menu.UseVisualStyleBackColor = false;
@@ -128,10 +123,10 @@
             this.btn_Room.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_Room.Image = global::Hotel_Management.Properties.Resources.bed__1_;
             this.btn_Room.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Room.Location = new System.Drawing.Point(-18, -9);
+            this.btn_Room.Location = new System.Drawing.Point(-9, -9);
             this.btn_Room.Name = "btn_Room";
             this.btn_Room.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
-            this.btn_Room.Size = new System.Drawing.Size(278, 141);
+            this.btn_Room.Size = new System.Drawing.Size(269, 122);
             this.btn_Room.TabIndex = 2;
             this.btn_Room.Text = "Room";
             this.btn_Room.UseVisualStyleBackColor = false;
@@ -352,13 +347,6 @@
             this.button5.Text = "        About";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(77, 116);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1601, 637);
-            this.panel2.TabIndex = 4;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 30;
@@ -369,45 +357,15 @@
             this.guna2Elipse2.BorderRadius = 30;
             this.guna2Elipse2.TargetControl = this;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.customer_s1);
-            this.panel3.Controls.Add(this.addroom_t1);
-            this.panel3.Location = new System.Drawing.Point(77, 116);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1598, 634);
-            this.panel3.TabIndex = 1;
-            // 
-            // customer_s1
-            // 
-            this.customer_s1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.customer_s1.Location = new System.Drawing.Point(-1, 0);
-            this.customer_s1.Name = "customer_s1";
-            this.customer_s1.Size = new System.Drawing.Size(1602, 637);
-            this.customer_s1.TabIndex = 0;
-            this.customer_s1.Visible = false;
-            // 
-            // addroom_t1
-            // 
-            this.addroom_t1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.addroom_t1.Location = new System.Drawing.Point(-6, -3);
-            this.addroom_t1.Name = "addroom_t1";
-            this.addroom_t1.Size = new System.Drawing.Size(1651, 754);
-            this.addroom_t1.TabIndex = 0;
-            this.addroom_t1.Visible = false;
-            this.addroom_t1.Load += new System.EventHandler(this.addroom_t1_Load);
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1885, 863);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1604, 863);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.flowLayoutPanel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -425,7 +383,6 @@
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel7.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -452,12 +409,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private addroom_t addroom_t1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private System.Windows.Forms.Panel panel3;
-        private Customer_s customer_s1;
     }
 }
 

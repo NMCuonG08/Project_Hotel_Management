@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Management
 {
-    partial class addroom_t
+    partial class AddRoom
     {
         /// <summary> 
         /// Required designer variable.

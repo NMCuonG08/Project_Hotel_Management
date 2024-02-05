@@ -24,3 +24,20 @@ D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hote
 D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
 D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Customer_s.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.RoomInformation.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddRoom.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FCustomerRegistration.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.AddRoom.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.CustomerRegistration.resources

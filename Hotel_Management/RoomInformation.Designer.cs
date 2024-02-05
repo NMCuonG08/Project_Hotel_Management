@@ -38,6 +38,7 @@
             this.HotelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HotelAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoom)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,12 +134,23 @@
             this.HotelAddress.Name = "HotelAddress";
             this.HotelAddress.ReadOnly = true;
             // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(1243, 68);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(177, 67);
+            this.btn_add.TabIndex = 1;
+            this.btn_add.Text = "Add new Room";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // RoomInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.ClientSize = new System.Drawing.Size(1540, 800);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.gvRoom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RoomInformation";
@@ -159,5 +171,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HotelName;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomType;
         private System.Windows.Forms.DataGridViewTextBoxColumn HotelAddress;
+        private System.Windows.Forms.Button btn_add;
     }
 }

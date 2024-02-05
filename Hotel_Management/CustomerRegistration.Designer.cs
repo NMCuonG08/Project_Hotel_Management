@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Management
 {
-    partial class Customer_s
+    partial class CustomerRegistration
     {
         /// <summary> 
         /// Required designer variable.
