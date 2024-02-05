@@ -70,6 +70,12 @@
     <Compile Include="FAddRoom.Designer.cs">
       <DependentUpon>FAddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fcheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcheckout.Designer.cs">
+      <DependentUpon>Fcheckout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCustomerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FAddRoom.resx">
       <DependentUpon>FAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fcheckout.resx">
+      <DependentUpon>Fcheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCustomerRegistration.resx">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>

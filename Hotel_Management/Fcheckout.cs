@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_Management
 {
-    public partial class FCustomerRegistration : Form
+    public partial class Fcheckout : Form
     {
-        public FCustomerRegistration()
+        public Fcheckout()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
