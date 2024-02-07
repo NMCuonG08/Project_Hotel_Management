@@ -82,6 +82,8 @@ namespace Hotel_Management
                 }
             }
         }
+
+        // Change button
         #region
         private void ChangeButtonAndPanelHover(Button button, Panel panel)
         {
@@ -140,21 +142,6 @@ namespace Hotel_Management
             ChangeButtonAndPanelClick(btn_registration, panel_customer_reg);
         }
 
-        private void btn_checkout_Click(object sender, EventArgs e)
-        {
-            ChangeButtonAndPanelClick(btn_checkout, panel_Checkout);
-            ///
-           if(fcheckout==null)
-            {
-                fcheckout = new Fcheckout();
-                fcheckout.FormClosed += Fcheckout_FormClosed;
-                ShowForm(fcheckout);
-            }
-            else
-            {
-                fcheckout.Activate();
-            }
-        }
 
         private void btn_checkout_MouseHover(object sender, EventArgs e)
         {
@@ -182,8 +169,8 @@ namespace Hotel_Management
         }
         #endregion
 
-
-
+        // change form
+        #region
 
         private void btn_registration_Click(object sender, EventArgs e)
         {
@@ -205,15 +192,28 @@ namespace Hotel_Management
         {
            fCustomerRegistration = null;
         }
+
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            ChangeButtonAndPanelClick(btn_checkout, panel_Checkout);
+            ///
+            if (fcheckout == null)
+            {
+                fcheckout = new Fcheckout();
+                fcheckout.FormClosed += Fcheckout_FormClosed;
+                ShowForm(fcheckout);
+            }
+            else
+            {
+                fcheckout.Activate();
+            }
+        }
         private void Fcheckout_FormClosed(object sender, FormClosedEventArgs e)
         {
             fcheckout = null;
         }
-
-        private void addroom_t1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btn_home_Click(object sender, EventArgs e)
         {
@@ -221,6 +221,6 @@ namespace Hotel_Management
         }
        
         }
-       
-    
+    #endregion
+
 }

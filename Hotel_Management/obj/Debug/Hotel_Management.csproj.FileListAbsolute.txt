@@ -59,3 +59,4 @@ D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Manag
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources

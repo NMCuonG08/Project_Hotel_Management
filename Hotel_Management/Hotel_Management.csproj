@@ -64,6 +64,12 @@
     <Compile Include="CustomerRegistration.Designer.cs">
       <DependentUpon>CustomerRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAddRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegistration.resx">
       <DependentUpon>CustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAddRoom.resx">
       <DependentUpon>FAddRoom.cs</DependentUpon>
