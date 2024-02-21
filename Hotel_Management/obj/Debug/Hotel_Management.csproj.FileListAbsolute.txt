@@ -60,3 +60,23 @@ D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Manag
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.AddRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.CustomerRegistration.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAbout.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FCustomerRegistration.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Login.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.RoomInformation.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.GenerateResource.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CoreCompileInputs.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CopyComplete
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
