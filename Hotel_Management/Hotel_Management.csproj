@@ -100,6 +100,12 @@
     <Compile Include="FSignIn.Designer.cs">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListRoom.Designer.cs">
+      <DependentUpon>ListRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListRoom.resx">
+      <DependentUpon>ListRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

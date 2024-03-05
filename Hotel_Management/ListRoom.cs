@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_Management
 {
-    public partial class FLogin : Form
+    public partial class ListRoom : Form
     {
-        public FLogin()
+        public ListRoom()
         {
             InitializeComponent();
-        }
-
-        private void FLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

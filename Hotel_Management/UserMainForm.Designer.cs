@@ -30,24 +30,24 @@
         {
             this.panel_main = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_home = new System.Windows.Forms.Button();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_settings = new System.Windows.Forms.Button();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_help = new System.Windows.Forms.Button();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_about = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_menu = new System.Windows.Forms.Button();
             this.panel_room = new System.Windows.Forms.Panel();
-            this.btn_Room = new System.Windows.Forms.Button();
             this.panel_customer_reg = new System.Windows.Forms.Panel();
-            this.btn_registration = new System.Windows.Forms.Button();
             this.panel_Checkout = new System.Windows.Forms.Panel();
-            this.btn_checkout = new System.Windows.Forms.Button();
             this.panel_cus_detal = new System.Windows.Forms.Panel();
-            this.btn_cus_detail = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
+            this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_help = new System.Windows.Forms.Button();
+            this.btn_about = new System.Windows.Forms.Button();
+            this.btn_menu = new System.Windows.Forms.Button();
+            this.btn_Room = new System.Windows.Forms.Button();
+            this.btn_payment = new System.Windows.Forms.Button();
+            this.btn_book_history = new System.Windows.Forms.Button();
+            this.btn_your_infor = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -73,9 +73,9 @@
             this.panel_main.Location = new System.Drawing.Point(0, 113);
             this.panel_main.Margin = new System.Windows.Forms.Padding(0);
             this.panel_main.MaximumSize = new System.Drawing.Size(256, 900);
-            this.panel_main.MinimumSize = new System.Drawing.Size(60, 900);
+            this.panel_main.MinimumSize = new System.Drawing.Size(73, 900);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(60, 900);
+            this.panel_main.Size = new System.Drawing.Size(73, 900);
             this.panel_main.TabIndex = 4;
             // 
             // flowLayoutPanel4
@@ -87,24 +87,6 @@
             this.flowLayoutPanel4.Size = new System.Drawing.Size(253, 96);
             this.flowLayoutPanel4.TabIndex = 1;
             // 
-            // btn_home
-            // 
-            this.btn_home.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_home.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_home.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_home.Image = global::Hotel_Management.Properties.Resources._4172165_appointment_booking_form_reservation_document_icon;
-            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_home.Location = new System.Drawing.Point(0, 0);
-            this.btn_home.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(253, 96);
-            this.btn_home.TabIndex = 2;
-            this.btn_home.Text = "Reservation   management";
-            this.btn_home.UseVisualStyleBackColor = false;
-            // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -113,23 +95,6 @@
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(253, 89);
             this.flowLayoutPanel5.TabIndex = 4;
-            // 
-            // btn_settings
-            // 
-            this.btn_settings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_settings.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_settings.Image = global::Hotel_Management.Properties.Resources._9967659_like_bubble_speech_feedback_review_satisfaction_icon;
-            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_settings.Location = new System.Drawing.Point(0, 0);
-            this.btn_settings.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(253, 89);
-            this.btn_settings.TabIndex = 2;
-            this.btn_settings.Text = "          Feedback and Review";
-            this.btn_settings.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel6
             // 
@@ -140,23 +105,6 @@
             this.flowLayoutPanel6.Size = new System.Drawing.Size(253, 89);
             this.flowLayoutPanel6.TabIndex = 5;
             // 
-            // btn_help
-            // 
-            this.btn_help.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_help.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_help.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_help.Image = global::Hotel_Management.Properties.Resources._4900843_female_help_service_support_technical_icon;
-            this.btn_help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_help.Location = new System.Drawing.Point(0, 0);
-            this.btn_help.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(253, 89);
-            this.btn_help.TabIndex = 2;
-            this.btn_help.Text = "        Contact and Support";
-            this.btn_help.UseVisualStyleBackColor = false;
-            // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -165,23 +113,6 @@
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(253, 89);
             this.flowLayoutPanel7.TabIndex = 5;
-            // 
-            // btn_about
-            // 
-            this.btn_about.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_about.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_about.Image = global::Hotel_Management.Properties.Resources._5402388_information_about_support_accessibility_info_icon;
-            this.btn_about.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_about.Location = new System.Drawing.Point(0, 0);
-            this.btn_about.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_about.Name = "btn_about";
-            this.btn_about.Size = new System.Drawing.Size(253, 89);
-            this.btn_about.TabIndex = 2;
-            this.btn_about.Text = "        About";
-            this.btn_about.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel2
             // 
@@ -205,6 +136,111 @@
             this.panel1.Size = new System.Drawing.Size(182, 101);
             this.panel1.TabIndex = 5;
             // 
+            // panel_room
+            // 
+            this.panel_room.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_room.Controls.Add(this.btn_Room);
+            this.panel_room.Location = new System.Drawing.Point(191, 3);
+            this.panel_room.Name = "panel_room";
+            this.panel_room.Size = new System.Drawing.Size(245, 109);
+            this.panel_room.TabIndex = 3;
+            // 
+            // panel_customer_reg
+            // 
+            this.panel_customer_reg.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_customer_reg.Controls.Add(this.btn_payment);
+            this.panel_customer_reg.Location = new System.Drawing.Point(442, 3);
+            this.panel_customer_reg.Name = "panel_customer_reg";
+            this.panel_customer_reg.Size = new System.Drawing.Size(392, 109);
+            this.panel_customer_reg.TabIndex = 5;
+            // 
+            // panel_Checkout
+            // 
+            this.panel_Checkout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_Checkout.Controls.Add(this.btn_book_history);
+            this.panel_Checkout.Location = new System.Drawing.Point(840, 3);
+            this.panel_Checkout.Name = "panel_Checkout";
+            this.panel_Checkout.Size = new System.Drawing.Size(304, 109);
+            this.panel_Checkout.TabIndex = 6;
+            // 
+            // panel_cus_detal
+            // 
+            this.panel_cus_detal.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_cus_detal.Controls.Add(this.btn_your_infor);
+            this.panel_cus_detal.Location = new System.Drawing.Point(1150, 3);
+            this.panel_cus_detal.Name = "panel_cus_detal";
+            this.panel_cus_detal.Size = new System.Drawing.Size(350, 109);
+            this.panel_cus_detal.TabIndex = 7;
+            // 
+            // btn_home
+            // 
+            this.btn_home.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_home.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_home.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_home.Image = global::Hotel_Management.Properties.Resources._4172165_appointment_booking_form_reservation_document_icon;
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(0, 0);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(253, 96);
+            this.btn_home.TabIndex = 2;
+            this.btn_home.Text = "Reservation   management";
+            this.btn_home.UseVisualStyleBackColor = false;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_settings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_settings.Image = global::Hotel_Management.Properties.Resources._9967659_like_bubble_speech_feedback_review_satisfaction_icon;
+            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.Location = new System.Drawing.Point(0, 0);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(253, 89);
+            this.btn_settings.TabIndex = 2;
+            this.btn_settings.Text = "          Feedback and Review";
+            this.btn_settings.UseVisualStyleBackColor = false;
+            // 
+            // btn_help
+            // 
+            this.btn_help.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_help.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_help.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_help.Image = global::Hotel_Management.Properties.Resources._4900843_female_help_service_support_technical_icon;
+            this.btn_help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_help.Location = new System.Drawing.Point(0, 0);
+            this.btn_help.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(253, 89);
+            this.btn_help.TabIndex = 2;
+            this.btn_help.Text = "        Contact and Support";
+            this.btn_help.UseVisualStyleBackColor = false;
+            // 
+            // btn_about
+            // 
+            this.btn_about.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_about.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_about.Image = global::Hotel_Management.Properties.Resources._5402388_information_about_support_accessibility_info_icon;
+            this.btn_about.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_about.Location = new System.Drawing.Point(0, 0);
+            this.btn_about.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Size = new System.Drawing.Size(253, 89);
+            this.btn_about.TabIndex = 2;
+            this.btn_about.Text = "        About";
+            this.btn_about.UseVisualStyleBackColor = false;
+            // 
             // btn_menu
             // 
             this.btn_menu.AutoSize = true;
@@ -223,15 +259,6 @@
             this.btn_menu.Text = "        ";
             this.btn_menu.UseVisualStyleBackColor = false;
             // 
-            // panel_room
-            // 
-            this.panel_room.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_room.Controls.Add(this.btn_Room);
-            this.panel_room.Location = new System.Drawing.Point(191, 3);
-            this.panel_room.Name = "panel_room";
-            this.panel_room.Size = new System.Drawing.Size(245, 109);
-            this.panel_room.TabIndex = 3;
-            // 
             // btn_Room
             // 
             this.btn_Room.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -247,81 +274,55 @@
             this.btn_Room.TabIndex = 2;
             this.btn_Room.Text = "     Booking room";
             this.btn_Room.UseVisualStyleBackColor = false;
+            this.btn_Room.Click += new System.EventHandler(this.btn_Room_Click);
             // 
-            // panel_customer_reg
+            // btn_payment
             // 
-            this.panel_customer_reg.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_customer_reg.Controls.Add(this.btn_registration);
-            this.panel_customer_reg.Location = new System.Drawing.Point(442, 3);
-            this.panel_customer_reg.Name = "panel_customer_reg";
-            this.panel_customer_reg.Size = new System.Drawing.Size(392, 109);
-            this.panel_customer_reg.TabIndex = 5;
+            this.btn_payment.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_payment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_payment.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_payment.Image = global::Hotel_Management.Properties.Resources._5027885_dollar_finance_money_online_payment_icon;
+            this.btn_payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_payment.Location = new System.Drawing.Point(0, 0);
+            this.btn_payment.Name = "btn_payment";
+            this.btn_payment.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
+            this.btn_payment.Size = new System.Drawing.Size(392, 109);
+            this.btn_payment.TabIndex = 2;
+            this.btn_payment.Text = "     Payment information";
+            this.btn_payment.UseVisualStyleBackColor = false;
             // 
-            // btn_registration
+            // btn_book_history
             // 
-            this.btn_registration.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_registration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_registration.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_registration.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_registration.Image = global::Hotel_Management.Properties.Resources._5027885_dollar_finance_money_online_payment_icon;
-            this.btn_registration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registration.Location = new System.Drawing.Point(0, 0);
-            this.btn_registration.Name = "btn_registration";
-            this.btn_registration.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
-            this.btn_registration.Size = new System.Drawing.Size(392, 109);
-            this.btn_registration.TabIndex = 2;
-            this.btn_registration.Text = "     Payment information";
-            this.btn_registration.UseVisualStyleBackColor = false;
+            this.btn_book_history.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_book_history.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_book_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_book_history.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_book_history.Image = global::Hotel_Management.Properties.Resources._7492465_graphical_command_user_interface_history2_icon;
+            this.btn_book_history.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_book_history.Location = new System.Drawing.Point(0, 0);
+            this.btn_book_history.Name = "btn_book_history";
+            this.btn_book_history.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
+            this.btn_book_history.Size = new System.Drawing.Size(304, 109);
+            this.btn_book_history.TabIndex = 2;
+            this.btn_book_history.Text = "        Booking history";
+            this.btn_book_history.UseVisualStyleBackColor = false;
             // 
-            // panel_Checkout
+            // btn_your_infor
             // 
-            this.panel_Checkout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_Checkout.Controls.Add(this.btn_checkout);
-            this.panel_Checkout.Location = new System.Drawing.Point(840, 3);
-            this.panel_Checkout.Name = "panel_Checkout";
-            this.panel_Checkout.Size = new System.Drawing.Size(304, 109);
-            this.panel_Checkout.TabIndex = 6;
-            // 
-            // btn_checkout
-            // 
-            this.btn_checkout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_checkout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_checkout.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_checkout.Image = global::Hotel_Management.Properties.Resources._7492465_graphical_command_user_interface_history2_icon;
-            this.btn_checkout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_checkout.Location = new System.Drawing.Point(0, 0);
-            this.btn_checkout.Name = "btn_checkout";
-            this.btn_checkout.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
-            this.btn_checkout.Size = new System.Drawing.Size(304, 109);
-            this.btn_checkout.TabIndex = 2;
-            this.btn_checkout.Text = "    Booking history";
-            this.btn_checkout.UseVisualStyleBackColor = false;
-            // 
-            // panel_cus_detal
-            // 
-            this.panel_cus_detal.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_cus_detal.Controls.Add(this.btn_cus_detail);
-            this.panel_cus_detal.Location = new System.Drawing.Point(1150, 3);
-            this.panel_cus_detal.Name = "panel_cus_detal";
-            this.panel_cus_detal.Size = new System.Drawing.Size(350, 109);
-            this.panel_cus_detal.TabIndex = 7;
-            // 
-            // btn_cus_detail
-            // 
-            this.btn_cus_detail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_cus_detail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cus_detail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_cus_detail.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_cus_detail.Image = global::Hotel_Management.Properties.Resources.satisfaction;
-            this.btn_cus_detail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cus_detail.Location = new System.Drawing.Point(0, -1);
-            this.btn_cus_detail.Name = "btn_cus_detail";
-            this.btn_cus_detail.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
-            this.btn_cus_detail.Size = new System.Drawing.Size(350, 109);
-            this.btn_cus_detail.TabIndex = 2;
-            this.btn_cus_detail.Text = "Your information";
-            this.btn_cus_detail.UseVisualStyleBackColor = false;
+            this.btn_your_infor.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_your_infor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_your_infor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_your_infor.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_your_infor.Image = global::Hotel_Management.Properties.Resources.satisfaction;
+            this.btn_your_infor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_your_infor.Location = new System.Drawing.Point(0, -1);
+            this.btn_your_infor.Name = "btn_your_infor";
+            this.btn_your_infor.Padding = new System.Windows.Forms.Padding(30, 5, 5, 5);
+            this.btn_your_infor.Size = new System.Drawing.Size(350, 109);
+            this.btn_your_infor.TabIndex = 2;
+            this.btn_your_infor.Text = "Your information";
+            this.btn_your_infor.UseVisualStyleBackColor = false;
             // 
             // UserMainForm
             // 
@@ -330,8 +331,12 @@
             this.ClientSize = new System.Drawing.Size(1604, 863);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.flowLayoutPanel2);
+            this.IsMdiContainer = true;
             this.Name = "UserMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserMainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.UserMainForm_Load);
             this.panel_main.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel5.ResumeLayout(false);
@@ -365,10 +370,10 @@
         private System.Windows.Forms.Panel panel_room;
         private System.Windows.Forms.Button btn_Room;
         private System.Windows.Forms.Panel panel_customer_reg;
-        private System.Windows.Forms.Button btn_registration;
+        private System.Windows.Forms.Button btn_payment;
         private System.Windows.Forms.Panel panel_Checkout;
-        private System.Windows.Forms.Button btn_checkout;
+        private System.Windows.Forms.Button btn_book_history;
         private System.Windows.Forms.Panel panel_cus_detal;
-        private System.Windows.Forms.Button btn_cus_detail;
+        private System.Windows.Forms.Button btn_your_infor;
     }
 }

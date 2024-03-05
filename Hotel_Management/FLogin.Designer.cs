@@ -269,6 +269,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FLogin";
             this.Text = "FLogin";
+            this.Load += new System.EventHandler(this.FLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
