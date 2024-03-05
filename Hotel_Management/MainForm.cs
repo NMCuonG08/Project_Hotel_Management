@@ -12,6 +12,7 @@ namespace Hotel_Management
 {
     public partial class MainForm : Form
     {
+        
         public MainForm()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Hotel_Management
         RoomInformation roomInformation;
         FCustomerRegistration fCustomerRegistration;
         Fcheckout fcheckout;
+        FAddRoom addRoom;
         public void ShowForm(Form form)
         {
 
@@ -113,11 +115,36 @@ namespace Hotel_Management
             ChangeButtonAndPanelLeave(btn_Room, panel_room);
         }
 
+        private void AddNewRoom()
+        {
+
+            if (addRoom == null)
+            {
+                addRoom = new FAddRoom();
+                addRoom.FormClosed += AddRoom_FormClosed;
+                
+                   
+                ShowForm(addRoom);
+            }
+            else
+            {
+                addRoom.Activate();
+            }
+
+
+        }
+
+        private void AddRoom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            addRoom = null;
+        }
+
         private void btn_Room_Click(object sender, EventArgs e)
         {
             ChangeButtonAndPanelClick(btn_Room, panel_room);
             // Form1_Load(sender,e);
-            Form1_Load(sender, e);
+            AddNewRoom();
+           
 
         }
 
@@ -217,7 +244,7 @@ namespace Hotel_Management
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-           
+            Form1_Load(sender, e);
         }
        
         }

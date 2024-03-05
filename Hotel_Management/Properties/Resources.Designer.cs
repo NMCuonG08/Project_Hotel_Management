@@ -63,6 +63,16 @@ namespace Hotel_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _103178_lock_security_password_secure_unlock_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("103178_lock_security_password_secure_unlock_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _211674_help_circled_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("211674_help_circled_icon (1)", resourceCulture);
@@ -83,6 +93,56 @@ namespace Hotel_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3709753_call_customer_relation_service_support_icon {
+            get {
+                object obj = ResourceManager.GetObject("3709753_call_customer_relation_service_support_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4172165_appointment_booking_form_reservation_document_icon {
+            get {
+                object obj = ResourceManager.GetObject("4172165_appointment_booking_form_reservation_document_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4172165_appointment_booking_form_reservation_document_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("4172165_appointment_booking_form_reservation_document_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4900843_female_help_service_support_technical_icon {
+            get {
+                object obj = ResourceManager.GetObject("4900843_female_help_service_support_technical_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5027885_dollar_finance_money_online_payment_icon {
+            get {
+                object obj = ResourceManager.GetObject("5027885_dollar_finance_money_online_payment_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5402388_information_about_support_accessibility_info_icon {
             get {
                 object obj = ResourceManager.GetObject("5402388_information_about_support_accessibility_info_icon", resourceCulture);
@@ -96,6 +156,76 @@ namespace Hotel_Management.Properties {
         internal static System.Drawing.Bitmap _5402450_home_building_construction_house_property_icon {
             get {
                 object obj = ResourceManager.GetObject("5402450_home_building_construction_house_property_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7492465_graphical_command_user_interface_history2_icon {
+            get {
+                object obj = ResourceManager.GetObject("7492465_graphical_command_user_interface_history2_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8665305_envelope_email_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("8665305_envelope_email_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9967659_like_bubble_speech_feedback_review_satisfaction_icon {
+            get {
+                object obj = ResourceManager.GetObject("9967659_like_bubble speech_feedback_review_satisfaction_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9967659_like_bubble_speech_feedback_review_satisfaction_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("9967659_like_bubble speech_feedback_review_satisfaction_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9967659_like_bubble_speech_feedback_review_satisfaction_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("9967659_like_bubble speech_feedback_review_satisfaction_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backgroundSigin {
+            get {
+                object obj = ResourceManager.GetObject("backgroundSigin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +296,26 @@ namespace Hotel_Management.Properties {
         internal static System.Drawing.Bitmap satisfaction {
             get {
                 object obj = ResourceManager.GetObject("satisfaction", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sign_up_bro {
+            get {
+                object obj = ResourceManager.GetObject("Sign up-bro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Working_remotely_amico {
+            get {
+                object obj = ResourceManager.GetObject("Working remotely-amico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
