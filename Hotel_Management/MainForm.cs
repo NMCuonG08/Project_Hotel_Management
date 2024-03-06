@@ -180,9 +180,30 @@ namespace Hotel_Management
             ChangeButtonAndPanelLeave(btn_checkout, panel_Checkout);
         }
 
+        ListUser users;
+        void ShowListUser()
+        {          
+                if (users == null)
+                {
+                users = new ListUser();
+                users.FormClosed += Users_FormClosed;
+                    ShowForm(users);
+                }
+                else
+                {
+                    users.Activate();
+                }
+        }
+
+        private void Users_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            users = null;
+        }
+
         private void btn_cus_detail_Click(object sender, EventArgs e)
         {
             ChangeButtonAndPanelClick(btn_cus_detail, panel_cus_detal);
+            ShowListUser();
         }
 
         private void btn_cus_detail_MouseHover(object sender, EventArgs e)

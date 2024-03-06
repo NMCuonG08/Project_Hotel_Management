@@ -31,27 +31,27 @@
             this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_menu = new System.Windows.Forms.Button();
             this.panel_room = new System.Windows.Forms.Panel();
-            this.btn_Room = new System.Windows.Forms.Button();
             this.panel_customer_reg = new System.Windows.Forms.Panel();
-            this.btn_registration = new System.Windows.Forms.Button();
             this.panel_Checkout = new System.Windows.Forms.Panel();
-            this.btn_checkout = new System.Windows.Forms.Button();
             this.panel_cus_detal = new System.Windows.Forms.Panel();
-            this.btn_cus_detail = new System.Windows.Forms.Button();
             this.main_transaction = new System.Windows.Forms.Timer(this.components);
             this.panel_main = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_home = new System.Windows.Forms.Button();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_settings = new System.Windows.Forms.Button();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_help = new System.Windows.Forms.Button();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_about = new System.Windows.Forms.Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_help = new System.Windows.Forms.Button();
+            this.btn_about = new System.Windows.Forms.Button();
+            this.btn_menu = new System.Windows.Forms.Button();
+            this.btn_Room = new System.Windows.Forms.Button();
+            this.btn_registration = new System.Windows.Forms.Button();
+            this.btn_checkout = new System.Windows.Forms.Button();
+            this.btn_cus_detail = new System.Windows.Forms.Button();
+            this.btn_home = new System.Windows.Forms.Button();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_room.SuspendLayout();
@@ -76,7 +76,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1604, 113);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1604, 110);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // panel1
@@ -86,6 +86,161 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(182, 101);
             this.panel1.TabIndex = 5;
+            // 
+            // panel_room
+            // 
+            this.panel_room.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_room.Controls.Add(this.btn_Room);
+            this.panel_room.Location = new System.Drawing.Point(191, 3);
+            this.panel_room.Name = "panel_room";
+            this.panel_room.Size = new System.Drawing.Size(245, 109);
+            this.panel_room.TabIndex = 3;
+            // 
+            // panel_customer_reg
+            // 
+            this.panel_customer_reg.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_customer_reg.Controls.Add(this.btn_registration);
+            this.panel_customer_reg.Location = new System.Drawing.Point(442, 3);
+            this.panel_customer_reg.Name = "panel_customer_reg";
+            this.panel_customer_reg.Size = new System.Drawing.Size(392, 109);
+            this.panel_customer_reg.TabIndex = 5;
+            // 
+            // panel_Checkout
+            // 
+            this.panel_Checkout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_Checkout.Controls.Add(this.btn_checkout);
+            this.panel_Checkout.Location = new System.Drawing.Point(840, 3);
+            this.panel_Checkout.Name = "panel_Checkout";
+            this.panel_Checkout.Size = new System.Drawing.Size(304, 109);
+            this.panel_Checkout.TabIndex = 6;
+            // 
+            // panel_cus_detal
+            // 
+            this.panel_cus_detal.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_cus_detal.Controls.Add(this.btn_cus_detail);
+            this.panel_cus_detal.Location = new System.Drawing.Point(1150, 3);
+            this.panel_cus_detal.Name = "panel_cus_detal";
+            this.panel_cus_detal.Size = new System.Drawing.Size(313, 109);
+            this.panel_cus_detal.TabIndex = 7;
+            // 
+            // main_transaction
+            // 
+            this.main_transaction.Interval = 10;
+            this.main_transaction.Tick += new System.EventHandler(this.main_transaction_Tick);
+            // 
+            // panel_main
+            // 
+            this.panel_main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel_main.BackColor = System.Drawing.Color.Black;
+            this.panel_main.Controls.Add(this.flowLayoutPanel4);
+            this.panel_main.Controls.Add(this.flowLayoutPanel5);
+            this.panel_main.Controls.Add(this.flowLayoutPanel6);
+            this.panel_main.Controls.Add(this.flowLayoutPanel7);
+            this.panel_main.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_main.Location = new System.Drawing.Point(0, 110);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_main.MaximumSize = new System.Drawing.Size(206, 900);
+            this.panel_main.MinimumSize = new System.Drawing.Size(74, 900);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(74, 900);
+            this.panel_main.TabIndex = 2;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel4.Controls.Add(this.btn_home);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(200, 69);
+            this.flowLayoutPanel4.TabIndex = 1;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel5.Controls.Add(this.btn_settings);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 78);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(200, 62);
+            this.flowLayoutPanel5.TabIndex = 4;
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel6.Controls.Add(this.btn_help);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 146);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(200, 62);
+            this.flowLayoutPanel6.TabIndex = 5;
+            // 
+            // flowLayoutPanel7
+            // 
+            this.flowLayoutPanel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel7.Controls.Add(this.btn_about);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 214);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(200, 62);
+            this.flowLayoutPanel7.TabIndex = 5;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 30;
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_settings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_settings.Image = global::Hotel_Management.Properties.Resources._274895_gear_settings_tools_machine_part_cog_icon;
+            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.Location = new System.Drawing.Point(0, 0);
+            this.btn_settings.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(200, 62);
+            this.btn_settings.TabIndex = 2;
+            this.btn_settings.Text = "          Settings";
+            this.btn_settings.UseVisualStyleBackColor = false;
+            // 
+            // btn_help
+            // 
+            this.btn_help.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_help.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_help.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_help.Image = global::Hotel_Management.Properties.Resources._211674_help_circled_icon__1_;
+            this.btn_help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_help.Location = new System.Drawing.Point(0, 0);
+            this.btn_help.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(203, 62);
+            this.btn_help.TabIndex = 2;
+            this.btn_help.Text = "      Help";
+            this.btn_help.UseVisualStyleBackColor = false;
+            // 
+            // btn_about
+            // 
+            this.btn_about.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_about.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_about.Image = global::Hotel_Management.Properties.Resources._5402388_information_about_support_accessibility_info_icon;
+            this.btn_about.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_about.Location = new System.Drawing.Point(0, 0);
+            this.btn_about.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.Size = new System.Drawing.Size(200, 62);
+            this.btn_about.TabIndex = 2;
+            this.btn_about.Text = "        About";
+            this.btn_about.UseVisualStyleBackColor = false;
             // 
             // btn_menu
             // 
@@ -100,20 +255,11 @@
             this.btn_menu.Location = new System.Drawing.Point(-3, -14);
             this.btn_menu.Margin = new System.Windows.Forms.Padding(0);
             this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(203, 127);
+            this.btn_menu.Size = new System.Drawing.Size(79, 115);
             this.btn_menu.TabIndex = 2;
             this.btn_menu.Text = "        ";
             this.btn_menu.UseVisualStyleBackColor = false;
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
-            // 
-            // panel_room
-            // 
-            this.panel_room.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_room.Controls.Add(this.btn_Room);
-            this.panel_room.Location = new System.Drawing.Point(191, 3);
-            this.panel_room.Name = "panel_room";
-            this.panel_room.Size = new System.Drawing.Size(245, 109);
-            this.panel_room.TabIndex = 3;
             // 
             // btn_Room
             // 
@@ -133,15 +279,6 @@
             this.btn_Room.Click += new System.EventHandler(this.btn_Room_Click);
             this.btn_Room.MouseLeave += new System.EventHandler(this.btn_Room_MouseLeave);
             this.btn_Room.MouseHover += new System.EventHandler(this.btn_Room_MouseHover);
-            // 
-            // panel_customer_reg
-            // 
-            this.panel_customer_reg.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_customer_reg.Controls.Add(this.btn_registration);
-            this.panel_customer_reg.Location = new System.Drawing.Point(442, 3);
-            this.panel_customer_reg.Name = "panel_customer_reg";
-            this.panel_customer_reg.Size = new System.Drawing.Size(392, 109);
-            this.panel_customer_reg.TabIndex = 5;
             // 
             // btn_registration
             // 
@@ -163,15 +300,6 @@
             this.btn_registration.MouseLeave += new System.EventHandler(this.btn_registration_MouseLeave);
             this.btn_registration.MouseHover += new System.EventHandler(this.btn_registration_MouseHover);
             // 
-            // panel_Checkout
-            // 
-            this.panel_Checkout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_Checkout.Controls.Add(this.btn_checkout);
-            this.panel_Checkout.Location = new System.Drawing.Point(840, 3);
-            this.panel_Checkout.Name = "panel_Checkout";
-            this.panel_Checkout.Size = new System.Drawing.Size(304, 109);
-            this.panel_Checkout.TabIndex = 6;
-            // 
             // btn_checkout
             // 
             this.btn_checkout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -190,15 +318,6 @@
             this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             this.btn_checkout.MouseLeave += new System.EventHandler(this.btn_checkout_MouseLeave);
             this.btn_checkout.MouseHover += new System.EventHandler(this.btn_checkout_MouseHover);
-            // 
-            // panel_cus_detal
-            // 
-            this.panel_cus_detal.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_cus_detal.Controls.Add(this.btn_cus_detail);
-            this.panel_cus_detal.Location = new System.Drawing.Point(1150, 3);
-            this.panel_cus_detal.Name = "panel_cus_detal";
-            this.panel_cus_detal.Size = new System.Drawing.Size(313, 109);
-            this.panel_cus_detal.TabIndex = 7;
             // 
             // btn_cus_detail
             // 
@@ -219,37 +338,6 @@
             this.btn_cus_detail.MouseLeave += new System.EventHandler(this.btn_cus_detail_MouseLeave);
             this.btn_cus_detail.MouseHover += new System.EventHandler(this.btn_cus_detail_MouseHover);
             // 
-            // main_transaction
-            // 
-            this.main_transaction.Interval = 10;
-            this.main_transaction.Tick += new System.EventHandler(this.main_transaction_Tick);
-            // 
-            // panel_main
-            // 
-            this.panel_main.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel_main.BackColor = System.Drawing.Color.Black;
-            this.panel_main.Controls.Add(this.flowLayoutPanel4);
-            this.panel_main.Controls.Add(this.flowLayoutPanel5);
-            this.panel_main.Controls.Add(this.flowLayoutPanel6);
-            this.panel_main.Controls.Add(this.flowLayoutPanel7);
-            this.panel_main.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_main.Location = new System.Drawing.Point(0, 113);
-            this.panel_main.Margin = new System.Windows.Forms.Padding(0);
-            this.panel_main.MaximumSize = new System.Drawing.Size(206, 900);
-            this.panel_main.MinimumSize = new System.Drawing.Size(74, 900);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(74, 900);
-            this.panel_main.TabIndex = 2;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel4.Controls.Add(this.btn_home);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(200, 69);
-            this.flowLayoutPanel4.TabIndex = 1;
-            // 
             // btn_home
             // 
             this.btn_home.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -268,94 +356,6 @@
             this.btn_home.Text = "        Home";
             this.btn_home.UseVisualStyleBackColor = false;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel5.Controls.Add(this.btn_settings);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 78);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(200, 62);
-            this.flowLayoutPanel5.TabIndex = 4;
-            // 
-            // btn_settings
-            // 
-            this.btn_settings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_settings.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_settings.Image = global::Hotel_Management.Properties.Resources._274895_gear_settings_tools_machine_part_cog_icon;
-            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_settings.Location = new System.Drawing.Point(0, 0);
-            this.btn_settings.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(200, 62);
-            this.btn_settings.TabIndex = 2;
-            this.btn_settings.Text = "          Settings";
-            this.btn_settings.UseVisualStyleBackColor = false;
-            // 
-            // flowLayoutPanel6
-            // 
-            this.flowLayoutPanel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel6.Controls.Add(this.btn_help);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 146);
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(200, 62);
-            this.flowLayoutPanel6.TabIndex = 5;
-            // 
-            // btn_help
-            // 
-            this.btn_help.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_help.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_help.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_help.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_help.Image = global::Hotel_Management.Properties.Resources._211674_help_circled_icon__1_;
-            this.btn_help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_help.Location = new System.Drawing.Point(0, 0);
-            this.btn_help.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(203, 62);
-            this.btn_help.TabIndex = 2;
-            this.btn_help.Text = "      Help";
-            this.btn_help.UseVisualStyleBackColor = false;
-            // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel7.Controls.Add(this.btn_about);
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 214);
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(200, 62);
-            this.flowLayoutPanel7.TabIndex = 5;
-            // 
-            // btn_about
-            // 
-            this.btn_about.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_about.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_about.Image = global::Hotel_Management.Properties.Resources._5402388_information_about_support_accessibility_info_icon;
-            this.btn_about.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_about.Location = new System.Drawing.Point(0, 0);
-            this.btn_about.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_about.Name = "btn_about";
-            this.btn_about.Size = new System.Drawing.Size(200, 62);
-            this.btn_about.TabIndex = 2;
-            this.btn_about.Text = "        About";
-            this.btn_about.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 30;
-            this.guna2Elipse2.TargetControl = this;
             // 
             // MainForm
             // 
@@ -401,7 +401,6 @@
         private System.Windows.Forms.FlowLayoutPanel panel_main;
         private System.Windows.Forms.Button btn_menu;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Button btn_settings;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
@@ -411,6 +410,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Button btn_Room;
+        private System.Windows.Forms.Button btn_home;
     }
 }
 

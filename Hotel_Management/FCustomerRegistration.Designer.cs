@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txb_gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_complete = new Guna.UI2.WinForms.Guna2Button();
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,7 +53,6 @@
             this.txb_nationality = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_roomType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txb_gender = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.txb_gender);
             this.panel1.Controls.Add(this.guna2DataGridView1);
             this.panel1.Controls.Add(this.btn_complete);
             this.panel1.Controls.Add(this.txb_price);
@@ -85,7 +86,6 @@
             this.panel1.Controls.Add(this.txb_nationality);
             this.panel1.Controls.Add(this.txb_phone);
             this.panel1.Controls.Add(this.txb_roomType);
-            this.panel1.Controls.Add(this.txb_gender);
             this.panel1.Controls.Add(this.txb_name);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -98,35 +98,55 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txb_gender
+            // 
+            this.txb_gender.BackColor = System.Drawing.Color.Transparent;
+            this.txb_gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txb_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txb_gender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_gender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txb_gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txb_gender.ItemHeight = 30;
+            this.txb_gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.txb_gender.Location = new System.Drawing.Point(30, 357);
+            this.txb_gender.Name = "txb_gender";
+            this.txb_gender.Size = new System.Drawing.Size(359, 36);
+            this.txb_gender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txb_gender.TabIndex = 63;
+            this.txb_gender.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_gender_KeyDown);
+            // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(960, 66);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(843, 66);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(748, 531);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(865, 531);
             this.guna2DataGridView1.TabIndex = 62;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -182,7 +202,7 @@
             this.txb_price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_price.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_price.Location = new System.Drawing.Point(538, 561);
+            this.txb_price.Location = new System.Drawing.Point(455, 560);
             this.txb_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_price.Name = "txb_price";
             this.txb_price.PasswordChar = '\0';
@@ -197,7 +217,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(534, 521);
+            this.label12.Location = new System.Drawing.Point(451, 520);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 23);
             this.label12.TabIndex = 59;
@@ -220,7 +240,7 @@
             "04A",
             "05A",
             "06A"});
-            this.txb_roomNo.Location = new System.Drawing.Point(538, 460);
+            this.txb_roomNo.Location = new System.Drawing.Point(455, 459);
             this.txb_roomNo.Name = "txb_roomNo";
             this.txb_roomNo.Size = new System.Drawing.Size(359, 36);
             this.txb_roomNo.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -231,7 +251,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(534, 426);
+            this.label11.Location = new System.Drawing.Point(451, 425);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 23);
             this.label11.TabIndex = 57;
@@ -241,7 +261,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(534, 318);
+            this.label10.Location = new System.Drawing.Point(451, 317);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 23);
             this.label10.TabIndex = 56;
@@ -251,7 +271,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(534, 227);
+            this.label9.Location = new System.Drawing.Point(451, 226);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 23);
             this.label9.TabIndex = 55;
@@ -268,7 +288,7 @@
             this.txb_bed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_bed.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_bed.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_bed.Location = new System.Drawing.Point(538, 263);
+            this.txb_bed.Location = new System.Drawing.Point(455, 262);
             this.txb_bed.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_bed.Name = "txb_bed";
             this.txb_bed.PasswordChar = '\0';
@@ -284,7 +304,7 @@
             this.datepkCheckin.Checked = true;
             this.datepkCheckin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datepkCheckin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datepkCheckin.Location = new System.Drawing.Point(538, 148);
+            this.datepkCheckin.Location = new System.Drawing.Point(455, 147);
             this.datepkCheckin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datepkCheckin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datepkCheckin.Name = "datepkCheckin";
@@ -297,7 +317,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(534, 112);
+            this.label8.Location = new System.Drawing.Point(451, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 23);
             this.label8.TabIndex = 52;
@@ -307,7 +327,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(534, 28);
+            this.label7.Location = new System.Drawing.Point(451, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 23);
             this.label7.TabIndex = 51;
@@ -324,7 +344,7 @@
             this.txb_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_address.Location = new System.Drawing.Point(538, 66);
+            this.txb_address.Location = new System.Drawing.Point(455, 65);
             this.txb_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_address.Name = "txb_address";
             this.txb_address.PasswordChar = '\0';
@@ -449,37 +469,17 @@
             "Single",
             "Double",
             "Triple"});
-            this.txb_roomType.Location = new System.Drawing.Point(538, 358);
+            this.txb_roomType.Location = new System.Drawing.Point(455, 357);
             this.txb_roomType.Name = "txb_roomType";
             this.txb_roomType.Size = new System.Drawing.Size(359, 36);
             this.txb_roomType.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_roomType.TabIndex = 43;
             this.txb_roomType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_roomType_KeyDown);
             // 
-            // txb_gender
-            // 
-            this.txb_gender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_gender.DefaultText = "";
-            this.txb_gender.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_gender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_gender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_gender.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txb_gender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_gender.Location = new System.Drawing.Point(28, 358);
-            this.txb_gender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_gender.Name = "txb_gender";
-            this.txb_gender.PasswordChar = '\0';
-            this.txb_gender.PlaceholderText = "";
-            this.txb_gender.SelectedText = "";
-            this.txb_gender.Size = new System.Drawing.Size(359, 36);
-            this.txb_gender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txb_gender.TabIndex = 42;
-            this.txb_gender.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_gender_KeyDown);
-            // 
             // txb_name
             // 
+            this.txb_name.BorderRadius = 10;
+            this.txb_name.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txb_name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_name.DefaultText = "";
             this.txb_name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -559,7 +559,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2Button btn_complete;
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private System.Windows.Forms.Label label12;
@@ -579,11 +578,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_nationality;
         private Guna.UI2.WinForms.Guna2TextBox txb_phone;
         private Guna.UI2.WinForms.Guna2ComboBox txb_roomType;
-        private Guna.UI2.WinForms.Guna2TextBox txb_gender;
         private Guna.UI2.WinForms.Guna2TextBox txb_name;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ComboBox txb_gender;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

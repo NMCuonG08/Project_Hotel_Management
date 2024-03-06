@@ -16,5 +16,80 @@ namespace Hotel_Management
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_complete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

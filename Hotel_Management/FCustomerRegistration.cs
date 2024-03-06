@@ -51,7 +51,7 @@ namespace Hotel_Management
         private void txb_nationality_KeyDown(object sender, KeyEventArgs e)
         {
 
-            EventKeyDownFocus(txb_gender, e);
+            //EventKeyDownFocus(txb_gender, e);
             
         }
 
@@ -119,6 +119,11 @@ namespace Hotel_Management
         }
 
         private void btn_complete_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txb_gender_KeyDown_1(object sender, KeyEventArgs e)
         {
 
         }
