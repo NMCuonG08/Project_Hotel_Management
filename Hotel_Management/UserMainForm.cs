@@ -12,7 +12,7 @@ namespace Hotel_Management
 {
     public partial class UserMainForm : Form
     {
-        ListRoom listRoom;
+        FListRoom listRoom;
         public UserMainForm()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace Hotel_Management
         {
             if (listRoom == null)
             {
-                listRoom = new ListRoom();
+                listRoom = new FListRoom();
                 listRoom.FormClosed += ListRoom_FormClosed;
                 ShowForm(listRoom);
             }

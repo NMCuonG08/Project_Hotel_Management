@@ -17,7 +17,7 @@ namespace Hotel_Management
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new MainForm());
-           Application.Run(new UserMainForm());
+           Application.Run(new FFindingRoom());
         }
     }
 }

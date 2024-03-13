@@ -58,6 +58,18 @@
     <Compile Include="AddRoom.Designer.cs">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="FAddNewBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddNewBooking.Designer.cs">
+      <DependentUpon>FAddNewBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBookingInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBookingInformation.Designer.cs">
+      <DependentUpon>FBookingInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -70,11 +82,23 @@
     <Compile Include="FAbout.Designer.cs">
       <DependentUpon>FAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="FAddPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddPayment.Designer.cs">
+      <DependentUpon>FAddPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAddRoom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FAddRoom.Designer.cs">
       <DependentUpon>FAddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBooking.Designer.cs">
+      <DependentUpon>FBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Fcheckout.cs">
       <SubType>Form</SubType>
@@ -82,11 +106,29 @@
     <Compile Include="Fcheckout.Designer.cs">
       <DependentUpon>Fcheckout.cs</DependentUpon>
     </Compile>
+    <Compile Include="FChoiceRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChoiceRoom.Designer.cs">
+      <DependentUpon>FChoiceRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCustomerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FCustomerRegistration.Designer.cs">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FExtendBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FExtendBooking.Designer.cs">
+      <DependentUpon>FExtendBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFindingRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFindingRoom.Designer.cs">
+      <DependentUpon>FFindingRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -100,11 +142,17 @@
     <Compile Include="FSignIn.Designer.cs">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListRoom.cs">
+    <Compile Include="FHotelInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListRoom.Designer.cs">
-      <DependentUpon>ListRoom.cs</DependentUpon>
+    <Compile Include="FHotelInformation.Designer.cs">
+      <DependentUpon>FHotelInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FListRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FListRoom.Designer.cs">
+      <DependentUpon>FListRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="ListUser.cs">
       <SubType>Form</SubType>
@@ -112,19 +160,32 @@
     <Compile Include="ListUser.Designer.cs">
       <DependentUpon>ListUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoomInformation.cs">
+    <Compile Include="Room.cs" />
+    <Compile Include="FRoomInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RoomInformation.Designer.cs">
-      <DependentUpon>RoomInformation.cs</DependentUpon>
+    <Compile Include="FRoomInformation.Designer.cs">
+      <DependentUpon>FRoomInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFindingHotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFindingHotel.Designer.cs">
+      <DependentUpon>UCFindingHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCListRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCListRoom.Designer.cs">
+      <DependentUpon>UCListRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="UserMainForm.cs">
       <SubType>Form</SubType>
@@ -135,20 +196,41 @@
     <EmbeddedResource Include="AddRoom.resx">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FAddNewBooking.resx">
+      <DependentUpon>FAddNewBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBookingInformation.resx">
+      <DependentUpon>FBookingInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegistration.resx">
       <DependentUpon>CustomerRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAbout.resx">
       <DependentUpon>FAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FAddPayment.resx">
+      <DependentUpon>FAddPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FAddRoom.resx">
       <DependentUpon>FAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBooking.resx">
+      <DependentUpon>FBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fcheckout.resx">
       <DependentUpon>Fcheckout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FChoiceRoom.resx">
+      <DependentUpon>FChoiceRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCustomerRegistration.resx">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FExtendBooking.resx">
+      <DependentUpon>FExtendBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFindingRoom.resx">
+      <DependentUpon>FFindingRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -156,14 +238,17 @@
     <EmbeddedResource Include="FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListRoom.resx">
-      <DependentUpon>ListRoom.cs</DependentUpon>
+    <EmbeddedResource Include="FHotelInformation.resx">
+      <DependentUpon>FHotelInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FListRoom.resx">
+      <DependentUpon>FListRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListUser.resx">
       <DependentUpon>ListUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,8 +260,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RoomInformation.resx">
-      <DependentUpon>RoomInformation.cs</DependentUpon>
+    <EmbeddedResource Include="FRoomInformation.resx">
+      <DependentUpon>FRoomInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFindingHotel.resx">
+      <DependentUpon>UCFindingHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCListRoom.resx">
+      <DependentUpon>UCListRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
@@ -272,6 +363,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backgroundSigin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shedule_checkin - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_checkout - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shedule_checkin - Copy - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_checkout - Copy - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bad %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software-engineer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

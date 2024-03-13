@@ -25,9 +25,7 @@ D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hote
 D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 D:\WINFORM#C\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Customer_s.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.MainForm.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Properties.Resources.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.RoomInformation.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.GenerateResource.cache
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
@@ -64,5 +62,16 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UserMainForm.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FLogin.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FSignIn.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ListRoom.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ListUser.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCListRoom.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Main.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBooking.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddPayment.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FExtendBooking.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBookingInformation.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FHotelInformation.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FListRoom.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FRoomInformation.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddNewBooking.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FFindingRoom.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCFindingHotel.resources

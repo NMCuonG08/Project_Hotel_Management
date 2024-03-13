@@ -16,5 +16,20 @@ namespace Hotel_Management
         {
             InitializeComponent();
         }
+
+        private void gv_booked_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == gv_booked.Columns["btnCheckout"].Index && e.RowIndex >= 0)
+            {
+                FBookingInformation booking = new FBookingInformation();
+                (this.MdiParent as Main)?.ShowForm(booking);
+
+            }
+            if (e.ColumnIndex == gv_booked.Columns["btn_extendbooking"].Index && e.RowIndex >= 0)
+            {
+                FExtendBooking extendBooking = new FExtendBooking();
+                (this.MdiParent as Main)?.ShowForm(extendBooking);
+            }
+        }
     }
 }

@@ -29,8 +29,8 @@ namespace Hotel_Management
 
         private void btn_complete_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
+            
+           
             this.Hide();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hotel_Management
 {
-    public partial class ListRoom : Form
+    public partial class FAddPayment : Form
     {
-        public ListRoom()
+        public FAddPayment()
         {
             InitializeComponent();
         }
