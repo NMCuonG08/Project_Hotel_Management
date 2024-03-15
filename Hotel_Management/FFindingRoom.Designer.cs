@@ -50,6 +50,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ucFindingHotel1 = new Hotel_Management.UCFindingHotel();
             this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txb_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,6 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.txb_email);
             this.panel1.Controls.Add(this.btn_findinghotel);
             this.panel1.Controls.Add(this.guna2TextBox2);
             this.panel1.Controls.Add(this.guna2DateTimePicker1);
@@ -79,7 +81,7 @@
             this.btn_findinghotel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_findinghotel.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_findinghotel.ForeColor = System.Drawing.Color.Black;
-            this.btn_findinghotel.Location = new System.Drawing.Point(1626, 13);
+            this.btn_findinghotel.Location = new System.Drawing.Point(1576, 13);
             this.btn_findinghotel.Name = "btn_findinghotel";
             this.btn_findinghotel.Size = new System.Drawing.Size(199, 51);
             this.btn_findinghotel.TabIndex = 0;
@@ -103,7 +105,7 @@
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(484, 48);
+            this.guna2TextBox2.Size = new System.Drawing.Size(460, 48);
             this.guna2TextBox2.TabIndex = 2;
             // 
             // guna2DateTimePicker1
@@ -301,6 +303,7 @@
             // 
             this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
             this.ucFindingHotel1.HotelName = null;
+            this.ucFindingHotel1.Id = 0;
             this.ucFindingHotel1.Image = null;
             this.ucFindingHotel1.Name = "ucFindingHotel1";
             this.ucFindingHotel1.Point = 0D;
@@ -364,6 +367,27 @@
             this.gv_hotel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_hotel.Visible = false;
             // 
+            // txb_email
+            // 
+            this.txb_email.BorderRadius = 10;
+            this.txb_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_email.DefaultText = "";
+            this.txb_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_email.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_email.Location = new System.Drawing.Point(1796, 13);
+            this.txb_email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_email.Name = "txb_email";
+            this.txb_email.PasswordChar = '\0';
+            this.txb_email.PlaceholderText = "";
+            this.txb_email.SelectedText = "";
+            this.txb_email.Size = new System.Drawing.Size(116, 48);
+            this.txb_email.TabIndex = 3;
+            // 
             // FFindingRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,5 +432,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txb_email;
     }
 }

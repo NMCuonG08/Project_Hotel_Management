@@ -17,9 +17,10 @@ namespace Hotel_Management
             InitializeComponent();
            
         }
-
+        public event EventHandler ItemClicked;
 
         #region Properties
+        private int _id;
         private Color _backgroundColor;
         private string _hotelName;
         private string _location;
@@ -44,8 +45,10 @@ namespace Hotel_Management
 
         [Category("Custom Props")]
         public double Point { get => _point; set { _point = value;btn_point.Text = value.ToString(); } }
-
+        [Category("Custom Props")]
         public Color BackgroundColor { get => _backgroundColor; set { _backgroundColor = value;this.BackColor = value; } }
+        [Category("Custom Props")]
+        public int Id { get => _id; set => _id = value; }
 
 
 
@@ -72,6 +75,11 @@ namespace Hotel_Management
         private void lb_name_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UCFindingHotel_Click(object sender, EventArgs e)
+        {
+            ItemClicked?.Invoke(this, e);
         }
     }
 }

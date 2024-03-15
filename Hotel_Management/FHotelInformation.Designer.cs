@@ -31,10 +31,10 @@
             this.txb_room = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txb_hotelname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txb_contactnumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_phoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txb_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,14 +43,10 @@
             this.txb_floor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txb_city = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txb_addressline = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txb_country = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txb_street = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txb_zip = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -59,6 +55,10 @@
             this.btn_clear = new Guna.UI2.WinForms.Guna2Button();
             this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
             this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Feedback = new System.Windows.Forms.Label();
+            this.txb_feedback = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,27 +120,27 @@
             this.guna2TextBox2.Size = new System.Drawing.Size(311, 64);
             this.guna2TextBox2.TabIndex = 4;
             // 
-            // txb_hotelname
+            // txb_name
             // 
-            this.txb_hotelname.BorderRadius = 20;
-            this.txb_hotelname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_hotelname.DefaultText = "";
-            this.txb_hotelname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_hotelname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_hotelname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_hotelname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_hotelname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_hotelname.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txb_hotelname.ForeColor = System.Drawing.Color.Black;
-            this.txb_hotelname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_hotelname.Location = new System.Drawing.Point(808, 71);
-            this.txb_hotelname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_hotelname.Name = "txb_hotelname";
-            this.txb_hotelname.PasswordChar = '\0';
-            this.txb_hotelname.PlaceholderText = "";
-            this.txb_hotelname.SelectedText = "";
-            this.txb_hotelname.Size = new System.Drawing.Size(628, 51);
-            this.txb_hotelname.TabIndex = 5;
+            this.txb_name.BorderRadius = 20;
+            this.txb_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_name.DefaultText = "";
+            this.txb_name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_name.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txb_name.ForeColor = System.Drawing.Color.Black;
+            this.txb_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_name.Location = new System.Drawing.Point(808, 71);
+            this.txb_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_name.Name = "txb_name";
+            this.txb_name.PasswordChar = '\0';
+            this.txb_name.PlaceholderText = "";
+            this.txb_name.SelectedText = "";
+            this.txb_name.Size = new System.Drawing.Size(628, 51);
+            this.txb_name.TabIndex = 5;
             // 
             // label2
             // 
@@ -162,27 +162,27 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Contact Number";
             // 
-            // txb_contactnumber
+            // txb_phoneNumber
             // 
-            this.txb_contactnumber.BorderRadius = 20;
-            this.txb_contactnumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_contactnumber.DefaultText = "";
-            this.txb_contactnumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_contactnumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_contactnumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_contactnumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_contactnumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_contactnumber.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txb_contactnumber.ForeColor = System.Drawing.Color.Black;
-            this.txb_contactnumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_contactnumber.Location = new System.Drawing.Point(808, 174);
-            this.txb_contactnumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_contactnumber.Name = "txb_contactnumber";
-            this.txb_contactnumber.PasswordChar = '\0';
-            this.txb_contactnumber.PlaceholderText = "";
-            this.txb_contactnumber.SelectedText = "";
-            this.txb_contactnumber.Size = new System.Drawing.Size(291, 51);
-            this.txb_contactnumber.TabIndex = 7;
+            this.txb_phoneNumber.BorderRadius = 20;
+            this.txb_phoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_phoneNumber.DefaultText = "";
+            this.txb_phoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_phoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_phoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_phoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_phoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_phoneNumber.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txb_phoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txb_phoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_phoneNumber.Location = new System.Drawing.Point(808, 174);
+            this.txb_phoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_phoneNumber.Name = "txb_phoneNumber";
+            this.txb_phoneNumber.PasswordChar = '\0';
+            this.txb_phoneNumber.PlaceholderText = "";
+            this.txb_phoneNumber.SelectedText = "";
+            this.txb_phoneNumber.Size = new System.Drawing.Size(291, 51);
+            this.txb_phoneNumber.TabIndex = 7;
             // 
             // label4
             // 
@@ -312,38 +312,6 @@
             this.txb_city.Size = new System.Drawing.Size(291, 51);
             this.txb_city.TabIndex = 17;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(802, 345);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 25);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Address Line";
-            // 
-            // txb_addressline
-            // 
-            this.txb_addressline.BorderRadius = 20;
-            this.txb_addressline.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_addressline.DefaultText = "";
-            this.txb_addressline.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_addressline.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_addressline.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_addressline.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_addressline.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_addressline.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txb_addressline.ForeColor = System.Drawing.Color.Black;
-            this.txb_addressline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_addressline.Location = new System.Drawing.Point(809, 383);
-            this.txb_addressline.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_addressline.Name = "txb_addressline";
-            this.txb_addressline.PasswordChar = '\0';
-            this.txb_addressline.PlaceholderText = "";
-            this.txb_addressline.SelectedText = "";
-            this.txb_addressline.Size = new System.Drawing.Size(290, 51);
-            this.txb_addressline.TabIndex = 15;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -408,43 +376,11 @@
             this.txb_street.Size = new System.Drawing.Size(288, 51);
             this.txb_street.TabIndex = 19;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1140, 554);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 25);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Website";
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BorderRadius = 20;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(1141, 592);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(295, 51);
-            this.guna2TextBox3.TabIndex = 25;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(802, 554);
+            this.label12.Location = new System.Drawing.Point(806, 350);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(89, 25);
             this.label12.TabIndex = 24;
@@ -463,7 +399,7 @@
             this.txb_zip.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_zip.ForeColor = System.Drawing.Color.Black;
             this.txb_zip.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_zip.Location = new System.Drawing.Point(809, 592);
+            this.txb_zip.Location = new System.Drawing.Point(809, 383);
             this.txb_zip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_zip.Name = "txb_zip";
             this.txb_zip.PasswordChar = '\0';
@@ -476,12 +412,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(804, 652);
+            this.label15.Location = new System.Drawing.Point(804, 666);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 25);
             this.label15.TabIndex = 28;
             this.label15.Text = "Decription";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // txb_decription
             // 
@@ -496,7 +431,7 @@
             this.txb_decription.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_decription.ForeColor = System.Drawing.Color.Black;
             this.txb_decription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_decription.Location = new System.Drawing.Point(811, 690);
+            this.txb_decription.Location = new System.Drawing.Point(811, 704);
             this.txb_decription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_decription.Name = "txb_decription";
             this.txb_decription.PasswordChar = '\0';
@@ -504,7 +439,6 @@
             this.txb_decription.SelectedText = "";
             this.txb_decription.Size = new System.Drawing.Size(625, 51);
             this.txb_decription.TabIndex = 27;
-            this.txb_decription.TextChanged += new System.EventHandler(this.txb_decription_TextChanged);
             // 
             // tbn_update
             // 
@@ -541,6 +475,7 @@
             this.btn_clear.Size = new System.Drawing.Size(216, 55);
             this.btn_clear.TabIndex = 64;
             this.btn_clear.Text = "Clear";
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_upload
             // 
@@ -560,6 +495,7 @@
             this.btn_upload.Size = new System.Drawing.Size(216, 55);
             this.btn_upload.TabIndex = 63;
             this.btn_upload.Text = "UpLoad Image";
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
             // picturebox
             // 
@@ -572,20 +508,86 @@
             this.picturebox.TabIndex = 62;
             this.picturebox.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1136, 567);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 25);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "Price";
+            // 
+            // txb_price
+            // 
+            this.txb_price.BorderRadius = 20;
+            this.txb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_price.DefaultText = "";
+            this.txb_price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_price.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txb_price.ForeColor = System.Drawing.Color.Black;
+            this.txb_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_price.Location = new System.Drawing.Point(1145, 605);
+            this.txb_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_price.Name = "txb_price";
+            this.txb_price.PasswordChar = '\0';
+            this.txb_price.PlaceholderText = "";
+            this.txb_price.SelectedText = "";
+            this.txb_price.Size = new System.Drawing.Size(291, 51);
+            this.txb_price.TabIndex = 67;
+            // 
+            // Feedback
+            // 
+            this.Feedback.AutoSize = true;
+            this.Feedback.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Feedback.Location = new System.Drawing.Point(804, 567);
+            this.Feedback.Name = "Feedback";
+            this.Feedback.Size = new System.Drawing.Size(96, 25);
+            this.Feedback.TabIndex = 66;
+            this.Feedback.Text = "Feedback";
+            // 
+            // txb_feedback
+            // 
+            this.txb_feedback.BorderRadius = 20;
+            this.txb_feedback.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_feedback.DefaultText = "";
+            this.txb_feedback.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_feedback.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_feedback.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_feedback.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_feedback.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_feedback.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txb_feedback.ForeColor = System.Drawing.Color.Black;
+            this.txb_feedback.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_feedback.Location = new System.Drawing.Point(811, 605);
+            this.txb_feedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_feedback.Name = "txb_feedback";
+            this.txb_feedback.PasswordChar = '\0';
+            this.txb_feedback.PlaceholderText = "";
+            this.txb_feedback.SelectedText = "";
+            this.txb_feedback.Size = new System.Drawing.Size(288, 51);
+            this.txb_feedback.TabIndex = 65;
+            // 
             // FHotelInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1775, 1008);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txb_price);
+            this.Controls.Add(this.Feedback);
+            this.Controls.Add(this.txb_feedback);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.picturebox);
             this.Controls.Add(this.tbn_update);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txb_decription);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.guna2TextBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txb_zip);
             this.Controls.Add(this.label9);
@@ -594,8 +596,6 @@
             this.Controls.Add(this.txb_street);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txb_city);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txb_addressline);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txb_capacity);
             this.Controls.Add(this.label6);
@@ -603,9 +603,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txb_email);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txb_contactnumber);
+            this.Controls.Add(this.txb_phoneNumber);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txb_hotelname);
+            this.Controls.Add(this.txb_name);
             this.Controls.Add(this.guna2TextBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txb_room);
@@ -623,10 +623,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_room;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txb_hotelname;
+        private Guna.UI2.WinForms.Guna2TextBox txb_name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txb_contactnumber;
+        private Guna.UI2.WinForms.Guna2TextBox txb_phoneNumber;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txb_email;
         private System.Windows.Forms.Label label5;
@@ -635,14 +635,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_floor;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txb_city;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox txb_addressline;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox txb_country;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txb_street;
-        private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox txb_zip;
         private System.Windows.Forms.Label label15;
@@ -651,5 +647,9 @@
         private Guna.UI2.WinForms.Guna2Button btn_clear;
         private Guna.UI2.WinForms.Guna2Button btn_upload;
         private Guna.UI2.WinForms.Guna2PictureBox picturebox;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2TextBox txb_price;
+        private System.Windows.Forms.Label Feedback;
+        private Guna.UI2.WinForms.Guna2TextBox txb_feedback;
     }
 }

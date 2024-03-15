@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+
 
 namespace Hotel_Management
 {
@@ -26,12 +30,160 @@ namespace Hotel_Management
         {
 
         }
-
+        Modify modify = new Modify();
         private void btn_complete_Click(object sender, EventArgs e)
         {
-            
-           
+            string UserEmail = txb_email.Text;
+            string passwords = txb_password.Text;
+            if (UserEmail.Trim() == "")
+            {
+                MessageBox.Show("Please enter your account name!", "Announcement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else if (passwords.Trim() == "")
+            {
+                MessageBox.Show("Please enter your password!", "Announcement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+               CheckLogin(UserEmail, passwords);
+            }
+
+        }
+
+
+        private Account SelectUser(string userEmail, string Password)
+        {
+            Account user = new Account();
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                string query = "SELECT * FROM UserRegister WHERE Useremail = @Useremail AND Password = @Password";
+
+                try
+                {
+                    sqlConnection.Open();
+
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Useremail", userEmail);
+                        sqlCommand.Parameters.AddWithValue("@Password", Password);
+
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Đọc thông tin từ SqlDataReader và tạo đối tượng User
+                                user = new Account
+                                {                                 
+                                    Id = (Int32)reader["ID"],
+                                    Useremail = reader["Useremail"].ToString(),
+                                    National = reader["National"].ToString(),
+                                    Address = reader["Address"].ToString(),
+                                    Phonenumber = reader["Phonenumber"].ToString(),
+                                    Gender = reader["Genders"].ToString(),
+                                    Birthday = (DateTime)(DBNull.Value.Equals(reader["BirthDay"]) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("BirthDay"))),
+                                    Idcardnumber = reader["Idcardnumber"].ToString(),
+                                    Password = reader["Password"].ToString(),
+                                    Role = reader["Role"].ToString(),
+
+                                };
+                                /*MessageBox.Show($"User: ID = {user.ID}, FullName = {user.FullName}, BirthDay = {user.BirthDay}");*/
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+
+                return user;
+            }
+        }
+
+        private void CheckLogin(string email, string password)
+        {
+            string query = "SELECT [password] from UserRegister where Useremail = @Email";
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add("@Email", email);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string storePassword = reader["password"].ToString();
+                            if (!string.IsNullOrEmpty(storePassword))
+                            {
+                                Account user = SelectUser(email, password);
+                                FFindingRoom fFinding = new FFindingRoom();
+                                Admin admin = new Admin();
+                                if (user != null )
+                                {
+                                   if ( user.Role == "user")
+                                    {
+                                    //    this.Hide();
+                                        fFinding.setUser(user);
+                                        fFinding.ShowDialog();
+                                    }
+                                   else if (user.Role == "admin")
+                                    {
+                                     //   this.Hide();
+                                        admin.ShowDialog();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect password!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("User not found!");
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            FSignIn fSignIn = new FSignIn();
+            fSignIn.Show();
             this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            uc_FG.Visible = true;
+            uc_FG.BringToFront();
+        }
+
+        private void pic_hide_Click(object sender, EventArgs e)
+        {
+            if(txb_password.PasswordChar== '●')
+            {
+                pic_eye.BringToFront();
+                txb_password.PasswordChar = '\0';
+            }
+        }
+
+        private void pic_eye_Click(object sender, EventArgs e)
+        {
+            if (txb_password.PasswordChar == '\0')
+            {
+                pic_hide.BringToFront();
+                txb_password.PasswordChar = '●';
+            }
         }
     }
 }

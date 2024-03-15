@@ -57,14 +57,12 @@ D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Manag
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAbout.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Ma.0EC9D88C.Up2Date
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UserMainForm.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FLogin.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FSignIn.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ListUser.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCListRoom.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Main.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBooking.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddPayment.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FExtendBooking.resources
@@ -75,3 +73,8 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddNewBooking.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FFindingRoom.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCFindingHotel.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FChoiceRoom.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCRoomInformation.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ucsearch.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.uc_FGpass.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Admin.resources

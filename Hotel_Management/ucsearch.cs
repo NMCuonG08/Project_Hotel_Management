@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace Hotel_Management
 {
-    public partial class FAbout : Form
+    public partial class ucsearch : UserControl
     {
-        public FAbout()
+        public ucsearch()
         {
             InitializeComponent();
+           
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucsearch_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

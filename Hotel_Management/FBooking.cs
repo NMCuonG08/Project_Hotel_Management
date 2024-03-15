@@ -13,14 +13,15 @@ namespace Hotel_Management
 {
     public partial class FBooking : Form
     {
-
+        public int hotelID;
         SqlConnection conn = new
            SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
         private FListRoom fListRoom;
-        public FBooking()
+        public FBooking(int hotelID)
         {
             InitializeComponent();
             LoadForm();
+            this.hotelID = hotelID;
         }
 
         void LoadForm()
@@ -43,14 +44,14 @@ namespace Hotel_Management
         private void gvBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             FBookingInformation booking = new FBookingInformation();
-            (this.MdiParent as Main)?.ShowForm(booking);
+            (this.MdiParent as Admin)?.ShowForm(booking);
         }
 
         private void Btn_addRoom_Click(object sender, EventArgs e)
         {
-            FListRoom fListRoom = new FListRoom();
+            FListRoom fListRoom = new FListRoom(hotelID);
             
-            (this.MdiParent as Main)?.ShowForm(fListRoom);
+            (this.MdiParent as Admin)?.ShowForm(fListRoom);
         }
 
         

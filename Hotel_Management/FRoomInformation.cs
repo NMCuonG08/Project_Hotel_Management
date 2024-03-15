@@ -39,7 +39,7 @@ namespace Hotel_Management
         private void btn_add_Click(object sender, EventArgs e)
         {
             FAddRoom fAddRoom = new FAddRoom();
-             (this.MdiParent as Main)?.ShowForm(fAddRoom);
+             (this.MdiParent as Admin)?.ShowForm(fAddRoom);
 
             //fAddRoom.Show();
         }
@@ -47,6 +47,23 @@ namespace Hotel_Management
         private void RoomInformation_FormClosed(object sender, FormClosedEventArgs e)
         {
             conn.Close();
+        }
+        string imageLocation = "";
+        private void btn_upload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "png files (*.png)|*png|jpg files(*.jpg)|*.jpg| All files(*.*)|*.* ";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                imageLocation = openFileDialog.FileName.ToString();
+                picturebox.ImageLocation = imageLocation;
+            }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            picturebox.Image = null;
         }
     }
 }

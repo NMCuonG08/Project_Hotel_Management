@@ -58,6 +58,7 @@
     <Compile Include="AddRoom.Designer.cs">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection.cs" />
     <Compile Include="FAddNewBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +76,6 @@
     </Compile>
     <Compile Include="CustomerRegistration.Designer.cs">
       <DependentUpon>CustomerRegistration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FAbout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FAbout.Designer.cs">
-      <DependentUpon>FAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="FAddPayment.cs">
       <SubType>Form</SubType>
@@ -130,18 +125,6 @@
     <Compile Include="FFindingRoom.Designer.cs">
       <DependentUpon>FFindingRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FLogin.Designer.cs">
-      <DependentUpon>FLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FSignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSignIn.Designer.cs">
-      <DependentUpon>FSignIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="FHotelInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,18 +137,33 @@
     <Compile Include="FListRoom.Designer.cs">
       <DependentUpon>FListRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSignIn.Designer.cs">
+      <DependentUpon>FSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelInformation.cs" />
+    <Compile Include="IHotelIDConsumer.cs" />
     <Compile Include="ListUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListUser.Designer.cs">
       <DependentUpon>ListUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modify.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
@@ -175,6 +173,7 @@
     <Compile Include="FRoomInformation.Designer.cs">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoan.cs" />
     <Compile Include="UCFindingHotel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,6 +186,25 @@
     <Compile Include="UCListRoom.Designer.cs">
       <DependentUpon>UCListRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCRoomInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRoomInformation.Designer.cs">
+      <DependentUpon>UCRoomInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucsearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucsearch.Designer.cs">
+      <DependentUpon>ucsearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_FGpass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_FGpass.Designer.cs">
+      <DependentUpon>uc_FGpass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account.cs" />
     <Compile Include="UserMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegistration.resx">
       <DependentUpon>CustomerRegistration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FAbout.resx">
-      <DependentUpon>FAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAddPayment.resx">
       <DependentUpon>FAddPayment.cs</DependentUpon>
@@ -232,23 +247,23 @@
     <EmbeddedResource Include="FFindingRoom.resx">
       <DependentUpon>FFindingRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
-      <DependentUpon>FLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSignIn.resx">
-      <DependentUpon>FSignIn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FHotelInformation.resx">
       <DependentUpon>FHotelInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FListRoom.resx">
       <DependentUpon>FListRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSignIn.resx">
+      <DependentUpon>FSignIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListUser.resx">
       <DependentUpon>ListUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -268,6 +283,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCListRoom.resx">
       <DependentUpon>UCListRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRoomInformation.resx">
+      <DependentUpon>UCRoomInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucsearch.resx">
+      <DependentUpon>ucsearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_FGpass.resx">
+      <DependentUpon>uc_FGpass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
@@ -411,6 +435,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luggage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tourist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

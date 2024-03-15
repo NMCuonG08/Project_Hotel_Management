@@ -178,6 +178,7 @@
             this.Controls.Add(this.pctbox);
             this.Name = "UCFindingHotel";
             this.Size = new System.Drawing.Size(1457, 239);
+            this.Click += new System.EventHandler(this.UCFindingHotel_Click);
             this.MouseEnter += new System.EventHandler(this.UCFindingHotel_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.UCFindingHotel_MouseLeave);
             this.MouseHover += new System.EventHandler(this.UCFindingHotel_MouseHover);

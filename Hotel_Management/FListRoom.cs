@@ -20,33 +20,35 @@ namespace Hotel_Management
 {
     public partial class FListRoom : Form
     {
-       
+        private int HotelID  ;
         SqlConnection conn = new
            SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
 
-        public FListRoom()
+        public FListRoom(int hotelID)
         {            
             InitializeComponent();
-            LoadForm();
+            LoadForm(hotelID);
             DateTime currentDate = DateTime.Now;
             string dayOfWeek = currentDate.ToString("[ dddd, ", System.Globalization.CultureInfo.GetCultureInfo("en-US"));
             lb_date.Text = dayOfWeek + " " + currentDate.ToString("dd/MM/yyyy | HH:mm:ss ]");
-
+            this.HotelID = hotelID;
             createItem();
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = true;
            
-
+          
         }
 
-        void LoadForm()
+        void LoadForm(int HotelID)
         {
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM RoomInformation";
+                string sql = "SELECT * FROM RoomInformation where HotelID = @HotelID ";
+                
                 DataTable data = new DataTable();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
                 dataAdapter.Fill(data);
                 gvRoom.DataSource = data;
 
@@ -54,6 +56,10 @@ namespace Hotel_Management
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
 
@@ -119,7 +125,7 @@ namespace Hotel_Management
 
             if (room != null)
             {
-                (this.MdiParent as Main)?.ShowForm(AddNewBooking);
+                (this.MdiParent as Admin)?.ShowForm(AddNewBooking);
             }
         }
 
@@ -203,7 +209,7 @@ namespace Hotel_Management
            if (room != null)
             {
                 roomInformation.SetData(room);
-                (this.MdiParent as Main)?.ShowForm(roomInformation);
+                (this.MdiParent as Admin)?.ShowForm(roomInformation);
             }
 
            

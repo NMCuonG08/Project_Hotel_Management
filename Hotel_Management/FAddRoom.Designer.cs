@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_size = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_clients = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txb_bed = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txb_roomtype = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txb_roomNum = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.rbtn_clearall = new System.Windows.Forms.RadioButton();
@@ -48,12 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txb_roomNum = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txb_roomtype = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txb_bed = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txb_clients = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txb_size = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,140 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1604, 863);
             this.panel1.TabIndex = 0;
+            // 
+            // txb_price
+            // 
+            this.txb_price.BorderRadius = 10;
+            this.txb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_price.DefaultText = "";
+            this.txb_price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_price.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_price.Location = new System.Drawing.Point(652, 510);
+            this.txb_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_price.Name = "txb_price";
+            this.txb_price.PasswordChar = '\0';
+            this.txb_price.PlaceholderText = "";
+            this.txb_price.SelectedText = "";
+            this.txb_price.Size = new System.Drawing.Size(362, 42);
+            this.txb_price.TabIndex = 52;
+            // 
+            // txb_size
+            // 
+            this.txb_size.BorderRadius = 10;
+            this.txb_size.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_size.DefaultText = "";
+            this.txb_size.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_size.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_size.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_size.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_size.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_size.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_size.Location = new System.Drawing.Point(652, 418);
+            this.txb_size.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_size.Name = "txb_size";
+            this.txb_size.PasswordChar = '\0';
+            this.txb_size.PlaceholderText = "";
+            this.txb_size.SelectedText = "";
+            this.txb_size.Size = new System.Drawing.Size(362, 42);
+            this.txb_size.TabIndex = 51;
+            // 
+            // txb_clients
+            // 
+            this.txb_clients.BackColor = System.Drawing.Color.Transparent;
+            this.txb_clients.BorderRadius = 10;
+            this.txb_clients.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txb_clients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txb_clients.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_clients.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_clients.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txb_clients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txb_clients.ItemHeight = 30;
+            this.txb_clients.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.txb_clients.Location = new System.Drawing.Point(652, 333);
+            this.txb_clients.Name = "txb_clients";
+            this.txb_clients.Size = new System.Drawing.Size(356, 36);
+            this.txb_clients.TabIndex = 50;
+            // 
+            // txb_bed
+            // 
+            this.txb_bed.BackColor = System.Drawing.Color.Transparent;
+            this.txb_bed.BorderRadius = 10;
+            this.txb_bed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txb_bed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txb_bed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_bed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_bed.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txb_bed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txb_bed.ItemHeight = 30;
+            this.txb_bed.Items.AddRange(new object[] {
+            "Single Bed ( 90 - 100 cm)",
+            "Double Bed (135 - 150 cm)",
+            "Twin bed ( 90 - 100 cm for each)",
+            "Queen bed (150 - 160 cm)",
+            "King bed (180 - 200 cm)",
+            "Sofa bed (sofa instead of bed)"});
+            this.txb_bed.Location = new System.Drawing.Point(652, 246);
+            this.txb_bed.Name = "txb_bed";
+            this.txb_bed.Size = new System.Drawing.Size(356, 36);
+            this.txb_bed.TabIndex = 49;
+            // 
+            // txb_roomtype
+            // 
+            this.txb_roomtype.BackColor = System.Drawing.Color.Transparent;
+            this.txb_roomtype.BorderRadius = 10;
+            this.txb_roomtype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txb_roomtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txb_roomtype.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomtype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomtype.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txb_roomtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txb_roomtype.ItemHeight = 30;
+            this.txb_roomtype.Items.AddRange(new object[] {
+            "Standard Room",
+            "Business Class Room",
+            "Family",
+            "VIP Room"});
+            this.txb_roomtype.Location = new System.Drawing.Point(655, 167);
+            this.txb_roomtype.Name = "txb_roomtype";
+            this.txb_roomtype.Size = new System.Drawing.Size(356, 36);
+            this.txb_roomtype.TabIndex = 48;
+            // 
+            // txb_roomNum
+            // 
+            this.txb_roomNum.BorderRadius = 10;
+            this.txb_roomNum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_roomNum.DefaultText = "";
+            this.txb_roomNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_roomNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_roomNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_roomNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_roomNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomNum.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_roomNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomNum.Location = new System.Drawing.Point(652, 65);
+            this.txb_roomNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_roomNum.Name = "txb_roomNum";
+            this.txb_roomNum.PasswordChar = '\0';
+            this.txb_roomNum.PlaceholderText = "";
+            this.txb_roomNum.SelectedText = "";
+            this.txb_roomNum.Size = new System.Drawing.Size(362, 42);
+            this.txb_roomNum.TabIndex = 47;
             // 
             // label8
             // 
@@ -284,6 +418,7 @@
             this.btn_add.Size = new System.Drawing.Size(180, 55);
             this.btn_add.TabIndex = 21;
             this.btn_add.Text = "Add Room";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label5
             // 
@@ -334,140 +469,6 @@
             this.label1.Size = new System.Drawing.Size(164, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Add New Room";
-            // 
-            // txb_roomNum
-            // 
-            this.txb_roomNum.BorderRadius = 10;
-            this.txb_roomNum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_roomNum.DefaultText = "";
-            this.txb_roomNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_roomNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_roomNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_roomNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_roomNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomNum.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txb_roomNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomNum.Location = new System.Drawing.Point(652, 65);
-            this.txb_roomNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_roomNum.Name = "txb_roomNum";
-            this.txb_roomNum.PasswordChar = '\0';
-            this.txb_roomNum.PlaceholderText = "";
-            this.txb_roomNum.SelectedText = "";
-            this.txb_roomNum.Size = new System.Drawing.Size(362, 42);
-            this.txb_roomNum.TabIndex = 47;
-            // 
-            // txb_roomtype
-            // 
-            this.txb_roomtype.BackColor = System.Drawing.Color.Transparent;
-            this.txb_roomtype.BorderRadius = 10;
-            this.txb_roomtype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txb_roomtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txb_roomtype.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomtype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomtype.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txb_roomtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txb_roomtype.ItemHeight = 30;
-            this.txb_roomtype.Items.AddRange(new object[] {
-            "Standard Room",
-            "Business Class Room",
-            "Family",
-            "VIP Room"});
-            this.txb_roomtype.Location = new System.Drawing.Point(655, 167);
-            this.txb_roomtype.Name = "txb_roomtype";
-            this.txb_roomtype.Size = new System.Drawing.Size(356, 36);
-            this.txb_roomtype.TabIndex = 48;
-            // 
-            // txb_bed
-            // 
-            this.txb_bed.BackColor = System.Drawing.Color.Transparent;
-            this.txb_bed.BorderRadius = 10;
-            this.txb_bed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txb_bed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txb_bed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_bed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_bed.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txb_bed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txb_bed.ItemHeight = 30;
-            this.txb_bed.Items.AddRange(new object[] {
-            "Single Bed ( 90 - 100 cm)",
-            "Double Bed (135 - 150 cm)",
-            "Twin bed ( 90 - 100 cm for each)",
-            "Queen bed (150 - 160 cm)",
-            "King bed (180 - 200 cm)",
-            "Sofa bed (sofa instead of bed)"});
-            this.txb_bed.Location = new System.Drawing.Point(652, 246);
-            this.txb_bed.Name = "txb_bed";
-            this.txb_bed.Size = new System.Drawing.Size(356, 36);
-            this.txb_bed.TabIndex = 49;
-            // 
-            // txb_clients
-            // 
-            this.txb_clients.BackColor = System.Drawing.Color.Transparent;
-            this.txb_clients.BorderRadius = 10;
-            this.txb_clients.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txb_clients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txb_clients.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_clients.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_clients.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txb_clients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txb_clients.ItemHeight = 30;
-            this.txb_clients.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.txb_clients.Location = new System.Drawing.Point(652, 333);
-            this.txb_clients.Name = "txb_clients";
-            this.txb_clients.Size = new System.Drawing.Size(356, 36);
-            this.txb_clients.TabIndex = 50;
-            // 
-            // txb_size
-            // 
-            this.txb_size.BorderRadius = 10;
-            this.txb_size.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_size.DefaultText = "";
-            this.txb_size.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_size.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_size.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_size.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_size.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txb_size.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_size.Location = new System.Drawing.Point(652, 418);
-            this.txb_size.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_size.Name = "txb_size";
-            this.txb_size.PasswordChar = '\0';
-            this.txb_size.PlaceholderText = "";
-            this.txb_size.SelectedText = "";
-            this.txb_size.Size = new System.Drawing.Size(362, 42);
-            this.txb_size.TabIndex = 51;
-            // 
-            // txb_price
-            // 
-            this.txb_price.BorderRadius = 10;
-            this.txb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_price.DefaultText = "";
-            this.txb_price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_price.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txb_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_price.Location = new System.Drawing.Point(652, 510);
-            this.txb_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_price.Name = "txb_price";
-            this.txb_price.PasswordChar = '\0';
-            this.txb_price.PlaceholderText = "";
-            this.txb_price.SelectedText = "";
-            this.txb_price.Size = new System.Drawing.Size(362, 42);
-            this.txb_price.TabIndex = 52;
             // 
             // FAddRoom
             // 

@@ -237,6 +237,7 @@
             this.Controls.Add(this.lb_name);
             this.Name = "UCListRoom";
             this.Size = new System.Drawing.Size(864, 165);
+            this.Load += new System.EventHandler(this.UCListRoom_Load);
             this.Click += new System.EventHandler(this.UCListRoom_Click);
             this.MouseEnter += new System.EventHandler(this.UCListRoom_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.UCListRoom_MouseLeave);

@@ -83,5 +83,10 @@ namespace Hotel_Management
         {
             ItemBooking?.Invoke(this, e);
         }
+
+        private void UCListRoom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

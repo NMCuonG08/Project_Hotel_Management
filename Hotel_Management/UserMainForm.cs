@@ -13,6 +13,7 @@ namespace Hotel_Management
     public partial class UserMainForm : Form
     {
         FListRoom listRoom;
+        public int hotelID;
         public UserMainForm()
         {
             InitializeComponent();
@@ -20,7 +21,6 @@ namespace Hotel_Management
 
         public void ShowForm(Form form)
         {
-
             form.MdiParent = this;
             form.Show();
             form.Dock = DockStyle.Fill;
@@ -33,7 +33,7 @@ namespace Hotel_Management
         {
             if (listRoom == null)
             {
-                listRoom = new FListRoom();
+                listRoom = new FListRoom(hotelID);
                 listRoom.FormClosed += ListRoom_FormClosed;
                 ShowForm(listRoom);
             }
