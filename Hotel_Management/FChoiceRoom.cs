@@ -70,14 +70,14 @@ namespace Hotel_Management
                     }
                     ls[i].Price = (double)gvRoom.Rows[i].Cells[3].Value;
                     ls[i].HotelSize = (double)gvRoom.Rows[i].Cells[12].Value;
-                    byte[] image = (byte[])gvRoom.Rows[i].Cells[10].Value;
+                    /*byte[] image = (byte[])gvRoom.Rows[i].Cells[10].Value;
                     if (image != null)
                     {
                         using (MemoryStream ms = new MemoryStream(image))
                         {
                             ls[i].RoomImage = System.Drawing.Image.FromStream(ms);
                         }
-                    }
+                    }*/
                     ls[i].Capacity = "2";
                    
               

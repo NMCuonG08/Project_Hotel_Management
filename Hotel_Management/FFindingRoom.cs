@@ -94,14 +94,14 @@ namespace Hotel_Management
                     }
                 
 
-                    byte[] image = (byte[])gv_hotel.Rows[i].Cells[6].Value;
-                    if (image != null)
+                   /*byte[] image = (byte[])gv_hotel.Rows[i].Cells[6].Value;
+                   if (image != null)
                     {
                         using (MemoryStream ms = new MemoryStream(image))
                         {
-                            ls[i].Image = System.Drawing.Image.FromStream(ms);
+                           ls[i].Image = System.Drawing.Image.FromStream(ms);
                         }
-                    }
+                  }*/
                     object HotelLocation = gv_hotel.Rows[i].Cells[2].Value;
                     if (HotelLocation != null)
                     {

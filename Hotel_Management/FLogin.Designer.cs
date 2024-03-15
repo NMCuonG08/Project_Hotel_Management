@@ -85,6 +85,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(584, 557);
             this.panel3.TabIndex = 14;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pic_hide
             // 
@@ -221,7 +222,7 @@
             this.txb_email.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txb_email.BorderThickness = 2;
             this.txb_email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_email.DefaultText = "";
+            this.txb_email.DefaultText = "Longka23@gmail.com";
             this.txb_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txb_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txb_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -249,7 +250,7 @@
             this.txb_password.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txb_password.BorderThickness = 2;
             this.txb_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_password.DefaultText = "";
+            this.txb_password.DefaultText = "12345Ab";
             this.txb_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txb_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txb_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));

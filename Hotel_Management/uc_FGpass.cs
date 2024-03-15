@@ -34,7 +34,7 @@ namespace Hotel_Management
             }
             else 
             {
-                string query = "select*from UserRegister where Email='" + Useremail + "'";
+                string query = "select*from UserRegister where Useremail='" + Useremail + "'";
                 if(modify.Taikhoans(query).Count!=0)
                 {
                     label1.ForeColor = Color.Black;

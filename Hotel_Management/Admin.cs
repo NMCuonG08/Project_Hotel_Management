@@ -22,7 +22,7 @@ namespace Hotel_Management
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             HotelID = 1;
-            this.AdminID = 3;
+            this.AdminID = 6;
         }
 
         FHotelInformation hotelInformation;

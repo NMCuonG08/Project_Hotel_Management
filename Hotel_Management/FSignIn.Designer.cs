@@ -30,7 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.cbx_role = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.datetime_birthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.txb_sigpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,9 +49,7 @@
             this.txb_siggender = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_sigemail = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.datetime_birthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cbx_role = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -91,23 +91,49 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(731, 663);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // guna2Button1
+            // cbx_role
             // 
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(861, 642);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(245, 41);
-            this.guna2Button1.TabIndex = 72;
-            this.guna2Button1.Text = "Close";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.cbx_role.BackColor = System.Drawing.Color.Transparent;
+            this.cbx_role.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbx_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_role.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbx_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbx_role.ItemHeight = 30;
+            this.cbx_role.Items.AddRange(new object[] {
+            "user",
+            "admin"});
+            this.cbx_role.Location = new System.Drawing.Point(546, 472);
+            this.cbx_role.Name = "cbx_role";
+            this.cbx_role.Size = new System.Drawing.Size(140, 36);
+            this.cbx_role.TabIndex = 76;
+            // 
+            // datetime_birthday
+            // 
+            this.datetime_birthday.Checked = true;
+            this.datetime_birthday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.datetime_birthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.datetime_birthday.Location = new System.Drawing.Point(129, 537);
+            this.datetime_birthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.datetime_birthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datetime_birthday.Name = "datetime_birthday";
+            this.datetime_birthday.Size = new System.Drawing.Size(393, 36);
+            this.datetime_birthday.TabIndex = 75;
+            this.datetime_birthday.Value = new System.DateTime(2024, 3, 14, 21, 13, 53, 686);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(128, 514);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 20);
+            this.label8.TabIndex = 74;
+            this.label8.Text = "BirthDay";
             // 
             // txb_sigpassword
             // 
@@ -400,47 +426,22 @@
             this.panel2.Size = new System.Drawing.Size(666, 669);
             this.panel2.TabIndex = 0;
             // 
-            // label8
+            // guna2Button1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(128, 514);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 20);
-            this.label8.TabIndex = 74;
-            this.label8.Text = "BirthDay";
-            // 
-            // datetime_birthday
-            // 
-            this.datetime_birthday.Checked = true;
-            this.datetime_birthday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.datetime_birthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datetime_birthday.Location = new System.Drawing.Point(129, 537);
-            this.datetime_birthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datetime_birthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.datetime_birthday.Name = "datetime_birthday";
-            this.datetime_birthday.Size = new System.Drawing.Size(393, 36);
-            this.datetime_birthday.TabIndex = 75;
-            this.datetime_birthday.Value = new System.DateTime(2024, 3, 14, 21, 13, 53, 686);
-            // 
-            // cbx_role
-            // 
-            this.cbx_role.BackColor = System.Drawing.Color.Transparent;
-            this.cbx_role.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbx_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbx_role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbx_role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbx_role.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbx_role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbx_role.ItemHeight = 30;
-            this.cbx_role.Items.AddRange(new object[] {
-            "user",
-            "admin"});
-            this.cbx_role.Location = new System.Drawing.Point(546, 472);
-            this.cbx_role.Name = "cbx_role";
-            this.cbx_role.Size = new System.Drawing.Size(140, 36);
-            this.cbx_role.TabIndex = 76;
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(861, 642);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(245, 41);
+            this.guna2Button1.TabIndex = 72;
+            this.guna2Button1.Text = "Close";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FSignIn
             // 

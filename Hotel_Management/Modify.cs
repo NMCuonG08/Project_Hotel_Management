@@ -24,7 +24,7 @@ namespace Hotel_Management
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    taikhoans.Add(new Taikhoan(reader.GetString(0), reader.GetString(1)));
+                    taikhoans.Add(new Taikhoan(reader.GetString(1), reader.GetString(2)));
                 }
                 connection.Close();
             }

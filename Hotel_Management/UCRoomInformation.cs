@@ -38,5 +38,11 @@ namespace Hotel_Management
 
 
         #endregion
+
+        private void btn_Booking_Click(object sender, EventArgs e)
+        {
+           Book_room book_Room=new Book_room();
+            book_Room.Show();
+        }
     }
 }
