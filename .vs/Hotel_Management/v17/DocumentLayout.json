@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\froominformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\froominformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\ihotelidconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\froominformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\froominformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\ihotelidconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\ihotelidconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +66,62 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Room.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\Room.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Room.cs",
+              "RelativeToolTip": "Hotel_Management\\Room.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T02:41:54.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FRoomInformation.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FRoomInformation.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\FRoomInformation.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FRoomInformation.cs*",
+              "RelativeToolTip": "Hotel_Management\\FRoomInformation.cs*",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T02:41:21.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FRoomInformation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FRoomInformation.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\FRoomInformation.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FRoomInformation.cs [Design]*",
+              "RelativeToolTip": "Hotel_Management\\FRoomInformation.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T02:41:16.742Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Admin.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\Admin.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Admin.cs",
+              "RelativeToolTip": "Hotel_Management\\Admin.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T16:39:34.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IHotelIDConsumer.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\IHotelIDConsumer.cs",
               "RelativeDocumentMoniker": "Hotel_Management\\IHotelIDConsumer.cs",
@@ -67,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Admin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Admin.cs",
               "RelativeDocumentMoniker": "Hotel_Management\\Admin.cs",
@@ -76,19 +143,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-15T11:49:55.721Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Admin.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\Admin.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Admin.cs",
-              "RelativeToolTip": "Hotel_Management\\Admin.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T16:39:34.048Z",
-              "EditorCaption": ""
             }
           ]
         }
