@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Collections;
 namespace Hotel_Management
 {
      class Modify
@@ -36,10 +37,20 @@ namespace Hotel_Management
             {
                 connection.Open();
                 sqlcommand = new SqlCommand(query, connection);
-                sqlcommand.ExecuteReader(); // thuc thi truy van
+                sqlcommand.ExecuteNonQuery(); // thuc thi truy van
                 connection.Close();
             }
         }
+        /*public void booking(string bookings)
+        {
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                connection.Open();
+                sqlcommand = new SqlCommand(bookings, connection);
+                sqlcommand.ExecuteNonQuery(); // thuc thi truy van
+                connection.Close();
+            }
+        }*/
     }
     
 }

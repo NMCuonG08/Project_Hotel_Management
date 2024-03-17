@@ -538,5 +538,65 @@
   <ItemGroup>
     <None Include="Resources\id1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel-1447197_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\united-nations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\united-nations %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel-1749602_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

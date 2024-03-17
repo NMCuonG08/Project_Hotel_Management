@@ -7,15 +7,20 @@
       "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\ucbookroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__mssqllocaldb/RoomManagement/True/SqlTable/dbo.Booking.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|d:\\winform#c\\project_hotel_management\\hotel_management\\book_room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\book_room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|d:\\winform#c\\project_hotel_management\\hotel_management\\ucbookroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|D:\\WINFORM#C\\Project_Hotel_Management\\hotel_management\\ucbookroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\ucbookroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|D:\\WINFORM#C\\Project_Hotel_Management\\hotel_management\\uc_fgpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\uc_fgpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|D:\\WINFORM#C\\Project_Hotel_Management\\hotel_management\\fsignin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fsignin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|D:\\WINFORM#C\\Project_Hotel_Management\\hotel_management\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,13 +66,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.Booking [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__mssqllocaldb/RoomManagement/True/SqlTable/dbo.Booking.sql",
-              "ToolTip": "dbo.Booking [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-03-15T18:26:10.489Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "FLogin.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\FLogin.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\FLogin.cs",
+              "ToolTip": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\FLogin.cs [Design]",
+              "RelativeToolTip": "Hotel_Management\\FLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T17:01:31.602Z"
             },
             {
               "$type": "Document",
@@ -77,34 +83,43 @@
               "RelativeDocumentMoniker": "Hotel_Management\\Ucbookroom.cs",
               "ToolTip": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\Ucbookroom.cs",
               "RelativeToolTip": "Hotel_Management\\Ucbookroom.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAAANAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T16:51:59.893Z",
+              "WhenOpened": "2024-03-17T08:03:36.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Ucbookroom.cs [Design]",
               "DocumentMoniker": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\Ucbookroom.cs",
               "RelativeDocumentMoniker": "Hotel_Management\\Ucbookroom.cs",
               "ToolTip": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\Ucbookroom.cs [Design]",
               "RelativeToolTip": "Hotel_Management\\Ucbookroom.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T14:47:29.126Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-17T05:11:16.19Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Book_room.cs [Design]",
-              "DocumentMoniker": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\Book_room.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\Book_room.cs",
-              "ToolTip": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\Book_room.cs [Design]",
-              "RelativeToolTip": "Hotel_Management\\Book_room.cs [Design]",
+              "Title": "uc_FGpass.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\uc_FGpass.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\uc_FGpass.cs",
+              "ToolTip": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\uc_FGpass.cs [Design]",
+              "RelativeToolTip": "Hotel_Management\\uc_FGpass.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T14:45:28.003Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-16T17:44:41.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FSignIn.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\FSignIn.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\FSignIn.cs",
+              "ToolTip": "D:\\WINFORM#C\\Project_Hotel_Management\\Hotel_Management\\FSignIn.cs [Design]",
+              "RelativeToolTip": "Hotel_Management\\FSignIn.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T17:01:30.688Z"
             }
           ]
         }

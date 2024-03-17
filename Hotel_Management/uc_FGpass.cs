@@ -57,5 +57,25 @@ namespace Hotel_Management
         {
             this.Hide();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txb_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

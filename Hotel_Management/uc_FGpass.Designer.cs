@@ -36,10 +36,9 @@
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2AnimateWindow3 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_close = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.SuspendLayout();
             // 
             // txb_email
@@ -59,7 +58,7 @@
             this.txb_email.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_email.ForeColor = System.Drawing.Color.Black;
             this.txb_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_email.Location = new System.Drawing.Point(76, 113);
+            this.txb_email.Location = new System.Drawing.Point(72, 138);
             this.txb_email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_email.Name = "txb_email";
             this.txb_email.PasswordChar = '\0';
@@ -69,19 +68,20 @@
             this.txb_email.Size = new System.Drawing.Size(267, 26);
             this.txb_email.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_email.TabIndex = 65;
+            this.txb_email.TextChanged += new System.EventHandler(this.txb_email_TextChanged);
             // 
             // txb_getpass
             // 
             this.txb_getpass.BorderColor = System.Drawing.Color.DimGray;
-            this.txb_getpass.BorderRadius = 15;
+            this.txb_getpass.BorderRadius = 5;
             this.txb_getpass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.txb_getpass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.txb_getpass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.txb_getpass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txb_getpass.FillColor = System.Drawing.Color.White;
-            this.txb_getpass.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_getpass.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txb_getpass.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txb_getpass.ForeColor = System.Drawing.Color.Black;
-            this.txb_getpass.Location = new System.Drawing.Point(69, 184);
+            this.txb_getpass.Location = new System.Drawing.Point(65, 209);
             this.txb_getpass.Name = "txb_getpass";
             this.txb_getpass.Size = new System.Drawing.Size(274, 31);
             this.txb_getpass.TabIndex = 72;
@@ -96,37 +96,25 @@
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(100, 100);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(114, 0);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(108, 16);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(177, 106);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(177, 103);
             this.guna2ImageButton1.TabIndex = 71;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::Hotel_Management.Properties.Resources.key__1_;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 113);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 67;
-            this.pictureBox1.TabStop = false;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // btn_close
             // 
             this.btn_close.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_close.BorderRadius = 15;
+            this.btn_close.BorderRadius = 5;
             this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_close.FillColor = System.Drawing.Color.White;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_close.ForeColor = System.Drawing.Color.Black;
-            this.btn_close.Location = new System.Drawing.Point(97, 221);
+            this.btn_close.Location = new System.Drawing.Point(93, 246);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(216, 27);
             this.btn_close.TabIndex = 73;
@@ -137,34 +125,53 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 155);
+            this.label1.Location = new System.Drawing.Point(69, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 74;
             this.label1.Text = "Result :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // guna2GradientTileButton1
+            // 
+            this.guna2GradientTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton1.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton1.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton1.Image = global::Hotel_Management.Properties.Resources.user__1_4;
+            this.guna2GradientTileButton1.Location = new System.Drawing.Point(38, 134);
+            this.guna2GradientTileButton1.Name = "guna2GradientTileButton1";
+            this.guna2GradientTileButton1.Size = new System.Drawing.Size(28, 30);
+            this.guna2GradientTileButton1.TabIndex = 97;
+            this.guna2GradientTileButton1.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
             // 
             // uc_FGpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.guna2GradientTileButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.txb_getpass);
             this.Controls.Add(this.guna2ImageButton1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txb_email);
             this.Name = "uc_FGpass";
             this.Size = new System.Drawing.Size(415, 338);
             this.Load += new System.EventHandler(this.uc_FGpass_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txb_email;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Button txb_getpass;
@@ -173,5 +180,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow3;
         private Guna.UI2.WinForms.Guna2Button btn_close;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
     }
 }
