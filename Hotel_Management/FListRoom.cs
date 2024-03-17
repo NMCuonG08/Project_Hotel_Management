@@ -20,12 +20,12 @@ namespace Hotel_Management
 {
     public partial class FListRoom : Form
     {
-        private int HotelID  ;
+        private int HotelID;
         SqlConnection conn = new
            SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
 
         public FListRoom(int hotelID)
-        {            
+        {
             InitializeComponent();
             LoadForm(hotelID);
             DateTime currentDate = DateTime.Now;
@@ -35,17 +35,25 @@ namespace Hotel_Management
             createItem();
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = true;
-           
-          
-        }
 
+
+        }
+        void Fillter()
+        {
+            conn.Open();
+            string sql = string.Format("SELECT * FROM RoomInformation where HotelID = '{0}' AND RoomType = '{1}' AND Status = '{2}' AND RoomBed = '{3}'", HotelID, cb_type.Text, btn_status.Text, cb_typebed.Text);
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gvRoom.DataSource = data;
+        }
         void LoadForm(int HotelID)
         {
             try
             {
                 conn.Open();
                 string sql = "SELECT * FROM RoomInformation where HotelID = @HotelID ";
-                
+
                 DataTable data = new DataTable();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
@@ -75,7 +83,7 @@ namespace Hotel_Management
             if (count > 0)
             {
                 UCListRoom[] ls = new UCListRoom[count];
-                for (int i = 0; i < count-1; i++)
+                for (int i = 0; i < count - 1; i++)
                 {
                     ls[i] = new UCListRoom();
                     object roomName = gvRoom.Rows[i].Cells[0].Value;
@@ -89,12 +97,12 @@ namespace Hotel_Management
                     byte[] image = (byte[])gvRoom.Rows[i].Cells[10].Value;
                     if (image != null)
                     {
-                        using (MemoryStream ms = new MemoryStream(image)) 
+                        using (MemoryStream ms = new MemoryStream(image))
                         {
                             ls[i].Image = System.Drawing.Image.FromStream(ms);
                         }
                     }
-                  
+
                     ls[i].Checkin = (DateTime)gvRoom.Rows[i].Cells[8].Value;
                     ls[i].Checkout = (DateTime)gvRoom.Rows[i].Cells[9].Value;
                     ls[i].Status = gvRoom.Rows[i].Cells[6].Value.ToString();
@@ -108,7 +116,7 @@ namespace Hotel_Management
                     }
                     ls[i].ItemBooking += Btn_Booking_Click;
                     ls[i].Click += ListRoom_Click;
-                 //   ls[i].btn_Booking.Click += Btn_Booking_Click; 
+                    //   ls[i].btn_Booking.Click += Btn_Booking_Click; 
                     flowLayoutPanel1.Controls.Add(ls[i]);
                 }
             }
@@ -116,7 +124,7 @@ namespace Hotel_Management
 
         private void Btn_Booking_Click(object sender, EventArgs e)
         {
-            
+
 
             UCListRoom clickBooking = sender as UCListRoom;
             FAddNewBooking AddNewBooking = new FAddNewBooking();
@@ -206,13 +214,13 @@ namespace Hotel_Management
             int id = Convert.ToInt32(clickedItem.RoomID);
             Room room = GetRoomByID(id);
 
-           if (room != null)
+            if (room != null)
             {
                 roomInformation.SetData(room);
                 (this.MdiParent as Admin)?.ShowForm(roomInformation);
             }
 
-           
+
 
         }
 
@@ -249,6 +257,17 @@ namespace Hotel_Management
 
         }
 
-       
-    }   
+        private void bt_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter();
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
+}

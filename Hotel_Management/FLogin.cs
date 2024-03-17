@@ -126,13 +126,13 @@ namespace Hotel_Management
                                 {
                                    if ( user.Role == "user")
                                     {
-                                    //    this.Hide();
+                                        this.Hide();
                                         fFinding.setUser(user);
                                         fFinding.ShowDialog();
                                     }
                                    else if (user.Role == "admin")
                                     {
-                                     //   this.Hide();
+                                        this.Hide();
                                         admin.ShowDialog();
                                     }
                                 }

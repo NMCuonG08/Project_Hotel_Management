@@ -18,7 +18,7 @@ namespace Hotel_Management
         public FAddRoom()
         {
             InitializeComponent();
-            txb_roomNum.Focus();
+            txb_roomname.Focus();
         }
         SqlConnection conn = new
           SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
@@ -51,7 +51,7 @@ namespace Hotel_Management
             }
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+        /*private void btn_save_Click(object sender, EventArgs e)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace Hotel_Management
                 conn.Open();
                 string sql = "Insert into HotelImage(htImage) values( @images )";
                 SqlCommand sqlCommand = new SqlCommand(sql, conn);
-               sqlCommand.Parameters.Add(new SqlParameter("@images", images));
+                sqlCommand.Parameters.Add(new SqlParameter("@images", images));
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Upload successful");
                 conn.Close();
@@ -73,7 +73,7 @@ namespace Hotel_Management
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
 
        /* private void btn_view_Click(object sender, EventArgs e)
         {
@@ -173,7 +173,6 @@ namespace Hotel_Management
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
