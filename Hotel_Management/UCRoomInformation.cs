@@ -16,7 +16,9 @@ namespace Hotel_Management
         {
             InitializeComponent();
         }
+        public event EventHandler ItemBooking;
         #region Properties
+        private int _id;
         private Image _roomImage;
         private String _capacity;
         private double _price;
@@ -24,19 +26,25 @@ namespace Hotel_Management
         private String _roomtype;
         private String _roombed;
         private double _size;
-
+        [Category("Custom Props")]
         public Image RoomImage { get => _roomImage; set { _roomImage = value; picturebox.Image = value; } }
+        [Category("Custom Props")]
         public string Capacity { get => _capacity; set { _capacity = value;txb_capacity.Text = value; } }
+        [Category("Custom Props")]
         public double Price { get => _price; set { _price = value; txb_price.Text = value.ToString(); } }
+        [Category("Custom Props")]
         public string Ultilities { get => _ultilities; set { _ultilities = value;  } }
         public string Roomtype { get => _roomtype; set { _roomtype = value; lb_roomtype.Text = value; } }
+        [Category("Custom Props")]
         public string Roombed { get => _roombed; set { _roombed = value; lb_roombed.Text = value; } }
-
+        [Category("Custom Props")]
         public double HotelSize { get => _size; set { _size = value; lb_size.Text = value.ToString(); } }
-        // private 
-
-
-
+        [Category("Custom Props")]
+        public int Id { get => _id; set => _id = value; }
         #endregion
+        private void btn_Booking_Click(object sender, EventArgs e)
+        {
+            ItemBooking?.Invoke(this, e);
+        }
     }
 }

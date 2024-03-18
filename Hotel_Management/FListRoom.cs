@@ -39,7 +39,7 @@ namespace Hotel_Management
           
         }
 
-        void LoadForm(int HotelID)
+        public void LoadForm(int HotelID)
         {
             try
             {
@@ -67,10 +67,64 @@ namespace Hotel_Management
         {
 
         }
+        void Fillter()
+        {
+            /* conn.Open();
+             string sql = string.Format("SELECT * FROM RoomInformation where HotelID = '{0}' AND RoomType = '{1}' AND Status = '{2}' AND RoomBed = '{3}'", HotelID, cb_type.Text, cb_status.Text, cb_typebed.Text);
+             DataTable data = new DataTable();
+             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+             dataAdapter.Fill(data);
+             gvRoom.DataSource = data;
+             conn.Close();*/
+            void Fillter()
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM RoomInformation WHERE HotelID = @HotelID";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@HotelID", HotelID);
 
+                    // Thêm điều kiện vào câu lệnh truy vấn chỉ khi ô checkbox tương ứng được chọn
+                    if (!string.IsNullOrEmpty(cb_type.Text))
+                    {
+                        sql += " AND RoomType = @RoomType";
+                        cmd.Parameters.AddWithValue("@RoomType", cb_type.Text);
+                    }
+                    if (!string.IsNullOrEmpty(cb_status.Text))
+                    {
+                        sql += " AND Status = @Status";
+                        cmd.Parameters.AddWithValue("@Status", cb_status.Text);
+                    }
+                    if (!string.IsNullOrEmpty(cb_typebed.Text))
+                    {
+                        sql += " AND RoomBed = @RoomBed";
+                        cmd.Parameters.AddWithValue("@RoomBed", cb_typebed.Text);
+                    }
+
+                    // Thực thi câu lệnh truy vấn
+                    cmd.CommandText = sql;
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    dataAdapter.Fill(data);
+                    gvRoom.DataSource = data;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+
+
+        }
         // Tạo list item room trong form 
         private void createItem()
         {
+            flowLayoutPanel1.Controls.Clear();
             int count = gvRoom.Rows.Count;
             if (count > 0)
             {
@@ -78,26 +132,44 @@ namespace Hotel_Management
                 for (int i = 0; i < count-1; i++)
                 {
                     ls[i] = new UCListRoom();
-                    object roomName = gvRoom.Rows[i].Cells[0].Value;
-                    if (roomName != null)
+                    object roomID = gvRoom.Rows[i].Cells[0].Value;
+                    if (roomID != null)
                     {
-                        ls[i].RoomID = roomName.ToString();
+                        ls[i].RoomID = roomID.ToString();
                     }
                     ls[i].Price = (double)gvRoom.Rows[i].Cells[3].Value;
                     ls[i].Color = Color.DodgerBlue;
 
-                    byte[] image = (byte[])gvRoom.Rows[i].Cells[10].Value;
+                    byte[] image = (byte[])gvRoom.Rows[i].Cells[8].Value;
                     if (image != null)
                     {
-                        using (MemoryStream ms = new MemoryStream(image)) 
+                        using (MemoryStream ms = new MemoryStream(image))
                         {
                             ls[i].Image = System.Drawing.Image.FromStream(ms);
                         }
                     }
-                  
-                    ls[i].Checkin = (DateTime)gvRoom.Rows[i].Cells[8].Value;
-                    ls[i].Checkout = (DateTime)gvRoom.Rows[i].Cells[9].Value;
-                    ls[i].Status = gvRoom.Rows[i].Cells[6].Value.ToString();
+                    DateTime checkin;
+                    DateTime checkout;
+                    object checkinValue = gvRoom.Rows[i].Cells[6].Value;
+                    object checkoutValue = gvRoom.Rows[i].Cells[7].Value;
+                    if (checkinValue != null && DateTime.TryParse(checkinValue.ToString(), out checkin))
+                    {
+                        ls[i].Checkin = checkin;
+                    }
+                    else
+                    {                       
+                        ls[i].Checkin = DateTime.MinValue;
+                    }
+
+                    if (checkoutValue != null && DateTime.TryParse(checkoutValue.ToString(), out checkout))
+                    {
+                        ls[i].Checkout = checkout;
+                    }
+                    else
+                    {                       
+                        ls[i].Checkout = DateTime.MinValue;                                                           
+                    }
+                    ls[i].Status = gvRoom.Rows[i].Cells[4].Value.ToString();
                     if (ls[i].Status == "Empty")
                     {
                         ls[i].btn_Booking.Visible = true;
@@ -108,16 +180,50 @@ namespace Hotel_Management
                     }
                     ls[i].ItemBooking += Btn_Booking_Click;
                     ls[i].Click += ListRoom_Click;
-                 //   ls[i].btn_Booking.Click += Btn_Booking_Click; 
+                    ls[i].ItemDelete += FListRoom_ItemDelete;
                     flowLayoutPanel1.Controls.Add(ls[i]);
                 }
+            }
+        }
+        private void DeleteRoom(int roomID)
+        {
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "Delete from RoomInformation where RoomID = @RoomID";
+                    SqlCommand sqlCommand = new SqlCommand(query, conn);
+                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void FListRoom_ItemDelete(object sender, EventArgs e)
+        {
+            UCListRoom clickBooking = sender as UCListRoom;     
+            int id = Convert.ToInt32(clickBooking.RoomID);
+
+            DialogResult result = MessageBox.Show("Ban muon xoa no khong", "Thong bao", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                DeleteRoom(id);
+                MessageBox.Show("Delete Successfull!");
+                this.LoadForm(HotelID);
+                this.createItem();
+            }
+            else if (result == DialogResult.Cancel)
+            {
+
             }
         }
 
         private void Btn_Booking_Click(object sender, EventArgs e)
         {
-            
-
             UCListRoom clickBooking = sender as UCListRoom;
             FAddNewBooking AddNewBooking = new FAddNewBooking();
             int id = Convert.ToInt32(clickBooking.RoomID);
@@ -167,59 +273,54 @@ namespace Hotel_Management
         }
 
 
-        /*
-                void Edit(Book book, string id)
-                {
+       void AddRoom(Room room)
+        {
+            try
+            {         
+                conn.Open();
+                string status = "empty";
+                string query = "Insert into RoomInformation values (@RoomType, @RoomBed,@RoomPrice,@Status,@RoomName,null,null,@RoomImage,@Clients,@size,@HotelID)";
+                SqlCommand sqlCommand = new SqlCommand(query, conn);
+                sqlCommand.Parameters.Add(new SqlParameter("RoomType",room.Type));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomBed", room.Bed));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomPrice", room.Price));
+                sqlCommand.Parameters.Add(new SqlParameter("Status", status));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomName", room.Name));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomImage", room.Image));
+                sqlCommand.Parameters.Add(new SqlParameter("Clients", room.Clients));
+                sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
+                sqlCommand.Parameters.Add(new SqlParameter("HotelID", HotelID));
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Upload successful");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
 
-                    SqlConnection sqlConnection = Connection.getConnection();
 
-                    string query = "Update Book set Category = @Category, Title = @Title, Author = @Author, ISBN = @ISBN Where ID = @ID;";
-
-                    try
-                    {
-                        sqlConnection.Open();
-
-                        SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                        sqlCommand.Parameters.Add("@ID", SqlDbType.NChar, 50).Value = id;
-                        sqlCommand.Parameters.Add("@Category", SqlDbType.NChar, 50).Value = book.Category;
-                        sqlCommand.Parameters.Add("@Title", SqlDbType.NChar, 50).Value = book.Title;
-                        sqlCommand.Parameters.Add("@Author", SqlDbType.NChar, 50).Value = book.Author;
-                        sqlCommand.Parameters.Add("@ISBN", SqlDbType.NChar, 50).Value = book.ISBN;
-                        sqlCommand.ExecuteNonQuery();
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                    }
-                    finally
-                    {
-                        sqlConnection.Close();
-                    }
-
-                }*/
-
-        // event += click
         private void ListRoom_Click(object sender, EventArgs e)
         {
             UCListRoom clickedItem = sender as UCListRoom;
             FRoomInformation roomInformation = new FRoomInformation();
             int id = Convert.ToInt32(clickedItem.RoomID);
             Room room = GetRoomByID(id);
-
            if (room != null)
             {
                 roomInformation.SetData(room);
+              
                 (this.MdiParent as Admin)?.ShowForm(roomInformation);
             }
-
-           
-
         }
 
         private void Btn_addRoom_Click(object sender, EventArgs e)
         {
-            FAddRoom fAddRoom = new FAddRoom();
-            fAddRoom.ShowDialog();
+            FAddRoom fAddRoom = new FAddRoom(HotelID);
+            fAddRoom.addRoom += AddRoom;
+            (this.MdiParent as Admin)?.ShowForm(fAddRoom);
         }
 
         private void radio_btn_checkall_CheckedChanged(object sender, EventArgs e)
@@ -249,6 +350,17 @@ namespace Hotel_Management
 
         }
 
-       
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter();
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }   
     }

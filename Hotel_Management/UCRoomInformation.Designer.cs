@@ -206,6 +206,7 @@
             this.btn_Booking.Size = new System.Drawing.Size(180, 63);
             this.btn_Booking.TabIndex = 27;
             this.btn_Booking.Text = "Đặt trước";
+            this.btn_Booking.Click += new System.EventHandler(this.btn_Booking_Click);
             // 
             // txb_price
             // 

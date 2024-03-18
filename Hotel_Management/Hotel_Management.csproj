@@ -58,6 +58,12 @@
     <Compile Include="AddRoom.Designer.cs">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Book_room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book_room.Designer.cs">
+      <DependentUpon>Book_room.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="FAddNewBooking.cs">
       <SubType>Form</SubType>
@@ -213,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="AddRoom.resx">
       <DependentUpon>AddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book_room.resx">
+      <DependentUpon>Book_room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAddNewBooking.resx">
       <DependentUpon>FAddNewBooking.cs</DependentUpon>
@@ -468,6 +477,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\key %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

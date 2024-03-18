@@ -300,6 +300,7 @@
             this.btn_add.Size = new System.Drawing.Size(180, 55);
             this.btn_add.TabIndex = 56;
             this.btn_add.Text = "Complete";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click_1);
             // 
             // label1
             // 

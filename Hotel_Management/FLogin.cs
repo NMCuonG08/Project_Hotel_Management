@@ -120,14 +120,14 @@ namespace Hotel_Management
                             if (!string.IsNullOrEmpty(storePassword))
                             {
                                 Account user = SelectUser(email, password);
-                                FFindingRoom fFinding = new FFindingRoom();
+                                
                                 Admin admin = new Admin();
                                 if (user != null )
                                 {
                                    if ( user.Role == "user")
                                     {
-                                    //    this.Hide();
-                                        fFinding.setUser(user);
+                                        //    this.Hide();
+                                        FFindingRoom fFinding = new FFindingRoom(user);
                                         fFinding.ShowDialog();
                                     }
                                    else if (user.Role == "admin")

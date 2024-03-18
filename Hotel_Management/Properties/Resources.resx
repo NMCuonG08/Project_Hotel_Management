@@ -136,6 +136,9 @@
   <data name="9967659_like_bubble speech_feedback_review_satisfaction_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9967659_like_bubble speech_feedback_review_satisfaction_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="id_card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id-card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shedule_checkin - Copy - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shedule_checkin - Copy - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +150,9 @@
   </data>
   <data name="4900843_female_help_service_support_technical_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4900843_female_help_service_support_technical_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,26 +178,29 @@
   <data name="OIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OIP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="id1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8665305_envelope_email_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8665305_envelope_email_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3709753_call_customer_relation_service_support_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3709753_call_customer_relation_service_support_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shedule_checkin - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shedule_checkin - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4172165_appointment_booking_form_reservation_document_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4172165_appointment_booking_form_reservation_document_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="schedule_checkout - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\schedule_checkout - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calendar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="103178_lock_security_password_secure_unlock_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\103178_lock_security_password_secure_unlock_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,17 +226,26 @@
   <data name="satisfaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\satisfaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="plus (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="7492465_graphical_command_user_interface_history2_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7492465_graphical_command_user_interface_history2_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundSigin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundSigin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5402450_home_building_construction_house_property_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5402450_home_building_construction_house_property_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundSigin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundSigin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shedule_checkin - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shedule_checkin - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="travelling" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\travelling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="travel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\travel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,20 +259,17 @@
   <data name="tourist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tourist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4172165_appointment_booking_form_reservation_document_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4172165_appointment_booking_form_reservation_document_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hotel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="9967659_like_bubble speech_feedback_review_satisfaction_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9967659_like_bubble speech_feedback_review_satisfaction_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hotel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="4172165_appointment_booking_form_reservation_document_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4172165_appointment_booking_form_reservation_document_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3709753_call_customer_relation_service_support_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3709753_call_customer_relation_service_support_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="queue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\queue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="luggage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\luggage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,7 +292,7 @@
   <data name="login2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

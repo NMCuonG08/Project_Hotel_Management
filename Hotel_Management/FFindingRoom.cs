@@ -16,10 +16,12 @@ namespace Hotel_Management
     {
         SqlConnection conn = new
          SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
-
-        public FFindingRoom()
+        private Account User = new Account();
+        public FFindingRoom(Account user)
         {
             InitializeComponent();
+            this.User = user;
+        //    txb_email.Text =User.Useremail;
             LoadForm();
             createItem();
         }
@@ -122,20 +124,16 @@ namespace Hotel_Management
             UCFindingHotel item = sender as UCFindingHotel;
             
             int id = Convert.ToInt32(item.Id);
-            FChoiceRoom choiceRoom = new FChoiceRoom(id);
+            FChoiceRoom choiceRoom = new FChoiceRoom(id,User.Id);
             //   Room room = GetRoomByID(id);
-
-            choiceRoom.HotelID = id;
+           /* choiceRoom.UserID = user.Id;
+            choiceRoom.HotelID = id;*/
             choiceRoom.ShowDialog();
            
         }
         // Set User
-       private Account user = new Account();
+       
 
-        public void setUser(Account user)
-        {
-            this.user = user;
-            txb_email.Text = user.Useremail;
-        } 
+        
     }
 }

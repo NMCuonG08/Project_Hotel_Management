@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,6 +86,15 @@ namespace Hotel_Management
                 txb_zip.Text = hotel.Zipcode;
                 txb_decription.Text = hotel.Description;
                 txb_city.Text = hotel.City;
+
+                byte[] image = hotel.HotelImage;
+                if (image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream(image))
+                    {
+                        picturebox.Image = System.Drawing.Image.FromStream(ms);
+                    }
+                }
             }
             else
             {
@@ -129,6 +139,26 @@ namespace Hotel_Management
         private void btn_clear_Click(object sender, EventArgs e)
         {
             picturebox.Image = null;
+        }
+        private void CheckHotelExist()
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string query = "Select ";
+                }
+
+
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

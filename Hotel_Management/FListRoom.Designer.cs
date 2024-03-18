@@ -29,33 +29,25 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvRoom = new System.Windows.Forms.DataGridView();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomBed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HotelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HotelAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucListRoom1 = new Hotel_Management.UCListRoom();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radio_btn_clear = new System.Windows.Forms.RadioButton();
             this.radio_btn_checkall = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_type = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.checklistbox = new System.Windows.Forms.CheckedListBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_typebed = new Guna.UI2.WinForms.Guna2ComboBox();
             this.datetime_to = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.datetime_from = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_status = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cb_status = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Btn_addRoom = new Guna.UI2.WinForms.Guna2Button();
             this.lb_date = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,6 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ucListRoom1 = new Hotel_Management.UCListRoom();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoom)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -89,85 +82,23 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RoomNumber,
-            this.RoomBed,
-            this.RoomPrice,
-            this.HotelName,
-            this.RoomType,
-            this.HotelAddress});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvRoom.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvRoom.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvRoom.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.gvRoom.Location = new System.Drawing.Point(888, 3);
             this.gvRoom.Name = "gvRoom";
             this.gvRoom.RowHeadersWidth = 51;
             this.gvRoom.RowTemplate.Height = 24;
             this.gvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvRoom.Size = new System.Drawing.Size(722, 193);
+            this.gvRoom.Size = new System.Drawing.Size(229, 193);
             this.gvRoom.TabIndex = 1;
             this.gvRoom.Visible = false;
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.DataPropertyName = "RoomID";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.RoomNumber.DefaultCellStyle = dataGridViewCellStyle2;
-            this.RoomNumber.HeaderText = "Room Number";
-            this.RoomNumber.MinimumWidth = 6;
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.ReadOnly = true;
-            // 
-            // RoomBed
-            // 
-            this.RoomBed.DataPropertyName = "RoomBed";
-            this.RoomBed.HeaderText = "Room Bed";
-            this.RoomBed.MinimumWidth = 6;
-            this.RoomBed.Name = "RoomBed";
-            this.RoomBed.ReadOnly = true;
-            // 
-            // RoomPrice
-            // 
-            this.RoomPrice.DataPropertyName = "RoomPrice";
-            this.RoomPrice.HeaderText = "Price per day";
-            this.RoomPrice.MinimumWidth = 6;
-            this.RoomPrice.Name = "RoomPrice";
-            this.RoomPrice.ReadOnly = true;
-            // 
-            // HotelName
-            // 
-            this.HotelName.DataPropertyName = "HotelName";
-            this.HotelName.HeaderText = "Hotel Name";
-            this.HotelName.MinimumWidth = 6;
-            this.HotelName.Name = "HotelName";
-            this.HotelName.ReadOnly = true;
-            // 
-            // RoomType
-            // 
-            this.RoomType.DataPropertyName = "RoomType";
-            this.RoomType.FillWeight = 150F;
-            this.RoomType.HeaderText = "RoomType";
-            this.RoomType.MinimumWidth = 6;
-            this.RoomType.Name = "RoomType";
-            this.RoomType.ReadOnly = true;
-            // 
-            // HotelAddress
-            // 
-            this.HotelAddress.DataPropertyName = "HotelAddress";
-            this.HotelAddress.HeaderText = "Hotel Address";
-            this.HotelAddress.MinimumWidth = 6;
-            this.HotelAddress.Name = "HotelAddress";
-            this.HotelAddress.ReadOnly = true;
             // 
             // flowLayoutPanel1
             // 
@@ -180,21 +111,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1751, 607);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // ucListRoom1
-            // 
-            this.ucListRoom1.Checkin = new System.DateTime(((long)(0)));
-            this.ucListRoom1.Checkout = new System.DateTime(((long)(0)));
-            this.ucListRoom1.Color = System.Drawing.Color.Empty;
-            this.ucListRoom1.Image = null;
-            this.ucListRoom1.Location = new System.Drawing.Point(3, 3);
-            this.ucListRoom1.Name = "ucListRoom1";
-            this.ucListRoom1.Price = 0D;
-            this.ucListRoom1.RoomID = null;
-            this.ucListRoom1.Size = new System.Drawing.Size(879, 179);
-            this.ucListRoom1.Status = null;
-            this.ucListRoom1.TabIndex = 0;
-            this.ucListRoom1.Visible = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -202,18 +118,18 @@
             this.panel1.Controls.Add(this.radio_btn_clear);
             this.panel1.Controls.Add(this.radio_btn_checkall);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.guna2ComboBox2);
+            this.panel1.Controls.Add(this.cb_type);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.checklistbox);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.guna2ComboBox1);
+            this.panel1.Controls.Add(this.cb_typebed);
             this.panel1.Controls.Add(this.datetime_to);
             this.panel1.Controls.Add(this.datetime_from);
             this.panel1.Controls.Add(this.guna2Button4);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btn_status);
+            this.panel1.Controls.Add(this.cb_status);
             this.panel1.Controls.Add(this.Btn_addRoom);
             this.panel1.Controls.Add(this.lb_date);
             this.panel1.Controls.Add(this.panel2);
@@ -257,27 +173,27 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Type";
             // 
-            // guna2ComboBox2
+            // cb_type
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.cb_type.BackColor = System.Drawing.Color.Transparent;
+            this.cb_type.BorderColor = System.Drawing.Color.Silver;
+            this.cb_type.BorderRadius = 5;
+            this.cb_type.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_type.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_type.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_type.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_type.ForeColor = System.Drawing.Color.Black;
+            this.cb_type.ItemHeight = 30;
+            this.cb_type.Items.AddRange(new object[] {
             "Standard Room",
             "Business Class Room",
             "Family",
             "VIP Room"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(180, 133);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(306, 36);
-            this.guna2ComboBox2.TabIndex = 21;
+            this.cb_type.Location = new System.Drawing.Point(180, 133);
+            this.cb_type.Name = "cb_type";
+            this.cb_type.Size = new System.Drawing.Size(306, 36);
+            this.cb_type.TabIndex = 21;
             // 
             // label10
             // 
@@ -316,29 +232,29 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Type bed";
             // 
-            // guna2ComboBox1
+            // cb_typebed
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.cb_typebed.BackColor = System.Drawing.Color.Transparent;
+            this.cb_typebed.BorderColor = System.Drawing.Color.Silver;
+            this.cb_typebed.BorderRadius = 5;
+            this.cb_typebed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_typebed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_typebed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_typebed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_typebed.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_typebed.ForeColor = System.Drawing.Color.Black;
+            this.cb_typebed.ItemHeight = 30;
+            this.cb_typebed.Items.AddRange(new object[] {
             "Single Bed ( 90 - 100 cm)",
             "Double Bed (135 - 150 cm)",
             "Twin bed ( 90 - 100 cm for each)",
             "Queen bed (150 - 160 cm)",
             "King bed (180 - 200 cm)",
             "Sofa bed (sofa instead of bed)"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(662, 215);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(308, 36);
-            this.guna2ComboBox1.TabIndex = 13;
+            this.cb_typebed.Location = new System.Drawing.Point(662, 215);
+            this.cb_typebed.Name = "cb_typebed";
+            this.cb_typebed.Size = new System.Drawing.Size(308, 36);
+            this.cb_typebed.TabIndex = 13;
             // 
             // datetime_to
             // 
@@ -385,6 +301,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(106, 45);
             this.guna2Button4.TabIndex = 10;
             this.guna2Button4.Text = "Searching";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // label8
             // 
@@ -416,26 +333,25 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "From";
             // 
-            // btn_status
+            // cb_status
             // 
-            this.btn_status.BackColor = System.Drawing.Color.Transparent;
-            this.btn_status.BorderColor = System.Drawing.Color.Silver;
-            this.btn_status.BorderRadius = 5;
-            this.btn_status.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.btn_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.btn_status.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btn_status.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btn_status.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btn_status.ForeColor = System.Drawing.Color.Black;
-            this.btn_status.ItemHeight = 30;
-            this.btn_status.Items.AddRange(new object[] {
-            "All",
+            this.cb_status.BackColor = System.Drawing.Color.Transparent;
+            this.cb_status.BorderColor = System.Drawing.Color.Silver;
+            this.cb_status.BorderRadius = 5;
+            this.cb_status.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_status.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_status.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_status.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cb_status.ForeColor = System.Drawing.Color.Black;
+            this.cb_status.ItemHeight = 30;
+            this.cb_status.Items.AddRange(new object[] {
             "Empty",
             "Occupied"});
-            this.btn_status.Location = new System.Drawing.Point(664, 142);
-            this.btn_status.Name = "btn_status";
-            this.btn_status.Size = new System.Drawing.Size(306, 36);
-            this.btn_status.TabIndex = 6;
+            this.cb_status.Location = new System.Drawing.Point(664, 142);
+            this.cb_status.Name = "cb_status";
+            this.cb_status.Size = new System.Drawing.Size(306, 36);
+            this.cb_status.TabIndex = 6;
             // 
             // Btn_addRoom
             // 
@@ -629,7 +545,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Room Management";
             // 
-            // ListRoom
+            // ucListRoom1
+            // 
+            this.ucListRoom1.Checkin = new System.DateTime(((long)(0)));
+            this.ucListRoom1.Checkout = new System.DateTime(((long)(0)));
+            this.ucListRoom1.Color = System.Drawing.Color.Empty;
+            this.ucListRoom1.Image = null;
+            this.ucListRoom1.Location = new System.Drawing.Point(3, 3);
+            this.ucListRoom1.Name = "ucListRoom1";
+            this.ucListRoom1.Price = 0D;
+            this.ucListRoom1.RoomID = null;
+            this.ucListRoom1.Size = new System.Drawing.Size(879, 179);
+            this.ucListRoom1.Status = null;
+            this.ucListRoom1.TabIndex = 0;
+            this.ucListRoom1.Visible = false;
+            // 
+            // FListRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -638,7 +569,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "ListRoom";
+            this.Name = "FListRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListRoom";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -656,12 +587,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gvRoom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomBed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HotelName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HotelAddress;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private UCListRoom ucListRoom1;
         private System.Windows.Forms.Panel panel1;
@@ -680,16 +605,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2ComboBox btn_status;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_status;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2DateTimePicker datetime_to;
         private Guna.UI2.WinForms.Guna2DateTimePicker datetime_from;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_typebed;
         private System.Windows.Forms.CheckedListBox checklistbox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_type;
         private System.Windows.Forms.RadioButton radio_btn_clear;
         private System.Windows.Forms.RadioButton radio_btn_checkall;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;

@@ -15,6 +15,7 @@ namespace Hotel_Management
     {
         SqlConnection conn = new
           SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
+        int hotelID ;
         public FRoomInformation()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace Hotel_Management
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
-            FAddRoom fAddRoom = new FAddRoom();
+            FAddRoom fAddRoom = new FAddRoom(hotelID);
              (this.MdiParent as Admin)?.ShowForm(fAddRoom);
 
             //fAddRoom.Show();
@@ -64,6 +65,11 @@ namespace Hotel_Management
         private void btn_clear_Click(object sender, EventArgs e)
         {
             picturebox.Image = null;
+        }
+
+        private void btn_add_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

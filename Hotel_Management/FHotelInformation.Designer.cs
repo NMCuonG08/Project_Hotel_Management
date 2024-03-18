@@ -51,7 +51,7 @@
             this.txb_zip = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txb_decription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbn_update = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_update = new Guna.UI2.WinForms.Guna2Button();
             this.btn_clear = new Guna.UI2.WinForms.Guna2Button();
             this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
             this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -59,6 +59,7 @@
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.Feedback = new System.Windows.Forms.Label();
             this.txb_feedback = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_create = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -440,22 +441,22 @@
             this.txb_decription.Size = new System.Drawing.Size(625, 51);
             this.txb_decription.TabIndex = 27;
             // 
-            // tbn_update
+            // btn_update
             // 
-            this.tbn_update.BorderRadius = 20;
-            this.tbn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tbn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tbn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tbn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tbn_update.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.tbn_update.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbn_update.ForeColor = System.Drawing.Color.White;
-            this.tbn_update.Location = new System.Drawing.Point(973, 779);
-            this.tbn_update.Name = "tbn_update";
-            this.tbn_update.Size = new System.Drawing.Size(290, 51);
-            this.tbn_update.TabIndex = 29;
-            this.tbn_update.Text = "Update";
-            this.tbn_update.Click += new System.EventHandler(this.tbn_update_Click);
+            this.btn_update.BorderRadius = 20;
+            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_update.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_update.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            this.btn_update.Location = new System.Drawing.Point(973, 779);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(290, 51);
+            this.btn_update.TabIndex = 29;
+            this.btn_update.Text = "Update";
+            this.btn_update.Click += new System.EventHandler(this.tbn_update_Click);
             // 
             // btn_clear
             // 
@@ -572,12 +573,30 @@
             this.txb_feedback.Size = new System.Drawing.Size(288, 51);
             this.txb_feedback.TabIndex = 65;
             // 
+            // btn_create
+            // 
+            this.btn_create.BorderRadius = 20;
+            this.btn_create.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_create.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_create.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_create.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_create.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_create.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_create.ForeColor = System.Drawing.Color.White;
+            this.btn_create.Location = new System.Drawing.Point(973, 849);
+            this.btn_create.Name = "btn_create";
+            this.btn_create.Size = new System.Drawing.Size(290, 51);
+            this.btn_create.TabIndex = 69;
+            this.btn_create.Text = "Create Hotel";
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
+            // 
             // FHotelInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1775, 1008);
+            this.Controls.Add(this.btn_create);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txb_price);
             this.Controls.Add(this.Feedback);
@@ -585,7 +604,7 @@
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.picturebox);
-            this.Controls.Add(this.tbn_update);
+            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txb_decription);
             this.Controls.Add(this.label12);
@@ -643,7 +662,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_zip;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2TextBox txb_decription;
-        private Guna.UI2.WinForms.Guna2Button tbn_update;
+        private Guna.UI2.WinForms.Guna2Button btn_update;
         private Guna.UI2.WinForms.Guna2Button btn_clear;
         private Guna.UI2.WinForms.Guna2Button btn_upload;
         private Guna.UI2.WinForms.Guna2PictureBox picturebox;
@@ -651,5 +670,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private System.Windows.Forms.Label Feedback;
         private Guna.UI2.WinForms.Guna2TextBox txb_feedback;
+        private Guna.UI2.WinForms.Guna2Button btn_create;
     }
 }

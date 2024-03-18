@@ -34,7 +34,7 @@
             this.txb_clients = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txb_bed = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txb_roomtype = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txb_roomNum = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_roomname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.rbtn_clearall = new System.Windows.Forms.RadioButton();
@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.txb_clients);
             this.panel1.Controls.Add(this.txb_bed);
             this.panel1.Controls.Add(this.txb_roomtype);
-            this.panel1.Controls.Add(this.txb_roomNum);
+            this.panel1.Controls.Add(this.txb_roomname);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.rbtn_clearall);
@@ -205,26 +205,26 @@
             this.txb_roomtype.Size = new System.Drawing.Size(356, 36);
             this.txb_roomtype.TabIndex = 48;
             // 
-            // txb_roomNum
+            // txb_roomname
             // 
-            this.txb_roomNum.BorderRadius = 10;
-            this.txb_roomNum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_roomNum.DefaultText = "";
-            this.txb_roomNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_roomNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_roomNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_roomNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_roomNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomNum.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txb_roomNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomNum.Location = new System.Drawing.Point(652, 65);
-            this.txb_roomNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_roomNum.Name = "txb_roomNum";
-            this.txb_roomNum.PasswordChar = '\0';
-            this.txb_roomNum.PlaceholderText = "";
-            this.txb_roomNum.SelectedText = "";
-            this.txb_roomNum.Size = new System.Drawing.Size(362, 42);
-            this.txb_roomNum.TabIndex = 47;
+            this.txb_roomname.BorderRadius = 10;
+            this.txb_roomname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_roomname.DefaultText = "";
+            this.txb_roomname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_roomname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_roomname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_roomname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_roomname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomname.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_roomname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomname.Location = new System.Drawing.Point(652, 65);
+            this.txb_roomname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_roomname.Name = "txb_roomname";
+            this.txb_roomname.PasswordChar = '\0';
+            this.txb_roomname.PlaceholderText = "";
+            this.txb_roomname.SelectedText = "";
+            this.txb_roomname.Size = new System.Drawing.Size(362, 42);
+            this.txb_roomname.TabIndex = 47;
             // 
             // label8
             // 
@@ -283,7 +283,7 @@
             // checklistbathroom
             // 
             this.checklistbathroom.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checklistbathroom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbathroom.FormattingEnabled = true;
             this.checklistbathroom.Items.AddRange(new object[] {
@@ -294,7 +294,7 @@
             "Gương lớn"});
             this.checklistbathroom.Location = new System.Drawing.Point(1097, 333);
             this.checklistbathroom.Name = "checklistbathroom";
-            this.checklistbathroom.Size = new System.Drawing.Size(402, 200);
+            this.checklistbathroom.Size = new System.Drawing.Size(402, 198);
             this.checklistbathroom.TabIndex = 39;
             // 
             // radio_btn_clear
@@ -354,7 +354,7 @@
             // checklistbox
             // 
             this.checklistbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbox.FormattingEnabled = true;
             this.checklistbox.Items.AddRange(new object[] {
@@ -367,7 +367,7 @@
             "Thiết bị pha cà phê"});
             this.checklistbox.Location = new System.Drawing.Point(1097, 69);
             this.checklistbox.Name = "checklistbox";
-            this.checklistbox.Size = new System.Drawing.Size(402, 200);
+            this.checklistbox.Size = new System.Drawing.Size(402, 198);
             this.checklistbox.TabIndex = 30;
             // 
             // btn_upload
@@ -513,7 +513,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox txb_clients;
         private Guna.UI2.WinForms.Guna2ComboBox txb_bed;
         private Guna.UI2.WinForms.Guna2ComboBox txb_roomtype;
-        private Guna.UI2.WinForms.Guna2TextBox txb_roomNum;
+        private Guna.UI2.WinForms.Guna2TextBox txb_roomname;
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private Guna.UI2.WinForms.Guna2TextBox txb_size;
     }
