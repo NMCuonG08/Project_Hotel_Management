@@ -58,6 +58,11 @@ namespace Hotel_Management
                 UCRoomInformation[] ls = new UCRoomInformation[count];
                 for (int i = 0; i < count - 1; i++)
                 {
+                    if (gvRoom.Rows[i].Cells[4].Value.ToString() != "Empty")
+                    {
+                        continue;
+                    }
+
                     ls[i] = new UCRoomInformation();
                     object roomID = gvRoom.Rows[i].Cells[0].Value;
                     if (roomID != null)
@@ -87,6 +92,8 @@ namespace Hotel_Management
                     ls[i].Capacity = "2";
                     ls[i].ItemBooking += FChoiceRoom_ItemBooking;
                     flowLayoutPanel1.Controls.Add(ls[i]);
+
+                    
                 }
             }
         }

@@ -31,7 +31,7 @@ namespace Hotel_Management
 
         }
         Modify modify = new Modify();
-        private void btn_complete_Click(object sender, EventArgs e)
+        private void btn_complete_Click_1(object sender, EventArgs e)
         {
             string UserEmail = txb_email.Text;
             string passwords = txb_password.Text;
@@ -120,14 +120,14 @@ namespace Hotel_Management
                             if (!string.IsNullOrEmpty(storePassword))
                             {
                                 Account user = SelectUser(email, password);
-                                
+                                FFindingRoom fFinding = new FFindingRoom(user);
                                 Admin admin = new Admin();
                                 if (user != null )
                                 {
                                    if ( user.Role == "user")
                                     {
-                                        //    this.Hide();
-                                        FFindingRoom fFinding = new FFindingRoom(user);
+                                    //    this.Hide();
+                                       // fFinding.setUser(user);
                                         fFinding.ShowDialog();
                                     }
                                    else if (user.Role == "admin")
@@ -154,7 +154,7 @@ namespace Hotel_Management
 
 
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
             FSignIn fSignIn = new FSignIn();
@@ -162,28 +162,41 @@ namespace Hotel_Management
             this.Hide();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             uc_FG.Visible = true;
             uc_FG.BringToFront();
         }
-
-        private void pic_hide_Click(object sender, EventArgs e)
+        private void btn_hide_Click(object sender, EventArgs e)
         {
-            if(txb_password.PasswordChar== '●')
+            if (txb_password.PasswordChar == '●')
             {
-                pic_eye.BringToFront();
+                eye_p.BringToFront();
                 txb_password.PasswordChar = '\0';
             }
         }
 
-        private void pic_eye_Click(object sender, EventArgs e)
+        private void eye_p_Click(object sender, EventArgs e)
         {
             if (txb_password.PasswordChar == '\0')
             {
-                pic_hide.BringToFront();
+                btn_hide.BringToFront();
                 txb_password.PasswordChar = '●';
             }
+        }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txb_email_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
