@@ -21,6 +21,16 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.AdminID = adminID;
+            if (CheckHotelExist())
+            {
+                btn_create.Visible = false;
+                btn_update.Visible = true;
+            }
+            else
+            {
+                btn_update.Visible=false;
+                btn_create.Visible=true;
+            }
             setDataHotel();
         }
 
@@ -119,8 +129,61 @@ namespace Hotel_Management
 
         }
 
+        private void UpdateHotel() 
+        {
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    if (CheckDataEmpty())
+                    {
+                        string query = "update HotelInformation set HotelName = @HotelName,City = @City,Street= @Street,FeedBack= @FeedBack,Price= @Price,HotelImage= @HotelImage,email= @email,zipcode= @zipcode,FloorsNumber=  @FloorsNumber,Capacity= @Capacity,PhoneNumber= @PhoneNumber,Country= @Country, Descriptions=@Descriptions  where AdminID = @AdminID";
+                        using (SqlCommand command = new SqlCommand(query, conn))
+                        {
+                            command.Parameters.Add(new SqlParameter("@HotelName", txb_name.Text));
+                            command.Parameters.Add(new SqlParameter("@City", txb_city.Text));
+                            command.Parameters.Add(new SqlParameter("@Street", txb_street.Text));
+                            command.Parameters.Add(new SqlParameter("@FeedBack", txb_feedback.Text));
+                            command.Parameters.Add(new SqlParameter("@Price", txb_price.Text));
+                            byte[] imageBytes;
+                            using (MemoryStream stream = new MemoryStream())
+                            {
+                                picturebox.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                                imageBytes = stream.ToArray();
+                            }
+                            command.Parameters.Add(new SqlParameter("@HotelImage", imageBytes));
+                            command.Parameters.Add(new SqlParameter("@email", txb_email.Text));
+                            command.Parameters.Add(new SqlParameter("@zipcode", txb_zip.Text));
+                            command.Parameters.Add(new SqlParameter("@FloorsNumber", txb_floor.Text));
+                            command.Parameters.Add(new SqlParameter("@Capacity", txb_capacity.Text));
+                            command.Parameters.Add(new SqlParameter("@PhoneNumber", txb_phoneNumber.Text));
+                            command.Parameters.Add(new SqlParameter("@Country", txb_country.Text));
+                            command.Parameters.Add(new SqlParameter("@AdminID", AdminID));
+                            command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Update Successful!");
+                            conn.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void tbn_update_Click(object sender, EventArgs e)
         {
+            UpdateHotel();
+            FHotelInformation fHotelInformation = new FHotelInformation(AdminID);
+            (this.MdiParent as Admin)?.ShowForm(fHotelInformation);
 
         }
         string imageLocation = "";
@@ -140,25 +203,92 @@ namespace Hotel_Management
         {
             picturebox.Image = null;
         }
-        private void CheckHotelExist()
+        private bool CheckHotelExist()
         {
+            bool exists = false; 
             try
             {
                 using (SqlConnection connection = Connection.GetSqlConnection())
                 {
                     connection.Open();
-                    string query = "Select ";
+                    string query = "SELECT COUNT(*) FROM HotelInformation WHERE AdminID = @AdminID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {                   
+                        command.Parameters.AddWithValue("@AdminID", AdminID);
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            exists = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);               
+            }
+
+            return exists;
+        }
+
+        private bool CheckDataEmpty()
+        {
+            return true;
+        }
+        private void CreateHotel()
+        {
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    if (CheckDataEmpty())
+                    {
+                        string query = "Insert into HotelInformation values (@HotelName, @City, @Street, @FeedBack, @Price, @HotelImage, @email, @zipcode, @FloorsNumber, @Capacity, @PhoneNumber, @Country, @AdminID, @Descriptions) ";
+                        using (SqlCommand command = new SqlCommand(query, conn))
+                        {
+                            command.Parameters.Add(new SqlParameter("@HotelName", txb_name.Text));
+                            command.Parameters.Add(new SqlParameter("@City", txb_city.Text));
+                            command.Parameters.Add(new SqlParameter("@Street", txb_street.Text));
+                            command.Parameters.Add(new SqlParameter("@FeedBack", txb_feedback.Text));
+                            command.Parameters.Add(new SqlParameter("@Price", txb_price.Text));
+                            byte[] imageBytes;
+                            using (MemoryStream stream = new MemoryStream())
+                            {
+                                picturebox.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png); 
+                                imageBytes = stream.ToArray();
+                            }
+                            command.Parameters.Add(new SqlParameter("@HotelImage", imageBytes));
+                            command.Parameters.Add(new SqlParameter("@email", txb_email.Text));
+                            command.Parameters.Add(new SqlParameter("@zipcode", txb_zip.Text));
+                            command.Parameters.Add(new SqlParameter("@FloorsNumber", txb_floor.Text));
+                            command.Parameters.Add(new SqlParameter("@Capacity", txb_capacity.Text));
+                            command.Parameters.Add(new SqlParameter("@PhoneNumber", txb_phoneNumber.Text));
+                            command.Parameters.Add(new SqlParameter("@Country", txb_country.Text));
+                            command.Parameters.Add(new SqlParameter("@AdminID", AdminID));
+                            command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Tao khach san thanh cong");
+                            conn.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
                 }
 
-
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
         private void btn_create_Click(object sender, EventArgs e)
         {
-
+            CreateHotel();
+            FHotelInformation fHotelInformation = new FHotelInformation(AdminID);
+            (this.MdiParent as Admin)?.ShowForm(fHotelInformation);
         }
     }
 }

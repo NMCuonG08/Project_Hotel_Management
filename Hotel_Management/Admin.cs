@@ -15,14 +15,17 @@ namespace Hotel_Management
     {
         public int HotelID { get; set; }
         public int AdminID { get; set; }
+        private Account Adm = new Account();
         SqlConnection conn = new
          SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
-        public Admin()
+        public Admin(Account admin)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             HotelID = 1;
-            this.AdminID = 3;
+            Adm = admin;
+            this.AdminID = Adm.Id;
+            
         }
 
         FHotelInformation hotelInformation;

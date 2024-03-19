@@ -119,20 +119,19 @@ namespace Hotel_Management
                             string storePassword = reader["password"].ToString();
                             if (!string.IsNullOrEmpty(storePassword))
                             {
-                                Account user = SelectUser(email, password);
-                                FFindingRoom fFinding = new FFindingRoom(user);
-                                Admin admin = new Admin();
-                                if (user != null )
+                                Account account = SelectUser(email, password);
+                                if (account != null )
                                 {
-                                   if ( user.Role == "user")
+                                   if (account.Role == "user")
                                     {
-                                    //    this.Hide();
-                                       // fFinding.setUser(user);
+                                        //    this.Hide();
+                                        FFindingRoom fFinding = new FFindingRoom(account);
                                         fFinding.ShowDialog();
                                     }
-                                   else if (user.Role == "admin")
+                                   else if (account.Role == "admin")
                                     {
-                                     //   this.Hide();
+                                        //   this.Hide();
+                                        Admin admin = new Admin(account);
                                         admin.ShowDialog();
                                     }
                                 }

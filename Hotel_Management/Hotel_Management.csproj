@@ -532,5 +532,59 @@
   <ItemGroup>
     <None Include="Resources\user %281%294.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %283%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cable-tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swimming-pool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frying-pan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

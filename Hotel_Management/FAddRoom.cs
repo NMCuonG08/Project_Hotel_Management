@@ -198,7 +198,6 @@ namespace Hotel_Management
             addRoom(room);
             FListRoom fListRoom = new FListRoom(HotelID);
             this.Close();
-            fListRoom.LoadForm(HotelID);
             //fListRoom.createItem();
         }
 

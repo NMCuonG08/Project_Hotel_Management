@@ -23,7 +23,7 @@ namespace Hotel_Management
             this.User = user;
         //    txb_email.Text =User.Useremail;
             LoadForm();
-            createItem();
+            
         }
 
         public void LoadForm()
@@ -36,12 +36,16 @@ namespace Hotel_Management
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
                 dataAdapter.Fill(data);
                 gv_hotel.DataSource = data;
+                createItem(data);
+                conn.Close();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            HashSet<string> uniqueHotel = GetUniqueHotelLocation();
+            cbx_hotelLocation.DataSource = new BindingSource(uniqueHotel, null);
         }
 
         private Room GetHotelByID(int id)
@@ -80,23 +84,22 @@ namespace Hotel_Management
             return room;
         }
 
-        private void createItem()
+        private void createItem(DataTable data)
         {
-            int count = gv_hotel.Rows.Count;
+            int count = data.Rows.Count;
             if (count > 0)
             {
                 UCFindingHotel[] ls = new UCFindingHotel[count];
-                for (int i = 0; i < count - 1; i++)
+                for (int i = 0; i < count; i++)
                 {
                     ls[i] = new UCFindingHotel();
-                    object roomName = gv_hotel.Rows[i].Cells[1].Value;
+                    object roomName = data.Rows[i]["HotelName"];
                     if (roomName != null)
                     {
                         ls[i].HotelName = roomName.ToString();
                     }
-                
 
-                    byte[] image = (byte[])gv_hotel.Rows[i].Cells[6].Value;
+                    byte[] image = (byte[])data.Rows[i]["HotelImage"];
                     if (image != null)
                     {
                         using (MemoryStream ms = new MemoryStream(image))
@@ -104,20 +107,22 @@ namespace Hotel_Management
                             ls[i].Image = System.Drawing.Image.FromStream(ms);
                         }
                     }
-                    object HotelLocation = gv_hotel.Rows[i].Cells[2].Value;
+
+                    object HotelLocation = data.Rows[i]["City"];
                     if (HotelLocation != null)
                     {
                         ls[i].Location = HotelLocation.ToString();
                     }
-                  //  ls[i].Ultilities = gv_hotel.Rows[i].Cells[5].Value;
-                    ls[i].Price = (Double)gv_hotel.Rows[i].Cells[5].Value;
-                    ls[i].Point = (Double)gv_hotel.Rows[i].Cells[4].Value;
-                    ls[i].Id = (Int32)gv_hotel.Rows[i].Cells[0].Value;
+
+                    ls[i].Price = (Double)data.Rows[i]["Price"];
+                    ls[i].Point = (Double)data.Rows[i]["Feedback"];
+                    ls[i].Id = (Int32)data.Rows[i]["HotelID"];
                     ls[i].Click += FFindingRoom_Click;
                     flowLayoutPanel1.Controls.Add(ls[i]);
                 }
             }
         }
+
 
         private void FFindingRoom_Click(object sender, EventArgs e)
         {
@@ -132,8 +137,73 @@ namespace Hotel_Management
            
         }
         // Set User
-       
 
-        
+        private HashSet<string> GetUniqueHotelLocation()
+        {
+            HashSet<string> listHotel = new HashSet<string>();
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT City FROM HotelInformation";
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string hotelLocation = reader["City"].ToString();
+                                listHotel.Add(hotelLocation);
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return listHotel;
+        }
+
+        private void btn_findinghotel_Click(object sender, EventArgs e)
+        {
+            string selectedLocation = cbx_hotelLocation.Text.Trim();
+            if (!string.IsNullOrEmpty(selectedLocation))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM HotelInformation WHERE City = @City";
+                    SqlCommand command = new SqlCommand(sql, conn);
+                    command.Parameters.AddWithValue("@City", selectedLocation);
+
+                    DataTable data = new DataTable();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    dataAdapter.Fill(data);
+
+                  
+                    flowLayoutPanel1.Controls.Clear();
+
+                    // Tạo lại các items cho flowLayoutPanel với dữ liệu mới
+                    createItem(data);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a location.");
+            }
+        }
+
     }
 }

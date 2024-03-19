@@ -182,8 +182,11 @@ namespace Hotel_Management
                     ls[i].Click += ListRoom_Click;
                     ls[i].ItemDelete += FListRoom_ItemDelete;
                     flowLayoutPanel1.Controls.Add(ls[i]);
+                   
                 }
             }
+            /*LoadForm(HotelID);
+            gvRoom.Refresh();*/
         }
         private void DeleteRoom(int roomID)
         {
@@ -293,6 +296,8 @@ namespace Hotel_Management
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Upload successful");
                 conn.Close();
+                LoadForm(HotelID);
+                createItem();
             }
             catch (Exception ex)
             {
@@ -351,6 +356,11 @@ namespace Hotel_Management
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
         {
             try
             {

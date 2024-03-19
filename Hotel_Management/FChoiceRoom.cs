@@ -25,7 +25,7 @@ namespace Hotel_Management
             this.HotelID = hotelID;
             this.UserID = userID;
             LoadForm(HotelID);
-            createItem();
+            
             txb_id.Text = HotelID.ToString(); 
         }
         void LoadForm(int HotelID)
@@ -39,6 +39,7 @@ namespace Hotel_Management
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
                 dataAdapter.Fill(data);
                 gvRoom.DataSource = data;
+                createItem(data);
             }
             catch (Exception ex)
             {
@@ -48,40 +49,52 @@ namespace Hotel_Management
             {
                 conn.Close();
             }
+            HashSet<string> uniqueRoomType = GetUniqueRoomType();
+            cbx_typeroom.DataSource = new BindingSource(uniqueRoomType, null);
+            HashSet<string> uniqueRoomBed = GetUniqueRoomBed();
+            cbx_typebed.DataSource = new BindingSource(uniqueRoomBed, null);
         }
 
-        private void createItem()
+        private void createItem(DataTable data)
         {
-            int count = gvRoom.Rows.Count;
+            int count = data.Rows.Count;
             if (count > 0)
             {
                 UCRoomInformation[] ls = new UCRoomInformation[count];
-                for (int i = 0; i < count - 1; i++)
+                for (int i = 0; i < count; i++)
                 {
-                    if (gvRoom.Rows[i].Cells[4].Value.ToString() != "Empty")
+                    if (data.Rows[i]["Status"].ToString() != "Empty")
                     {
                         continue;
                     }
 
                     ls[i] = new UCRoomInformation();
-                    object roomID = gvRoom.Rows[i].Cells[0].Value;
-                    if (roomID != null)
+                    object roomID = data.Rows[i]["RoomID"];
+                    if (roomID != DBNull.Value)
                     {
-                        ls[i].Id = (Int32)roomID;
+                        ls[i].Id = Convert.ToInt32(roomID);
                     }
-                    object roomType = gvRoom.Rows[i].Cells[1].Value;
-                    if (roomType != null)
+                    object roomType = data.Rows[i]["RoomType"];
+                    if (roomType != DBNull.Value)
                     {
                         ls[i].Roomtype = roomType.ToString();
                     }
-                    object roomBed = gvRoom.Rows[i].Cells[2].Value;
-                    if (roomBed != null)
+                    object roomBed = data.Rows[i]["RoomBed"];
+                    if (roomBed != DBNull.Value)
                     {
                         ls[i].Roombed = roomBed.ToString();
                     }
-                    ls[i].Price = (double)gvRoom.Rows[i].Cells[3].Value;
-                    ls[i].HotelSize = (double)gvRoom.Rows[i].Cells[10].Value;
-                    byte[] image = (byte[])gvRoom.Rows[i].Cells[8].Value;
+                    object price = data.Rows[i]["RoomPrice"];
+                    if (price != DBNull.Value)
+                    {
+                        ls[i].Price = Convert.ToDouble(price);
+                    }
+                    object hotelSize = data.Rows[i]["Size"];
+                    if (hotelSize != DBNull.Value)
+                    {
+                        ls[i].HotelSize = Convert.ToDouble(hotelSize);
+                    }
+                    byte[] image = (byte[])data.Rows[i]["RoomImage"];
                     if (image != null)
                     {
                         using (MemoryStream ms = new MemoryStream(image))
@@ -89,14 +102,13 @@ namespace Hotel_Management
                             ls[i].RoomImage = System.Drawing.Image.FromStream(ms);
                         }
                     }
-                    ls[i].Capacity = "2";
+                    ls[i].Capacity = "2"; 
                     ls[i].ItemBooking += FChoiceRoom_ItemBooking;
                     flowLayoutPanel1.Controls.Add(ls[i]);
-
-                    
                 }
             }
         }
+
 
         private void FChoiceRoom_ItemBooking(object sender, EventArgs e)
         {
@@ -233,7 +245,114 @@ namespace Hotel_Management
             }
             return hotel;
         }
+        private HashSet<string> GetUniqueRoomType()
+        {
+            HashSet<string> listRoom = new HashSet<string>();
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT RoomType FROM RoomInformation";
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string hotelLocation = reader["RoomType"].ToString();
+                                listRoom.Add(hotelLocation);
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return listRoom;
+        }
+        private HashSet<string> GetUniqueRoomBed()
+        {
+            HashSet<string> listRoom = new HashSet<string>();
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT RoomBed FROM RoomInformation";
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string hotelLocation = reader["RoomBed"].ToString();
+                                listRoom.Add(hotelLocation);
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return listRoom;
+        }
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            string selectedType = cbx_typeroom.Text.Trim();
+            string selectedTypeBed = cbx_typebed.Text.Trim();
 
+            if (!string.IsNullOrEmpty(selectedType) || !string.IsNullOrEmpty(selectedTypeBed))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM RoomInformation WHERE 1 = 1";
+                    if (!string.IsNullOrEmpty(selectedType))
+                    {
+                        sql += " AND RoomType = @RoomType";
+                    }
+                    if (!string.IsNullOrEmpty(selectedTypeBed))
+                    {
+                        sql += " AND RoomBed = @RoomBed";
+                    }
+
+                    SqlCommand command = new SqlCommand(sql, conn);
+                    if (!string.IsNullOrEmpty(selectedType))
+                    {
+                        command.Parameters.AddWithValue("@RoomType", selectedType);
+                    }
+                    if (!string.IsNullOrEmpty(selectedTypeBed))
+                    {
+                        command.Parameters.AddWithValue("@RoomBed", selectedTypeBed);
+                    }
+
+                    DataTable data = new DataTable();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    dataAdapter.Fill(data);
+                    flowLayoutPanel1.Controls.Clear();
+                    createItem(data);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else
+            {
+               
+            }
+        }
 
     }
 }

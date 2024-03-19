@@ -58,9 +58,9 @@ namespace Hotel_Management
             {
                 lb_roomtype.Text = Room.Type ?? string.Empty;
                 lb_bed.Text = Room.Bed ?? string.Empty;
-                lb_roomsize.Text = Room.Size.ToString();
-                lb_clients.Text = Room.Clients.ToString();
-                lb_price.Text = Room.Price.ToString();
+                lb_roomsize.Text = Room.Size.ToString() + " m2";
+                lb_clients.Text = Room.Clients.ToString() + " clients";
+                lb_price.Text = Room.Price.ToString() + " $";
             }
         }
 
