@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Hotel_Management
 {
@@ -31,7 +32,15 @@ namespace Hotel_Management
             txb_roomPrice.Text = room.Price.ToString();
             txb_roomtype.SelectedItem = room.Type;
             txb_clients.SelectedItem = room.Clients.ToString();
-            txb_size.Text = room.Size.ToString();           
+            txb_size.Text = room.Size.ToString();
+            byte[] image = room.Image;
+            if (image != null)
+            {
+                using (MemoryStream ms = new MemoryStream(image))
+                {
+                    picturebox.Image = System.Drawing.Image.FromStream(ms);
+                }
+            }
         }
         private void RoomInformation_Load(object sender, EventArgs e)
         {

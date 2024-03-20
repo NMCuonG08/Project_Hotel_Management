@@ -161,6 +161,11 @@ namespace Hotel_Management
             fcheckout = null;
         }
 
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         #endregion
 

@@ -17,11 +17,13 @@ namespace Hotel_Management
         //  public int HotelID;
         public int UserID;
         public int RoomID;
-        public Book_room(int userID, int roomID)
+        private int HotelID;
+        public Book_room(int userID, int roomID, int hotelID)
         {
             InitializeComponent();
             this.UserID = userID;
             this.RoomID = roomID;
+            this.HotelID = hotelID;
         }
         public void SetData(Room Room, Account User, HotelInformation HotelInformation)
         {       
@@ -80,7 +82,7 @@ namespace Hotel_Management
                     using (SqlConnection connection = Connection.GetSqlConnection())
                     {
                         connection.Open();
-                        string query = "Insert into Booking values (@CustomerName, @Checkin,@CheckOut, @BookingDate,@PaymentStatus,@BookingStatus,@UserID,@RoomID)";
+                        string query = "Insert into Booking values (@CustomerName, @Checkin,@CheckOut, @BookingDate,@PaymentStatus,@BookingStatus,@UserID,@RoomID,@HotelID)";
                         SqlCommand command = new SqlCommand(query, connection);
                         command.Parameters.Add(new SqlParameter("@CustomerName", txb_nameuser.Text));
                         command.Parameters.Add(new SqlParameter("Checkin", timep_checkin.Value));
@@ -90,6 +92,7 @@ namespace Hotel_Management
                         command.Parameters.Add(new SqlParameter("@BookingStatus", "pending"));
                         command.Parameters.Add(new SqlParameter("@UserID", UserID));
                         command.Parameters.Add(new SqlParameter("RoomID", RoomID));
+                        command.Parameters.Add(new SqlParameter("HotelID", HotelID));
                         command.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show("You Booking thanh cong", "Thong bao");

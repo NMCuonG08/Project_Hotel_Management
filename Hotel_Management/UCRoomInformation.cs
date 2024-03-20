@@ -38,7 +38,7 @@ namespace Hotel_Management
         [Category("Custom Props")]
         public string Roombed { get => _roombed; set { _roombed = value; lb_roombed.Text = value; } }
         [Category("Custom Props")]
-        public double HotelSize { get => _size; set { _size = value; lb_size.Text = value.ToString(); } }
+        public double HotelSize { get => _size; set { _size = value; lb_size.Text = value.ToString() + " m2"; } }
         [Category("Custom Props")]
         public int Id { get => _id; set => _id = value; }
         #endregion

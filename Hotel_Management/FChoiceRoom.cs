@@ -116,7 +116,7 @@ namespace Hotel_Management
             int id = Convert.ToInt32(clickbooking.Id);
             Account User = GetUserByID(this.UserID);
             HotelInformation hotel = GetHotelInformationByID(this.HotelID);
-            Book_room booking = new Book_room(UserID, id);
+            Book_room booking = new Book_room(UserID, id, HotelID);
             Room room = GetRoomByID(id);
             if (room != null && hotel!= null && User != null)
             {     
