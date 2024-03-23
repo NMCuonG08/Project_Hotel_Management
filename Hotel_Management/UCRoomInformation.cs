@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Hotel_Management
 {
     public partial class UCRoomInformation : UserControl
@@ -15,6 +16,7 @@ namespace Hotel_Management
         public UCRoomInformation()
         {
             InitializeComponent();
+            
         }
         public event EventHandler ItemBooking;
         #region Properties
@@ -34,11 +36,11 @@ namespace Hotel_Management
         public double Price { get => _price; set { _price = value; txb_price.Text = value.ToString(); } }
         [Category("Custom Props")]
         public string Ultilities { get => _ultilities; set { _ultilities = value;  } }
-        public string Roomtype { get => _roomtype; set { _roomtype = value; lb_roomtype.Text = value; } }
+        public string Roomtype { get => _roomtype; set { _roomtype = value; lb_roomType.Text = value; } }
         [Category("Custom Props")]
         public string Roombed { get => _roombed; set { _roombed = value; lb_roombed.Text = value; } }
         [Category("Custom Props")]
-        public double HotelSize { get => _size; set { _size = value; lb_size.Text = value.ToString() + " m2"; } }
+        public double HotelSize { get => _size; set { _size = value; lb_size.Text = "Area: " +  value.ToString() + " m2"; } }
         [Category("Custom Props")]
         public int Id { get => _id; set => _id = value; }
         #endregion
@@ -46,5 +48,40 @@ namespace Hotel_Management
         {
             ItemBooking?.Invoke(this, e);
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lb_TV_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txb_capacity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void SetPanelVisibility(string panelName)
+        {
+            Panel panel = this.flowLayoutPanel1.Controls["panel_" + panelName] as Panel;
+            if (panel != null)
+            {
+                panel.Visible = true;
+            }
+            else
+            {
+                Panel otherpanel = this.flowLayoutPanel1.Controls["panel_" + panelName] as Panel;
+                if (otherpanel != null)
+                {
+                    otherpanel.Visible = true;
+                }
+            }
+        }
+
+
+
     }
 }

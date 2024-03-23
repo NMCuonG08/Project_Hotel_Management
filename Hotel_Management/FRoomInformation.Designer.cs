@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvClient = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.rbtn_clearall = new System.Windows.Forms.RadioButton();
-            this.rbtn_choiceall = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checklistbathroom = new System.Windows.Forms.CheckedListBox();
-            this.radio_btn_clear = new System.Windows.Forms.RadioButton();
-            this.radio_btn_checkall = new System.Windows.Forms.RadioButton();
             this.btn_clear = new Guna.UI2.WinForms.Guna2Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.checklistbox = new System.Windows.Forms.CheckedListBox();
             this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
-            this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,6 +51,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txb_roomid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rbtn_clearall = new System.Windows.Forms.RadioButton();
+            this.rbtn_choiceall = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checklistbathroom = new System.Windows.Forms.CheckedListBox();
+            this.radio_btn_clear = new System.Windows.Forms.RadioButton();
+            this.radio_btn_checkall = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checklistbox = new System.Windows.Forms.CheckedListBox();
+            this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             ((System.ComponentModel.ISupportInitialize)(this.gvClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
@@ -67,42 +68,42 @@
             // gvClient
             // 
             this.gvClient.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gvClient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gvClient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gvClient.ColumnHeadersHeight = 4;
             this.gvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvClient.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvClient.DefaultCellStyle = dataGridViewCellStyle15;
             this.gvClient.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gvClient.Location = new System.Drawing.Point(91, 12);
             this.gvClient.Name = "gvClient";
             this.gvClient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvClient.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvClient.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.gvClient.RowHeadersVisible = false;
             this.gvClient.RowHeadersWidth = 51;
             this.gvClient.RowTemplate.Height = 24;
@@ -131,77 +132,6 @@
             this.gvClient.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gvClient.Visible = false;
             // 
-            // rbtn_clearall
-            // 
-            this.rbtn_clearall.AutoSize = true;
-            this.rbtn_clearall.Location = new System.Drawing.Point(1458, 388);
-            this.rbtn_clearall.Name = "rbtn_clearall";
-            this.rbtn_clearall.Size = new System.Drawing.Size(77, 20);
-            this.rbtn_clearall.TabIndex = 67;
-            this.rbtn_clearall.TabStop = true;
-            this.rbtn_clearall.Text = "Clear all";
-            this.rbtn_clearall.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_choiceall
-            // 
-            this.rbtn_choiceall.AutoSize = true;
-            this.rbtn_choiceall.Location = new System.Drawing.Point(1365, 386);
-            this.rbtn_choiceall.Name = "rbtn_choiceall";
-            this.rbtn_choiceall.Size = new System.Drawing.Size(87, 20);
-            this.rbtn_choiceall.TabIndex = 66;
-            this.rbtn_choiceall.TabStop = true;
-            this.rbtn_choiceall.Text = "Choice all";
-            this.rbtn_choiceall.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1127, 386);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 25);
-            this.label6.TabIndex = 65;
-            this.label6.Text = "Tiện nghi phòng tắm";
-            // 
-            // checklistbathroom
-            // 
-            this.checklistbathroom.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checklistbathroom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checklistbathroom.FormattingEnabled = true;
-            this.checklistbathroom.Items.AddRange(new object[] {
-            "Phòng tắm riêng",
-            "Bộ vệ sinh cá nhân",
-            "Máy sấy tóc",
-            "Vòi tắm đứng",
-            "Gương lớn"});
-            this.checklistbathroom.Location = new System.Drawing.Point(1132, 414);
-            this.checklistbathroom.Name = "checklistbathroom";
-            this.checklistbathroom.Size = new System.Drawing.Size(402, 198);
-            this.checklistbathroom.TabIndex = 64;
-            // 
-            // radio_btn_clear
-            // 
-            this.radio_btn_clear.AutoSize = true;
-            this.radio_btn_clear.Location = new System.Drawing.Point(1457, 124);
-            this.radio_btn_clear.Name = "radio_btn_clear";
-            this.radio_btn_clear.Size = new System.Drawing.Size(77, 20);
-            this.radio_btn_clear.TabIndex = 63;
-            this.radio_btn_clear.TabStop = true;
-            this.radio_btn_clear.Text = "Clear all";
-            this.radio_btn_clear.UseVisualStyleBackColor = true;
-            // 
-            // radio_btn_checkall
-            // 
-            this.radio_btn_checkall.AutoSize = true;
-            this.radio_btn_checkall.Location = new System.Drawing.Point(1364, 124);
-            this.radio_btn_checkall.Name = "radio_btn_checkall";
-            this.radio_btn_checkall.Size = new System.Drawing.Size(87, 20);
-            this.radio_btn_checkall.TabIndex = 62;
-            this.radio_btn_checkall.TabStop = true;
-            this.radio_btn_checkall.Text = "Choice all";
-            this.radio_btn_checkall.UseVisualStyleBackColor = true;
-            // 
             // btn_clear
             // 
             this.btn_clear.BorderRadius = 26;
@@ -222,35 +152,6 @@
             this.btn_clear.Text = "Clear";
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1127, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 25);
-            this.label10.TabIndex = 60;
-            this.label10.Text = "Tiện nghi phòng";
-            // 
-            // checklistbox
-            // 
-            this.checklistbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checklistbox.FormattingEnabled = true;
-            this.checklistbox.Items.AddRange(new object[] {
-            "Máy lạnh",
-            "TV",
-            "Rèm cửa/ màn che",
-            "Bàn làm việc",
-            "Không hút thuốc",
-            "Tủ lạnh",
-            "Thiết bị pha cà phê"});
-            this.checklistbox.Location = new System.Drawing.Point(1132, 150);
-            this.checklistbox.Name = "checklistbox";
-            this.checklistbox.Size = new System.Drawing.Size(402, 198);
-            this.checklistbox.TabIndex = 59;
-            // 
             // btn_upload
             // 
             this.btn_upload.BorderRadius = 26;
@@ -270,17 +171,6 @@
             this.btn_upload.TabIndex = 58;
             this.btn_upload.Text = "UpLoad Image";
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
-            // 
-            // picturebox
-            // 
-            this.picturebox.BorderRadius = 20;
-            this.picturebox.FillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.picturebox.ImageRotate = 0F;
-            this.picturebox.Location = new System.Drawing.Point(74, 146);
-            this.picturebox.Name = "picturebox";
-            this.picturebox.Size = new System.Drawing.Size(505, 391);
-            this.picturebox.TabIndex = 57;
-            this.picturebox.TabStop = false;
             // 
             // btn_add
             // 
@@ -536,12 +426,161 @@
             this.txb_roomid.Size = new System.Drawing.Size(362, 42);
             this.txb_roomid.TabIndex = 86;
             // 
+            // rbtn_clearall
+            // 
+            this.rbtn_clearall.AutoSize = true;
+            this.rbtn_clearall.Location = new System.Drawing.Point(1465, 397);
+            this.rbtn_clearall.Name = "rbtn_clearall";
+            this.rbtn_clearall.Size = new System.Drawing.Size(77, 20);
+            this.rbtn_clearall.TabIndex = 94;
+            this.rbtn_clearall.TabStop = true;
+            this.rbtn_clearall.Text = "Clear all";
+            this.rbtn_clearall.UseVisualStyleBackColor = true;
+            this.rbtn_clearall.CheckedChanged += new System.EventHandler(this.rbtn_clearall_CheckedChanged);
+            // 
+            // rbtn_choiceall
+            // 
+            this.rbtn_choiceall.AutoSize = true;
+            this.rbtn_choiceall.Location = new System.Drawing.Point(1372, 395);
+            this.rbtn_choiceall.Name = "rbtn_choiceall";
+            this.rbtn_choiceall.Size = new System.Drawing.Size(87, 20);
+            this.rbtn_choiceall.TabIndex = 93;
+            this.rbtn_choiceall.TabStop = true;
+            this.rbtn_choiceall.Text = "Choice all";
+            this.rbtn_choiceall.UseVisualStyleBackColor = true;
+            this.rbtn_choiceall.CheckedChanged += new System.EventHandler(this.rbtn_choiceall_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1134, 395);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(233, 25);
+            this.label6.TabIndex = 92;
+            this.label6.Text = "Bathroom conveniences ";
+            // 
+            // checklistbathroom
+            // 
+            this.checklistbathroom.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checklistbathroom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checklistbathroom.FormattingEnabled = true;
+            this.checklistbathroom.Items.AddRange(new object[] {
+            "Private_bathroom",
+            "Personal_hygiene_kit",
+            "Hair_dryer",
+            "Standing_shower",
+            "Large_mirror",
+            "Bluetooth_speaker",
+            "Ventilation_system"});
+            this.checklistbathroom.Location = new System.Drawing.Point(1139, 423);
+            this.checklistbathroom.Name = "checklistbathroom";
+            this.checklistbathroom.Size = new System.Drawing.Size(402, 198);
+            this.checklistbathroom.TabIndex = 91;
+            // 
+            // radio_btn_clear
+            // 
+            this.radio_btn_clear.AutoSize = true;
+            this.radio_btn_clear.Location = new System.Drawing.Point(1463, 45);
+            this.radio_btn_clear.Name = "radio_btn_clear";
+            this.radio_btn_clear.Size = new System.Drawing.Size(77, 20);
+            this.radio_btn_clear.TabIndex = 90;
+            this.radio_btn_clear.TabStop = true;
+            this.radio_btn_clear.Text = "Clear all";
+            this.radio_btn_clear.UseVisualStyleBackColor = true;
+            this.radio_btn_clear.CheckedChanged += new System.EventHandler(this.radio_btn_clear_CheckedChanged);
+            // 
+            // radio_btn_checkall
+            // 
+            this.radio_btn_checkall.AutoSize = true;
+            this.radio_btn_checkall.Location = new System.Drawing.Point(1370, 45);
+            this.radio_btn_checkall.Name = "radio_btn_checkall";
+            this.radio_btn_checkall.Size = new System.Drawing.Size(87, 20);
+            this.radio_btn_checkall.TabIndex = 89;
+            this.radio_btn_checkall.TabStop = true;
+            this.radio_btn_checkall.Text = "Choice all";
+            this.radio_btn_checkall.UseVisualStyleBackColor = true;
+            this.radio_btn_checkall.CheckedChanged += new System.EventHandler(this.radio_btn_checkall_CheckedChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1133, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(197, 25);
+            this.label10.TabIndex = 88;
+            this.label10.Text = "Room conveniences ";
+            // 
+            // checklistbox
+            // 
+            this.checklistbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checklistbox.FormattingEnabled = true;
+            this.checklistbox.Items.AddRange(new object[] {
+            "Air_conditioner",
+            "TV",
+            "Curtains",
+            "Desk_workspace",
+            "Small_kitchen",
+            "Refrigerator",
+            "Coffee_maker",
+            "Free_bottled_water",
+            "Safe_box"});
+            this.checklistbox.Location = new System.Drawing.Point(1138, 71);
+            this.checklistbox.Name = "checklistbox";
+            this.checklistbox.Size = new System.Drawing.Size(402, 242);
+            this.checklistbox.TabIndex = 87;
+            // 
+            // picturebox
+            // 
+            this.picturebox.BorderRadius = 20;
+            this.picturebox.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.picturebox.ImageRotate = 0F;
+            this.picturebox.Location = new System.Drawing.Point(91, 68);
+            this.picturebox.Name = "picturebox";
+            this.picturebox.Size = new System.Drawing.Size(505, 391);
+            this.picturebox.TabIndex = 57;
+            this.picturebox.TabStop = false;
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1667, 27);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 54);
+            this.btn_close.TabIndex = 122;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // FRoomInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1604, 863);
+            this.ClientSize = new System.Drawing.Size(1763, 816);
+            this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.rbtn_clearall);
+            this.Controls.Add(this.rbtn_choiceall);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.checklistbathroom);
+            this.Controls.Add(this.radio_btn_clear);
+            this.Controls.Add(this.radio_btn_checkall);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.checklistbox);
             this.Controls.Add(this.txb_roomid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txb_roomPrice);
@@ -556,15 +595,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.rbtn_clearall);
-            this.Controls.Add(this.rbtn_choiceall);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.checklistbathroom);
-            this.Controls.Add(this.radio_btn_clear);
-            this.Controls.Add(this.radio_btn_checkall);
             this.Controls.Add(this.btn_clear);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.checklistbox);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.picturebox);
             this.Controls.Add(this.btn_add);
@@ -586,15 +617,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView gvClient;
-        private System.Windows.Forms.RadioButton rbtn_clearall;
-        private System.Windows.Forms.RadioButton rbtn_choiceall;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckedListBox checklistbathroom;
-        private System.Windows.Forms.RadioButton radio_btn_clear;
-        private System.Windows.Forms.RadioButton radio_btn_checkall;
         private Guna.UI2.WinForms.Guna2Button btn_clear;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckedListBox checklistbox;
         private Guna.UI2.WinForms.Guna2Button btn_upload;
         private Guna.UI2.WinForms.Guna2PictureBox picturebox;
         private Guna.UI2.WinForms.Guna2Button btn_add;
@@ -613,5 +636,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txb_roomid;
+        private System.Windows.Forms.RadioButton rbtn_clearall;
+        private System.Windows.Forms.RadioButton rbtn_choiceall;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckedListBox checklistbathroom;
+        private System.Windows.Forms.RadioButton radio_btn_clear;
+        private System.Windows.Forms.RadioButton radio_btn_checkall;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckedListBox checklistbox;
+        public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
     }
 }

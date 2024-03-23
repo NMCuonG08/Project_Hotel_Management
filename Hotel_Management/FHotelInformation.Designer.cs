@@ -60,6 +60,8 @@
             this.Feedback = new System.Windows.Forms.Label();
             this.txb_feedback = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_create = new Guna.UI2.WinForms.Guna2Button();
+            this.checklistbox = new System.Windows.Forms.CheckedListBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,7 +136,7 @@
             this.txb_name.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_name.ForeColor = System.Drawing.Color.Black;
             this.txb_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_name.Location = new System.Drawing.Point(808, 71);
+            this.txb_name.Location = new System.Drawing.Point(731, 73);
             this.txb_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_name.Name = "txb_name";
             this.txb_name.PasswordChar = '\0';
@@ -147,7 +149,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(803, 33);
+            this.label2.Location = new System.Drawing.Point(726, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 25);
             this.label2.TabIndex = 6;
@@ -157,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(801, 136);
+            this.label3.Location = new System.Drawing.Point(724, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 25);
             this.label3.TabIndex = 8;
@@ -176,7 +178,7 @@
             this.txb_phoneNumber.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_phoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txb_phoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_phoneNumber.Location = new System.Drawing.Point(808, 174);
+            this.txb_phoneNumber.Location = new System.Drawing.Point(731, 176);
             this.txb_phoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_phoneNumber.Name = "txb_phoneNumber";
             this.txb_phoneNumber.PasswordChar = '\0';
@@ -189,7 +191,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1136, 136);
+            this.label4.Location = new System.Drawing.Point(1059, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
             this.label4.TabIndex = 10;
@@ -208,7 +210,7 @@
             this.txb_email.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_email.ForeColor = System.Drawing.Color.Black;
             this.txb_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_email.Location = new System.Drawing.Point(1145, 174);
+            this.txb_email.Location = new System.Drawing.Point(1068, 176);
             this.txb_email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_email.Name = "txb_email";
             this.txb_email.PasswordChar = '\0';
@@ -221,7 +223,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1140, 243);
+            this.label5.Location = new System.Drawing.Point(1063, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 25);
             this.label5.TabIndex = 14;
@@ -240,7 +242,7 @@
             this.txb_capacity.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_capacity.ForeColor = System.Drawing.Color.Black;
             this.txb_capacity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_capacity.Location = new System.Drawing.Point(1145, 281);
+            this.txb_capacity.Location = new System.Drawing.Point(1068, 283);
             this.txb_capacity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_capacity.Name = "txb_capacity";
             this.txb_capacity.PasswordChar = '\0';
@@ -253,7 +255,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(803, 243);
+            this.label6.Location = new System.Drawing.Point(726, 245);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 25);
             this.label6.TabIndex = 12;
@@ -272,7 +274,7 @@
             this.txb_floor.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_floor.ForeColor = System.Drawing.Color.Black;
             this.txb_floor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_floor.Location = new System.Drawing.Point(806, 281);
+            this.txb_floor.Location = new System.Drawing.Point(729, 283);
             this.txb_floor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_floor.Name = "txb_floor";
             this.txb_floor.PasswordChar = '\0';
@@ -285,7 +287,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1136, 345);
+            this.label7.Location = new System.Drawing.Point(1059, 347);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 25);
             this.label7.TabIndex = 18;
@@ -304,7 +306,7 @@
             this.txb_city.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_city.ForeColor = System.Drawing.Color.Black;
             this.txb_city.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_city.Location = new System.Drawing.Point(1145, 383);
+            this.txb_city.Location = new System.Drawing.Point(1068, 385);
             this.txb_city.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_city.Name = "txb_city";
             this.txb_city.PasswordChar = '\0';
@@ -317,7 +319,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1136, 449);
+            this.label9.Location = new System.Drawing.Point(1059, 451);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 25);
             this.label9.TabIndex = 22;
@@ -336,7 +338,7 @@
             this.txb_country.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_country.ForeColor = System.Drawing.Color.Black;
             this.txb_country.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_country.Location = new System.Drawing.Point(1145, 487);
+            this.txb_country.Location = new System.Drawing.Point(1068, 489);
             this.txb_country.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_country.Name = "txb_country";
             this.txb_country.PasswordChar = '\0';
@@ -349,7 +351,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(804, 449);
+            this.label10.Location = new System.Drawing.Point(727, 451);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 25);
             this.label10.TabIndex = 20;
@@ -368,7 +370,7 @@
             this.txb_street.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_street.ForeColor = System.Drawing.Color.Black;
             this.txb_street.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_street.Location = new System.Drawing.Point(811, 487);
+            this.txb_street.Location = new System.Drawing.Point(734, 489);
             this.txb_street.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_street.Name = "txb_street";
             this.txb_street.PasswordChar = '\0';
@@ -381,7 +383,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(806, 350);
+            this.label12.Location = new System.Drawing.Point(729, 352);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(89, 25);
             this.label12.TabIndex = 24;
@@ -400,7 +402,7 @@
             this.txb_zip.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_zip.ForeColor = System.Drawing.Color.Black;
             this.txb_zip.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_zip.Location = new System.Drawing.Point(809, 383);
+            this.txb_zip.Location = new System.Drawing.Point(732, 385);
             this.txb_zip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_zip.Name = "txb_zip";
             this.txb_zip.PasswordChar = '\0';
@@ -413,7 +415,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(804, 666);
+            this.label15.Location = new System.Drawing.Point(727, 668);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 25);
             this.label15.TabIndex = 28;
@@ -432,7 +434,7 @@
             this.txb_decription.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_decription.ForeColor = System.Drawing.Color.Black;
             this.txb_decription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_decription.Location = new System.Drawing.Point(811, 704);
+            this.txb_decription.Location = new System.Drawing.Point(734, 706);
             this.txb_decription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_decription.Name = "txb_decription";
             this.txb_decription.PasswordChar = '\0';
@@ -451,7 +453,7 @@
             this.btn_update.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_update.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Location = new System.Drawing.Point(973, 779);
+            this.btn_update.Location = new System.Drawing.Point(896, 781);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(290, 51);
             this.btn_update.TabIndex = 29;
@@ -513,7 +515,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1136, 567);
+            this.label8.Location = new System.Drawing.Point(1059, 569);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 25);
             this.label8.TabIndex = 68;
@@ -532,7 +534,7 @@
             this.txb_price.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_price.ForeColor = System.Drawing.Color.Black;
             this.txb_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_price.Location = new System.Drawing.Point(1145, 605);
+            this.txb_price.Location = new System.Drawing.Point(1068, 607);
             this.txb_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_price.Name = "txb_price";
             this.txb_price.PasswordChar = '\0';
@@ -545,7 +547,7 @@
             // 
             this.Feedback.AutoSize = true;
             this.Feedback.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feedback.Location = new System.Drawing.Point(804, 567);
+            this.Feedback.Location = new System.Drawing.Point(727, 569);
             this.Feedback.Name = "Feedback";
             this.Feedback.Size = new System.Drawing.Size(96, 25);
             this.Feedback.TabIndex = 66;
@@ -564,7 +566,7 @@
             this.txb_feedback.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txb_feedback.ForeColor = System.Drawing.Color.Black;
             this.txb_feedback.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_feedback.Location = new System.Drawing.Point(811, 605);
+            this.txb_feedback.Location = new System.Drawing.Point(734, 607);
             this.txb_feedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_feedback.Name = "txb_feedback";
             this.txb_feedback.PasswordChar = '\0';
@@ -583,12 +585,41 @@
             this.btn_create.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_create.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_create.ForeColor = System.Drawing.Color.White;
-            this.btn_create.Location = new System.Drawing.Point(973, 849);
+            this.btn_create.Location = new System.Drawing.Point(896, 851);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(290, 51);
             this.btn_create.TabIndex = 69;
             this.btn_create.Text = "Create Hotel";
             this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
+            // 
+            // checklistbox
+            // 
+            this.checklistbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checklistbox.FormattingEnabled = true;
+            this.checklistbox.Items.AddRange(new object[] {
+            "Máy lạnh",
+            "Hồ bơi",
+            "Nhà hàng",
+            "Lễ tân 24h",
+            "Chỗ đậu xe",
+            "Thang máy",
+            "WIfi"});
+            this.checklistbox.Location = new System.Drawing.Point(1390, 76);
+            this.checklistbox.Name = "checklistbox";
+            this.checklistbox.Size = new System.Drawing.Size(402, 220);
+            this.checklistbox.TabIndex = 70;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1385, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 25);
+            this.label11.TabIndex = 71;
+            this.label11.Text = "Extensions";
             // 
             // FHotelInformation
             // 
@@ -596,6 +627,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1775, 1008);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.checklistbox);
             this.Controls.Add(this.btn_create);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txb_price);
@@ -671,5 +704,7 @@
         private System.Windows.Forms.Label Feedback;
         private Guna.UI2.WinForms.Guna2TextBox txb_feedback;
         private Guna.UI2.WinForms.Guna2Button btn_create;
+        private System.Windows.Forms.CheckedListBox checklistbox;
+        private System.Windows.Forms.Label label11;
     }
 }

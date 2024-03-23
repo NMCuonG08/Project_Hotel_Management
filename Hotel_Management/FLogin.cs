@@ -131,8 +131,9 @@ namespace Hotel_Management
                                    else if (account.Role == "admin")
                                     {
                                         //   this.Hide();
-                                        Admin admin = new Admin(account);
-                                        admin.ShowDialog();
+                                        Connection.fad = new Admin(account);
+                                        Connection.admin = account;
+                                        Connection.fad.ShowDialog();
                                     }
                                 }
                             }
@@ -166,23 +167,6 @@ namespace Hotel_Management
             uc_FG.Visible = true;
             uc_FG.BringToFront();
         }
-        private void btn_hide_Click(object sender, EventArgs e)
-        {
-            if (txb_password.PasswordChar == '●')
-            {
-                eye_p.BringToFront();
-                txb_password.PasswordChar = '\0';
-            }
-        }
-
-        private void eye_p_Click(object sender, EventArgs e)
-        {
-            if (txb_password.PasswordChar == '\0')
-            {
-                btn_hide.BringToFront();
-                txb_password.PasswordChar = '●';
-            }
-        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
@@ -196,6 +180,25 @@ namespace Hotel_Management
         private void txb_email_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void btn_hipe_Click(object sender, EventArgs e)
+        {
+           if( txb_password.PasswordChar == '●')
+            {
+                btn_eye.BringToFront();
+                txb_password.PasswordChar = '\0';
+                btn_hipe.Visible = false;
+            }
+           
+        }
+        private void btn_eye_Click(object sender, EventArgs e)
+        {
+            if (txb_password.PasswordChar == '\0')
+            {
+                btn_hipe.BringToFront();
+                txb_password.PasswordChar = '●';
+                btn_eye.Visible = false;
+            }
         }
     }
 }

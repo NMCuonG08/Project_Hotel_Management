@@ -67,7 +67,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1497, 780);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2Panel1
             // 
@@ -95,7 +94,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(654, 677);
             this.guna2Panel1.TabIndex = 95;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // label2
             // 
@@ -284,9 +282,9 @@
             this.cbx_role.ForeColor = System.Drawing.Color.Black;
             this.cbx_role.ItemHeight = 30;
             this.cbx_role.Items.AddRange(new object[] {
-            "User",
-            "Admin"});
-            this.cbx_role.Location = new System.Drawing.Point(504, 552);
+            "user",
+            "admin"});
+            this.cbx_role.Location = new System.Drawing.Point(516, 552);
             this.cbx_role.Name = "cbx_role";
             this.cbx_role.Size = new System.Drawing.Size(135, 36);
             this.cbx_role.TabIndex = 94;
@@ -316,7 +314,6 @@
             this.txb_sigemail.Size = new System.Drawing.Size(393, 36);
             this.txb_sigemail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigemail.TabIndex = 77;
-            this.txb_sigemail.TextChanged += new System.EventHandler(this.txb_sigemail_TextChanged);
             // 
             // datetime_birthday
             // 
@@ -357,7 +354,6 @@
             this.txb_siggender.Size = new System.Drawing.Size(393, 36);
             this.txb_siggender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_siggender.TabIndex = 80;
-            this.txb_siggender.TextChanged += new System.EventHandler(this.txb_siggender_TextChanged);
             // 
             // txb_signational
             // 
@@ -384,7 +380,6 @@
             this.txb_signational.Size = new System.Drawing.Size(393, 36);
             this.txb_signational.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_signational.TabIndex = 79;
-            this.txb_signational.TextChanged += new System.EventHandler(this.txb_signational_TextChanged);
             // 
             // txb_sigpassword
             // 
@@ -412,7 +407,6 @@
             this.txb_sigpassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigpassword.TabIndex = 78;
             this.txb_sigpassword.UseSystemPasswordChar = true;
-            this.txb_sigpassword.TextChanged += new System.EventHandler(this.txb_sigpassword_TextChanged);
             // 
             // txb_sigphone
             // 
@@ -439,7 +433,6 @@
             this.txb_sigphone.Size = new System.Drawing.Size(393, 36);
             this.txb_sigphone.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigphone.TabIndex = 83;
-            this.txb_sigphone.TextChanged += new System.EventHandler(this.txb_sigphone_TextChanged);
             // 
             // txb_sigIdcard
             // 
@@ -466,7 +459,6 @@
             this.txb_sigIdcard.Size = new System.Drawing.Size(393, 36);
             this.txb_sigIdcard.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigIdcard.TabIndex = 81;
-            this.txb_sigIdcard.TextChanged += new System.EventHandler(this.txb_sigIdcard_TextChanged);
             // 
             // txb_sigaddress
             // 
@@ -493,7 +485,6 @@
             this.txb_sigaddress.Size = new System.Drawing.Size(393, 36);
             this.txb_sigaddress.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigaddress.TabIndex = 82;
-            this.txb_sigaddress.TextChanged += new System.EventHandler(this.txb_sigaddress_TextChanged);
             // 
             // btn_complete
             // 

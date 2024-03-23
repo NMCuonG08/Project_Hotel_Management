@@ -102,12 +102,120 @@ namespace Hotel_Management
                             ls[i].RoomImage = System.Drawing.Image.FromStream(ms);
                         }
                     }
-                    ls[i].Capacity = "2"; 
+                    ls[i].Capacity = "2";
+                    List<String> con = CheckConvenience(ls[i].Id);
+                    foreach (String s in con)
+                    {
+                        ls[i].SetPanelVisibility(s);
+                    }
                     ls[i].ItemBooking += FChoiceRoom_ItemBooking;
                     flowLayoutPanel1.Controls.Add(ls[i]);
+                    
                 }
             }
         }
+
+        private List<String> CheckConvenience(int roomID)
+        {
+            List<string> convenienceNames = new List<string>();
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string sqlQuery = @"
+                                        SELECT COLUMN_NAME 
+                                        FROM INFORMATION_SCHEMA.COLUMNS 
+                                        WHERE TABLE_NAME = 'RoomConveniences' 
+                                        AND DATA_TYPE = 'bit' 
+                                        AND COLUMN_NAME <> 'RoomID' 
+                                        AND COLUMN_NAME IN (
+                                            SELECT 'Air_conditioner' FROM RoomConveniences WHERE Air_conditioner = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'TV' FROM RoomConveniences WHERE TV = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Curtains' FROM RoomConveniences WHERE Curtains = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Desk_workspace' FROM RoomConveniences WHERE Desk_workspace = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Small_kitchen' FROM RoomConveniences WHERE Small_kitchen = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Refrigerator' FROM RoomConveniences WHERE Refrigerator = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Coffee_maker' FROM RoomConveniences WHERE Coffee_maker = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Free_bottled_water' FROM RoomConveniences WHERE Free_bottled_water = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Safe_box' FROM RoomConveniences WHERE Safe_box = 1 AND RoomID = @RoomID
+                                        );
+                                    ";
+
+                    SqlCommand command = new SqlCommand(sqlQuery, connection);
+                    command.Parameters.AddWithValue("@RoomID", roomID);
+
+                    SqlDataReader reader = command.ExecuteReader();
+                   
+
+                    while (reader.Read())
+                    {
+                        string columnName = reader["COLUMN_NAME"].ToString();
+                        convenienceNames.Add(columnName);
+                    }
+                    reader.Close();
+                    string sqlQuery2 = @"
+                                        SELECT COLUMN_NAME 
+                                        FROM INFORMATION_SCHEMA.COLUMNS 
+                                        WHERE TABLE_NAME = 'Bathroomconveniences' 
+                                        AND DATA_TYPE = 'bit' 
+                                        AND COLUMN_NAME <> 'RoomID' 
+                                        AND COLUMN_NAME IN (
+                                            SELECT 'Private_bathroom' FROM Bathroomconveniences WHERE Private_bathroom = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Personal_hygiene_kit' FROM Bathroomconveniences WHERE Personal_hygiene_kit = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Hair_dryer' FROM Bathroomconveniences WHERE Hair_dryer = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Standing_shower' FROM Bathroomconveniences WHERE Standing_shower = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Large_mirror' FROM Bathroomconveniences WHERE Large_mirror = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Bluetooth_speaker' FROM Bathroomconveniences WHERE Bluetooth_speaker = 1 AND RoomID = @RoomID
+                                            UNION
+                                            SELECT 'Ventilation_system' FROM Bathroomconveniences WHERE Ventilation_system = 1 AND RoomID = @RoomID
+                                           
+                                        );
+                                    ";
+
+                    SqlCommand command2 = new SqlCommand(sqlQuery2, connection);
+                    command2.Parameters.AddWithValue("@RoomID", roomID);
+
+                    SqlDataReader reader2 = command2.ExecuteReader();
+                    
+
+                    while (reader2.Read())
+                    {
+                        string columnName = reader2["COLUMN_NAME"].ToString();
+                        convenienceNames.Add(columnName);
+                    }
+
+                    reader2.Close();
+
+                   
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return convenienceNames;
+        }
+
+
+
+
+
+
 
 
         private void FChoiceRoom_ItemBooking(object sender, EventArgs e)
@@ -354,5 +462,9 @@ namespace Hotel_Management
             }
         }
 
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

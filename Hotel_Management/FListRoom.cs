@@ -200,7 +200,24 @@ namespace Hotel_Management
                     sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
                     sqlCommand.ExecuteNonQuery();
                 }
-            }catch (Exception ex)
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "Delete from RoomConveniences where RoomID = @RoomID";
+                    SqlCommand sqlCommand = new SqlCommand(query, conn);
+                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
+                    sqlCommand.ExecuteNonQuery();
+                }
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "Delete from Bathroomconveniences where RoomID = @RoomID";
+                    SqlCommand sqlCommand = new SqlCommand(query, conn);
+                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -216,8 +233,8 @@ namespace Hotel_Management
             {
                 DeleteRoom(id);
                 MessageBox.Show("Delete Successfull!");
-                this.LoadForm(HotelID);
-                this.createItem();
+                this.Close();
+                Connection.Openadmin();
             }
             else if (result == DialogResult.Cancel)
             {
@@ -281,7 +298,7 @@ namespace Hotel_Management
             try
             {         
                 conn.Open();
-                string status = "empty";
+                string status = "Empty";
                 string query = "Insert into RoomInformation values (@RoomType, @RoomBed,@RoomPrice,@Status,@RoomName,null,null,@RoomImage,@Clients,@size,@HotelID)";
                 SqlCommand sqlCommand = new SqlCommand(query, conn);
                 sqlCommand.Parameters.Add(new SqlParameter("RoomType",room.Type));

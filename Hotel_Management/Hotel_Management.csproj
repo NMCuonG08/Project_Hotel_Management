@@ -586,5 +586,83 @@
   <ItemGroup>
     <None Include="Resources\credit-card.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utility-room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utility-room1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workspace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-fridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-fridge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safebox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safebox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hygiene.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooling-fan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hair-dryer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval-mirror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hygiene1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air-conditioner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smart-tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\private.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peace.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

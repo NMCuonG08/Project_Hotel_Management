@@ -80,5 +80,50 @@ namespace Hotel_Management
         {
 
         }
+        void rBtnCheckAll(RadioButton rbtn, CheckedListBox checkedList)
+        {
+            if (rbtn.Checked)
+            {
+                for (int i = 0; i < checkedList.Items.Count; i++)
+                {
+                    checkedList.SetItemChecked(i, true);
+                }
+            }
+        }
+        void rBtn_ClearAll(RadioButton rbtn, CheckedListBox checkedList)
+        {
+            if (rbtn.Checked)
+            {
+                for (int i = 0; i < checkedList.Items.Count; i++)
+                {
+                    checkedList.SetItemChecked(i, false);
+                }
+            }
+        }
+
+        private void radio_btn_checkall_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtnCheckAll(radio_btn_checkall, checklistbox);
+        }
+
+        private void radio_btn_clear_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtn_ClearAll(radio_btn_clear, checklistbox);
+        }
+
+        private void rbtn_choiceall_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtnCheckAll(rbtn_choiceall, checklistbathroom);
+        }
+
+        private void rbtn_clearall_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtn_ClearAll(rbtn_clearall, checklistbathroom);
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -70,104 +70,16 @@ namespace Hotel_Management
                 }
             }
         }
-
        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FSignIn_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txb_sigemail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void datetime_birthday_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void txb_siggender_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txb_signational_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txb_sigpassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txb_sigphone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txb_sigIdcard_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txb_sigaddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Hide();

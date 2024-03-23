@@ -22,10 +22,43 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            HotelID = 1;
+            this.HotelID = FindHotelID(admin.Id);
             Adm = admin;
             this.AdminID = Adm.Id;
             
+        }
+
+        public int FindHotelID(int adminID)
+        {
+            int hotelID = -1; 
+
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT HotelID FROM HotelInformation WHERE AdminID = @AdminID";
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@AdminID", adminID);
+
+                   
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            
+                            hotelID = Convert.ToInt32(reader["HotelID"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            // Trả về giá trị HotelID
+            return hotelID;
         }
 
         FHotelInformation hotelInformation;

@@ -182,6 +182,69 @@ namespace Hotel_Management
         public delegate void AddRoomDelegate(Room room);
         public AddRoomDelegate addRoom;
 
+        public void SetConveniences(CheckedListBox checkedListBox)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    int maxRoomID;
+                    string getMaxRoomIDQuery = "SELECT MAX(RoomID) FROM RoomInformation";
+                    using (SqlCommand getMaxRoomIDCmd = new SqlCommand(getMaxRoomIDQuery, connection))
+                    {
+                        object result = getMaxRoomIDCmd.ExecuteScalar();
+                        maxRoomID = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                    int newRoomID = maxRoomID ;
+
+                    string addRoomConvenienceQuery = "INSERT INTO RoomConveniences (RoomiD) VALUES (@RoomID)";
+                    using (SqlCommand addRoomConvenienceCmd = new SqlCommand(addRoomConvenienceQuery, connection))
+                    {
+                        addRoomConvenienceCmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                        addRoomConvenienceCmd.ExecuteNonQuery();
+                    }
+                    string addBathRoomConvenienceQuery = "INSERT INTO Bathroomconveniences (RoomiD) VALUES (@RoomID)";
+                    using (SqlCommand addBathRoomConvenienceCmd = new SqlCommand(addBathRoomConvenienceQuery, connection))
+                    {
+                        addBathRoomConvenienceCmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                        addBathRoomConvenienceCmd.ExecuteNonQuery();
+                    }
+
+                    foreach (object itemChecked in checkedListBox.CheckedItems)
+                    {
+                        string updateQuery = "UPDATE RoomConveniences SET ";
+                        string itemName = itemChecked.ToString();
+                        updateQuery += $"{itemName} = 1 WHERE RoomID = @RoomID"; 
+
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    foreach (object itemChecked in checklistbathroom.CheckedItems)
+                    {
+                        string updateQuery = "UPDATE Bathroomconveniences SET ";
+                        string itemName = itemChecked.ToString();
+                        updateQuery += $"{itemName} = 1 WHERE RoomID = @RoomID";
+
+                        // Thực hiện truy vấn SQL
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             
@@ -196,10 +259,15 @@ namespace Hotel_Management
             int size = Convert.ToInt32(txb_size.Text);
             Room room = new Room(txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, null, null, images, status);
             addRoom(room);
-            FListRoom fListRoom = new FListRoom(HotelID);
+            SetConveniences(checklistbox);
+            Connection.Openadmin();
             this.Close();
-            //fListRoom.createItem();
+           
         }
 
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
