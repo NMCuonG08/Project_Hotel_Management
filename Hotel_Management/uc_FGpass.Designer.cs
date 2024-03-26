@@ -30,35 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_FGpass));
-            this.txb_getpass = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2AnimateWindow3 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_close = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txb_email = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_getpass = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txb_close = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txb_getpass
-            // 
-            this.txb_getpass.BorderColor = System.Drawing.Color.DimGray;
-            this.txb_getpass.BorderRadius = 15;
-            this.txb_getpass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txb_getpass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txb_getpass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txb_getpass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txb_getpass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txb_getpass.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_getpass.ForeColor = System.Drawing.Color.Black;
-            this.txb_getpass.Location = new System.Drawing.Point(119, 310);
-            this.txb_getpass.Name = "txb_getpass";
-            this.txb_getpass.Size = new System.Drawing.Size(274, 41);
-            this.txb_getpass.TabIndex = 72;
-            this.txb_getpass.Text = "Get Password";
-            this.txb_getpass.Click += new System.EventHandler(this.txb_getpass_Click);
             // 
             // guna2ImageButton1
             // 
@@ -86,24 +68,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_close
-            // 
-            this.btn_close.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_close.BorderRadius = 15;
-            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_close.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.ForeColor = System.Drawing.Color.Black;
-            this.btn_close.Location = new System.Drawing.Point(141, 366);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(216, 38);
-            this.btn_close.TabIndex = 73;
-            this.btn_close.Text = "Close";
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // label1
             // 
@@ -141,15 +105,53 @@
             this.txb_email.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_email.TabIndex = 102;
             // 
+            // txb_getpass
+            // 
+            this.txb_getpass.BorderRadius = 20;
+            this.txb_getpass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txb_getpass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txb_getpass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txb_getpass.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txb_getpass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txb_getpass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txb_getpass.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(111)))));
+            this.txb_getpass.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_getpass.ForeColor = System.Drawing.Color.White;
+            this.txb_getpass.Location = new System.Drawing.Point(126, 315);
+            this.txb_getpass.Name = "txb_getpass";
+            this.txb_getpass.Size = new System.Drawing.Size(274, 45);
+            this.txb_getpass.TabIndex = 103;
+            this.txb_getpass.Text = "Get Password";
+            this.txb_getpass.Click += new System.EventHandler(this.txb_getpass_Click);
+            // 
+            // txb_close
+            // 
+            this.txb_close.BorderRadius = 20;
+            this.txb_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txb_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txb_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txb_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txb_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txb_close.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txb_close.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(111)))));
+            this.txb_close.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_close.ForeColor = System.Drawing.Color.White;
+            this.txb_close.Location = new System.Drawing.Point(152, 375);
+            this.txb_close.Name = "txb_close";
+            this.txb_close.Size = new System.Drawing.Size(227, 36);
+            this.txb_close.TabIndex = 104;
+            this.txb_close.Text = "Close";
+            this.txb_close.Click += new System.EventHandler(this.txb_close_Click);
+            // 
             // uc_FGpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Controls.Add(this.txb_close);
+            this.Controls.Add(this.txb_getpass);
             this.Controls.Add(this.txb_email);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_close);
-            this.Controls.Add(this.txb_getpass);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "uc_FGpass";
@@ -164,12 +166,12 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2Button txb_getpass;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow3;
-        private Guna.UI2.WinForms.Guna2Button btn_close;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txb_email;
+        private Guna.UI2.WinForms.Guna2GradientButton txb_getpass;
+        private Guna.UI2.WinForms.Guna2GradientButton txb_close;
     }
 }

@@ -53,7 +53,8 @@ namespace Hotel_Management
         {
 
         }
-        private void btn_close_Click(object sender, EventArgs e)
+
+        private void txb_close_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

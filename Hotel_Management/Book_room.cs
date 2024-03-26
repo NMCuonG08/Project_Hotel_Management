@@ -113,5 +113,15 @@ namespace Hotel_Management
         {
             this.Close();
         }
+
+        private void lb_hotelname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -149,6 +149,12 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FReport.Designer.cs">
+      <DependentUpon>FReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,12 @@
       <DependentUpon>uc_FGpass.cs</DependentUpon>
     </Compile>
     <Compile Include="Account.cs" />
+    <Compile Include="UserControlDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDashboard.Designer.cs">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +277,9 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FReport.resx">
+      <DependentUpon>FReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_FGpass.resx">
       <DependentUpon>uc_FGpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDashboard.resx">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
@@ -663,6 +681,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\peace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\living-room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\living-room1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\840_560.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant-1837150_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31b32bab349ca5d3817436fd1987a2d9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\architecture-3824660_1280.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

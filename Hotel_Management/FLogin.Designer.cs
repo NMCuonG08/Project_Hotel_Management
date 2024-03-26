@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btn_complete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_complete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_hipe = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_eye = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +41,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton2 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uc_FG = new Hotel_Management.uc_FGpass();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,30 +71,10 @@
             this.linkLabel1.Text = "Forgot password?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
-            // btn_complete
-            // 
-            this.btn_complete.BorderRadius = 30;
-            this.btn_complete.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btn_complete.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_complete.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btn_complete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_complete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_complete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_complete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_complete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_complete.FocusedColor = System.Drawing.Color.White;
-            this.btn_complete.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btn_complete.ForeColor = System.Drawing.Color.Black;
-            this.btn_complete.Location = new System.Drawing.Point(158, 382);
-            this.btn_complete.Name = "btn_complete";
-            this.btn_complete.Size = new System.Drawing.Size(263, 70);
-            this.btn_complete.TabIndex = 72;
-            this.btn_complete.Text = "Sign in";
-            this.btn_complete.Click += new System.EventHandler(this.btn_complete_Click_1);
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.btn_complete);
             this.guna2Panel1.Controls.Add(this.btn_hipe);
             this.guna2Panel1.Controls.Add(this.btn_eye);
             this.guna2Panel1.Controls.Add(this.label2);
@@ -100,7 +83,6 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton2);
             this.guna2Panel1.Controls.Add(this.guna2GradientTileButton1);
-            this.guna2Panel1.Controls.Add(this.btn_complete);
             this.guna2Panel1.Controls.Add(this.linkLabel1);
             this.guna2Panel1.Controls.Add(this.linkLabel2);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
@@ -108,6 +90,26 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(590, 629);
             this.guna2Panel1.TabIndex = 79;
+            this.guna2Panel1.Click += new System.EventHandler(this.btn_complete_Click_1);
+            // 
+            // btn_complete
+            // 
+            this.btn_complete.BorderRadius = 20;
+            this.btn_complete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_complete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_complete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_complete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_complete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_complete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_complete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(111)))));
+            this.btn_complete.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btn_complete.ForeColor = System.Drawing.Color.White;
+            this.btn_complete.Location = new System.Drawing.Point(117, 364);
+            this.btn_complete.Name = "btn_complete";
+            this.btn_complete.Size = new System.Drawing.Size(316, 58);
+            this.btn_complete.TabIndex = 106;
+            this.btn_complete.Text = "Sign in";
+            this.btn_complete.Click += new System.EventHandler(this.btn_complete_Click_1);
             // 
             // btn_hipe
             // 
@@ -121,7 +123,7 @@
             this.btn_hipe.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_hipe.ForeColor = System.Drawing.Color.White;
             this.btn_hipe.Image = global::Hotel_Management.Properties.Resources.hide1;
-            this.btn_hipe.Location = new System.Drawing.Point(469, 237);
+            this.btn_hipe.Location = new System.Drawing.Point(426, 233);
             this.btn_hipe.Name = "btn_hipe";
             this.btn_hipe.Size = new System.Drawing.Size(37, 25);
             this.btn_hipe.TabIndex = 105;
@@ -139,7 +141,7 @@
             this.btn_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_eye.ForeColor = System.Drawing.Color.White;
             this.btn_eye.Image = global::Hotel_Management.Properties.Resources.view11;
-            this.btn_eye.Location = new System.Drawing.Point(469, 233);
+            this.btn_eye.Location = new System.Drawing.Point(426, 233);
             this.btn_eye.Name = "btn_eye";
             this.btn_eye.Size = new System.Drawing.Size(37, 25);
             this.btn_eye.TabIndex = 104;
@@ -149,7 +151,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 77);
+            this.label2.Location = new System.Drawing.Point(188, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 30);
             this.label2.TabIndex = 103;
@@ -161,7 +163,7 @@
             this.txb_password.BorderRadius = 10;
             this.txb_password.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txb_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_password.DefaultText = "";
+            this.txb_password.DefaultText = "12345Ab";
             this.txb_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txb_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txb_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -188,7 +190,7 @@
             this.txb_email.BorderRadius = 10;
             this.txb_email.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txb_email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_email.DefaultText = "";
+            this.txb_email.DefaultText = "Long25@gmail.com";
             this.txb_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txb_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txb_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -256,15 +258,25 @@
             this.guna2GradientTileButton1.Size = new System.Drawing.Size(47, 46);
             this.guna2GradientTileButton1.TabIndex = 96;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this.guna2Panel1;
+            // 
             // uc_FG
             // 
             this.uc_FG.BackColor = System.Drawing.Color.WhiteSmoke;
             this.uc_FG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.uc_FG.Location = new System.Drawing.Point(1031, 79);
             this.uc_FG.Name = "uc_FG";
-            this.uc_FG.Size = new System.Drawing.Size(654, 629);
+            this.uc_FG.Size = new System.Drawing.Size(588, 629);
             this.uc_FG.TabIndex = 80;
             this.uc_FG.Visible = false;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 20;
+            this.guna2Elipse2.TargetControl = this.uc_FG;
             // 
             // FLogin
             // 
@@ -289,7 +301,6 @@
         #endregion
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private Guna.UI2.WinForms.Guna2Button btn_complete;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton2;
@@ -298,6 +309,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_email;
         private Guna.UI2.WinForms.Guna2TextBox txb_password;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_complete;
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_hipe;
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_eye;
     }

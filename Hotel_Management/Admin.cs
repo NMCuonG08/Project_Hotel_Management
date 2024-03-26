@@ -68,6 +68,7 @@ namespace Hotel_Management
         FAddRoom addRoom;
         FListRoom listRoom;
         FBooking booking;
+        FReport report;
         public void ShowForm(Form form)
         {
             if (form is IHotelIDConsumer)
@@ -197,6 +198,23 @@ namespace Hotel_Management
         private void btn_logout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void Freport_Formclosed(object sender, FormClosedEventArgs e)
+        {
+            report = null;
+        }
+        private void btn_service_Click(object sender, EventArgs e)
+        {
+            if (report == null)
+            {
+               report = new FReport();
+                report.FormClosed += Freport_Formclosed;
+                ShowForm(report);
+            }
+            else
+            {
+                report.Activate();
+            }
         }
 
 

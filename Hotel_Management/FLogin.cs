@@ -183,13 +183,11 @@ namespace Hotel_Management
         }
         private void btn_hipe_Click(object sender, EventArgs e)
         {
-           if( txb_password.PasswordChar == '●')
+            if(txb_password.PasswordChar== '●')
             {
                 btn_eye.BringToFront();
-                txb_password.PasswordChar = '\0';
-                btn_hipe.Visible = false;
+                txb_password.PasswordChar ='\0';
             }
-           
         }
         private void btn_eye_Click(object sender, EventArgs e)
         {
@@ -197,7 +195,6 @@ namespace Hotel_Management
             {
                 btn_hipe.BringToFront();
                 txb_password.PasswordChar = '●';
-                btn_eye.Visible = false;
             }
         }
     }
