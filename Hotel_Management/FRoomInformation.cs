@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Hotel_Management
 {
@@ -15,6 +16,7 @@ namespace Hotel_Management
     {
         SqlConnection conn = new
           SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
+        int hotelID ;
         public FRoomInformation()
         {
             InitializeComponent();
@@ -30,7 +32,15 @@ namespace Hotel_Management
             txb_roomPrice.Text = room.Price.ToString();
             txb_roomtype.SelectedItem = room.Type;
             txb_clients.SelectedItem = room.Clients.ToString();
-            txb_size.Text = room.Size.ToString();           
+            txb_size.Text = room.Size.ToString();
+            byte[] image = room.Image;
+            if (image != null)
+            {
+                using (MemoryStream ms = new MemoryStream(image))
+                {
+                    picturebox.Image = System.Drawing.Image.FromStream(ms);
+                }
+            }
         }
         private void RoomInformation_Load(object sender, EventArgs e)
         {
@@ -38,7 +48,7 @@ namespace Hotel_Management
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
-            FAddRoom fAddRoom = new FAddRoom();
+            FAddRoom fAddRoom = new FAddRoom(hotelID);
              (this.MdiParent as Admin)?.ShowForm(fAddRoom);
 
             //fAddRoom.Show();
@@ -64,6 +74,56 @@ namespace Hotel_Management
         private void btn_clear_Click(object sender, EventArgs e)
         {
             picturebox.Image = null;
+        }
+
+        private void btn_add_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        void rBtnCheckAll(RadioButton rbtn, CheckedListBox checkedList)
+        {
+            if (rbtn.Checked)
+            {
+                for (int i = 0; i < checkedList.Items.Count; i++)
+                {
+                    checkedList.SetItemChecked(i, true);
+                }
+            }
+        }
+        void rBtn_ClearAll(RadioButton rbtn, CheckedListBox checkedList)
+        {
+            if (rbtn.Checked)
+            {
+                for (int i = 0; i < checkedList.Items.Count; i++)
+                {
+                    checkedList.SetItemChecked(i, false);
+                }
+            }
+        }
+
+        private void radio_btn_checkall_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtnCheckAll(radio_btn_checkall, checklistbox);
+        }
+
+        private void radio_btn_clear_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtn_ClearAll(radio_btn_clear, checklistbox);
+        }
+
+        private void rbtn_choiceall_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtnCheckAll(rbtn_choiceall, checklistbathroom);
+        }
+
+        private void rbtn_clearall_CheckedChanged(object sender, EventArgs e)
+        {
+            rBtn_ClearAll(rbtn_clearall, checklistbathroom);
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

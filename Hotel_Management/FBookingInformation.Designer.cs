@@ -28,36 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomBed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label29 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.AddedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paymentmethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Btn_addRoom = new Guna.UI2.WinForms.Guna2Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.combx_Bookingstatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -78,340 +62,66 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.combx_Bookingstatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lb_message_checout = new System.Windows.Forms.Label();
+            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.label28 = new System.Windows.Forms.Label();
             this.combx_paymentstatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
-            this.lb_message_checout = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomBed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.AddedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paymentmethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Btn_addRoom = new Guna.UI2.WinForms.Guna2Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // flowLayoutPanel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 37);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Booking Information";
+            this.flowLayoutPanel1.Controls.Add(this.guna2Panel1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(54, 119);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1615, 989);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // guna2Panel1
+            // combx_Bookingstatus
             // 
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Green;
-            this.guna2Panel1.Controls.Add(this.panel3);
-            this.guna2Panel1.Controls.Add(this.panel2);
-            this.guna2Panel1.Controls.Add(this.panel1);
-            this.guna2Panel1.Location = new System.Drawing.Point(69, 109);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1637, 904);
-            this.guna2Panel1.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.guna2DataGridView2);
-            this.panel3.Controls.Add(this.label29);
-            this.panel3.Location = new System.Drawing.Point(4, 628);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1630, 273);
-            this.panel3.TabIndex = 33;
-            // 
-            // guna2DataGridView2
-            // 
-            this.guna2DataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.guna2DataGridView2.ColumnHeadersHeight = 30;
-            this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RoomNumber,
-            this.RoomType,
-            this.RoomBed});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle19;
-            this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(61, 141);
-            this.guna2DataGridView2.Name = "guna2DataGridView2";
-            this.guna2DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            this.guna2DataGridView2.RowHeadersVisible = false;
-            this.guna2DataGridView2.RowHeadersWidth = 51;
-            this.guna2DataGridView2.RowTemplate.Height = 30;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(1548, 98);
-            this.guna2DataGridView2.TabIndex = 12;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 30;
-            this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 30;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.HeaderText = "Room Number";
-            this.RoomNumber.MinimumWidth = 6;
-            this.RoomNumber.Name = "RoomNumber";
-            // 
-            // RoomType
-            // 
-            this.RoomType.HeaderText = "Type";
-            this.RoomType.MinimumWidth = 6;
-            this.RoomType.Name = "RoomType";
-            // 
-            // RoomBed
-            // 
-            this.RoomBed.HeaderText = "Bed";
-            this.RoomBed.MinimumWidth = 6;
-            this.RoomBed.Name = "RoomBed";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(22, 34);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(101, 37);
-            this.label29.TabIndex = 11;
-            this.label29.Text = "Room";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.guna2DataGridView1);
-            this.panel2.Controls.Add(this.Btn_addRoom);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label47);
-            this.panel2.Location = new System.Drawing.Point(4, 342);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1630, 280);
-            this.panel2.TabIndex = 32;
-            // 
-            // guna2DataGridView1
-            // 
-            this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            this.guna2DataGridView1.ColumnHeadersHeight = 30;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AddedDate,
-            this.InvoceNumber,
-            this.Paymentmethod,
-            this.Amount});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(56, 151);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowTemplate.Height = 30;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1548, 98);
-            this.guna2DataGridView1.TabIndex = 23;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // AddedDate
-            // 
-            this.AddedDate.HeaderText = "Added Date";
-            this.AddedDate.MinimumWidth = 6;
-            this.AddedDate.Name = "AddedDate";
-            // 
-            // InvoceNumber
-            // 
-            this.InvoceNumber.HeaderText = "Invoce Number";
-            this.InvoceNumber.MinimumWidth = 6;
-            this.InvoceNumber.Name = "InvoceNumber";
-            // 
-            // Paymentmethod
-            // 
-            this.Paymentmethod.HeaderText = "Payment method";
-            this.Paymentmethod.MinimumWidth = 6;
-            this.Paymentmethod.Name = "Paymentmethod";
-            // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Amount";
-            this.Amount.MinimumWidth = 6;
-            this.Amount.Name = "Amount";
-            // 
-            // Btn_addRoom
-            // 
-            this.Btn_addRoom.BackgroundImage = global::Hotel_Management.Properties.Resources.Add___Copy;
-            this.Btn_addRoom.BorderRadius = 10;
-            this.Btn_addRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_addRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_addRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_addRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_addRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(116)))), ((int)(((byte)(16)))));
-            this.Btn_addRoom.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Btn_addRoom.ForeColor = System.Drawing.Color.White;
-            this.Btn_addRoom.Image = global::Hotel_Management.Properties.Resources.plus__1_;
-            this.Btn_addRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_addRoom.Location = new System.Drawing.Point(1495, 59);
-            this.Btn_addRoom.Name = "Btn_addRoom";
-            this.Btn_addRoom.Size = new System.Drawing.Size(109, 45);
-            this.Btn_addRoom.TabIndex = 24;
-            this.Btn_addRoom.Text = "      Add  ";
-            this.Btn_addRoom.Click += new System.EventHandler(this.Btn_addRoom_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label26.Location = new System.Drawing.Point(287, 95);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(95, 27);
-            this.label26.TabIndex = 22;
-            this.label26.Text = "Pending:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DimGray;
-            this.label25.Location = new System.Drawing.Point(51, 95);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(112, 27);
-            this.label25.TabIndex = 21;
-            this.label25.Text = "Total paid:";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(17, 32);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(155, 37);
-            this.label47.TabIndex = 20;
-            this.label47.Text = "Payments";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1630, 332);
-            this.panel1.TabIndex = 31;
+            this.combx_Bookingstatus.BackColor = System.Drawing.Color.Transparent;
+            this.combx_Bookingstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combx_Bookingstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combx_Bookingstatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combx_Bookingstatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combx_Bookingstatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.combx_Bookingstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.combx_Bookingstatus.ItemHeight = 30;
+            this.combx_Bookingstatus.Items.AddRange(new object[] {
+            "Pending",
+            "Success",
+            "Canceled"});
+            this.combx_Bookingstatus.Location = new System.Drawing.Point(657, 39);
+            this.combx_Bookingstatus.Name = "combx_Bookingstatus";
+            this.combx_Bookingstatus.Size = new System.Drawing.Size(289, 36);
+            this.combx_Bookingstatus.TabIndex = 13;
             // 
             // label24
             // 
@@ -442,6 +152,37 @@
             this.label22.Size = new System.Drawing.Size(307, 27);
             this.label22.TabIndex = 49;
             this.label22.Text = "Nights                                     :";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1630, 332);
+            this.panel1.TabIndex = 31;
             // 
             // label21
             // 
@@ -644,43 +385,56 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Details";
             // 
-            // combx_Bookingstatus
+            // panel4
             // 
-            this.combx_Bookingstatus.BackColor = System.Drawing.Color.Transparent;
-            this.combx_Bookingstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combx_Bookingstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combx_Bookingstatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combx_Bookingstatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combx_Bookingstatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.combx_Bookingstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.combx_Bookingstatus.ItemHeight = 30;
-            this.combx_Bookingstatus.Items.AddRange(new object[] {
-            "Pending",
-            "Success",
-            "Canceled"});
-            this.combx_Bookingstatus.Location = new System.Drawing.Point(669, 49);
-            this.combx_Bookingstatus.Name = "combx_Bookingstatus";
-            this.combx_Bookingstatus.Size = new System.Drawing.Size(289, 36);
-            this.combx_Bookingstatus.TabIndex = 6;
+            this.panel4.Controls.Add(this.lb_message_checout);
+            this.panel4.Controls.Add(this.btn_save);
+            this.panel4.Controls.Add(this.label28);
+            this.panel4.Controls.Add(this.combx_paymentstatus);
+            this.panel4.Controls.Add(this.label27);
+            this.panel4.Controls.Add(this.combx_Bookingstatus);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(12, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1718, 101);
+            this.panel4.TabIndex = 8;
             // 
-            // label27
+            // lb_message_checout
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(410, 62);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(218, 23);
-            this.label27.TabIndex = 7;
-            this.label27.Text = "Changing Booking Status:";
+            this.lb_message_checout.AutoSize = true;
+            this.lb_message_checout.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_message_checout.ForeColor = System.Drawing.Color.Maroon;
+            this.lb_message_checout.Location = new System.Drawing.Point(57, 63);
+            this.lb_message_checout.Name = "lb_message_checout";
+            this.lb_message_checout.Size = new System.Drawing.Size(302, 23);
+            this.lb_message_checout.TabIndex = 18;
+            this.lb_message_checout.Text = "The booked is in Checked Out State";
+            this.lb_message_checout.Visible = false;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BorderRadius = 10;
+            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_save.FillColor = System.Drawing.Color.Green;
+            this.btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(1591, 39);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(100, 36);
+            this.btn_save.TabIndex = 17;
+            this.btn_save.Text = "Save";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(1021, 62);
+            this.label28.Location = new System.Drawing.Point(1009, 52);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(220, 23);
-            this.label28.TabIndex = 9;
+            this.label28.TabIndex = 16;
             this.label28.Text = "Changing Payment Status:";
             // 
             // combx_paymentstatus
@@ -698,38 +452,310 @@
             "Success",
             "Failed",
             "Patialy paid"});
-            this.combx_paymentstatus.Location = new System.Drawing.Point(1270, 49);
+            this.combx_paymentstatus.Location = new System.Drawing.Point(1258, 39);
             this.combx_paymentstatus.Name = "combx_paymentstatus";
             this.combx_paymentstatus.Size = new System.Drawing.Size(272, 36);
-            this.combx_paymentstatus.TabIndex = 8;
+            this.combx_paymentstatus.TabIndex = 15;
             // 
-            // btn_save
+            // label27
             // 
-            this.btn_save.BorderRadius = 10;
-            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.Green;
-            this.btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(1603, 49);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(100, 36);
-            this.btn_save.TabIndex = 10;
-            this.btn_save.Text = "Save";
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(398, 52);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(218, 23);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Changing Booking Status:";
             // 
-            // lb_message_checout
+            // label1
             // 
-            this.lb_message_checout.AutoSize = true;
-            this.lb_message_checout.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_message_checout.ForeColor = System.Drawing.Color.Maroon;
-            this.lb_message_checout.Location = new System.Drawing.Point(69, 73);
-            this.lb_message_checout.Name = "lb_message_checout";
-            this.lb_message_checout.Size = new System.Drawing.Size(302, 23);
-            this.lb_message_checout.TabIndex = 11;
-            this.lb_message_checout.Text = "The booked is in Checked Out State";
-            this.lb_message_checout.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(310, 37);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Booking Information";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Green;
+            this.guna2Panel1.Controls.Add(this.panel3);
+            this.guna2Panel1.Controls.Add(this.panel2);
+            this.guna2Panel1.Controls.Add(this.panel1);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1637, 904);
+            this.guna2Panel1.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.guna2DataGridView2);
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Location = new System.Drawing.Point(4, 628);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1630, 273);
+            this.panel3.TabIndex = 33;
+            // 
+            // guna2DataGridView2
+            // 
+            this.guna2DataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            this.guna2DataGridView2.ColumnHeadersHeight = 30;
+            this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RoomNumber,
+            this.RoomType,
+            this.RoomBed});
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle31;
+            this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.Location = new System.Drawing.Point(61, 141);
+            this.guna2DataGridView2.Name = "guna2DataGridView2";
+            this.guna2DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            this.guna2DataGridView2.RowHeadersVisible = false;
+            this.guna2DataGridView2.RowHeadersWidth = 51;
+            this.guna2DataGridView2.RowTemplate.Height = 30;
+            this.guna2DataGridView2.Size = new System.Drawing.Size(1548, 98);
+            this.guna2DataGridView2.TabIndex = 12;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 30;
+            this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 30;
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.HeaderText = "Room Number";
+            this.RoomNumber.MinimumWidth = 6;
+            this.RoomNumber.Name = "RoomNumber";
+            // 
+            // RoomType
+            // 
+            this.RoomType.HeaderText = "Type";
+            this.RoomType.MinimumWidth = 6;
+            this.RoomType.Name = "RoomType";
+            // 
+            // RoomBed
+            // 
+            this.RoomBed.HeaderText = "Bed";
+            this.RoomBed.MinimumWidth = 6;
+            this.RoomBed.Name = "RoomBed";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(22, 34);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(101, 37);
+            this.label29.TabIndex = 11;
+            this.label29.Text = "Room";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.guna2DataGridView1);
+            this.panel2.Controls.Add(this.Btn_addRoom);
+            this.panel2.Controls.Add(this.label26);
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.label47);
+            this.panel2.Location = new System.Drawing.Point(4, 342);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1630, 280);
+            this.panel2.TabIndex = 32;
+            // 
+            // guna2DataGridView1
+            // 
+            this.guna2DataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            this.guna2DataGridView1.ColumnHeadersHeight = 30;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AddedDate,
+            this.InvoceNumber,
+            this.Paymentmethod,
+            this.Amount});
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle27;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(56, 151);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.RowTemplate.Height = 30;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1548, 98);
+            this.guna2DataGridView1.TabIndex = 23;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 30;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 30;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // AddedDate
+            // 
+            this.AddedDate.HeaderText = "Added Date";
+            this.AddedDate.MinimumWidth = 6;
+            this.AddedDate.Name = "AddedDate";
+            // 
+            // InvoceNumber
+            // 
+            this.InvoceNumber.HeaderText = "Invoce Number";
+            this.InvoceNumber.MinimumWidth = 6;
+            this.InvoceNumber.Name = "InvoceNumber";
+            // 
+            // Paymentmethod
+            // 
+            this.Paymentmethod.HeaderText = "Payment method";
+            this.Paymentmethod.MinimumWidth = 6;
+            this.Paymentmethod.Name = "Paymentmethod";
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
+            this.Amount.Name = "Amount";
+            // 
+            // Btn_addRoom
+            // 
+            this.Btn_addRoom.BackgroundImage = global::Hotel_Management.Properties.Resources.Add___Copy;
+            this.Btn_addRoom.BorderRadius = 10;
+            this.Btn_addRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_addRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_addRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_addRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_addRoom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(116)))), ((int)(((byte)(16)))));
+            this.Btn_addRoom.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Btn_addRoom.ForeColor = System.Drawing.Color.White;
+            this.Btn_addRoom.Image = global::Hotel_Management.Properties.Resources.plus__1_;
+            this.Btn_addRoom.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_addRoom.Location = new System.Drawing.Point(1495, 59);
+            this.Btn_addRoom.Name = "Btn_addRoom";
+            this.Btn_addRoom.Size = new System.Drawing.Size(109, 45);
+            this.Btn_addRoom.TabIndex = 24;
+            this.Btn_addRoom.Text = "      Add  ";
+            this.Btn_addRoom.Click += new System.EventHandler(this.Btn_addRoom_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label26.Location = new System.Drawing.Point(287, 95);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(95, 27);
+            this.label26.TabIndex = 22;
+            this.label26.Text = "Pending:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.DimGray;
+            this.label25.Location = new System.Drawing.Point(51, 95);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(112, 27);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "Total paid:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(17, 32);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(155, 37);
+            this.label47.TabIndex = 20;
+            this.label47.Text = "Payments";
             // 
             // FBookingInformation
             // 
@@ -738,17 +764,16 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1763, 1055);
-            this.Controls.Add(this.lb_message_checout);
-            this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.combx_paymentstatus);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.combx_Bookingstatus);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FBookingInformation";
             this.Text = "BookingInformation";
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -756,17 +781,28 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lb_message_checout;
+        private Guna.UI2.WinForms.Guna2Button btn_save;
+        private System.Windows.Forms.Label label28;
+        private Guna.UI2.WinForms.Guna2ComboBox combx_paymentstatus;
+        private System.Windows.Forms.Label label27;
+        private Guna.UI2.WinForms.Guna2ComboBox combx_Bookingstatus;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomBed;
+        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn AddedDate;
@@ -801,16 +837,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomBed;
-        private System.Windows.Forms.Label label29;
-        private Guna.UI2.WinForms.Guna2ComboBox combx_Bookingstatus;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private Guna.UI2.WinForms.Guna2ComboBox combx_paymentstatus;
-        private Guna.UI2.WinForms.Guna2Button btn_save;
-        private System.Windows.Forms.Label lb_message_checout;
     }
 }

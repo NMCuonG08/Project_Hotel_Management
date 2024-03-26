@@ -34,7 +34,7 @@
             this.txb_clients = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txb_bed = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txb_roomtype = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txb_roomNum = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_roomname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.rbtn_clearall = new System.Windows.Forms.RadioButton();
@@ -47,13 +47,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.checklistbox = new System.Windows.Forms.CheckedListBox();
             this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
-            this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
@@ -61,12 +62,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.txb_price);
             this.panel1.Controls.Add(this.txb_size);
             this.panel1.Controls.Add(this.txb_clients);
             this.panel1.Controls.Add(this.txb_bed);
             this.panel1.Controls.Add(this.txb_roomtype);
-            this.panel1.Controls.Add(this.txb_roomNum);
+            this.panel1.Controls.Add(this.txb_roomname);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.rbtn_clearall);
@@ -89,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1604, 863);
+            this.panel1.Size = new System.Drawing.Size(1781, 863);
             this.panel1.TabIndex = 0;
             // 
             // txb_price
@@ -205,26 +207,26 @@
             this.txb_roomtype.Size = new System.Drawing.Size(356, 36);
             this.txb_roomtype.TabIndex = 48;
             // 
-            // txb_roomNum
+            // txb_roomname
             // 
-            this.txb_roomNum.BorderRadius = 10;
-            this.txb_roomNum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_roomNum.DefaultText = "";
-            this.txb_roomNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_roomNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_roomNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_roomNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_roomNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomNum.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txb_roomNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomNum.Location = new System.Drawing.Point(652, 65);
-            this.txb_roomNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_roomNum.Name = "txb_roomNum";
-            this.txb_roomNum.PasswordChar = '\0';
-            this.txb_roomNum.PlaceholderText = "";
-            this.txb_roomNum.SelectedText = "";
-            this.txb_roomNum.Size = new System.Drawing.Size(362, 42);
-            this.txb_roomNum.TabIndex = 47;
+            this.txb_roomname.BorderRadius = 10;
+            this.txb_roomname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_roomname.DefaultText = "";
+            this.txb_roomname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_roomname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_roomname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_roomname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_roomname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomname.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_roomname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_roomname.Location = new System.Drawing.Point(652, 65);
+            this.txb_roomname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_roomname.Name = "txb_roomname";
+            this.txb_roomname.PasswordChar = '\0';
+            this.txb_roomname.PlaceholderText = "";
+            this.txb_roomname.SelectedText = "";
+            this.txb_roomname.Size = new System.Drawing.Size(362, 42);
+            this.txb_roomname.TabIndex = 47;
             // 
             // label8
             // 
@@ -249,7 +251,7 @@
             // rbtn_clearall
             // 
             this.rbtn_clearall.AutoSize = true;
-            this.rbtn_clearall.Location = new System.Drawing.Point(1423, 307);
+            this.rbtn_clearall.Location = new System.Drawing.Point(1424, 395);
             this.rbtn_clearall.Name = "rbtn_clearall";
             this.rbtn_clearall.Size = new System.Drawing.Size(77, 20);
             this.rbtn_clearall.TabIndex = 42;
@@ -261,7 +263,7 @@
             // rbtn_choiceall
             // 
             this.rbtn_choiceall.AutoSize = true;
-            this.rbtn_choiceall.Location = new System.Drawing.Point(1330, 305);
+            this.rbtn_choiceall.Location = new System.Drawing.Point(1331, 393);
             this.rbtn_choiceall.Name = "rbtn_choiceall";
             this.rbtn_choiceall.Size = new System.Drawing.Size(87, 20);
             this.rbtn_choiceall.TabIndex = 41;
@@ -274,27 +276,29 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1092, 305);
+            this.label6.Location = new System.Drawing.Point(1093, 393);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 25);
+            this.label6.Size = new System.Drawing.Size(233, 25);
             this.label6.TabIndex = 40;
-            this.label6.Text = "Tiện nghi phòng tắm";
+            this.label6.Text = "Bathroom conveniences ";
             // 
             // checklistbathroom
             // 
             this.checklistbathroom.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checklistbathroom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbathroom.FormattingEnabled = true;
             this.checklistbathroom.Items.AddRange(new object[] {
-            "Phòng tắm riêng",
-            "Bộ vệ sinh cá nhân",
-            "Máy sấy tóc",
-            "Vòi tắm đứng",
-            "Gương lớn"});
-            this.checklistbathroom.Location = new System.Drawing.Point(1097, 333);
+            "Private_bathroom",
+            "Personal_hygiene_kit",
+            "Hair_dryer",
+            "Standing_shower",
+            "Large_mirror",
+            "Bluetooth_speaker",
+            "Ventilation_system"});
+            this.checklistbathroom.Location = new System.Drawing.Point(1098, 421);
             this.checklistbathroom.Name = "checklistbathroom";
-            this.checklistbathroom.Size = new System.Drawing.Size(402, 200);
+            this.checklistbathroom.Size = new System.Drawing.Size(402, 198);
             this.checklistbathroom.TabIndex = 39;
             // 
             // radio_btn_clear
@@ -347,27 +351,29 @@
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(1092, 41);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 25);
+            this.label10.Size = new System.Drawing.Size(197, 25);
             this.label10.TabIndex = 31;
-            this.label10.Text = "Tiện nghi phòng";
+            this.label10.Text = "Room conveniences ";
             // 
             // checklistbox
             // 
             this.checklistbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbox.FormattingEnabled = true;
             this.checklistbox.Items.AddRange(new object[] {
-            "Máy lạnh",
+            "Air_conditioner",
             "TV",
-            "Rèm cửa/ màn che",
-            "Bàn làm việc",
-            "Không hút thuốc",
-            "Tủ lạnh",
-            "Thiết bị pha cà phê"});
+            "Curtains",
+            "Desk_workspace",
+            "Small_kitchen",
+            "Refrigerator",
+            "Coffee_maker",
+            "Free_bottled_water",
+            "Safe_box"});
             this.checklistbox.Location = new System.Drawing.Point(1097, 69);
             this.checklistbox.Name = "checklistbox";
-            this.checklistbox.Size = new System.Drawing.Size(402, 200);
+            this.checklistbox.Size = new System.Drawing.Size(402, 242);
             this.checklistbox.TabIndex = 30;
             // 
             // btn_upload
@@ -389,16 +395,6 @@
             this.btn_upload.TabIndex = 23;
             this.btn_upload.Text = "UpLoad Image";
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
-            // 
-            // picturebox
-            // 
-            this.picturebox.BorderRadius = 30;
-            this.picturebox.ImageRotate = 0F;
-            this.picturebox.Location = new System.Drawing.Point(39, 65);
-            this.picturebox.Name = "picturebox";
-            this.picturebox.Size = new System.Drawing.Size(505, 391);
-            this.picturebox.TabIndex = 22;
-            this.picturebox.TabStop = false;
             // 
             // btn_add
             // 
@@ -470,11 +466,42 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Add New Room";
             // 
+            // picturebox
+            // 
+            this.picturebox.BorderRadius = 30;
+            this.picturebox.ImageRotate = 0F;
+            this.picturebox.Location = new System.Drawing.Point(39, 65);
+            this.picturebox.Name = "picturebox";
+            this.picturebox.Size = new System.Drawing.Size(505, 391);
+            this.picturebox.TabIndex = 22;
+            this.picturebox.TabStop = false;
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1667, 12);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 54);
+            this.btn_close.TabIndex = 121;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // FAddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 863);
+            this.ClientSize = new System.Drawing.Size(1781, 863);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FAddRoom";
@@ -513,8 +540,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox txb_clients;
         private Guna.UI2.WinForms.Guna2ComboBox txb_bed;
         private Guna.UI2.WinForms.Guna2ComboBox txb_roomtype;
-        private Guna.UI2.WinForms.Guna2TextBox txb_roomNum;
+        private Guna.UI2.WinForms.Guna2TextBox txb_roomname;
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private Guna.UI2.WinForms.Guna2TextBox txb_size;
+        public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
     }
 }

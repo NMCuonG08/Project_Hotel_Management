@@ -10,15 +10,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hotel_Management
 {
-    public partial class FAddRoom : Form
+    public partial class FAddRoom : Form, IHotelIDConsumer
     {
-        public FAddRoom()
+        public int HotelID { get; set; }
+
+
+        public FAddRoom(int hotelID)
         {
             InitializeComponent();
-            txb_roomNum.Focus();
+            txb_roomname.Focus();
+            this.HotelID = hotelID;   
         }
         SqlConnection conn = new
           SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
@@ -51,29 +57,7 @@ namespace Hotel_Management
             }
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                byte[] images = null;
-                FileStream stream = new FileStream(imageLocation,FileMode.Open,FileAccess.Read);
-                BinaryReader br = new BinaryReader(stream);
-                images = br.ReadBytes((int)stream.Length);
-
-                conn.Open();
-                string sql = "Insert into HotelImage(htImage) values( @images )";
-                SqlCommand sqlCommand = new SqlCommand(sql, conn);
-               sqlCommand.Parameters.Add(new SqlParameter("@images", images));
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Upload successful");
-                conn.Close();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
        /* private void btn_view_Click(object sender, EventArgs e)
         {
@@ -170,10 +154,120 @@ namespace Hotel_Management
         {
 
         }
+        /*private void btn_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                byte[] images = null;
+                FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(stream);
+                images = br.ReadBytes((int)stream.Length);
+
+                conn.Open();
+                string sql = "Insert into HotelImage(htImage) values( @images )";
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.Parameters.Add(new SqlParameter("@images", images));
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Upload successful");
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+*/
+
+        public delegate void AddRoomDelegate(Room room);
+        public AddRoomDelegate addRoom;
+
+        public void SetConveniences(CheckedListBox checkedListBox)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    int maxRoomID;
+                    string getMaxRoomIDQuery = "SELECT MAX(RoomID) FROM RoomInformation";
+                    using (SqlCommand getMaxRoomIDCmd = new SqlCommand(getMaxRoomIDQuery, connection))
+                    {
+                        object result = getMaxRoomIDCmd.ExecuteScalar();
+                        maxRoomID = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                    int newRoomID = maxRoomID ;
+
+                    string addRoomConvenienceQuery = "INSERT INTO RoomConveniences (RoomiD) VALUES (@RoomID)";
+                    using (SqlCommand addRoomConvenienceCmd = new SqlCommand(addRoomConvenienceQuery, connection))
+                    {
+                        addRoomConvenienceCmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                        addRoomConvenienceCmd.ExecuteNonQuery();
+                    }
+                    string addBathRoomConvenienceQuery = "INSERT INTO Bathroomconveniences (RoomiD) VALUES (@RoomID)";
+                    using (SqlCommand addBathRoomConvenienceCmd = new SqlCommand(addBathRoomConvenienceQuery, connection))
+                    {
+                        addBathRoomConvenienceCmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                        addBathRoomConvenienceCmd.ExecuteNonQuery();
+                    }
+
+                    foreach (object itemChecked in checkedListBox.CheckedItems)
+                    {
+                        string updateQuery = "UPDATE RoomConveniences SET ";
+                        string itemName = itemChecked.ToString();
+                        updateQuery += $"{itemName} = 1 WHERE RoomID = @RoomID"; 
+
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    foreach (object itemChecked in checklistbathroom.CheckedItems)
+                    {
+                        string updateQuery = "UPDATE Bathroomconveniences SET ";
+                        string itemName = itemChecked.ToString();
+                        updateQuery += $"{itemName} = 1 WHERE RoomID = @RoomID";
+
+                        // Thực hiện truy vấn SQL
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@RoomID", newRoomID);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            
+            byte[] images = null;
+            FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(stream);
+            images = br.ReadBytes((int)stream.Length);
 
+            string status = "empty"; conn.Open();
+            int roomPrice = Convert.ToInt32(txb_price.Text);
+            int clients = Convert.ToInt32(txb_clients.Text);
+            int size = Convert.ToInt32(txb_size.Text);
+            Room room = new Room(txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, null, null, images, status);
+            addRoom(room);
+            SetConveniences(checklistbox);
+            Connection.Openadmin();
+            this.Close();
+           
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -78,6 +78,7 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ucsearch.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.uc_FGpass.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Admin.resources
+<<<<<<< HEAD
 D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
 D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
 D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
@@ -116,3 +117,6 @@ D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Managemen
 D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
 D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Book_room.resources
 D:\WINFORM#C\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Ucbookroom.resources
+=======
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Book_room.resources
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591

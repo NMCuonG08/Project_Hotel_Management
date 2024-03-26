@@ -119,21 +119,21 @@ namespace Hotel_Management
                             string storePassword = reader["password"].ToString();
                             if (!string.IsNullOrEmpty(storePassword))
                             {
-                                Account user = SelectUser(email, password);
-                                FFindingRoom fFinding = new FFindingRoom();
-                                Admin admin = new Admin();
-                                if (user != null )
+                                Account account = SelectUser(email, password);
+                                if (account != null )
                                 {
-                                   if ( user.Role == "user")
+                                   if (account.Role == "user")
                                     {
-                                    //    this.Hide();
-                                        fFinding.setUser(user);
+                                        //    this.Hide();
+                                        FFindingRoom fFinding = new FFindingRoom(account);
                                         fFinding.ShowDialog();
                                     }
-                                   else if (user.Role == "admin")
+                                   else if (account.Role == "admin")
                                     {
-                                     //   this.Hide();
-                                        admin.ShowDialog();
+                                        //   this.Hide();
+                                        Connection.fad = new Admin(account);
+                                        Connection.admin = account;
+                                        Connection.fad.ShowDialog();
                                     }
                                 }
                             }
@@ -167,6 +167,7 @@ namespace Hotel_Management
             uc_FG.Visible = true;
             uc_FG.BringToFront();
         }
+<<<<<<< HEAD
         private void btn_hide_Click(object sender, EventArgs e)
         {
             if (txb_password.PasswordChar == '●')
@@ -181,7 +182,39 @@ namespace Hotel_Management
             if (txb_password.PasswordChar == '\0')
             {
                 btn_hide.BringToFront();
+=======
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txb_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_hipe_Click(object sender, EventArgs e)
+        {
+           if( txb_password.PasswordChar == '●')
+            {
+                btn_eye.BringToFront();
+                txb_password.PasswordChar = '\0';
+                btn_hipe.Visible = false;
+            }
+           
+        }
+        private void btn_eye_Click(object sender, EventArgs e)
+        {
+            if (txb_password.PasswordChar == '\0')
+            {
+                btn_hipe.BringToFront();
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
                 txb_password.PasswordChar = '●';
+                btn_eye.Visible = false;
             }
         }
         private void panel3_Paint(object sender, PaintEventArgs e)

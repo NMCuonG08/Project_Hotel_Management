@@ -32,12 +32,12 @@
             this.lb_name = new System.Windows.Forms.Label();
             this.lb_location = new System.Windows.Forms.Label();
             this.lb_ultilities = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pctbox = new System.Windows.Forms.PictureBox();
-            this.btn_point = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_point = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctbox = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbox)).BeginInit();
             this.SuspendLayout();
@@ -83,54 +83,15 @@
             this.lb_ultilities.TabIndex = 5;
             this.lb_ultilities.Text = "utilities";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Hotel_Management.Properties.Resources.location;
-            this.pictureBox1.Location = new System.Drawing.Point(384, 97);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pctbox
-            // 
-            this.pctbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pctbox.Location = new System.Drawing.Point(3, 0);
-            this.pctbox.Name = "pctbox";
-            this.pctbox.Size = new System.Drawing.Size(359, 236);
-            this.pctbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctbox.TabIndex = 1;
-            this.pctbox.TabStop = false;
-            // 
-            // btn_point
-            // 
-            this.btn_point.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_point.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_point.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_point.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_point.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_point.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_point.FillColor = System.Drawing.Color.Magenta;
-            this.btn_point.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_point.ForeColor = System.Drawing.Color.White;
-            this.btn_point.Location = new System.Drawing.Point(1384, 14);
-            this.btn_point.Name = "btn_point";
-            this.btn_point.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_point.Size = new System.Drawing.Size(57, 50);
-            this.btn_point.TabIndex = 7;
-            this.btn_point.Text = "10";
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(1272, 21);
+            this.label3.Location = new System.Drawing.Point(1231, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 43);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Very good!";
+            this.label3.Text = "Evaluate:";
             // 
             // txb_price
             // 
@@ -162,10 +123,51 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Giá mỗi đêm rẻ nhất từ:";
             // 
+            // btn_point
+            // 
+            this.btn_point.BackColor = System.Drawing.Color.Transparent;
+            this.btn_point.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_point.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_point.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_point.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_point.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_point.FillColor = System.Drawing.Color.Magenta;
+            this.btn_point.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_point.ForeColor = System.Drawing.Color.White;
+            this.btn_point.Location = new System.Drawing.Point(1373, 14);
+            this.btn_point.Name = "btn_point";
+            this.btn_point.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_point.Size = new System.Drawing.Size(68, 63);
+            this.btn_point.TabIndex = 7;
+            this.btn_point.Text = "10";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Hotel_Management.Properties.Resources.location;
+            this.pictureBox1.Location = new System.Drawing.Point(384, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pctbox
+            // 
+            this.pctbox.FillColor = System.Drawing.Color.DimGray;
+            this.pctbox.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Horizontal;
+            this.pctbox.ImageRotate = 0F;
+            this.pctbox.Location = new System.Drawing.Point(0, 0);
+            this.pctbox.Name = "pctbox";
+            this.pctbox.Size = new System.Drawing.Size(378, 241);
+            this.pctbox.TabIndex = 11;
+            this.pctbox.TabStop = false;
+            // 
             // UCFindingHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pctbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txb_price);
             this.Controls.Add(this.label3);
@@ -175,9 +177,8 @@
             this.Controls.Add(this.lb_location);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pctbox);
             this.Name = "UCFindingHotel";
-            this.Size = new System.Drawing.Size(1457, 239);
+            this.Size = new System.Drawing.Size(1457, 241);
             this.Click += new System.EventHandler(this.UCFindingHotel_Click);
             this.MouseEnter += new System.EventHandler(this.UCFindingHotel_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.UCFindingHotel_MouseLeave);
@@ -189,8 +190,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pctbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.Label lb_location;
@@ -200,5 +199,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2PictureBox pctbox;
     }
 }

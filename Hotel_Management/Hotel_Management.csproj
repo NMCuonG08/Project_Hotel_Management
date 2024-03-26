@@ -488,6 +488,7 @@
     <None Include="Resources\key %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\user %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -531,20 +532,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\income1.png" />
+=======
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id1.png" />
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\id-card1.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\id1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\location %281%29.png" />
+=======
+    <None Include="Resources\user %281%29.png" />
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hotel-1447197_1280.jpg" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\user %281%293.png" />
   </ItemGroup>
   <ItemGroup>
@@ -591,12 +606,178 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendar3.png" />
+=======
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel-1749602_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\united-nations %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %283%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cable-tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swimming-pool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frying-pan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi.png" />
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\credit-card.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\credit-card %281%29.png" />
+=======
+    <None Include="Resources\view11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utility-room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\utility-room1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workspace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-fridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-fridge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safebox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safebox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hygiene.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooling-fan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hair-dryer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oval-mirror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hygiene1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air-conditioner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smart-tv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\private.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peace.png" />
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

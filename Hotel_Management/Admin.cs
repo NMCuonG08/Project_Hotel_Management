@@ -15,14 +15,55 @@ namespace Hotel_Management
     {
         public int HotelID { get; set; }
         public int AdminID { get; set; }
+        private Account Adm = new Account();
         SqlConnection conn = new
          SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
-        public Admin()
+        public Admin(Account admin)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+<<<<<<< HEAD
             HotelID = 1;
             this.AdminID = 6;
+=======
+            this.HotelID = FindHotelID(admin.Id);
+            Adm = admin;
+            this.AdminID = Adm.Id;
+            
+        }
+
+        public int FindHotelID(int adminID)
+        {
+            int hotelID = -1; 
+
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string sql = "SELECT HotelID FROM HotelInformation WHERE AdminID = @AdminID";
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    cmd.Parameters.AddWithValue("@AdminID", adminID);
+
+                   
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            
+                            hotelID = Convert.ToInt32(reader["HotelID"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            // Trả về giá trị HotelID
+            return hotelID;
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
         }
 
         FHotelInformation hotelInformation;
@@ -156,6 +197,11 @@ namespace Hotel_Management
         private void Fcheckout_FormClosed(object sender, FormClosedEventArgs e)
         {
             fcheckout = null;
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

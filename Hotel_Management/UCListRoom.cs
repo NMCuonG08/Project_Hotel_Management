@@ -16,7 +16,7 @@ namespace Hotel_Management
         public event EventHandler ItemClicked;
 
         public event EventHandler ItemBooking;
-
+        public event EventHandler ItemDelete;
 
         public UCListRoom()
         {
@@ -87,6 +87,11 @@ namespace Hotel_Management
         private void UCListRoom_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            ItemDelete?.Invoke(this, e);
         }
     }
 }

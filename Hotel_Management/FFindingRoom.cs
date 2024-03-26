@@ -16,12 +16,14 @@ namespace Hotel_Management
     {
         SqlConnection conn = new
          SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
-
-        public FFindingRoom()
+        private Account User = new Account();
+        public FFindingRoom(Account user)
         {
             InitializeComponent();
+            this.User = user;
+        //    txb_email.Text =User.Useremail;
             LoadForm();
-            createItem();
+            
         }
 
         public void LoadForm()
@@ -34,12 +36,16 @@ namespace Hotel_Management
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
                 dataAdapter.Fill(data);
                 gv_hotel.DataSource = data;
+                createItem(data);
+                conn.Close();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            HashSet<string> uniqueHotel = GetUniqueHotelLocation();
+            cbx_hotelLocation.DataSource = new BindingSource(uniqueHotel, null);
         }
 
         private Room GetHotelByID(int id)
@@ -78,64 +84,140 @@ namespace Hotel_Management
             return room;
         }
 
-        private void createItem()
+        private void createItem(DataTable data)
         {
-            int count = gv_hotel.Rows.Count;
+            int count = data.Rows.Count;
             if (count > 0)
             {
                 UCFindingHotel[] ls = new UCFindingHotel[count];
-                for (int i = 0; i < count - 1; i++)
+                for (int i = 0; i < count; i++)
                 {
                     ls[i] = new UCFindingHotel();
-                    object roomName = gv_hotel.Rows[i].Cells[1].Value;
+                    object roomName = data.Rows[i]["HotelName"];
                     if (roomName != null)
                     {
                         ls[i].HotelName = roomName.ToString();
                     }
-                
 
+<<<<<<< HEAD
                    /*byte[] image = (byte[])gv_hotel.Rows[i].Cells[6].Value;
                    if (image != null)
+=======
+                    byte[] image = (byte[])data.Rows[i]["HotelImage"];
+                    if (image != null)
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
                     {
                         using (MemoryStream ms = new MemoryStream(image))
                         {
                            ls[i].Image = System.Drawing.Image.FromStream(ms);
                         }
+<<<<<<< HEAD
                   }*/
                     object HotelLocation = gv_hotel.Rows[i].Cells[2].Value;
+=======
+                    }
+
+                    object HotelLocation = data.Rows[i]["City"];
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
                     if (HotelLocation != null)
                     {
                         ls[i].Location = HotelLocation.ToString();
                     }
-                  //  ls[i].Ultilities = gv_hotel.Rows[i].Cells[5].Value;
-                    ls[i].Price = (Double)gv_hotel.Rows[i].Cells[5].Value;
-                    ls[i].Point = (Double)gv_hotel.Rows[i].Cells[4].Value;
-                    ls[i].Id = (Int32)gv_hotel.Rows[i].Cells[0].Value;
+
+                    ls[i].Price = (Double)data.Rows[i]["Price"];
+                    ls[i].Point = (Double)data.Rows[i]["Feedback"];
+                    ls[i].Id = (Int32)data.Rows[i]["HotelID"];
                     ls[i].Click += FFindingRoom_Click;
                     flowLayoutPanel1.Controls.Add(ls[i]);
                 }
             }
         }
 
+
         private void FFindingRoom_Click(object sender, EventArgs e)
         {
             UCFindingHotel item = sender as UCFindingHotel;
             
             int id = Convert.ToInt32(item.Id);
-            FChoiceRoom choiceRoom = new FChoiceRoom(id);
+            FChoiceRoom choiceRoom = new FChoiceRoom(id,User.Id);
             //   Room room = GetRoomByID(id);
-
-            choiceRoom.HotelID = id;
+           /* choiceRoom.UserID = user.Id;
+            choiceRoom.HotelID = id;*/
             choiceRoom.ShowDialog();
            
         }
         // Set User
-       private Account user = new Account();
 
-        public void setUser(Account user)
+        private HashSet<string> GetUniqueHotelLocation()
         {
-            this.user = user;
-            txb_email.Text = user.Useremail;
-        } 
+            HashSet<string> listHotel = new HashSet<string>();
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT City FROM HotelInformation";
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string hotelLocation = reader["City"].ToString();
+                                listHotel.Add(hotelLocation);
+                            }
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return listHotel;
+        }
+
+        private void btn_findinghotel_Click(object sender, EventArgs e)
+        {
+            string selectedLocation = cbx_hotelLocation.Text.Trim();
+            if (!string.IsNullOrEmpty(selectedLocation))
+            {
+                try
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM HotelInformation WHERE City = @City";
+                    SqlCommand command = new SqlCommand(sql, conn);
+                    command.Parameters.AddWithValue("@City", selectedLocation);
+
+                    DataTable data = new DataTable();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    dataAdapter.Fill(data);
+
+                  
+                    flowLayoutPanel1.Controls.Clear();
+
+                    // Tạo lại các items cho flowLayoutPanel với dữ liệu mới
+                    createItem(data);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a location.");
+            }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -70,18 +70,12 @@ namespace Hotel_Management
                 }
             }
         }
-
        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FSignIn_Load(object sender, EventArgs e)
         {
 
         }
+<<<<<<< HEAD
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -168,6 +162,13 @@ namespace Hotel_Management
 
         }
 
+=======
+        private void datetime_birthday_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+       
+>>>>>>> 543780dc8c9bd348cf5d13acf362bb6ca6406591
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Hide();

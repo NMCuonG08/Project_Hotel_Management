@@ -37,6 +37,19 @@ namespace Hotel_Management
             this.Image = image;
             this.status = status;
         }
+        public Room( string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status)
+        {
+            this.Name = name;
+            this.Type = type;
+            this.Bed = bed;
+            this.Clients = clients;
+            this.Size = size;
+            this.Price = price;
+            this.Room_facilities = room_facilities;
+            this.Bathroom_facilities = bathroom_facilities;
+            this.Image = image;
+            this.status = status;
+        }
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
