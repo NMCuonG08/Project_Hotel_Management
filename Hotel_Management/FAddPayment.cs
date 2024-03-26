@@ -16,5 +16,15 @@ namespace Hotel_Management
         {
             InitializeComponent();
         }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            Data.invoiceNum = txb_invoce_number.Text.ToString();
+            Data.pMethod = combx_pymethod.Text.ToString();
+            Data.dt = Convert.ToDateTime(dtp.Text.ToString());
+            Data.amount = txb_amount.Text.ToString();
+            this.Close();
+        }
+
     }
 }

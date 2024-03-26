@@ -38,6 +38,7 @@
             this.txb_amount = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // txb_invoce_number
@@ -52,13 +53,13 @@
             this.txb_invoce_number.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_invoce_number.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_invoce_number.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_invoce_number.Location = new System.Drawing.Point(218, 93);
+            this.txb_invoce_number.Location = new System.Drawing.Point(214, 46);
             this.txb_invoce_number.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_invoce_number.Name = "txb_invoce_number";
             this.txb_invoce_number.PasswordChar = '\0';
             this.txb_invoce_number.PlaceholderText = "";
             this.txb_invoce_number.SelectedText = "";
-            this.txb_invoce_number.Size = new System.Drawing.Size(420, 48);
+            this.txb_invoce_number.Size = new System.Drawing.Size(420, 36);
             this.txb_invoce_number.TabIndex = 0;
             // 
             // combx_pymethod
@@ -76,7 +77,7 @@
             "Paypal",
             "Visa",
             "Cash"});
-            this.combx_pymethod.Location = new System.Drawing.Point(218, 206);
+            this.combx_pymethod.Location = new System.Drawing.Point(218, 150);
             this.combx_pymethod.Name = "combx_pymethod";
             this.combx_pymethod.Size = new System.Drawing.Size(420, 36);
             this.combx_pymethod.TabIndex = 1;
@@ -86,7 +87,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(3, 114);
+            this.label1.Location = new System.Drawing.Point(3, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 27);
             this.label1.TabIndex = 2;
@@ -97,7 +98,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(3, 172);
+            this.label2.Location = new System.Drawing.Point(3, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 27);
             this.label2.TabIndex = 3;
@@ -108,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(3, 215);
+            this.label3.Location = new System.Drawing.Point(3, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 27);
             this.label3.TabIndex = 4;
@@ -118,7 +119,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 280);
+            this.label4.Location = new System.Drawing.Point(3, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 27);
             this.label4.TabIndex = 5;
@@ -136,13 +137,13 @@
             this.txb_add_date.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_add_date.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_add_date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_add_date.Location = new System.Drawing.Point(218, 149);
+            this.txb_add_date.Location = new System.Drawing.Point(218, 100);
             this.txb_add_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_add_date.Name = "txb_add_date";
             this.txb_add_date.PasswordChar = '\0';
             this.txb_add_date.PlaceholderText = "";
             this.txb_add_date.SelectedText = "";
-            this.txb_add_date.Size = new System.Drawing.Size(420, 50);
+            this.txb_add_date.Size = new System.Drawing.Size(420, 34);
             this.txb_add_date.TabIndex = 6;
             // 
             // txb_amount
@@ -157,13 +158,13 @@
             this.txb_amount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_amount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_amount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_amount.Location = new System.Drawing.Point(218, 263);
+            this.txb_amount.Location = new System.Drawing.Point(214, 200);
             this.txb_amount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_amount.Name = "txb_amount";
             this.txb_amount.PasswordChar = '\0';
             this.txb_amount.PlaceholderText = "";
             this.txb_amount.SelectedText = "";
-            this.txb_amount.Size = new System.Drawing.Size(420, 48);
+            this.txb_amount.Size = new System.Drawing.Size(420, 34);
             this.txb_amount.TabIndex = 7;
             // 
             // label5
@@ -184,17 +185,26 @@
             this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(218, 373);
+            this.btn_save.Location = new System.Drawing.Point(218, 266);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(180, 45);
             this.btn_save.TabIndex = 9;
             this.btn_save.Text = "Save";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // dtp
+            // 
+            this.dtp.Location = new System.Drawing.Point(218, 107);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(416, 22);
+            this.dtp.TabIndex = 10;
             // 
             // FAddPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 509);
+            this.ClientSize = new System.Drawing.Size(657, 348);
+            this.Controls.Add(this.dtp);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txb_amount);
@@ -227,5 +237,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_amount;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btn_save;
+        private System.Windows.Forms.DateTimePicker dtp;
     }
 }

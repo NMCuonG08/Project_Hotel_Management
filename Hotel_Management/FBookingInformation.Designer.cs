@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< Updated upstream
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,6 +38,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+>>>>>>> Stashed changes
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -45,16 +57,45 @@
             this.RoomBed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label29 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.AddedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paymentmethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+>>>>>>> Stashed changes
             this.Btn_addRoom = new Guna.UI2.WinForms.Guna2Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
             this.panel1 = new System.Windows.Forms.Panel();
+=======
+            this.dgv1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.AddedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paymentmethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbGName = new System.Windows.Forms.Label();
+            this.lbGEmail = new System.Windows.Forms.Label();
+            this.lbGPhone = new System.Windows.Forms.Label();
+            this.lbGCountry = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbPhone = new System.Windows.Forms.Label();
+            this.lbCountry = new System.Windows.Forms.Label();
+            this.lbCity = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -68,7 +109,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -79,17 +119,36 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.combx_Bookingstatus = new Guna.UI2.WinForms.Guna2ComboBox();
+<<<<<<< Updated upstream
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.combx_paymentstatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.lb_message_checout = new System.Windows.Forms.Label();
+=======
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lb_message_checout = new System.Windows.Forms.Label();
+            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.combx_paymentstatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbtp = new System.Windows.Forms.Label();
+            this.lbPen = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1.SuspendLayout();
+>>>>>>> Stashed changes
             this.guna2Panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
+<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // label1
@@ -109,10 +168,17 @@
             this.guna2Panel1.Controls.Add(this.panel3);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Controls.Add(this.panel1);
+<<<<<<< Updated upstream
             this.guna2Panel1.Location = new System.Drawing.Point(69, 109);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1637, 904);
             this.guna2Panel1.TabIndex = 5;
+=======
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1637, 904);
+            this.guna2Panel1.TabIndex = 7;
+>>>>>>> Stashed changes
             // 
             // panel3
             // 
@@ -127,6 +193,7 @@
             // guna2DataGridView2
             // 
             this.guna2DataGridView2.AllowUserToResizeRows = false;
+<<<<<<< Updated upstream
             dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -141,12 +208,29 @@
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+=======
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+>>>>>>> Stashed changes
             this.guna2DataGridView2.ColumnHeadersHeight = 30;
             this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RoomNumber,
             this.RoomType,
             this.RoomBed});
+<<<<<<< Updated upstream
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,10 +239,21 @@
             dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle19;
+=======
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+>>>>>>> Stashed changes
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView2.Location = new System.Drawing.Point(61, 141);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+<<<<<<< Updated upstream
             dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -167,6 +262,16 @@
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+=======
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+>>>>>>> Stashed changes
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 51;
             this.guna2DataGridView2.RowTemplate.Height = 30;
@@ -225,16 +330,26 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< Updated upstream
             this.panel2.Controls.Add(this.guna2DataGridView1);
+=======
+            this.panel2.Controls.Add(this.lbPen);
+            this.panel2.Controls.Add(this.lbtp);
+>>>>>>> Stashed changes
             this.panel2.Controls.Add(this.Btn_addRoom);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label47);
+<<<<<<< Updated upstream
+=======
+            this.panel2.Controls.Add(this.dgv1);
+>>>>>>> Stashed changes
             this.panel2.Location = new System.Drawing.Point(4, 342);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1630, 280);
             this.panel2.TabIndex = 32;
             // 
+<<<<<<< Updated upstream
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToResizeRows = false;
@@ -330,6 +445,8 @@
             this.Amount.MinimumWidth = 6;
             this.Amount.Name = "Amount";
             // 
+=======
+>>>>>>> Stashed changes
             // Btn_addRoom
             // 
             this.Btn_addRoom.BackgroundImage = global::Hotel_Management.Properties.Resources.Add___Copy;
@@ -355,7 +472,11 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+<<<<<<< Updated upstream
             this.label26.Location = new System.Drawing.Point(287, 95);
+=======
+            this.label26.Location = new System.Drawing.Point(442, 95);
+>>>>>>> Stashed changes
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(95, 27);
             this.label26.TabIndex = 22;
@@ -382,9 +503,127 @@
             this.label47.TabIndex = 20;
             this.label47.Text = "Payments";
             // 
+<<<<<<< Updated upstream
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+=======
+            // dgv1
+            // 
+            this.dgv1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv1.ColumnHeadersHeight = 30;
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AddedDate,
+            this.InvoceNumber,
+            this.Paymentmethod,
+            this.Amount});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv1.Location = new System.Drawing.Point(54, 151);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv1.RowHeadersVisible = false;
+            this.dgv1.RowHeadersWidth = 51;
+            this.dgv1.RowTemplate.Height = 30;
+            this.dgv1.Size = new System.Drawing.Size(1548, 98);
+            this.dgv1.TabIndex = 23;
+            this.dgv1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgv1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgv1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.dgv1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv1.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgv1.ThemeStyle.ReadOnly = false;
+            this.dgv1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv1.ThemeStyle.RowsStyle.Height = 30;
+            this.dgv1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // AddedDate
+            // 
+            this.AddedDate.HeaderText = "Added Date";
+            this.AddedDate.MinimumWidth = 6;
+            this.AddedDate.Name = "AddedDate";
+            // 
+            // InvoceNumber
+            // 
+            this.InvoceNumber.HeaderText = "Invoce Number";
+            this.InvoceNumber.MinimumWidth = 6;
+            this.InvoceNumber.Name = "InvoceNumber";
+            // 
+            // Paymentmethod
+            // 
+            this.Paymentmethod.HeaderText = "Payment method";
+            this.Paymentmethod.MinimumWidth = 6;
+            this.Paymentmethod.Name = "Paymentmethod";
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
+            this.Amount.Name = "Amount";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label36);
+            this.panel1.Controls.Add(this.label35);
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.lbName);
+            this.panel1.Controls.Add(this.lbGName);
+            this.panel1.Controls.Add(this.lbGEmail);
+            this.panel1.Controls.Add(this.lbGPhone);
+            this.panel1.Controls.Add(this.lbGCountry);
+            this.panel1.Controls.Add(this.lbEmail);
+            this.panel1.Controls.Add(this.lbPhone);
+            this.panel1.Controls.Add(this.lbCountry);
+            this.panel1.Controls.Add(this.lbCity);
+>>>>>>> Stashed changes
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label22);
@@ -398,7 +637,10 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
+<<<<<<< Updated upstream
             this.panel1.Controls.Add(this.label12);
+=======
+>>>>>>> Stashed changes
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label8);
@@ -408,10 +650,187 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+<<<<<<< Updated upstream
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1630, 332);
             this.panel1.TabIndex = 31;
+=======
+            this.panel1.Location = new System.Drawing.Point(4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1630, 332);
+            this.panel1.TabIndex = 31;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(1292, 296);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(18, 27);
+            this.label36.TabIndex = 69;
+            this.label36.Text = " ";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(1294, 269);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(18, 27);
+            this.label35.TabIndex = 68;
+            this.label35.Text = " ";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(1294, 242);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(18, 27);
+            this.label34.TabIndex = 67;
+            this.label34.Text = " ";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(1294, 219);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(18, 27);
+            this.label33.TabIndex = 66;
+            this.label33.Text = " ";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(1294, 192);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(18, 27);
+            this.label32.TabIndex = 65;
+            this.label32.Text = " ";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(1294, 165);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(18, 27);
+            this.label31.TabIndex = 64;
+            this.label31.Text = " ";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(1292, 138);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(18, 27);
+            this.label30.TabIndex = 63;
+            this.label30.Text = " ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1292, 111);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 27);
+            this.label12.TabIndex = 62;
+            this.label12.Text = " ";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(280, 107);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(18, 27);
+            this.lbName.TabIndex = 61;
+            this.lbName.Text = " ";
+            // 
+            // lbGName
+            // 
+            this.lbGName.AutoSize = true;
+            this.lbGName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGName.Location = new System.Drawing.Point(680, 111);
+            this.lbGName.Name = "lbGName";
+            this.lbGName.Size = new System.Drawing.Size(18, 27);
+            this.lbGName.TabIndex = 60;
+            this.lbGName.Text = " ";
+            // 
+            // lbGEmail
+            // 
+            this.lbGEmail.AutoSize = true;
+            this.lbGEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGEmail.Location = new System.Drawing.Point(631, 215);
+            this.lbGEmail.Name = "lbGEmail";
+            this.lbGEmail.Size = new System.Drawing.Size(18, 27);
+            this.lbGEmail.TabIndex = 59;
+            this.lbGEmail.Text = " ";
+            // 
+            // lbGPhone
+            // 
+            this.lbGPhone.AutoSize = true;
+            this.lbGPhone.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGPhone.Location = new System.Drawing.Point(631, 186);
+            this.lbGPhone.Name = "lbGPhone";
+            this.lbGPhone.Size = new System.Drawing.Size(18, 27);
+            this.lbGPhone.TabIndex = 58;
+            this.lbGPhone.Text = " ";
+            // 
+            // lbGCountry
+            // 
+            this.lbGCountry.AutoSize = true;
+            this.lbGCountry.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGCountry.Location = new System.Drawing.Point(631, 161);
+            this.lbGCountry.Name = "lbGCountry";
+            this.lbGCountry.Size = new System.Drawing.Size(18, 27);
+            this.lbGCountry.TabIndex = 57;
+            this.lbGCountry.Text = " ";
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(194, 235);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(18, 27);
+            this.lbEmail.TabIndex = 55;
+            this.lbEmail.Text = " ";
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AutoSize = true;
+            this.lbPhone.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhone.Location = new System.Drawing.Point(194, 206);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.Size = new System.Drawing.Size(18, 27);
+            this.lbPhone.TabIndex = 54;
+            this.lbPhone.Text = " ";
+            // 
+            // lbCountry
+            // 
+            this.lbCountry.AutoSize = true;
+            this.lbCountry.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCountry.Location = new System.Drawing.Point(194, 181);
+            this.lbCountry.Name = "lbCountry";
+            this.lbCountry.Size = new System.Drawing.Size(18, 27);
+            this.lbCountry.TabIndex = 53;
+            this.lbCountry.Text = " ";
+            // 
+            // lbCity
+            // 
+            this.lbCity.AutoSize = true;
+            this.lbCity.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCity.Location = new System.Drawing.Point(194, 154);
+            this.lbCity.Name = "lbCity";
+            this.lbCity.Size = new System.Drawing.Size(18, 27);
+            this.lbCity.TabIndex = 52;
+            this.lbCity.Text = " ";
+>>>>>>> Stashed changes
             // 
             // label24
             // 
@@ -419,9 +838,9 @@
             this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(1098, 296);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(305, 27);
+            this.label24.Size = new System.Drawing.Size(70, 27);
             this.label24.TabIndex = 51;
-            this.label24.Text = "Total Price                              :";
+            this.label24.Text = "Total ";
             // 
             // label23
             // 
@@ -439,9 +858,13 @@
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(1098, 269);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(307, 27);
+            this.label22.Size = new System.Drawing.Size(97, 27);
             this.label22.TabIndex = 49;
+<<<<<<< Updated upstream
             this.label22.Text = "Nights                                     :";
+=======
+            this.label22.Text = "Nights   ";
+>>>>>>> Stashed changes
             // 
             // label21
             // 
@@ -449,9 +872,9 @@
             this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(1100, 242);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(304, 27);
+            this.label21.Size = new System.Drawing.Size(76, 27);
             this.label21.TabIndex = 48;
-            this.label21.Text = "Guest                                      :";
+            this.label21.Text = "Guest ";
             // 
             // label18
             // 
@@ -459,9 +882,9 @@
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(1097, 215);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(309, 27);
+            this.label18.Size = new System.Drawing.Size(183, 27);
             this.label18.TabIndex = 47;
-            this.label18.Text = "Booking Status                       :";
+            this.label18.Text = "Booking Status   ";
             // 
             // label17
             // 
@@ -469,9 +892,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(1099, 188);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(308, 27);
+            this.label17.Size = new System.Drawing.Size(182, 27);
             this.label17.TabIndex = 46;
-            this.label17.Text = "Payment Status                      :";
+            this.label17.Text = "Payment Status  ";
             // 
             // label16
             // 
@@ -479,19 +902,19 @@
             this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(1095, 161);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(310, 27);
+            this.label16.Size = new System.Drawing.Size(112, 27);
             this.label16.TabIndex = 45;
-            this.label16.Text = "Check out                                :";
+            this.label16.Text = "Check out";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1096, 134);
+            this.label15.Location = new System.Drawing.Point(1095, 134);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(307, 27);
+            this.label15.Size = new System.Drawing.Size(175, 27);
             this.label15.TabIndex = 44;
-            this.label15.Text = "Check in                                  :";
+            this.label15.Text = "Check in             ";
             // 
             // label19
             // 
@@ -499,9 +922,9 @@
             this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(1095, 107);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(305, 27);
+            this.label19.Size = new System.Drawing.Size(191, 27);
             this.label19.TabIndex = 43;
-            this.label19.Text = "Booking Number                   :";
+            this.label19.Text = "Booking Number ";
             // 
             // label20
             // 
@@ -518,7 +941,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(537, 235);
+            this.label9.Location = new System.Drawing.Point(537, 215);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 27);
             this.label9.TabIndex = 41;
@@ -528,7 +951,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(537, 208);
+            this.label10.Location = new System.Drawing.Point(537, 188);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 27);
             this.label10.TabIndex = 40;
@@ -538,21 +961,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(537, 181);
+            this.label11.Location = new System.Drawing.Point(537, 161);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 27);
             this.label11.TabIndex = 39;
             this.label11.Text = "Country";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(537, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 27);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "City";
             // 
             // label13
             // 
@@ -645,6 +1058,28 @@
             this.label2.Text = "Details";
             // 
             // combx_Bookingstatus
+<<<<<<< Updated upstream
+=======
+            // 
+            this.combx_Bookingstatus.BackColor = System.Drawing.Color.Transparent;
+            this.combx_Bookingstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combx_Bookingstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combx_Bookingstatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combx_Bookingstatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combx_Bookingstatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.combx_Bookingstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.combx_Bookingstatus.ItemHeight = 30;
+            this.combx_Bookingstatus.Items.AddRange(new object[] {
+            "Pending",
+            "Success",
+            "Canceled"});
+            this.combx_Bookingstatus.Location = new System.Drawing.Point(657, 39);
+            this.combx_Bookingstatus.Name = "combx_Bookingstatus";
+            this.combx_Bookingstatus.Size = new System.Drawing.Size(289, 36);
+            this.combx_Bookingstatus.TabIndex = 13;
+            // 
+            // panel4
+>>>>>>> Stashed changes
             // 
             this.combx_Bookingstatus.BackColor = System.Drawing.Color.Transparent;
             this.combx_Bookingstatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -721,6 +1156,7 @@
             // 
             // lb_message_checout
             // 
+<<<<<<< Updated upstream
             this.lb_message_checout.AutoSize = true;
             this.lb_message_checout.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_message_checout.ForeColor = System.Drawing.Color.Maroon;
@@ -730,6 +1166,35 @@
             this.lb_message_checout.TabIndex = 11;
             this.lb_message_checout.Text = "The booked is in Checked Out State";
             this.lb_message_checout.Visible = false;
+=======
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(310, 37);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Booking Information";
+            // 
+            // lbtp
+            // 
+            this.lbtp.AutoSize = true;
+            this.lbtp.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtp.Location = new System.Drawing.Point(169, 95);
+            this.lbtp.Name = "lbtp";
+            this.lbtp.Size = new System.Drawing.Size(24, 27);
+            this.lbtp.TabIndex = 70;
+            this.lbtp.Text = "0";
+            // 
+            // lbPen
+            // 
+            this.lbPen.AutoSize = true;
+            this.lbPen.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPen.Location = new System.Drawing.Point(543, 95);
+            this.lbPen.Name = "lbPen";
+            this.lbPen.Size = new System.Drawing.Size(44, 27);
+            this.lbPen.TabIndex = 71;
+            this.lbPen.Text = "Yes";
+>>>>>>> Stashed changes
             // 
             // FBookingInformation
             // 
@@ -749,15 +1214,28 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FBookingInformation";
             this.Text = "BookingInformation";
+<<<<<<< Updated upstream
+=======
+            this.Load += new System.EventHandler(this.FBookingInformation_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
+>>>>>>> Stashed changes
             this.guna2Panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+<<<<<<< Updated upstream
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -768,7 +1246,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv1;
         private System.Windows.Forms.DataGridViewTextBoxColumn AddedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoceNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paymentmethod;
@@ -791,7 +1269,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
@@ -801,6 +1278,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+<<<<<<< Updated upstream
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomType;
@@ -812,5 +1290,26 @@
         private Guna.UI2.WinForms.Guna2ComboBox combx_paymentstatus;
         private Guna.UI2.WinForms.Guna2Button btn_save;
         private System.Windows.Forms.Label lb_message_checout;
+=======
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Label lbPhone;
+        private System.Windows.Forms.Label lbCountry;
+        private System.Windows.Forms.Label lbCity;
+        private System.Windows.Forms.Label lbGEmail;
+        private System.Windows.Forms.Label lbGPhone;
+        private System.Windows.Forms.Label lbGCountry;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbGName;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbPen;
+        private System.Windows.Forms.Label lbtp;
+>>>>>>> Stashed changes
     }
 }

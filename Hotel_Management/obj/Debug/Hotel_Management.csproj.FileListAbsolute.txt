@@ -78,11 +78,22 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ucsearch.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.uc_FGpass.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Admin.resources
+<<<<<<< Updated upstream
 D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
 D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
 D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.AddRoom.resources
+=======
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Book_room.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.AddRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Book_room.resources
+>>>>>>> Stashed changes
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddNewBooking.resources
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBookingInformation.resources
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.CustomerRegistration.resources
@@ -113,4 +124,7 @@ D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Manageme
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CopyComplete
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
 D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb
+<<<<<<< Updated upstream
 D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+=======
+>>>>>>> Stashed changes

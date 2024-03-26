@@ -20,6 +20,20 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.AdminID = adminID;
+<<<<<<< Updated upstream
+=======
+            
+            if (CheckHotelExist())
+            {
+                btn_create.Visible = false;
+                btn_update.Visible = true;
+            }
+            else
+            {
+                btn_update.Visible=false;
+                btn_create.Visible=true;
+            }
+>>>>>>> Stashed changes
             setDataHotel();
         }
 
@@ -85,6 +99,19 @@ namespace Hotel_Management
                 txb_zip.Text = hotel.Zipcode;
                 txb_decription.Text = hotel.Description;
                 txb_city.Text = hotel.City;
+<<<<<<< Updated upstream
+=======
+
+                byte[] image = hotel.HotelImage;
+                if (image != null)
+                {
+                    using (MemoryStream ms = new MemoryStream(image))
+                    {
+                        picturebox.Image = System.Drawing.Image.FromStream(ms);
+                    }
+                }
+                
+>>>>>>> Stashed changes
             }
             else
             {
@@ -101,6 +128,7 @@ namespace Hotel_Management
                 txb_decription.Text = "";
                 txb_city.Text = "";
             }
+            
         }
 
 

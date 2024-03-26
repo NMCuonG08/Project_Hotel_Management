@@ -43,6 +43,16 @@ namespace Hotel_Management
         }
         private void gvBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int index = gvBooking.CurrentCell.RowIndex;
+            Data.bData = new BookingData (
+                gvBooking.Rows[index].Cells[1].Value.ToString(),
+                Convert.ToDateTime(gvBooking.Rows[index].Cells[2].Value),
+                Convert.ToDateTime(gvBooking.Rows[index].Cells[3].Value),
+                Convert.ToDateTime(gvBooking.Rows[index].Cells[4].Value),
+                gvBooking.Rows[index].Cells[5].Value.ToString(),
+                gvBooking.Rows[index].Cells[6].Value.ToString(),
+                Convert.ToInt32(gvBooking.Rows[index].Cells[7].Value),
+                Convert.ToInt32(gvBooking.Rows[index].Cells[8].Value));
             FBookingInformation booking = new FBookingInformation();
             (this.MdiParent as Admin)?.ShowForm(booking);
         }
