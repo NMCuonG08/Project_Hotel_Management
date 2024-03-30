@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_size = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_clients = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -47,21 +48,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.checklistbox = new System.Windows.Forms.CheckedListBox();
             this.btn_upload = new Guna.UI2.WinForms.Guna2Button();
+            this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_add = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.txb_price);
             this.panel1.Controls.Add(this.txb_size);
@@ -94,8 +94,30 @@
             this.panel1.Size = new System.Drawing.Size(1781, 863);
             this.panel1.TabIndex = 0;
             // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1667, 12);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 54);
+            this.btn_close.TabIndex = 121;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // txb_price
             // 
+            this.txb_price.BorderColor = System.Drawing.Color.Gray;
             this.txb_price.BorderRadius = 10;
             this.txb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_price.DefaultText = "";
@@ -117,6 +139,7 @@
             // 
             // txb_size
             // 
+            this.txb_size.BorderColor = System.Drawing.Color.Gray;
             this.txb_size.BorderRadius = 10;
             this.txb_size.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_size.DefaultText = "";
@@ -139,6 +162,7 @@
             // txb_clients
             // 
             this.txb_clients.BackColor = System.Drawing.Color.Transparent;
+            this.txb_clients.BorderColor = System.Drawing.Color.Gray;
             this.txb_clients.BorderRadius = 10;
             this.txb_clients.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_clients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -166,6 +190,7 @@
             // txb_bed
             // 
             this.txb_bed.BackColor = System.Drawing.Color.Transparent;
+            this.txb_bed.BorderColor = System.Drawing.Color.Gray;
             this.txb_bed.BorderRadius = 10;
             this.txb_bed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_bed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -189,6 +214,7 @@
             // txb_roomtype
             // 
             this.txb_roomtype.BackColor = System.Drawing.Color.Transparent;
+            this.txb_roomtype.BorderColor = System.Drawing.Color.Gray;
             this.txb_roomtype.BorderRadius = 10;
             this.txb_roomtype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_roomtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -209,6 +235,7 @@
             // 
             // txb_roomname
             // 
+            this.txb_roomname.BorderColor = System.Drawing.Color.Gray;
             this.txb_roomname.BorderRadius = 10;
             this.txb_roomname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_roomname.DefaultText = "";
@@ -218,6 +245,7 @@
             this.txb_roomname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txb_roomname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_roomname.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txb_roomname.ForeColor = System.Drawing.Color.Black;
             this.txb_roomname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_roomname.Location = new System.Drawing.Point(652, 65);
             this.txb_roomname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -284,7 +312,7 @@
             // 
             // checklistbathroom
             // 
-            this.checklistbathroom.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checklistbathroom.BackColor = System.Drawing.SystemColors.Control;
             this.checklistbathroom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checklistbathroom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbathroom.FormattingEnabled = true;
@@ -334,7 +362,7 @@
             this.btn_clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_clear.FillColor = System.Drawing.Color.White;
+            this.btn_clear.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_clear.FocusedColor = System.Drawing.Color.White;
             this.btn_clear.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_clear.ForeColor = System.Drawing.Color.Black;
@@ -357,7 +385,7 @@
             // 
             // checklistbox
             // 
-            this.checklistbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checklistbox.BackColor = System.Drawing.SystemColors.Control;
             this.checklistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbox.FormattingEnabled = true;
@@ -378,6 +406,8 @@
             // 
             // btn_upload
             // 
+            this.btn_upload.BackColor = System.Drawing.Color.Transparent;
+            this.btn_upload.BorderColor = System.Drawing.Color.Gray;
             this.btn_upload.BorderRadius = 26;
             this.btn_upload.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btn_upload.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -385,7 +415,7 @@
             this.btn_upload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_upload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_upload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_upload.FillColor = System.Drawing.Color.White;
+            this.btn_upload.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_upload.FocusedColor = System.Drawing.Color.White;
             this.btn_upload.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_upload.ForeColor = System.Drawing.Color.Black;
@@ -395,6 +425,18 @@
             this.btn_upload.TabIndex = 23;
             this.btn_upload.Text = "UpLoad Image";
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
+            // 
+            // picturebox
+            // 
+            this.picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.picturebox.BorderRadius = 30;
+            this.picturebox.FillColor = System.Drawing.Color.Silver;
+            this.picturebox.ImageRotate = 0F;
+            this.picturebox.Location = new System.Drawing.Point(39, 65);
+            this.picturebox.Name = "picturebox";
+            this.picturebox.Size = new System.Drawing.Size(505, 391);
+            this.picturebox.TabIndex = 22;
+            this.picturebox.TabStop = false;
             // 
             // btn_add
             // 
@@ -465,37 +507,6 @@
             this.label1.Size = new System.Drawing.Size(164, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Add New Room";
-            // 
-            // picturebox
-            // 
-            this.picturebox.BorderRadius = 30;
-            this.picturebox.ImageRotate = 0F;
-            this.picturebox.Location = new System.Drawing.Point(39, 65);
-            this.picturebox.Name = "picturebox";
-            this.picturebox.Size = new System.Drawing.Size(505, 391);
-            this.picturebox.TabIndex = 22;
-            this.picturebox.TabStop = false;
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
-            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_close.Location = new System.Drawing.Point(1667, 12);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(57, 54);
-            this.btn_close.TabIndex = 121;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // FAddRoom
             // 

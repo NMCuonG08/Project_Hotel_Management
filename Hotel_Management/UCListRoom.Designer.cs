@@ -236,6 +236,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lb_name);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UCListRoom";
             this.Size = new System.Drawing.Size(864, 165);
             this.Load += new System.EventHandler(this.UCListRoom_Load);

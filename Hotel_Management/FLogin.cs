@@ -19,6 +19,7 @@ namespace Hotel_Management
         public FLogin()
         {
             InitializeComponent();
+            txb_email.Focus();
         }
 
         private void FLogin_Load(object sender, EventArgs e)
@@ -198,6 +199,22 @@ namespace Hotel_Management
                 btn_hipe.BringToFront();
                 txb_password.PasswordChar = '●';
                 btn_eye.Visible = false;
+            }
+        }
+
+        private void txb_email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_password.Focus();
+            }
+        }
+
+        private void txb_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if((e.KeyCode == Keys.Enter))
+            {
+                btn_complete.Focus();
             }
         }
     }

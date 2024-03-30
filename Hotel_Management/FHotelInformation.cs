@@ -16,7 +16,6 @@ namespace Hotel_Management
     {
 
         public int AdminID { get; set; }
-
         public FHotelInformation(int adminID)
         {
             InitializeComponent();
@@ -79,11 +78,52 @@ namespace Hotel_Management
             return hotel;
         }
 
+        private void SetConveniences(int HotelID)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string getHotelConvenienceQuery = $"SELECT * FROM Hotel_conveniences WHERE HotelID = {HotelID}";
+                    using (SqlCommand getHotelConveniencesCmd = new SqlCommand(getHotelConvenienceQuery, connection))
+                    {
+                        using (SqlDataReader reader = getHotelConveniencesCmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                for (int i = 1; i < reader.FieldCount; i++)
+                                {
+                                    string columnName = reader.GetName(i);
+                                    bool value = Convert.ToBoolean(reader[columnName]);
+                                    if (value)
+                                    {
+                                        int index = checklistbox.Items.IndexOf(columnName);
+                                        if (index != -1)
+                                        {
+                                            checklistbox.SetItemChecked(index, true);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
         private void setDataHotel()
         {
             HotelInformation hotel = ReadData(AdminID);
             if (hotel != null)
             {
+                txb_hotelID.Text = hotel.Id.ToString();
                txb_name.Text = hotel.Name;
                 txb_phoneNumber.Text = hotel.PhoneNumber;
                 txb_email.Text = hotel.Email;
@@ -105,6 +145,7 @@ namespace Hotel_Management
                         picturebox.Image = System.Drawing.Image.FromStream(ms);
                     }
                 }
+                SetConveniences(hotel.Id);
             }
             else
             {
@@ -128,7 +169,33 @@ namespace Hotel_Management
         {
 
         }
+        public void EditHotelConvenience(int HotelID)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string updateRoomConveniencesQuery = "UPDATE Hotel_conveniences SET ";
+                    for (int i = 0; i < checklistbox.Items.Count; i++)
+                    {
+                        string columnName = checklistbox.Items[i].ToString();
+                        bool isChecked = checklistbox.GetItemChecked(i);
+                        updateRoomConveniencesQuery += $"[{columnName}] = {(isChecked ? 1 : 0)}, ";
+                    }
+                    updateRoomConveniencesQuery = updateRoomConveniencesQuery.TrimEnd(',', ' ') + $" WHERE HotelID = {HotelID}";
 
+                    using (SqlCommand cmd = new SqlCommand(updateRoomConveniencesQuery, connection))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private void UpdateHotel() 
         {
             try
@@ -162,6 +229,8 @@ namespace Hotel_Management
                             command.Parameters.Add(new SqlParameter("@AdminID", AdminID));
                             command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
                             command.ExecuteNonQuery();
+                            int hotelID = Convert.ToInt32(txb_hotelID.Text);
+                            EditHotelConvenience(hotelID);
                             MessageBox.Show("Update Successful!");
                             conn.Close();
                         }
@@ -230,7 +299,49 @@ namespace Hotel_Management
 
             return exists;
         }
+        private void CreateHotelConvenience()
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    int maxHotelID;
+                    string getMaxHotelIDQuery = "SELECT MAX(HotelID) FROM HotelInformation";
+                    using (SqlCommand getMaxRoomIDCmd = new SqlCommand(getMaxHotelIDQuery, connection))
+                    {
+                        object result = getMaxRoomIDCmd.ExecuteScalar();
+                        maxHotelID = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                    int newHotelID = maxHotelID;
 
+                    string addHotelConvenienceQuery = "INSERT INTO Hotel_conveniences (HotelID) VALUES (@HotelID)";
+                    using (SqlCommand addHotelConvenienceCmd = new SqlCommand(addHotelConvenienceQuery, connection))
+                    {
+                        addHotelConvenienceCmd.Parameters.AddWithValue("@HotelID", newHotelID);
+                        addHotelConvenienceCmd.ExecuteNonQuery();
+                    }
+                   
+                    foreach (object itemChecked in checklistbox.CheckedItems)
+                    {
+                        string updateQuery = "UPDATE Hotel_conveniences SET ";
+                        string itemName = itemChecked.ToString();
+                        updateQuery += $"[{itemName}] = 1 WHERE HotelID = @HotelID";
+
+                        using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@HotelID", newHotelID);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private bool CheckDataEmpty()
         {
             return true;
@@ -269,6 +380,7 @@ namespace Hotel_Management
                             command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
                             command.ExecuteNonQuery();
                             MessageBox.Show("Tao khach san thanh cong");
+                            CreateHotelConvenience();
                             conn.Close();
                         }
                     }

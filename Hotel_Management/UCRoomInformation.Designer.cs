@@ -148,6 +148,7 @@
             this.guna2Panel1.Controls.Add(this.txb_capacity);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Panel1.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel1.Location = new System.Drawing.Point(451, 22);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -1052,7 +1053,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel2.Controls.Add(this.btn_Booking);
             this.guna2Panel2.Controls.Add(this.txb_price);
             this.guna2Panel2.Controls.Add(this.label1);
@@ -1167,11 +1168,12 @@
             // 
             this.picturebox.BackColor = System.Drawing.SystemColors.Control;
             this.picturebox.BorderRadius = 20;
-            this.picturebox.FillColor = System.Drawing.Color.Gray;
+            this.picturebox.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.picturebox.ImageRotate = 0F;
             this.picturebox.Location = new System.Drawing.Point(31, 22);
             this.picturebox.Name = "picturebox";
             this.picturebox.Size = new System.Drawing.Size(393, 220);
+            this.picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox.TabIndex = 3;
             this.picturebox.TabStop = false;
             // 
@@ -1186,7 +1188,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.picturebox);
             this.Name = "UCRoomInformation";
-            this.Size = new System.Drawing.Size(1746, 501);
+            this.Size = new System.Drawing.Size(1816, 501);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);

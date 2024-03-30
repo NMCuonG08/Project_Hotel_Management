@@ -47,7 +47,7 @@
             this.btn_logout = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -245,6 +245,7 @@
             this.btn_service.TabIndex = 2;
             this.btn_service.Text = "Report";
             this.btn_service.UseVisualStyleBackColor = false;
+            this.btn_service.Click += new System.EventHandler(this.btn_service_Click);
             // 
             // flowLayoutPanel6
             // 
@@ -285,7 +286,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.guna2Panel1);
+            this.panel4.Controls.Add(this.guna2GradientTileButton10);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1046, 0);
@@ -293,14 +294,25 @@
             this.panel4.Size = new System.Drawing.Size(277, 44);
             this.panel4.TabIndex = 12;
             // 
-            // guna2Panel1
+            // guna2GradientTileButton10
             // 
-            this.guna2Panel1.BackgroundImage = global::Hotel_Management.Properties.Resources.administrator;
-            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(65, 44);
-            this.guna2Panel1.TabIndex = 13;
+            this.guna2GradientTileButton10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton10.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton10.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton10.Image = global::Hotel_Management.Properties.Resources.admin;
+            this.guna2GradientTileButton10.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 0);
+            this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
+            this.guna2GradientTileButton10.Size = new System.Drawing.Size(65, 41);
+            this.guna2GradientTileButton10.TabIndex = 119;
             // 
             // label1
             // 
@@ -362,8 +374,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btn_booking;
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        public Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
     }
 }

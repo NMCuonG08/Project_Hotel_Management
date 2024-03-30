@@ -199,6 +199,26 @@ namespace Hotel_Management
             this.Close();
         }
 
+        FReport fReport;
+        private void btn_service_Click(object sender, EventArgs e)
+        {
+            if (fReport == null)
+            {
+                fReport = new FReport(HotelID);
+                fReport.FormClosed += FReport_FormClosed;
+                ShowForm(fReport);
+            }
+            else
+            {
+                fReport.Activate();
+            }
+        }
+
+        private void FReport_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fReport = null;
+        }
+
 
         #endregion
 

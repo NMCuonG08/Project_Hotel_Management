@@ -33,7 +33,7 @@ namespace Hotel_Management
         [Category("Custom Props")]
         public string Capacity { get => _capacity; set { _capacity = value;txb_capacity.Text = value; } }
         [Category("Custom Props")]
-        public double Price { get => _price; set { _price = value; txb_price.Text = value.ToString(); } }
+        public double Price { get => _price; set { _price = value; txb_price.Text = value.ToString() + " $"; } }
         [Category("Custom Props")]
         public string Ultilities { get => _ultilities; set { _ultilities = value;  } }
         public string Roomtype { get => _roomtype; set { _roomtype = value; lb_roomType.Text = value; } }
@@ -73,7 +73,7 @@ namespace Hotel_Management
             }
             else
             {
-                Panel otherpanel = this.flowLayoutPanel1.Controls["panel_" + panelName] as Panel;
+                Panel otherpanel = this.flowLayoutPanel2.Controls["panel_" + panelName] as Panel;
                 if (otherpanel != null)
                 {
                     otherpanel.Visible = true;

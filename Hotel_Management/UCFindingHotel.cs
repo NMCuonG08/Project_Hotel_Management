@@ -28,6 +28,8 @@ namespace Hotel_Management
         private double _price;
             private Image _image;
         private double _point;
+        private string convenience;
+        private string convenience2;
         [Category("Custom Props")]
         public string HotelName { get => _hotelName; set { _hotelName = value;lb_name.Text = value; } }
 
@@ -35,10 +37,10 @@ namespace Hotel_Management
         public string Location { get => _location; set { _location = value; lb_location.Text = value; } }
 
         [Category("Custom Props")]
-        public string Ultilities { get => _ultilities; set { _ultilities = value;  lb_ultilities.Text = value; } }
+        public string Ultilities { get => _ultilities; set { _ultilities = value; lb_ultilities.Text = value; } }
 
         [Category("Custom Props")]
-        public double Price { get => _price; set { _price = value; txb_price.Text = value.ToString(); } }
+        public double Price { get => _price; set { _price = value; txb_price.Text = value.ToString() + " $"; } }
 
         [Category("Custom Props")]
         public Image Image { get => _image; set { _image = value; pctbox.Image = value; } }
@@ -49,6 +51,10 @@ namespace Hotel_Management
         public Color BackgroundColor { get => _backgroundColor; set { _backgroundColor = value;this.BackColor = value; } }
         [Category("Custom Props")]
         public int Id { get => _id; set => _id = value; }
+        [Category("Custom Props")]
+        public string Convenience { get => convenience; set { convenience = value;lb1.Text = value; } }
+
+        public string Convenience2 { get => convenience2; set { convenience2 = value; } }
 
 
 
@@ -65,11 +71,14 @@ namespace Hotel_Management
         private void UCFindingHotel_MouseHover(object sender, EventArgs e)
         {
             this.BackColor = Color.LightGreen;
+            
         }
 
         private void UCFindingHotel_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = BackgroundColor;
+          
+
         }
 
         private void lb_name_Click(object sender, EventArgs e)
@@ -80,6 +89,46 @@ namespace Hotel_Management
         private void UCFindingHotel_Click(object sender, EventArgs e)
         {
             ItemClicked?.Invoke(this, e);
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            panel.Visible = true;
+            pp.Visible = true;
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            panel.Visible = false;
+            pp.Visible = false;
+        }
+        public void SetPanelVisibility(string panelName)
+        {
+            Panel panel = this.panel.Controls["panel_" + panelName] as Panel;
+            if (panel != null)
+            {
+                panel.Visible = true;
+            }
+            else
+            {
+                Panel otherpanel = this.panel.Controls["panel_" + panelName] as Panel;
+                if (otherpanel != null)
+                {
+                    otherpanel.Visible = true;
+                }
+            }
+        }
+
+        private void lb1_MouseHover(object sender, EventArgs e)
+        {
+            panel.Visible = true;
+            pp.Visible = true;
+        }
+
+        private void lb1_MouseLeave(object sender, EventArgs e)
+        {
+            panel.Visible = false;
+            pp.Visible = false;
         }
     }
 }

@@ -246,13 +246,11 @@ namespace Hotel_Management
 
 
         private void btn_add_Click(object sender, EventArgs e)
-        {
-            
+        { 
             byte[] images = null;
             FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(stream);
             images = br.ReadBytes((int)stream.Length);
-
             string status = "empty"; conn.Open();
             int roomPrice = Convert.ToInt32(txb_price.Text);
             int clients = Convert.ToInt32(txb_clients.Text);
@@ -261,8 +259,7 @@ namespace Hotel_Management
             addRoom(room);
             SetConveniences(checklistbox);
             Connection.Openadmin();
-            this.Close();
-           
+            this.Close(); 
         }
 
         private void btn_close_Click(object sender, EventArgs e)

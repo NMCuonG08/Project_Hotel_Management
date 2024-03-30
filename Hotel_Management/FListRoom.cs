@@ -69,13 +69,7 @@ namespace Hotel_Management
         }
         void Fillter()
         {
-            /* conn.Open();
-             string sql = string.Format("SELECT * FROM RoomInformation where HotelID = '{0}' AND RoomType = '{1}' AND Status = '{2}' AND RoomBed = '{3}'", HotelID, cb_type.Text, cb_status.Text, cb_typebed.Text);
-             DataTable data = new DataTable();
-             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
-             dataAdapter.Fill(data);
-             gvRoom.DataSource = data;
-             conn.Close();*/
+           
             void Fillter()
             {
                 try
@@ -84,8 +78,6 @@ namespace Hotel_Management
                     string sql = "SELECT * FROM RoomInformation WHERE HotelID = @HotelID";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@HotelID", HotelID);
-
-                    // Thêm điều kiện vào câu lệnh truy vấn chỉ khi ô checkbox tương ứng được chọn
                     if (!string.IsNullOrEmpty(cb_type.Text))
                     {
                         sql += " AND RoomType = @RoomType";
@@ -280,7 +272,10 @@ namespace Hotel_Management
                             Status = reader["Status"].ToString(),
                             Clients = Convert.ToInt32(reader["Clients"]),
                             Size = Convert.ToDouble(reader["Size"]),
-                            Image = (byte[])reader["RoomImage"]
+                            Image = (byte[])reader["RoomImage"],
+                            Checkin = (DateTime)reader["Checkin"],
+                            Checkout = (DateTime)reader["Checkout"],
+
                         };
                     }
                 }
@@ -299,13 +294,15 @@ namespace Hotel_Management
             {         
                 conn.Open();
                 string status = "Empty";
-                string query = "Insert into RoomInformation values (@RoomType, @RoomBed,@RoomPrice,@Status,@RoomName,null,null,@RoomImage,@Clients,@size,@HotelID)";
+                string query = "Insert into RoomInformation values (@RoomType, @RoomBed,@RoomPrice,@Status,@RoomName,@Checkin,@Checkout,@RoomImage,@Clients,@size,@HotelID)";
                 SqlCommand sqlCommand = new SqlCommand(query, conn);
                 sqlCommand.Parameters.Add(new SqlParameter("RoomType",room.Type));
                 sqlCommand.Parameters.Add(new SqlParameter("RoomBed", room.Bed));
                 sqlCommand.Parameters.Add(new SqlParameter("RoomPrice", room.Price));
                 sqlCommand.Parameters.Add(new SqlParameter("Status", status));
                 sqlCommand.Parameters.Add(new SqlParameter("RoomName", room.Name));
+                sqlCommand.Parameters.Add(new SqlParameter("Checkin", DateTime.Now));
+                sqlCommand.Parameters.Add(new SqlParameter("Checkout", DateTime.Now));
                 sqlCommand.Parameters.Add(new SqlParameter("RoomImage", room.Image));
                 sqlCommand.Parameters.Add(new SqlParameter("Clients", room.Clients));
                 sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
@@ -320,7 +317,33 @@ namespace Hotel_Management
             {
                 MessageBox.Show(ex.Message);
             }
-            
+        }
+        private void EditRoom(Room room)
+        {
+            try
+            {
+                conn.Open();
+               
+                string query = "update RoomInformation set  RoomType = @RoomType, RoomBed = @RoomBed,RoomPrice = @RoomPrice,RoomName = @RoomName,RoomImage  = @RoomImage,Clients= @Clients,size = @size where RoomID = @RoomID";
+                SqlCommand sqlCommand = new SqlCommand(query, conn);
+                sqlCommand.Parameters.Add(new SqlParameter("RoomType", room.Type));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomBed", room.Bed));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomPrice", room.Price));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomName", room.Name));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomImage", room.Image));
+                sqlCommand.Parameters.Add(new SqlParameter("Clients", room.Clients));
+                sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
+                sqlCommand.Parameters.Add(new SqlParameter("RoomID", room.Id));
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Edit successful");
+                conn.Close();
+                LoadForm(HotelID);
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -333,7 +356,7 @@ namespace Hotel_Management
            if (room != null)
             {
                 roomInformation.SetData(room);
-              
+                roomInformation.editRoom += EditRoom;
                 (this.MdiParent as Admin)?.ShowForm(roomInformation);
             }
         }

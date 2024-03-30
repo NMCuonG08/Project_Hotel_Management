@@ -70,21 +70,21 @@
             // 
             // btn_complete
             // 
+            this.btn_complete.BackColor = System.Drawing.Color.Transparent;
             this.btn_complete.BorderRadius = 30;
-            this.btn_complete.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.btn_complete.CheckedState.FillColor = System.Drawing.Color.White;
             this.btn_complete.CheckedState.ForeColor = System.Drawing.Color.Black;
             this.btn_complete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_complete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_complete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_complete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_complete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_complete.FocusedColor = System.Drawing.Color.White;
+            this.btn_complete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
+            this.btn_complete.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(111)))));
             this.btn_complete.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_complete.ForeColor = System.Drawing.Color.Black;
-            this.btn_complete.Location = new System.Drawing.Point(158, 382);
+            this.btn_complete.Location = new System.Drawing.Point(70, 382);
             this.btn_complete.Name = "btn_complete";
-            this.btn_complete.Size = new System.Drawing.Size(263, 70);
+            this.btn_complete.Size = new System.Drawing.Size(393, 63);
             this.btn_complete.TabIndex = 72;
             this.btn_complete.Text = "Sign in";
             this.btn_complete.Click += new System.EventHandler(this.btn_complete_Click_1);
@@ -181,6 +181,7 @@
             this.txb_password.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_password.TabIndex = 102;
             this.txb_password.UseSystemPasswordChar = true;
+            this.txb_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_password_KeyDown);
             // 
             // txb_email
             // 
@@ -207,6 +208,7 @@
             this.txb_email.Size = new System.Drawing.Size(393, 46);
             this.txb_email.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_email.TabIndex = 101;
+            this.txb_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_email_KeyDown);
             // 
             // label1
             // 

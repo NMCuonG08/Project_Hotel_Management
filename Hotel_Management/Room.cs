@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,12 +19,24 @@ namespace Hotel_Management
              private string status;
            private List<String> room_facilities;
            private List<String> bathroom_facilities;
+        private DateTime checkin;
+        private DateTime checkout;
            private Byte[] image;
         public Room()
         {
         }
-
-        public Room(int id, string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status)
+        public Room(int id, string name, string type, string bed, int clients, double size, double price, byte[] image)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Type = type;
+            this.Bed = bed;
+            this.Clients = clients;
+            this.Size = size;
+            this.Price = price;
+            this.Image = image;
+        }
+        public Room(int id, string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status, DateTime checkin, DateTime checkout)
         {
             this.Id = id;
             this.Name = name;
@@ -36,8 +49,25 @@ namespace Hotel_Management
             this.Bathroom_facilities = bathroom_facilities;
             this.Image = image;
             this.status = status;
+            this.checkin = checkin;
+            this.checkout = checkout;
         }
-        public Room( string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status)
+        public Room( string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status, DateTime checkin, DateTime checkout)
+        {
+            this.Name = name;
+            this.Type = type;
+            this.Bed = bed;
+            this.Clients = clients;
+            this.Size = size;
+            this.Price = price;
+            this.Room_facilities = room_facilities;
+            this.Bathroom_facilities = bathroom_facilities;
+            this.Image = image;
+            this.status = status;
+            this.checkin = checkin;
+            this.checkout = checkout;
+        }
+        public Room(string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status)
         {
             this.Name = name;
             this.Type = type;
@@ -62,5 +92,7 @@ namespace Hotel_Management
         public List<string> Bathroom_facilities { get => bathroom_facilities; set => bathroom_facilities = value; }
         public byte[] Image { get => image; set => image = value; }
         public string Status { get => status; set => status = value; }
+        public DateTime Checkin { get => checkin; set => checkin = value; }
+        public DateTime Checkout { get => checkout; set => checkout = value; }
     }
 }

@@ -314,6 +314,7 @@
             this.txb_sigemail.Size = new System.Drawing.Size(393, 36);
             this.txb_sigemail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigemail.TabIndex = 77;
+            this.txb_sigemail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_sigemail_KeyDown);
             // 
             // datetime_birthday
             // 
@@ -354,6 +355,7 @@
             this.txb_siggender.Size = new System.Drawing.Size(393, 36);
             this.txb_siggender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_siggender.TabIndex = 80;
+            this.txb_siggender.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_siggender_KeyDown);
             // 
             // txb_signational
             // 
@@ -380,6 +382,7 @@
             this.txb_signational.Size = new System.Drawing.Size(393, 36);
             this.txb_signational.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_signational.TabIndex = 79;
+            this.txb_signational.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_signational_KeyDown);
             // 
             // txb_sigpassword
             // 
@@ -407,6 +410,7 @@
             this.txb_sigpassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigpassword.TabIndex = 78;
             this.txb_sigpassword.UseSystemPasswordChar = true;
+            this.txb_sigpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_sigpassword_KeyDown);
             // 
             // txb_sigphone
             // 
@@ -459,6 +463,7 @@
             this.txb_sigIdcard.Size = new System.Drawing.Size(393, 36);
             this.txb_sigIdcard.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigIdcard.TabIndex = 81;
+            this.txb_sigIdcard.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_sigIdcard_KeyDown);
             // 
             // txb_sigaddress
             // 
@@ -485,6 +490,7 @@
             this.txb_sigaddress.Size = new System.Drawing.Size(393, 36);
             this.txb_sigaddress.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txb_sigaddress.TabIndex = 82;
+            this.txb_sigaddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txb_sigaddress_KeyDown);
             // 
             // btn_complete
             // 

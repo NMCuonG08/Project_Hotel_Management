@@ -31,5 +31,10 @@ namespace Hotel_Management
                 (this.MdiParent as Admin)?.ShowForm(extendBooking);
             }
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

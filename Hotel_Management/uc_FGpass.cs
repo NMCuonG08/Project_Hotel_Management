@@ -25,7 +25,7 @@ namespace Hotel_Management
 
         private void txb_getpass_Click(object sender, EventArgs e)
         {
-            string Useremail = txb_email.Text;
+            string Useremail = txb_email.Text.ToString();
          
 
             if (Useremail.Trim()=="")
@@ -34,7 +34,7 @@ namespace Hotel_Management
             }
             else 
             {
-                string query = "select*from UserRegister where Email='" + Useremail + "'";
+                string query = "select*from UserRegister where UserEmail='" + Useremail + "'";
                 if(modify.Taikhoans(query).Count!=0)
                 {
                     label1.ForeColor = Color.Black;

@@ -87,5 +87,53 @@ namespace Hotel_Management
             fLogin.Show();
 
         }
+
+        private void txb_sigemail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_sigpassword.Focus();
+            }
+        }
+
+        private void txb_sigpassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_signational.Focus();
+            }
+        }
+
+        private void txb_signational_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txb_siggender.Focus();
+            }
+        }
+
+        private void txb_siggender_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txb_sigIdcard.Focus();
+            }
+        }
+
+        private void txb_sigIdcard_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))
+            {
+                txb_sigaddress.Focus();
+            }
+        }
+
+        private void txb_sigaddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))
+            {
+                txb_sigphone.Focus();
+            }
+        }
     }
 }

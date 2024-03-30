@@ -25,8 +25,6 @@ namespace Hotel_Management
             this.HotelID = hotelID;
             this.UserID = userID;
             LoadForm(HotelID);
-            
-            txb_id.Text = HotelID.ToString(); 
         }
         void LoadForm(int HotelID)
         {
@@ -227,8 +225,9 @@ namespace Hotel_Management
             Book_room booking = new Book_room(UserID, id, HotelID);
             Room room = GetRoomByID(id);
             if (room != null && hotel!= null && User != null)
-            {     
-                booking.SetData(room,User,hotel);
+            {                  
+                booking.SetTime(datetime_checkin.Value, datetime_checkout.Value, room);
+                booking.SetData(room, User, hotel);
                 booking.RoomID = id;
                 booking.UserID = this.UserID;
                 booking.ShowDialog();
@@ -415,13 +414,14 @@ namespace Hotel_Management
         {
             string selectedType = cbx_typeroom.Text.Trim();
             string selectedTypeBed = cbx_typebed.Text.Trim();
-
+            DateTime checkin = datetime_checkin.Value;
+            DateTime checkout = datetime_checkout.Value;
             if (!string.IsNullOrEmpty(selectedType) || !string.IsNullOrEmpty(selectedTypeBed))
             {
                 try
                 {
                     conn.Open();
-                    string sql = "SELECT * FROM RoomInformation WHERE 1 = 1";
+                    string sql = "SELECT * FROM RoomInformation WHERE HotelID = @HotelID";
                     if (!string.IsNullOrEmpty(selectedType))
                     {
                         sql += " AND RoomType = @RoomType";
@@ -430,8 +430,12 @@ namespace Hotel_Management
                     {
                         sql += " AND RoomBed = @RoomBed";
                     }
-
+                    if (checkin != null && checkout != null)
+                    {
+                        sql += " AND RoomID NOT IN (SELECT RoomID FROM Booking WHERE (@Checkin < Checkout AND @Checkout > Checkin))";
+                    }
                     SqlCommand command = new SqlCommand(sql, conn);
+                    command.Parameters.Add(new SqlParameter("HotelID", HotelID));
                     if (!string.IsNullOrEmpty(selectedType))
                     {
                         command.Parameters.AddWithValue("@RoomType", selectedType);
@@ -440,7 +444,11 @@ namespace Hotel_Management
                     {
                         command.Parameters.AddWithValue("@RoomBed", selectedTypeBed);
                     }
-
+                    if (checkin != null)
+                    {
+                        command.Parameters.AddWithValue("@Checkin", checkin);
+                        command.Parameters.AddWithValue("@Checkout", checkout);
+                    }
                     DataTable data = new DataTable();
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                     dataAdapter.Fill(data);
@@ -458,9 +466,10 @@ namespace Hotel_Management
             }
             else
             {
-               
+                // Handle case where no type or bed is selected
             }
         }
+
 
         private void btn_close_Click(object sender, EventArgs e)
         {

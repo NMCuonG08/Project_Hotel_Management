@@ -25,10 +25,21 @@ namespace Hotel_Management
             this.RoomID = roomID;
             this.HotelID = hotelID;
         }
+        double price;
+        public void SetTime(DateTime checkin, DateTime checkout, Room Room)
+        {
+            timep_checkin.Value = checkin;
+            timep_checkout.Value = checkout;
+
+            TimeSpan timeSpan = checkout - checkin;
+            int amount = Math.Abs(timeSpan.Days);
+            price = ((Room.Price)*amount);
+        }
         public void SetData(Room Room, Account User, HotelInformation HotelInformation)
         {       
             /*this.UserID = User.Id;
             this.UserID = Room.Id;*/
+            
             if (User != null)
             {
                 txb_national.Text = User.National ?? string.Empty;
@@ -37,6 +48,7 @@ namespace Hotel_Management
                 txb_idcardnumber.Text = User.Idcardnumber ?? string.Empty;
                 txb_phonenumber.Text = User.Phonenumber ?? string.Empty;
                 txb_useremail.Text = User.Useremail ?? string.Empty;
+                lb_price.Text = price.ToString();
             }
 
             // Check if HotelInformation object is not null
@@ -62,13 +74,13 @@ namespace Hotel_Management
                 lb_bed.Text = Room.Bed ?? string.Empty;
                 lb_roomsize.Text = Room.Size.ToString() + " m2";
                 lb_clients.Text = Room.Clients.ToString() + " clients";
-                lb_price.Text = Room.Price.ToString() + " $";
+                lb_price.Text = price.ToString() + " $";
             }
         }
 
         public bool Check()
         {
-
+            if (string.IsNullOrEmpty(txb_nameuser.Text)) { return false; }
 
             return true;
         }
@@ -82,7 +94,7 @@ namespace Hotel_Management
                     using (SqlConnection connection = Connection.GetSqlConnection())
                     {
                         connection.Open();
-                        string query = "Insert into Booking values (@CustomerName, @Checkin,@CheckOut, @BookingDate,@PaymentStatus,@BookingStatus,@UserID,@RoomID,@HotelID)";
+                        string query = "Insert into Booking values (@CustomerName, @Checkin,@CheckOut, @BookingDate,@PaymentStatus,@BookingStatus,@UserID,@RoomID,@HotelID,@Price)";
                         SqlCommand command = new SqlCommand(query, connection);
                         command.Parameters.Add(new SqlParameter("@CustomerName", txb_nameuser.Text));
                         command.Parameters.Add(new SqlParameter("Checkin", timep_checkin.Value));
@@ -93,6 +105,7 @@ namespace Hotel_Management
                         command.Parameters.Add(new SqlParameter("@UserID", UserID));
                         command.Parameters.Add(new SqlParameter("RoomID", RoomID));
                         command.Parameters.Add(new SqlParameter("HotelID", HotelID));
+                        command.Parameters.Add(new SqlParameter("Price", price));
                         command.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show("You Booking thanh cong", "Thong bao");
@@ -113,5 +126,12 @@ namespace Hotel_Management
         {
             this.Close();
         }
+
+        private void Book_room_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

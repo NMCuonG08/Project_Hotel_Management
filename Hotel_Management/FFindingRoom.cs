@@ -117,6 +117,22 @@ namespace Hotel_Management
                     ls[i].Price = (Double)data.Rows[i]["Price"];
                     ls[i].Point = (Double)data.Rows[i]["Feedback"];
                     ls[i].Id = (Int32)data.Rows[i]["HotelID"];
+                    List<String> con = CheckConvenience(ls[i].Id);
+                    if (con.Count >= 1)
+                    {
+                        ls[i].Convenience = con[0]; 
+                        ls[i].Convenience2 = con[1];
+                    }
+                    else
+                    {
+                        ls[i].Convenience = "";
+                    }
+                    
+                    foreach (String s in con)
+                    {
+                        
+                        ls[i].SetPanelVisibility(s);
+                    }
                     ls[i].Click += FFindingRoom_Click;
                     flowLayoutPanel1.Controls.Add(ls[i]);
                 }
@@ -179,15 +195,10 @@ namespace Hotel_Management
                     string sql = "SELECT * FROM HotelInformation WHERE City = @City";
                     SqlCommand command = new SqlCommand(sql, conn);
                     command.Parameters.AddWithValue("@City", selectedLocation);
-
                     DataTable data = new DataTable();
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                     dataAdapter.Fill(data);
-
-                  
                     flowLayoutPanel1.Controls.Clear();
-
-                    // Tạo lại các items cho flowLayoutPanel với dữ liệu mới
                     createItem(data);
                 }
                 catch (Exception ex)
@@ -208,6 +219,57 @@ namespace Hotel_Management
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private List<String> CheckConvenience(int hotelID)
+        {
+            List<string> convenienceNames = new List<string>();
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string sqlQuery = @"
+                                        SELECT COLUMN_NAME 
+                                        FROM INFORMATION_SCHEMA.COLUMNS 
+                                        WHERE TABLE_NAME = 'Hotel_conveniences' 
+                                        AND DATA_TYPE = 'bit' 
+                                        AND COLUMN_NAME <> 'HotelID' 
+                                        AND COLUMN_NAME IN (
+                                            SELECT 'Breakfast' FROM Hotel_conveniences WHERE Breakfast = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Free_WiFi' FROM Hotel_conveniences WHERE Free_WiFi = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT '247_Room_Service' FROM Hotel_conveniences WHERE [247_Room_Service] = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Daily_Housekeeping' FROM Hotel_conveniences WHERE Daily_Housekeeping = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Restaurant_and_Bar' FROM Hotel_conveniences WHERE Restaurant_and_Bar = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Swimming_Pool_and_Spa' FROM Hotel_conveniences WHERE Swimming_Pool_and_Spa = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Laundry_Service' FROM Hotel_conveniences WHERE Laundry_Service = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Parking_area' FROM Hotel_conveniences WHERE Parking_area = 1 AND HotelID = @HotelID
+                                            UNION
+                                            SELECT 'Gym' FROM Hotel_conveniences WHERE Gym = 1 AND HotelID = @HotelID
+                                        );
+                                    ";
+                    SqlCommand command = new SqlCommand(sqlQuery, connection);
+                    command.Parameters.AddWithValue("@HotelID", hotelID);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string columnName = reader["COLUMN_NAME"].ToString();
+                        convenienceNames.Add(columnName);
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return convenienceNames;
         }
     }
 }
