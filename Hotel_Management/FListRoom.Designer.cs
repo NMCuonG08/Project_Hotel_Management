@@ -73,6 +73,7 @@
             // 
             this.gvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvRoom.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gvRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -81,7 +82,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvRoom.ColumnHeadersHeight = 29;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -91,21 +92,19 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvRoom.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvRoom.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.gvRoom.Location = new System.Drawing.Point(888, 3);
+            this.gvRoom.Location = new System.Drawing.Point(1007, 13);
             this.gvRoom.Name = "gvRoom";
             this.gvRoom.RowHeadersWidth = 51;
             this.gvRoom.RowTemplate.Height = 24;
             this.gvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvRoom.Size = new System.Drawing.Size(750, 193);
+            this.gvRoom.Size = new System.Drawing.Size(10, 10);
             this.gvRoom.TabIndex = 1;
-            this.gvRoom.Visible = false;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.ucListRoom1);
-            this.flowLayoutPanel1.Controls.Add(this.gvRoom);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 398);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1751, 607);
@@ -116,6 +115,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.radio_btn_clear);
+            this.panel1.Controls.Add(this.gvRoom);
             this.panel1.Controls.Add(this.radio_btn_checkall);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.cb_type);
@@ -178,7 +178,7 @@
             // cb_type
             // 
             this.cb_type.BackColor = System.Drawing.Color.Transparent;
-            this.cb_type.BorderColor = System.Drawing.Color.Silver;
+            this.cb_type.BorderColor = System.Drawing.Color.Black;
             this.cb_type.BorderRadius = 5;
             this.cb_type.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -239,7 +239,7 @@
             // cb_typebed
             // 
             this.cb_typebed.BackColor = System.Drawing.Color.Transparent;
-            this.cb_typebed.BorderColor = System.Drawing.Color.Silver;
+            this.cb_typebed.BorderColor = System.Drawing.Color.Black;
             this.cb_typebed.BorderRadius = 5;
             this.cb_typebed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_typebed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -264,6 +264,7 @@
             // 
             this.datetime_to.BorderRadius = 5;
             this.datetime_to.Checked = true;
+            this.datetime_to.FillColor = System.Drawing.Color.Silver;
             this.datetime_to.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datetime_to.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datetime_to.Location = new System.Drawing.Point(664, 62);
@@ -280,6 +281,7 @@
             this.datetime_from.BackColor = System.Drawing.Color.Transparent;
             this.datetime_from.BorderRadius = 5;
             this.datetime_from.Checked = true;
+            this.datetime_from.FillColor = System.Drawing.Color.Silver;
             this.datetime_from.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datetime_from.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datetime_from.Location = new System.Drawing.Point(180, 62);
@@ -340,7 +342,7 @@
             // cb_status
             // 
             this.cb_status.BackColor = System.Drawing.Color.Transparent;
-            this.cb_status.BorderColor = System.Drawing.Color.Silver;
+            this.cb_status.BorderColor = System.Drawing.Color.Black;
             this.cb_status.BorderRadius = 5;
             this.cb_status.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

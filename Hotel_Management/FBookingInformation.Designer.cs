@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,6 +56,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbCityy = new System.Windows.Forms.Label();
             this.lbtp = new System.Windows.Forms.Label();
             this.lbn = new System.Windows.Forms.Label();
             this.lbg = new System.Windows.Forms.Label();
@@ -104,7 +105,6 @@
             this.combx_paymentstatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbCityy = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -148,46 +148,46 @@
             // dgv2
             // 
             this.dgv2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgv2.ColumnHeadersHeight = 30;
             this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RoomNumber,
             this.RoomType,
             this.RoomBed});
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv2.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv2.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgv2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv2.Location = new System.Drawing.Point(61, 141);
             this.dgv2.Name = "dgv2";
             this.dgv2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgv2.RowHeadersVisible = false;
             this.dgv2.RowHeadersWidth = 51;
             this.dgv2.RowTemplate.Height = 30;
@@ -270,20 +270,20 @@
             // dgv
             // 
             this.dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgv.ColumnHeadersHeight = 30;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -291,26 +291,26 @@
             this.InvoceNumber,
             this.Paymentmethod,
             this.Amount});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv.Location = new System.Drawing.Point(56, 151);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 30;
@@ -463,10 +463,22 @@
             this.panel1.Size = new System.Drawing.Size(1630, 332);
             this.panel1.TabIndex = 31;
             // 
+            // lbCityy
+            // 
+            this.lbCityy.AutoSize = true;
+            this.lbCityy.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCityy.ForeColor = System.Drawing.Color.Red;
+            this.lbCityy.Location = new System.Drawing.Point(903, 148);
+            this.lbCityy.Name = "lbCityy";
+            this.lbCityy.Size = new System.Drawing.Size(37, 20);
+            this.lbCityy.TabIndex = 78;
+            this.lbCityy.Text = "City";
+            // 
             // lbtp
             // 
             this.lbtp.AutoSize = true;
             this.lbtp.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtp.ForeColor = System.Drawing.Color.Red;
             this.lbtp.Location = new System.Drawing.Point(1373, 305);
             this.lbtp.Name = "lbtp";
             this.lbtp.Size = new System.Drawing.Size(18, 20);
@@ -477,6 +489,7 @@
             // 
             this.lbn.AutoSize = true;
             this.lbn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbn.ForeColor = System.Drawing.Color.Red;
             this.lbn.Location = new System.Drawing.Point(1373, 274);
             this.lbn.Name = "lbn";
             this.lbn.Size = new System.Drawing.Size(18, 20);
@@ -487,6 +500,7 @@
             // 
             this.lbg.AutoSize = true;
             this.lbg.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbg.ForeColor = System.Drawing.Color.Red;
             this.lbg.Location = new System.Drawing.Point(1373, 252);
             this.lbg.Name = "lbg";
             this.lbg.Size = new System.Drawing.Size(18, 20);
@@ -497,7 +511,8 @@
             // 
             this.lbbs.AutoSize = true;
             this.lbbs.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbbs.Location = new System.Drawing.Point(1373, 215);
+            this.lbbs.ForeColor = System.Drawing.Color.Red;
+            this.lbbs.Location = new System.Drawing.Point(1373, 225);
             this.lbbs.Name = "lbbs";
             this.lbbs.Size = new System.Drawing.Size(39, 20);
             this.lbbs.TabIndex = 74;
@@ -507,7 +522,8 @@
             // 
             this.lbps.AutoSize = true;
             this.lbps.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbps.Location = new System.Drawing.Point(1373, 188);
+            this.lbps.ForeColor = System.Drawing.Color.Red;
+            this.lbps.Location = new System.Drawing.Point(1373, 195);
             this.lbps.Name = "lbps";
             this.lbps.Size = new System.Drawing.Size(39, 20);
             this.lbps.TabIndex = 73;
@@ -517,7 +533,8 @@
             // 
             this.lbcout.AutoSize = true;
             this.lbcout.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbcout.Location = new System.Drawing.Point(1373, 161);
+            this.lbcout.ForeColor = System.Drawing.Color.Red;
+            this.lbcout.Location = new System.Drawing.Point(1373, 168);
             this.lbcout.Name = "lbcout";
             this.lbcout.Size = new System.Drawing.Size(39, 20);
             this.lbcout.TabIndex = 72;
@@ -527,7 +544,8 @@
             // 
             this.lbcin.AutoSize = true;
             this.lbcin.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbcin.Location = new System.Drawing.Point(1373, 129);
+            this.lbcin.ForeColor = System.Drawing.Color.Red;
+            this.lbcin.Location = new System.Drawing.Point(1373, 139);
             this.lbcin.Name = "lbcin";
             this.lbcin.Size = new System.Drawing.Size(39, 20);
             this.lbcin.TabIndex = 71;
@@ -537,7 +555,8 @@
             // 
             this.lbbn.AutoSize = true;
             this.lbbn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbbn.Location = new System.Drawing.Point(1373, 102);
+            this.lbbn.ForeColor = System.Drawing.Color.Red;
+            this.lbbn.Location = new System.Drawing.Point(1373, 112);
             this.lbbn.Name = "lbbn";
             this.lbbn.Size = new System.Drawing.Size(39, 20);
             this.lbbn.TabIndex = 70;
@@ -547,6 +566,7 @@
             // 
             this.lbGEmail.AutoSize = true;
             this.lbGEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGEmail.ForeColor = System.Drawing.Color.Red;
             this.lbGEmail.Location = new System.Drawing.Point(903, 257);
             this.lbGEmail.Name = "lbGEmail";
             this.lbGEmail.Size = new System.Drawing.Size(37, 20);
@@ -557,6 +577,7 @@
             // 
             this.lbGPhone.AutoSize = true;
             this.lbGPhone.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGPhone.ForeColor = System.Drawing.Color.Red;
             this.lbGPhone.Location = new System.Drawing.Point(903, 230);
             this.lbGPhone.Name = "lbGPhone";
             this.lbGPhone.Size = new System.Drawing.Size(37, 20);
@@ -567,6 +588,7 @@
             // 
             this.lbGCountry.AutoSize = true;
             this.lbGCountry.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGCountry.ForeColor = System.Drawing.Color.Red;
             this.lbGCountry.Location = new System.Drawing.Point(903, 184);
             this.lbGCountry.Name = "lbGCountry";
             this.lbGCountry.Size = new System.Drawing.Size(37, 20);
@@ -577,6 +599,7 @@
             // 
             this.lbgname.AutoSize = true;
             this.lbgname.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbgname.ForeColor = System.Drawing.Color.Red;
             this.lbgname.Location = new System.Drawing.Point(903, 114);
             this.lbgname.Name = "lbgname";
             this.lbgname.Size = new System.Drawing.Size(77, 20);
@@ -587,6 +610,7 @@
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.ForeColor = System.Drawing.Color.Red;
             this.lbEmail.Location = new System.Drawing.Point(269, 257);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(37, 20);
@@ -597,6 +621,7 @@
             // 
             this.lbPhone.AutoSize = true;
             this.lbPhone.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhone.ForeColor = System.Drawing.Color.Red;
             this.lbPhone.Location = new System.Drawing.Point(269, 218);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.Size = new System.Drawing.Size(37, 20);
@@ -607,6 +632,7 @@
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCountry.ForeColor = System.Drawing.Color.Red;
             this.lbCountry.Location = new System.Drawing.Point(269, 184);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(37, 20);
@@ -617,6 +643,7 @@
             // 
             this.lbCity.AutoSize = true;
             this.lbCity.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCity.ForeColor = System.Drawing.Color.Red;
             this.lbCity.Location = new System.Drawing.Point(269, 148);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(37, 20);
@@ -627,6 +654,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.Red;
             this.lbName.Location = new System.Drawing.Point(269, 110);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(37, 20);
@@ -639,9 +667,9 @@
             this.label24.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(1098, 296);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(251, 27);
+            this.label24.Size = new System.Drawing.Size(227, 27);
             this.label24.TabIndex = 51;
-            this.label24.Text = "Total Price                     :";
+            this.label24.Text = "Total Price                  ";
             // 
             // label23
             // 
@@ -659,9 +687,9 @@
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(1098, 269);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(235, 27);
+            this.label22.Size = new System.Drawing.Size(103, 27);
             this.label22.TabIndex = 49;
-            this.label22.Text = "Nights                         :";
+            this.label22.Text = "Nights    ";
             // 
             // label21
             // 
@@ -669,9 +697,9 @@
             this.label21.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(1100, 242);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(238, 27);
+            this.label21.Size = new System.Drawing.Size(118, 27);
             this.label21.TabIndex = 48;
-            this.label21.Text = "Guest                           :";
+            this.label21.Text = "Guest        ";
             // 
             // label18
             // 
@@ -679,9 +707,9 @@
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(1097, 215);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(255, 27);
+            this.label18.Size = new System.Drawing.Size(183, 27);
             this.label18.TabIndex = 47;
-            this.label18.Text = "Booking Status              :";
+            this.label18.Text = "Booking Status   ";
             // 
             // label17
             // 
@@ -689,9 +717,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(1099, 188);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(248, 27);
+            this.label17.Size = new System.Drawing.Size(218, 27);
             this.label17.TabIndex = 46;
-            this.label17.Text = "Payment Status            :";
+            this.label17.Text = "Payment Status        ";
             // 
             // label16
             // 
@@ -699,19 +727,20 @@
             this.label16.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(1095, 161);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(256, 27);
+            this.label16.Size = new System.Drawing.Size(148, 27);
             this.label16.TabIndex = 45;
-            this.label16.Text = "Check out                       :";
+            this.label16.Text = "Check out      ";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(1096, 134);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(265, 27);
+            this.label15.Size = new System.Drawing.Size(139, 27);
             this.label15.TabIndex = 44;
-            this.label15.Text = "Check in                           :";
+            this.label15.Text = "Check in       ";
             // 
             // label19
             // 
@@ -719,9 +748,9 @@
             this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(1095, 107);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(251, 27);
+            this.label19.Size = new System.Drawing.Size(209, 27);
             this.label19.TabIndex = 43;
-            this.label19.Text = "Booking Number          :";
+            this.label19.Text = "Booking Number    ";
             // 
             // label20
             // 
@@ -974,16 +1003,6 @@
             this.label1.Size = new System.Drawing.Size(310, 37);
             this.label1.TabIndex = 12;
             this.label1.Text = "Booking Information";
-            // 
-            // lbCityy
-            // 
-            this.lbCityy.AutoSize = true;
-            this.lbCityy.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCityy.Location = new System.Drawing.Point(903, 148);
-            this.lbCityy.Name = "lbCityy";
-            this.lbCityy.Size = new System.Drawing.Size(37, 20);
-            this.lbCityy.TabIndex = 78;
-            this.lbCityy.Text = "City";
             // 
             // FBookingInformation
             // 

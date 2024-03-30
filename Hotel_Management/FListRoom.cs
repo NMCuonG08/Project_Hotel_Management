@@ -67,8 +67,7 @@ namespace Hotel_Management
         {
 
         }
-        void Fillter()
-        {
+       
            
             void Fillter()
             {
@@ -110,9 +109,8 @@ namespace Hotel_Management
                     conn.Close();
                 }
             }
-
-
-        }
+        
+        
         // Tạo list item room trong form 
         private void createItem()
         {
