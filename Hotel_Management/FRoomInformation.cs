@@ -257,7 +257,7 @@ namespace Hotel_Management
             Room room = new Room(roomID, txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, image);
             editRoom(room);
             EditConveniences(roomID);
-            Connection.Openadmin();
+       //     Connection.Openadmin();
             this.Close();
         }
     }

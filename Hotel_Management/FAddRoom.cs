@@ -258,7 +258,7 @@ namespace Hotel_Management
             Room room = new Room(txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, null, null, images, status);
             addRoom(room);
             SetConveniences(checklistbox);
-            Connection.Openadmin();
+         //   Connection.Openadmin();
             this.Close(); 
         }
 

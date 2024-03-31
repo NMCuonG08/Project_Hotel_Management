@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvRoom = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucListRoom1 = new Hotel_Management.UCListRoom();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radio_btn_clear = new System.Windows.Forms.RadioButton();
             this.radio_btn_checkall = new System.Windows.Forms.RadioButton();
@@ -62,7 +63,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ucListRoom1 = new Hotel_Management.UCListRoom();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoom)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -110,6 +110,22 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1751, 607);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
+            // ucListRoom1
+            // 
+            this.ucListRoom1.Checkin = new System.DateTime(((long)(0)));
+            this.ucListRoom1.Checkout = new System.DateTime(((long)(0)));
+            this.ucListRoom1.Color = System.Drawing.Color.Empty;
+            this.ucListRoom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ucListRoom1.Image = null;
+            this.ucListRoom1.Location = new System.Drawing.Point(3, 3);
+            this.ucListRoom1.Name = "ucListRoom1";
+            this.ucListRoom1.Price = 0D;
+            this.ucListRoom1.RoomID = null;
+            this.ucListRoom1.Size = new System.Drawing.Size(879, 179);
+            this.ucListRoom1.Status = null;
+            this.ucListRoom1.TabIndex = 0;
+            this.ucListRoom1.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -155,14 +171,13 @@
             // radio_btn_checkall
             // 
             this.radio_btn_checkall.AutoSize = true;
-            this.radio_btn_checkall.Location = new System.Drawing.Point(1283, 38);
+            this.radio_btn_checkall.Location = new System.Drawing.Point(1297, 37);
             this.radio_btn_checkall.Name = "radio_btn_checkall";
             this.radio_btn_checkall.Size = new System.Drawing.Size(87, 20);
             this.radio_btn_checkall.TabIndex = 39;
             this.radio_btn_checkall.TabStop = true;
             this.radio_btn_checkall.Text = "Choice all";
             this.radio_btn_checkall.UseVisualStyleBackColor = true;
-            this.radio_btn_checkall.Visible = false;
             this.radio_btn_checkall.CheckedChanged += new System.EventHandler(this.radio_btn_checkall_CheckedChanged);
             // 
             // label11
@@ -206,7 +221,6 @@
             this.label10.Size = new System.Drawing.Size(109, 25);
             this.label10.TabIndex = 20;
             this.label10.Text = "Extensions";
-            this.label10.Visible = false;
             // 
             // checklistbox
             // 
@@ -214,17 +228,19 @@
             this.checklistbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checklistbox.FormattingEnabled = true;
             this.checklistbox.Items.AddRange(new object[] {
-            "Máy lạnh",
-            "Wifi",
+            "Air_conditioner",
             "TV",
-            "Máy sấy tóc",
-            "Điện thoại bàn",
-            "Ăn sáng miễn phí"});
+            "Curtains",
+            "Desk_workspace",
+            "Small_kitchen",
+            "Refrigerator",
+            "Coffee_maker",
+            "Free_bottled_water",
+            "Safe_box"});
             this.checklistbox.Location = new System.Drawing.Point(1150, 61);
             this.checklistbox.Name = "checklistbox";
             this.checklistbox.Size = new System.Drawing.Size(402, 220);
             this.checklistbox.TabIndex = 19;
-            this.checklistbox.Visible = false;
             // 
             // label9
             // 
@@ -551,22 +567,6 @@
             this.label1.Size = new System.Drawing.Size(172, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Room Management";
-            // 
-            // ucListRoom1
-            // 
-            this.ucListRoom1.Checkin = new System.DateTime(((long)(0)));
-            this.ucListRoom1.Checkout = new System.DateTime(((long)(0)));
-            this.ucListRoom1.Color = System.Drawing.Color.Empty;
-            this.ucListRoom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ucListRoom1.Image = null;
-            this.ucListRoom1.Location = new System.Drawing.Point(3, 3);
-            this.ucListRoom1.Name = "ucListRoom1";
-            this.ucListRoom1.Price = 0D;
-            this.ucListRoom1.RoomID = null;
-            this.ucListRoom1.Size = new System.Drawing.Size(879, 179);
-            this.ucListRoom1.Status = null;
-            this.ucListRoom1.TabIndex = 0;
-            this.ucListRoom1.Visible = false;
             // 
             // FListRoom
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Management.Instrumentation;
@@ -20,6 +21,7 @@ namespace Hotel_Management
         public FBookingInformation()
         {
             InitializeComponent();
+            LoadPayment();
         }
         public FBookingInformation(Room room, Account user, int hotelID, int bookingID )    
         {
@@ -28,18 +30,42 @@ namespace Hotel_Management
             this.HotelID = hotelID;
             this.BookingID = bookingID;
             InitializeComponent();
+            LoadPayment();
             Setlb();
         }
 
+        public void LoadPayment()
+        {
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Payment where BookingID = @BookingID ";
+                    DataTable data = new DataTable();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@BookingID", BookingID);
+                    dataAdapter.Fill(data);
+                    dgv.DataSource = data;
+                  //  MessageBox.Show($"{BookingID}");
+                    conn.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+
         private void Btn_addRoom_Click(object sender, EventArgs e)
         {
-            FAddPayment fAddPayment = new FAddPayment();
+            FAddPayment fAddPayment = new FAddPayment(BookingID, this);
+            fAddPayment.SetData();
             fAddPayment.ShowDialog();
-            dgv.Rows[0].Cells[0].Value = Payinfo.Dt;
-            dgv.Rows[0].Cells[1].Value = Payinfo.Inum;
-            dgv.Rows[0].Cells[2].Value = Payinfo.Pmethod;
-            dgv.Rows[0].Cells[3].Value = Payinfo.Amount;
-            lbtpaid.Text = (Convert.ToInt32(lbtpaid.Text) + Convert.ToInt32(Payinfo.Amount)).ToString();
+           
         }
         void Setlb()
         {
@@ -58,6 +84,7 @@ namespace Hotel_Management
             lbGEmail.Text = User.Useremail.ToString(); 
             lbGPhone.Text = User.Phonenumber.ToString();
             //   lbbn.Text = Instance.BID.ToString();
+            lb_bookingdate.Text = booking.Bookingdate.ToString();
             lbbn.Text = booking.Id.ToString();
             lbcin.Text = booking.Checkin.ToString();
             lbcout.Text = booking.Checkout.ToString();

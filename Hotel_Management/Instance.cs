@@ -217,7 +217,44 @@ namespace Hotel_Management
             }
             return hotel;
         }
-        public static HotelInformation Hotelinfo { get; set; }
-        public static Booking Bookinfo { get; set; }
+
+        public static Payinfo GetBookingInforByID(int id)
+        {
+
+            Payinfo payment = new Payinfo();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;"))
+                {
+                    conn.Open();
+                    string query = "Select * from Booking where ID = @ID";
+                    SqlCommand sqlCommand = new SqlCommand(query, conn);
+                    sqlCommand.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        payment = new Payinfo
+                        {
+                            Id = id,                           
+                            AddDate = reader["CheckIn"] != DBNull.Value ? (DateTime)reader["CheckIn"] : DateTime.MinValue, 
+                            PaymentMethod = reader["PaymentStatus"].ToString(),
+                            Amount = (double)reader["UserID"],
+                            BookingID = (Int32)reader["RoomID"],
+                        };
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return payment;
+        }
+
+     //   public static HotelInformation Hotelinfo { get; set; }
+       // public static Booking Bookinfo { get; set; }
+        
+            
     }
 }
