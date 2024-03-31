@@ -80,3 +80,41 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Admin.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Book_room.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FReport.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
+D:\New folder\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.AssemblyReference.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.AddRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Book_room.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddNewBooking.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBookingInformation.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.CustomerRegistration.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddPayment.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBooking.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FChoiceRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FCustomerRegistration.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FExtendBooking.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FFindingRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FHotelInformation.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FListRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FLogin.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FReport.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FSignIn.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ListUser.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Admin.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FRoomInformation.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCFindingHotel.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCListRoom.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCRoomInformation.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ucsearch.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.uc_FGpass.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UserMainForm.resources
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.GenerateResource.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CoreCompileInputs.cache
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.csproj.CopyComplete
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.exe
+D:\New folder\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.pdb

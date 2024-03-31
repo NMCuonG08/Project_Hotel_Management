@@ -15,17 +15,18 @@ using Hotel_Management.Properties;
 using System.IO;
 using static Guna.UI2.Native.WinApi;
 using System.Collections.ObjectModel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Hotel_Management
 {
     public partial class FListRoom : Form
     {
-        private int HotelID  ;
+        private int HotelID;
         SqlConnection conn = new
            SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
 
         public FListRoom(int hotelID)
-        {            
+        {
             InitializeComponent();
             LoadForm(hotelID);
             DateTime currentDate = DateTime.Now;
@@ -35,23 +36,36 @@ namespace Hotel_Management
             createItem();
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = true;
-           
-          
+            
         }
-
+       /* void CountStatus() 
+        {
+            conn.Open();
+            string s = "Empty";
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = String.Format("SELECT COUNT(*) FROM RoomInformation WHERE Status = '{0}';", s);
+            Int32 count = Convert.ToInt32(cmd.ExecuteScalar());
+            btn_empty.Text = count.ToString();
+            s = "Occupied";
+            cmd = new SqlCommand();
+            cmd.CommandText = String.Format("SELECT COUNT(*) FROM RoomInformation WHERE Status = '{0}';", s);
+            count = Convert.ToInt32(cmd.ExecuteScalar());
+            bt_occ.Text = count.ToString();
+            conn.Close();
+        }*/
         public void LoadForm(int HotelID)
         {
             try
             {
                 conn.Open();
                 string sql = "SELECT * FROM RoomInformation where HotelID = @HotelID ";
-                
+
                 DataTable data = new DataTable();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
                 dataAdapter.Fill(data);
                 gvRoom.DataSource = data;
-
+                //CountStatus();
             }
             catch (Exception ex)
             {
@@ -67,10 +81,31 @@ namespace Hotel_Management
         {
 
         }
-       
-           
-            void Fillter()
+        void Fillter(string s)
+        {
+            try
             {
+                conn.Open();
+                string sql = string.Format("SELECT * FROM RoomInformation WHERE Status = '{0}'", s);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                // Thực thi câu lệnh truy vấn
+                cmd.CommandText = sql;
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                dataAdapter.Fill(data);
+                gvRoom.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        } 
+        void Fillter()
+        {
                 try
                 {
                     conn.Open();
@@ -108,7 +143,7 @@ namespace Hotel_Management
                 {
                     conn.Close();
                 }
-            }
+        }
         
         
         // Tạo list item room trong form 
@@ -409,6 +444,42 @@ namespace Hotel_Management
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_empty_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Empty");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Occupied");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
         }
     }   
     }
