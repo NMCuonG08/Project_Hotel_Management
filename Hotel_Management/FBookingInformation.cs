@@ -29,7 +29,12 @@ namespace Hotel_Management
             this.User = user;
             this.HotelID = hotelID;
             this.BookingID = bookingID;
+
             InitializeComponent();
+            /*panel_details.Visible = true;
+            panel_payment.Visible = false;
+            panel_room.Visible = false;*/
+            ShowDetailsPanel();
             LoadPayment();
             Setlb();
         }
@@ -47,7 +52,28 @@ namespace Hotel_Management
                     dataAdapter.SelectCommand.Parameters.AddWithValue("@BookingID", BookingID);
                     dataAdapter.Fill(data);
                     dgv.DataSource = data;
-                  //  MessageBox.Show($"{BookingID}");
+                    dgv.Columns["BookingID"].Visible = false;
+                    string sqltotal = " SELECT ISNULL(SUM(Amount), 0) FROM Payment where BookingID = @BookingID";
+                    SqlCommand cmd = new SqlCommand(sqltotal, conn);
+                    cmd.Parameters.AddWithValue("@BookingID", BookingID);
+                    double total = (double)cmd.ExecuteScalar();
+                    lbtpaid.Text = total.ToString();
+
+                    string sqlpending = " SELECT ISNULL(Price, 0) FROM Booking where ID = @ID";
+                    SqlCommand cmd2 = new SqlCommand(sqlpending, conn);
+                    cmd2.Parameters.AddWithValue("@ID", BookingID);
+                    double pending = (double)cmd2.ExecuteScalar();
+                    double value = pending - total;
+                    if (value >= 0)
+                    {
+                        lb_pendingpay.Text = (pending - total).ToString();
+
+                    }
+                    else
+                    {
+                        lb_pendingpay.Text = "0";
+                        Btn_addpayment.Enabled = false;
+                    }
                     conn.Close();
                 }
 
@@ -92,7 +118,7 @@ namespace Hotel_Management
             lbbs.Text = booking.Bookingstatus.ToString();
             lbg.Text = "1";
             lbn.Text = "1";
-            lbtp.Text = booking.Price.ToString();
+            lbtp.Text = booking.Price.ToString() + " $";
           //  MessageBox.Show($"{ub.RoomID}");
            
             dgv2.Rows[0].Cells[0].Value = Room.Id;
@@ -108,6 +134,56 @@ namespace Hotel_Management
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ShowDetailsPanel()
+        {
+            panel_details.Visible = true;
+            panel_payment.Visible = false;
+            panel_room.Visible = false;
+
+            btn_details.FillColor = Color.White;
+            btn_details.ForeColor = Color.Teal;
+            btn_payment.FillColor = Color.Teal;
+            btn_payment.ForeColor = Color.White;
+            btn_room.FillColor = Color.Teal;
+            btn_room.ForeColor = Color.White;
+        }
+        private void btn_details_Click(object sender, EventArgs e)
+        {
+            ShowDetailsPanel();
+        }
+
+        private void btn_payment_Click(object sender, EventArgs e)
+        {
+            panel_details.Visible = false;
+            panel_payment.Visible = true;
+            panel_room.Visible = false;
+            btn_payment.FillColor = Color.White;
+            btn_payment.ForeColor = Color.Teal;
+            btn_details.FillColor = Color.Teal;
+            btn_details.ForeColor = Color.White;
+            btn_room.FillColor = Color.Teal;
+            btn_room.ForeColor = Color.White;
+        }
+
+        private void btn_room_Click(object sender, EventArgs e)
+        {
+            panel_details.Visible = false;
+            panel_payment.Visible = false;
+            panel_room.Visible = true;
+
+            btn_room.FillColor = Color.White;
+            btn_room.ForeColor = Color.Teal;
+            btn_details.FillColor = Color.Teal;
+            btn_details.ForeColor = Color.White;
+            btn_payment.FillColor = Color.Teal;
+            btn_payment.ForeColor = Color.White;
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

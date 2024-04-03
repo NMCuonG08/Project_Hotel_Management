@@ -35,16 +35,9 @@ namespace Hotel_Management
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
                 dataAdapter.Fill(data);
                 gvBooking.DataSource = data;
-               /* int index = gvBooking.CurrentRow.Index;
-                Instance.Bookinfo = new Booking(gvBooking.Rows[index].Cells[1].Value.ToString(),
-                Convert.ToDateTime(gvBooking.Rows[index].Cells[2].Value.ToString()),
-                Convert.ToDateTime(gvBooking.Rows[index].Cells[3].Value.ToString()),
-                Convert.ToDateTime(gvBooking.Rows[index].Cells[4].Value.ToString()),
-                gvBooking.Rows[index].Cells[5].Value.ToString(),
-                gvBooking.Rows[index].Cells[6].Value.ToString(),
-                gvBooking.Rows[index].Cells[7].Value.ToString(),
-                gvBooking.Rows[index].Cells[8].Value.ToString());
-                Instance.BID = Convert.ToInt32(gvBooking.Rows[index].Cells[0].Value.ToString());*/
+                gvBooking.Columns["UserID"].Visible = false;
+                gvBooking.Columns["HotelID"].Visible = false;
+                gvBooking.Columns["RoomID"].Visible = false;
                 conn.Close();
             }
             catch (Exception ex)
@@ -79,6 +72,13 @@ namespace Hotel_Management
             (this.MdiParent as Admin)?.ShowForm(fListRoom);
         }
 
-
+        private void gvBooking_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            DataGridViewRow row = gvBooking.Rows[e.RowIndex];
+            if (row.Cells["BookingStatus"].Value != null && row.Cells["BookingStatus"].Value.ToString() == "pending")
+            {
+                row.DefaultCellStyle.BackColor = Color.White;
+            }
+        }
     }
 }

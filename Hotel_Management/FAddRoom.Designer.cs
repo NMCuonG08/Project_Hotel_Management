@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAddRoom));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
@@ -93,11 +94,12 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1781, 863);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_close
             // 
             this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_close.BackgroundImage")));
             this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -107,9 +109,9 @@
             this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
             this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_close.Location = new System.Drawing.Point(1667, 12);
+            this.btn_close.Location = new System.Drawing.Point(1712, 12);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(57, 54);
             this.btn_close.TabIndex = 121;
@@ -117,7 +119,7 @@
             // 
             // txb_price
             // 
-            this.txb_price.BorderColor = System.Drawing.Color.Gray;
+            this.txb_price.BorderColor = System.Drawing.Color.Black;
             this.txb_price.BorderRadius = 10;
             this.txb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_price.DefaultText = "";
@@ -128,7 +130,7 @@
             this.txb_price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_price.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_price.Location = new System.Drawing.Point(652, 510);
+            this.txb_price.Location = new System.Drawing.Point(656, 569);
             this.txb_price.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_price.Name = "txb_price";
             this.txb_price.PasswordChar = '\0';
@@ -139,7 +141,7 @@
             // 
             // txb_size
             // 
-            this.txb_size.BorderColor = System.Drawing.Color.Gray;
+            this.txb_size.BorderColor = System.Drawing.Color.Black;
             this.txb_size.BorderRadius = 10;
             this.txb_size.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_size.DefaultText = "";
@@ -150,7 +152,7 @@
             this.txb_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_size.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_size.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_size.Location = new System.Drawing.Point(652, 418);
+            this.txb_size.Location = new System.Drawing.Point(656, 477);
             this.txb_size.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_size.Name = "txb_size";
             this.txb_size.PasswordChar = '\0';
@@ -162,7 +164,7 @@
             // txb_clients
             // 
             this.txb_clients.BackColor = System.Drawing.Color.Transparent;
-            this.txb_clients.BorderColor = System.Drawing.Color.Gray;
+            this.txb_clients.BorderColor = System.Drawing.Color.Black;
             this.txb_clients.BorderRadius = 10;
             this.txb_clients.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_clients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -182,7 +184,7 @@
             "8",
             "9",
             "10"});
-            this.txb_clients.Location = new System.Drawing.Point(652, 333);
+            this.txb_clients.Location = new System.Drawing.Point(656, 392);
             this.txb_clients.Name = "txb_clients";
             this.txb_clients.Size = new System.Drawing.Size(356, 36);
             this.txb_clients.TabIndex = 50;
@@ -190,7 +192,7 @@
             // txb_bed
             // 
             this.txb_bed.BackColor = System.Drawing.Color.Transparent;
-            this.txb_bed.BorderColor = System.Drawing.Color.Gray;
+            this.txb_bed.BorderColor = System.Drawing.Color.Black;
             this.txb_bed.BorderRadius = 10;
             this.txb_bed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_bed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -206,7 +208,7 @@
             "Queen bed (150 - 160 cm)",
             "King bed (180 - 200 cm)",
             "Sofa bed (sofa instead of bed)"});
-            this.txb_bed.Location = new System.Drawing.Point(652, 246);
+            this.txb_bed.Location = new System.Drawing.Point(656, 305);
             this.txb_bed.Name = "txb_bed";
             this.txb_bed.Size = new System.Drawing.Size(356, 36);
             this.txb_bed.TabIndex = 49;
@@ -214,7 +216,7 @@
             // txb_roomtype
             // 
             this.txb_roomtype.BackColor = System.Drawing.Color.Transparent;
-            this.txb_roomtype.BorderColor = System.Drawing.Color.Gray;
+            this.txb_roomtype.BorderColor = System.Drawing.Color.Black;
             this.txb_roomtype.BorderRadius = 10;
             this.txb_roomtype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txb_roomtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -228,14 +230,14 @@
             "Business Class Room",
             "Family",
             "VIP Room"});
-            this.txb_roomtype.Location = new System.Drawing.Point(655, 167);
+            this.txb_roomtype.Location = new System.Drawing.Point(659, 226);
             this.txb_roomtype.Name = "txb_roomtype";
             this.txb_roomtype.Size = new System.Drawing.Size(356, 36);
             this.txb_roomtype.TabIndex = 48;
             // 
             // txb_roomname
             // 
-            this.txb_roomname.BorderColor = System.Drawing.Color.Gray;
+            this.txb_roomname.BorderColor = System.Drawing.Color.Black;
             this.txb_roomname.BorderRadius = 10;
             this.txb_roomname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_roomname.DefaultText = "";
@@ -247,7 +249,7 @@
             this.txb_roomname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txb_roomname.ForeColor = System.Drawing.Color.Black;
             this.txb_roomname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_roomname.Location = new System.Drawing.Point(652, 65);
+            this.txb_roomname.Location = new System.Drawing.Point(656, 124);
             this.txb_roomname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_roomname.Name = "txb_roomname";
             this.txb_roomname.PasswordChar = '\0';
@@ -260,7 +262,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(648, 391);
+            this.label8.Location = new System.Drawing.Point(652, 450);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 45;
@@ -270,7 +272,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(650, 300);
+            this.label7.Location = new System.Drawing.Point(654, 359);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 23);
             this.label7.TabIndex = 43;
@@ -279,7 +281,7 @@
             // rbtn_clearall
             // 
             this.rbtn_clearall.AutoSize = true;
-            this.rbtn_clearall.Location = new System.Drawing.Point(1424, 395);
+            this.rbtn_clearall.Location = new System.Drawing.Point(1450, 456);
             this.rbtn_clearall.Name = "rbtn_clearall";
             this.rbtn_clearall.Size = new System.Drawing.Size(77, 20);
             this.rbtn_clearall.TabIndex = 42;
@@ -291,7 +293,7 @@
             // rbtn_choiceall
             // 
             this.rbtn_choiceall.AutoSize = true;
-            this.rbtn_choiceall.Location = new System.Drawing.Point(1331, 393);
+            this.rbtn_choiceall.Location = new System.Drawing.Point(1357, 454);
             this.rbtn_choiceall.Name = "rbtn_choiceall";
             this.rbtn_choiceall.Size = new System.Drawing.Size(87, 20);
             this.rbtn_choiceall.TabIndex = 41;
@@ -304,7 +306,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1093, 393);
+            this.label6.Location = new System.Drawing.Point(1097, 452);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 25);
             this.label6.TabIndex = 40;
@@ -324,7 +326,7 @@
             "Large_mirror",
             "Bluetooth_speaker",
             "Ventilation_system"});
-            this.checklistbathroom.Location = new System.Drawing.Point(1098, 421);
+            this.checklistbathroom.Location = new System.Drawing.Point(1102, 480);
             this.checklistbathroom.Name = "checklistbathroom";
             this.checklistbathroom.Size = new System.Drawing.Size(402, 198);
             this.checklistbathroom.TabIndex = 39;
@@ -332,7 +334,7 @@
             // radio_btn_clear
             // 
             this.radio_btn_clear.AutoSize = true;
-            this.radio_btn_clear.Location = new System.Drawing.Point(1422, 43);
+            this.radio_btn_clear.Location = new System.Drawing.Point(1426, 102);
             this.radio_btn_clear.Name = "radio_btn_clear";
             this.radio_btn_clear.Size = new System.Drawing.Size(77, 20);
             this.radio_btn_clear.TabIndex = 38;
@@ -344,7 +346,7 @@
             // radio_btn_checkall
             // 
             this.radio_btn_checkall.AutoSize = true;
-            this.radio_btn_checkall.Location = new System.Drawing.Point(1329, 43);
+            this.radio_btn_checkall.Location = new System.Drawing.Point(1333, 102);
             this.radio_btn_checkall.Name = "radio_btn_checkall";
             this.radio_btn_checkall.Size = new System.Drawing.Size(87, 20);
             this.radio_btn_checkall.TabIndex = 37;
@@ -366,7 +368,7 @@
             this.btn_clear.FocusedColor = System.Drawing.Color.White;
             this.btn_clear.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_clear.ForeColor = System.Drawing.Color.Black;
-            this.btn_clear.Location = new System.Drawing.Point(328, 497);
+            this.btn_clear.Location = new System.Drawing.Point(332, 556);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(216, 55);
             this.btn_clear.TabIndex = 32;
@@ -377,7 +379,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1092, 41);
+            this.label10.Location = new System.Drawing.Point(1096, 100);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(197, 25);
             this.label10.TabIndex = 31;
@@ -399,7 +401,7 @@
             "Coffee_maker",
             "Free_bottled_water",
             "Safe_box"});
-            this.checklistbox.Location = new System.Drawing.Point(1097, 69);
+            this.checklistbox.Location = new System.Drawing.Point(1101, 128);
             this.checklistbox.Name = "checklistbox";
             this.checklistbox.Size = new System.Drawing.Size(402, 242);
             this.checklistbox.TabIndex = 30;
@@ -419,7 +421,7 @@
             this.btn_upload.FocusedColor = System.Drawing.Color.White;
             this.btn_upload.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_upload.ForeColor = System.Drawing.Color.Black;
-            this.btn_upload.Location = new System.Drawing.Point(39, 497);
+            this.btn_upload.Location = new System.Drawing.Point(43, 556);
             this.btn_upload.Name = "btn_upload";
             this.btn_upload.Size = new System.Drawing.Size(216, 55);
             this.btn_upload.TabIndex = 23;
@@ -432,9 +434,10 @@
             this.picturebox.BorderRadius = 30;
             this.picturebox.FillColor = System.Drawing.Color.Silver;
             this.picturebox.ImageRotate = 0F;
-            this.picturebox.Location = new System.Drawing.Point(39, 65);
+            this.picturebox.Location = new System.Drawing.Point(43, 124);
             this.picturebox.Name = "picturebox";
             this.picturebox.Size = new System.Drawing.Size(505, 391);
+            this.picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox.TabIndex = 22;
             this.picturebox.TabStop = false;
             // 
@@ -451,7 +454,7 @@
             this.btn_add.FocusedColor = System.Drawing.Color.White;
             this.btn_add.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(751, 619);
+            this.btn_add.Location = new System.Drawing.Point(752, 676);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(180, 55);
             this.btn_add.TabIndex = 21;
@@ -462,7 +465,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(648, 483);
+            this.label5.Location = new System.Drawing.Point(652, 542);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 23);
             this.label5.TabIndex = 16;
@@ -472,7 +475,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(651, 220);
+            this.label4.Location = new System.Drawing.Point(655, 279);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 23);
             this.label4.TabIndex = 15;
@@ -482,7 +485,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(651, 126);
+            this.label3.Location = new System.Drawing.Point(655, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 23);
             this.label3.TabIndex = 14;
@@ -492,7 +495,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(651, 36);
+            this.label2.Location = new System.Drawing.Point(652, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 23);
             this.label2.TabIndex = 13;
@@ -501,10 +504,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 26);
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F);
+            this.label1.Location = new System.Drawing.Point(32, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 23);
+            this.label1.Size = new System.Drawing.Size(264, 38);
             this.label1.TabIndex = 12;
             this.label1.Text = "Add New Room";
             // 

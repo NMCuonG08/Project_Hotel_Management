@@ -165,12 +165,6 @@
     <Compile Include="HotelInformation.cs" />
     <Compile Include="IHotelIDConsumer.cs" />
     <Compile Include="Instance.cs" />
-    <Compile Include="ListUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListUser.Designer.cs">
-      <DependentUpon>ListUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,9 +274,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListUser.resx">
-      <DependentUpon>ListUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -718,6 +709,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

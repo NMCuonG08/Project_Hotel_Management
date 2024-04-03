@@ -61,7 +61,6 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UserMainForm.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FLogin.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FSignIn.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.ListUser.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCListRoom.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBooking.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddPayment.resources

@@ -259,10 +259,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F);
             this.label7.Location = new System.Drawing.Point(12, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(321, 37);
+            this.label7.Size = new System.Drawing.Size(373, 39);
             this.label7.TabIndex = 24;
             this.label7.Text = "Extend Booking Form";
             // 

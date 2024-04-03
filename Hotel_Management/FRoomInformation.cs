@@ -35,6 +35,7 @@ namespace Hotel_Management
             txb_roomtype.SelectedItem = room.Type;
             txb_clients.SelectedItem = room.Clients.ToString();
             txb_size.Text = room.Size.ToString();      
+            combobox_status.Text = room.Status.ToString();
             byte[] image = room.Image;
             if (image != null)
             {
@@ -254,11 +255,21 @@ namespace Hotel_Management
             int roomID = Convert.ToInt32(txb_roomid.Text);
             int clients = Convert.ToInt32(txb_clients.Text);
             int size = Convert.ToInt32(txb_size.Text);
-            Room room = new Room(roomID, txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, image);
-            editRoom(room);
-            EditConveniences(roomID);
-       //     Connection.Openadmin();
-            this.Close();
+            if (!string.IsNullOrEmpty(txb_price.Text) && int.TryParse(txb_price.Text, out roomPrice) &&
+                !string.IsNullOrEmpty(txb_roomid.Text) && int.TryParse(txb_roomid.Text, out roomID) &&
+                !string.IsNullOrEmpty(txb_clients.Text) && int.TryParse(txb_clients.Text, out clients) &&
+                !string.IsNullOrEmpty(txb_size.Text) && int.TryParse(txb_size.Text, out size))
+            {
+                Room room = new Room(roomID, txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, combobox_status.Text, image);
+                editRoom(room);
+                EditConveniences(roomID);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all required fields with valid integer values.");
+            }
+           
         }
     }
 }

@@ -25,6 +25,8 @@ namespace Hotel_Management
             this.HotelID = hotelID;
             this.UserID = userID;
             LoadForm(HotelID);
+            datetime_checkin.MinDate =  DateTime.Today.AddDays(1);
+            datetime_checkout.MinDate = datetime_checkin.Value.AddDays(1);
         }
         void LoadForm(int HotelID)
         {
@@ -208,14 +210,6 @@ namespace Hotel_Management
             }
             return convenienceNames;
         }
-
-
-
-
-
-
-
-
         private void FChoiceRoom_ItemBooking(object sender, EventArgs e)
         {
             UCRoomInformation clickbooking = sender as UCRoomInformation;
@@ -412,6 +406,7 @@ namespace Hotel_Management
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
+            panel_hide.Visible = false;
             string selectedType = cbx_typeroom.Text.Trim();
             string selectedTypeBed = cbx_typebed.Text.Trim();
             DateTime checkin = datetime_checkin.Value;
@@ -466,7 +461,6 @@ namespace Hotel_Management
             }
             else
             {
-                // Handle case where no type or bed is selected
             }
         }
 
@@ -474,6 +468,12 @@ namespace Hotel_Management
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+       
+        private void datetime_checkin_ValueChanged(object sender, EventArgs e)
+        {
+            datetime_checkout.MinDate = datetime_checkin.Value.AddDays(1);
         }
     }
 }

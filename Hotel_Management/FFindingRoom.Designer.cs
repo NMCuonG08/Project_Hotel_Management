@@ -40,11 +40,12 @@
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
+            this.listcheckbox_start = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox_convenience = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,8 +57,8 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ucFindingHotel1 = new Hotel_Management.UCFindingHotel();
+            this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -149,9 +150,11 @@
             this.cbx_hotelLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_hotelLocation.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbx_hotelLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbx_hotelLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbx_hotelLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbx_hotelLocation.ForeColor = System.Drawing.Color.Black;
             this.cbx_hotelLocation.ItemHeight = 30;
+            this.cbx_hotelLocation.Items.AddRange(new object[] {
+            ""});
             this.cbx_hotelLocation.Location = new System.Drawing.Point(47, 13);
             this.cbx_hotelLocation.Name = "cbx_hotelLocation";
             this.cbx_hotelLocation.Size = new System.Drawing.Size(444, 36);
@@ -205,11 +208,12 @@
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 20;
-            this.guna2Panel3.Controls.Add(this.checkedListBox3);
+            this.guna2Panel3.Controls.Add(this.guna2HScrollBar1);
+            this.guna2Panel3.Controls.Add(this.listcheckbox_start);
             this.guna2Panel3.Controls.Add(this.label4);
             this.guna2Panel3.Controls.Add(this.guna2TextBox3);
             this.guna2Panel3.Controls.Add(this.label3);
-            this.guna2Panel3.Controls.Add(this.checkedListBox2);
+            this.guna2Panel3.Controls.Add(this.checkedListBox_convenience);
             this.guna2Panel3.Controls.Add(this.label2);
             this.guna2Panel3.Controls.Add(this.checkedListBox1);
             this.guna2Panel3.Controls.Add(this.label1);
@@ -219,27 +223,33 @@
             this.guna2Panel3.Size = new System.Drawing.Size(473, 829);
             this.guna2Panel3.TabIndex = 0;
             // 
-            // checkedListBox3
+            // guna2HScrollBar1
             // 
-            this.checkedListBox3.BackColor = System.Drawing.Color.Azure;
-            this.checkedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
-            "10",
-            "9",
-            "8",
-            "7",
-            "6",
+            this.guna2HScrollBar1.BorderRadius = 10;
+            this.guna2HScrollBar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2HScrollBar1.InUpdate = false;
+            this.guna2HScrollBar1.LargeChange = 10;
+            this.guna2HScrollBar1.Location = new System.Drawing.Point(52, 112);
+            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
+            this.guna2HScrollBar1.ScrollbarSize = 23;
+            this.guna2HScrollBar1.Size = new System.Drawing.Size(356, 23);
+            this.guna2HScrollBar1.TabIndex = 16;
+            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.Black;
+            // 
+            // listcheckbox_start
+            // 
+            this.listcheckbox_start.BackColor = System.Drawing.Color.Azure;
+            this.listcheckbox_start.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listcheckbox_start.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listcheckbox_start.FormattingEnabled = true;
+            this.listcheckbox_start.Items.AddRange(new object[] {
             "5",
             "4",
-            "3",
-            "2",
-            "1"});
-            this.checkedListBox3.Location = new System.Drawing.Point(52, 203);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(329, 168);
-            this.checkedListBox3.TabIndex = 14;
+            "3"});
+            this.listcheckbox_start.Location = new System.Drawing.Point(52, 203);
+            this.listcheckbox_start.Name = "listcheckbox_start";
+            this.listcheckbox_start.Size = new System.Drawing.Size(329, 168);
+            this.listcheckbox_start.TabIndex = 14;
             // 
             // label4
             // 
@@ -264,7 +274,7 @@
             this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(52, 85);
+            this.guna2TextBox3.Location = new System.Drawing.Point(52, 57);
             this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
@@ -277,32 +287,32 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 56);
+            this.label3.Location = new System.Drawing.Point(47, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 25);
             this.label3.TabIndex = 12;
             this.label3.Text = "Phạm vi giá";
             // 
-            // checkedListBox2
+            // checkedListBox_convenience
             // 
-            this.checkedListBox2.BackColor = System.Drawing.Color.Azure;
-            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.checkedListBox_convenience.BackColor = System.Drawing.Color.Azure;
+            this.checkedListBox_convenience.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox_convenience.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox_convenience.FormattingEnabled = true;
+            this.checkedListBox_convenience.Items.AddRange(new object[] {
             "Breakfast",
-            "Free_Wi-Fi",
-            "24/7_Room_Service",
+            "Free_WiFi",
+            "247_Room_Service",
             "Daily_Housekeeping",
             "Restaurant_and_Bar",
             "Swimming_Pool_and_Spa",
             "Laundry_Service",
             "Parking_area",
             "Gym"});
-            this.checkedListBox2.Location = new System.Drawing.Point(52, 509);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(329, 264);
-            this.checkedListBox2.TabIndex = 11;
+            this.checkedListBox_convenience.Location = new System.Drawing.Point(52, 509);
+            this.checkedListBox_convenience.Name = "checkedListBox_convenience";
+            this.checkedListBox_convenience.Size = new System.Drawing.Size(329, 253);
+            this.checkedListBox_convenience.TabIndex = 11;
             // 
             // label2
             // 
@@ -453,6 +463,24 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1433, 872);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
+            // ucFindingHotel1
+            // 
+            this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
+            this.ucFindingHotel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ucFindingHotel1.Convenience = null;
+            this.ucFindingHotel1.Convenience2 = null;
+            this.ucFindingHotel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ucFindingHotel1.HotelName = null;
+            this.ucFindingHotel1.Id = 0;
+            this.ucFindingHotel1.Image = null;
+            this.ucFindingHotel1.Name = "ucFindingHotel1";
+            this.ucFindingHotel1.Point = 0D;
+            this.ucFindingHotel1.Price = 0D;
+            this.ucFindingHotel1.Size = new System.Drawing.Size(1468, 239);
+            this.ucFindingHotel1.TabIndex = 0;
+            this.ucFindingHotel1.Ultilities = null;
+            this.ucFindingHotel1.Visible = false;
+            // 
             // gv_hotel
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -507,24 +535,6 @@
             this.gv_hotel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_hotel.Visible = false;
             // 
-            // ucFindingHotel1
-            // 
-            this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
-            this.ucFindingHotel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucFindingHotel1.Convenience = null;
-            this.ucFindingHotel1.Convenience2 = null;
-            this.ucFindingHotel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ucFindingHotel1.HotelName = null;
-            this.ucFindingHotel1.Id = 0;
-            this.ucFindingHotel1.Image = null;
-            this.ucFindingHotel1.Name = "ucFindingHotel1";
-            this.ucFindingHotel1.Point = 0D;
-            this.ucFindingHotel1.Price = 0D;
-            this.ucFindingHotel1.Size = new System.Drawing.Size(1468, 239);
-            this.ucFindingHotel1.TabIndex = 0;
-            this.ucFindingHotel1.Ultilities = null;
-            this.ucFindingHotel1.Visible = false;
-            // 
             // FFindingRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -566,11 +576,11 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.CheckedListBox listcheckbox_start;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBox_convenience;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label1;
@@ -581,5 +591,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton13;
+        private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
     }
 }

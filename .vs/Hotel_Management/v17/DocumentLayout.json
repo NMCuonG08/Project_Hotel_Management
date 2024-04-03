@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\faddpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\faddpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\fbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\fcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fcheckout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\fbookinginformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\fbookinginformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fbookinginformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\fbookinginformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\fbookinginformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fbookinginformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\faddpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\faddpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\flistroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\flistroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\fbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|c:\\users\\asus\\desktop\\project_hotel_management\\hotel_management\\fchoiceroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fchoiceroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\hotel_management\\fchoiceroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54E7031B-B78B-44B9-B47E-4203BB0CD177}|Hotel_Management\\Hotel_Management.csproj|solutionrelative:hotel_management\\fchoiceroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,101 +63,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Fcheckout.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Fcheckout.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\Fcheckout.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\Fcheckout.cs [Design]",
-              "RelativeToolTip": "Hotel_Management\\Fcheckout.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T12:13:43.309Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "FListRoom.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FListRoom.cs",
               "RelativeDocumentMoniker": "Hotel_Management\\FListRoom.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FListRoom.cs",
               "RelativeToolTip": "Hotel_Management\\FListRoom.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAD4AAAANAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFsAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T11:32:20.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FBooking.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBooking.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\FBooking.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBooking.cs",
-              "RelativeToolTip": "Hotel_Management\\FBooking.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAIwE0AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T11:26:45.64Z",
+              "WhenOpened": "2024-04-03T00:23:06.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FBooking.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBooking.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\FBooking.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBooking.cs [Design]",
-              "RelativeToolTip": "Hotel_Management\\FBooking.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T11:26:44.664Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FAddPayment.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FAddPayment.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\FAddPayment.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FAddPayment.cs",
-              "RelativeToolTip": "Hotel_Management\\FAddPayment.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAIwFUAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T10:32:29.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FAddPayment.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FAddPayment.cs",
-              "RelativeDocumentMoniker": "Hotel_Management\\FAddPayment.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FAddPayment.cs [Design]",
-              "RelativeToolTip": "Hotel_Management\\FAddPayment.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T14:22:23.434Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "FBookingInformation.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBookingInformation.cs",
               "RelativeDocumentMoniker": "Hotel_Management\\FBookingInformation.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBookingInformation.cs",
               "RelativeToolTip": "Hotel_Management\\FBookingInformation.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAAAEAAAABHAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAAAEUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T06:32:27.721Z",
+              "WhenOpened": "2024-04-03T00:16:27.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FBookingInformation.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBookingInformation.cs",
               "RelativeDocumentMoniker": "Hotel_Management\\FBookingInformation.cs",
               "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FBookingInformation.cs [Design]",
               "RelativeToolTip": "Hotel_Management\\FBookingInformation.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T08:25:47.36Z",
+              "WhenOpened": "2024-04-03T00:16:18.96Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FChoiceRoom.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FChoiceRoom.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\FChoiceRoom.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FChoiceRoom.cs",
+              "RelativeToolTip": "Hotel_Management\\FChoiceRoom.cs",
+              "ViewState": "AQIAAL0BAAAAAAAAAAAgwNgBAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:05:12.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FChoiceRoom.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FChoiceRoom.cs",
+              "RelativeDocumentMoniker": "Hotel_Management\\FChoiceRoom.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Project_Hotel_Management\\Hotel_Management\\FChoiceRoom.cs [Design]",
+              "RelativeToolTip": "Hotel_Management\\FChoiceRoom.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T15:19:55.839Z",
               "EditorCaption": " [Design]"
             }
           ]

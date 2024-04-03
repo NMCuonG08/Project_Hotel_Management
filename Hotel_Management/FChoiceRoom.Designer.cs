@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChoiceRoom));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.gvRoom = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -44,9 +45,12 @@
             this.cbx_typebed = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbx_typeroom = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel_hide = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoom)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            this.panel_hide.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -61,26 +65,26 @@
             // 
             // gvRoom
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gvRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gvRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gvRoom.ColumnHeadersHeight = 4;
             this.gvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvRoom.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvRoom.DefaultCellStyle = dataGridViewCellStyle9;
             this.gvRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gvRoom.Location = new System.Drawing.Point(3, 3);
             this.gvRoom.Name = "gvRoom";
@@ -177,16 +181,17 @@
             this.datetime_checkin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datetime_checkin.Location = new System.Drawing.Point(987, 13);
             this.datetime_checkin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datetime_checkin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datetime_checkin.MinDate = new System.DateTime(2024, 4, 2, 0, 0, 0, 0);
             this.datetime_checkin.Name = "datetime_checkin";
             this.datetime_checkin.Size = new System.Drawing.Size(247, 45);
             this.datetime_checkin.TabIndex = 123;
-            this.datetime_checkin.Value = new System.DateTime(2024, 3, 12, 23, 25, 1, 5);
+            this.datetime_checkin.Value = new System.DateTime(2024, 4, 2, 0, 0, 0, 0);
+            this.datetime_checkin.ValueChanged += new System.EventHandler(this.datetime_checkin_ValueChanged);
             // 
             // btn_close
             // 
             this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_close.BackgroundImage")));
             this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -197,7 +202,7 @@
             this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
             this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_close.Location = new System.Drawing.Point(1885, 0);
             this.btn_close.Name = "btn_close";
@@ -212,8 +217,9 @@
             this.btn_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_search.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_search.ForeColor = System.Drawing.Color.Black;
             this.btn_search.Location = new System.Drawing.Point(1699, 13);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(180, 45);
@@ -275,13 +281,33 @@
             this.cbx_typeroom.Size = new System.Drawing.Size(306, 36);
             this.cbx_typeroom.TabIndex = 23;
             // 
+            // panel_hide
+            // 
+            this.panel_hide.BackColor = System.Drawing.Color.White;
+            this.panel_hide.Controls.Add(this.label3);
+            this.panel_hide.Location = new System.Drawing.Point(83, 123);
+            this.panel_hide.Name = "panel_hide";
+            this.panel_hide.Size = new System.Drawing.Size(1859, 935);
+            this.panel_hide.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F);
+            this.label3.Location = new System.Drawing.Point(526, 368);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(792, 38);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Vui Long Nhap thong tin tim kiem phong cho ban";
+            // 
             // FChoiceRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.BackgroundImage = global::Hotel_Management.Properties.Resources.architecture_3824660_1280;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.Controls.Add(this.panel_hide);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -292,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvRoom)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.panel_hide.ResumeLayout(false);
+            this.panel_hide.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -311,5 +339,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datetime_checkout;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Panel panel_hide;
+        private System.Windows.Forms.Label label3;
     }
 }

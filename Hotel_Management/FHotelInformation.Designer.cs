@@ -79,7 +79,7 @@
             this.txb_room.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.txb_room.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_room.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txb_room.ForeColor = System.Drawing.Color.Transparent;
+            this.txb_room.ForeColor = System.Drawing.Color.Black;
             this.txb_room.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_room.Location = new System.Drawing.Point(266, 119);
             this.txb_room.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -93,10 +93,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F);
             this.label1.Location = new System.Drawing.Point(26, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 38);
+            this.label1.Size = new System.Drawing.Size(103, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Hotel";
             // 
@@ -113,7 +113,7 @@
             this.guna2TextBox2.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Location = new System.Drawing.Point(266, 232);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -126,7 +126,7 @@
             // 
             // txb_name
             // 
-            this.txb_name.BorderColor = System.Drawing.Color.Gray;
+            this.txb_name.BorderColor = System.Drawing.Color.Black;
             this.txb_name.BorderRadius = 10;
             this.txb_name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_name.DefaultText = "";
@@ -169,7 +169,7 @@
             // 
             // txb_phoneNumber
             // 
-            this.txb_phoneNumber.BorderColor = System.Drawing.Color.Gray;
+            this.txb_phoneNumber.BorderColor = System.Drawing.Color.Black;
             this.txb_phoneNumber.BorderRadius = 10;
             this.txb_phoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_phoneNumber.DefaultText = "";
@@ -202,7 +202,7 @@
             // 
             // txb_email
             // 
-            this.txb_email.BorderColor = System.Drawing.Color.Gray;
+            this.txb_email.BorderColor = System.Drawing.Color.Black;
             this.txb_email.BorderRadius = 10;
             this.txb_email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_email.DefaultText = "";
@@ -235,7 +235,7 @@
             // 
             // txb_capacity
             // 
-            this.txb_capacity.BorderColor = System.Drawing.Color.Gray;
+            this.txb_capacity.BorderColor = System.Drawing.Color.Black;
             this.txb_capacity.BorderRadius = 10;
             this.txb_capacity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_capacity.DefaultText = "";
@@ -255,6 +255,7 @@
             this.txb_capacity.SelectedText = "";
             this.txb_capacity.Size = new System.Drawing.Size(291, 51);
             this.txb_capacity.TabIndex = 13;
+            this.txb_capacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_capacity_KeyPress);
             // 
             // label6
             // 
@@ -268,7 +269,7 @@
             // 
             // txb_floor
             // 
-            this.txb_floor.BorderColor = System.Drawing.Color.Gray;
+            this.txb_floor.BorderColor = System.Drawing.Color.Black;
             this.txb_floor.BorderRadius = 10;
             this.txb_floor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_floor.DefaultText = "";
@@ -288,6 +289,7 @@
             this.txb_floor.SelectedText = "";
             this.txb_floor.Size = new System.Drawing.Size(293, 51);
             this.txb_floor.TabIndex = 11;
+            this.txb_floor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_floor_KeyPress);
             // 
             // label7
             // 
@@ -301,7 +303,7 @@
             // 
             // txb_city
             // 
-            this.txb_city.BorderColor = System.Drawing.Color.Gray;
+            this.txb_city.BorderColor = System.Drawing.Color.Black;
             this.txb_city.BorderRadius = 10;
             this.txb_city.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_city.DefaultText = "";
@@ -334,7 +336,7 @@
             // 
             // txb_country
             // 
-            this.txb_country.BorderColor = System.Drawing.Color.Gray;
+            this.txb_country.BorderColor = System.Drawing.Color.Black;
             this.txb_country.BorderRadius = 10;
             this.txb_country.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_country.DefaultText = "";
@@ -367,7 +369,7 @@
             // 
             // txb_street
             // 
-            this.txb_street.BorderColor = System.Drawing.Color.Gray;
+            this.txb_street.BorderColor = System.Drawing.Color.Black;
             this.txb_street.BorderRadius = 10;
             this.txb_street.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_street.DefaultText = "";
@@ -400,7 +402,7 @@
             // 
             // txb_zip
             // 
-            this.txb_zip.BorderColor = System.Drawing.Color.Gray;
+            this.txb_zip.BorderColor = System.Drawing.Color.Black;
             this.txb_zip.BorderRadius = 10;
             this.txb_zip.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_zip.DefaultText = "";
@@ -506,7 +508,7 @@
             // 
             // txb_price
             // 
-            this.txb_price.BorderColor = System.Drawing.Color.Gray;
+            this.txb_price.BorderColor = System.Drawing.Color.Black;
             this.txb_price.BorderRadius = 10;
             this.txb_price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_price.DefaultText = "";
@@ -526,6 +528,7 @@
             this.txb_price.SelectedText = "";
             this.txb_price.Size = new System.Drawing.Size(291, 51);
             this.txb_price.TabIndex = 67;
+            this.txb_price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_price_KeyPress);
             // 
             // Feedback
             // 
@@ -539,7 +542,7 @@
             // 
             // txb_feedback
             // 
-            this.txb_feedback.BorderColor = System.Drawing.Color.Gray;
+            this.txb_feedback.BorderColor = System.Drawing.Color.Black;
             this.txb_feedback.BorderRadius = 10;
             this.txb_feedback.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_feedback.DefaultText = "";
@@ -559,6 +562,7 @@
             this.txb_feedback.SelectedText = "";
             this.txb_feedback.Size = new System.Drawing.Size(288, 51);
             this.txb_feedback.TabIndex = 65;
+            this.txb_feedback.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_feedback_KeyPress);
             // 
             // checklistbox
             // 
@@ -623,7 +627,7 @@
             this.txb_hotelID.PasswordChar = '\0';
             this.txb_hotelID.PlaceholderText = "";
             this.txb_hotelID.SelectedText = "";
-            this.txb_hotelID.Size = new System.Drawing.Size(291, 51);
+            this.txb_hotelID.Size = new System.Drawing.Size(47, 51);
             this.txb_hotelID.TabIndex = 72;
             this.txb_hotelID.Visible = false;
             // 

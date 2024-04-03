@@ -53,9 +53,7 @@
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton8 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton7 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton5 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton4 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton3 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.txb_nameuser = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_useremail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,12 +61,21 @@
             this.timep_checkout = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txb_phonenumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txb_address = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_national = new Guna.UI2.WinForms.Guna2TextBox();
             this.txb_idcardnumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txb_gender = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txb_gender = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientTileButton4 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.txb_address = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.panel.SuspendLayout();
@@ -87,7 +94,7 @@
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(72)))), ((int)(((byte)(130)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(65, 648);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(64, 648);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(223, 45);
             this.guna2GradientButton1.TabIndex = 122;
@@ -212,7 +219,7 @@
             this.lb_price.BackColor = System.Drawing.SystemColors.Control;
             this.lb_price.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lb_price.Location = new System.Drawing.Point(469, 657);
+            this.lb_price.Location = new System.Drawing.Point(472, 657);
             this.lb_price.Name = "lb_price";
             this.lb_price.Size = new System.Drawing.Size(31, 36);
             this.lb_price.TabIndex = 115;
@@ -223,7 +230,7 @@
             this.lb_hotelname.AutoSize = true;
             this.lb_hotelname.BackColor = System.Drawing.SystemColors.Control;
             this.lb_hotelname.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_hotelname.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lb_hotelname.ForeColor = System.Drawing.Color.Black;
             this.lb_hotelname.Location = new System.Drawing.Point(58, 17);
             this.lb_hotelname.Name = "lb_hotelname";
             this.lb_hotelname.Size = new System.Drawing.Size(140, 31);
@@ -301,7 +308,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(622, 479);
+            this.label5.Location = new System.Drawing.Point(613, 460);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 17);
             this.label5.TabIndex = 119;
@@ -312,6 +319,13 @@
             this.panel.BackColor = System.Drawing.Color.White;
             this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel.BorderRadius = 10;
+            this.panel.Controls.Add(this.label11);
+            this.panel.Controls.Add(this.label10);
+            this.panel.Controls.Add(this.label9);
+            this.panel.Controls.Add(this.label8);
+            this.panel.Controls.Add(this.label7);
+            this.panel.Controls.Add(this.label6);
+            this.panel.Controls.Add(this.label2);
             this.panel.Controls.Add(this.richTextBox1);
             this.panel.Controls.Add(this.guna2CheckBox1);
             this.panel.Controls.Add(this.label1);
@@ -388,7 +402,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(156, 479);
+            this.label4.Location = new System.Drawing.Point(156, 461);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 118;
@@ -429,7 +443,7 @@
             this.guna2GradientTileButton2.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton2.Image = global::Hotel_Management.Properties.Resources.email__4_;
             this.guna2GradientTileButton2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2GradientTileButton2.Location = new System.Drawing.Point(93, 168);
+            this.guna2GradientTileButton2.Location = new System.Drawing.Point(544, 207);
             this.guna2GradientTileButton2.Name = "guna2GradientTileButton2";
             this.guna2GradientTileButton2.Size = new System.Drawing.Size(36, 36);
             this.guna2GradientTileButton2.TabIndex = 115;
@@ -448,7 +462,7 @@
             this.guna2GradientTileButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientTileButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton1.Image = global::Hotel_Management.Properties.Resources.calendar__1_;
-            this.guna2GradientTileButton1.Location = new System.Drawing.Point(576, 499);
+            this.guna2GradientTileButton1.Location = new System.Drawing.Point(544, 482);
             this.guna2GradientTileButton1.Name = "guna2GradientTileButton1";
             this.guna2GradientTileButton1.Size = new System.Drawing.Size(36, 36);
             this.guna2GradientTileButton1.TabIndex = 114;
@@ -467,7 +481,7 @@
             this.guna2GradientTileButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientTileButton8.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton8.Image = global::Hotel_Management.Properties.Resources.calendar__1_;
-            this.guna2GradientTileButton8.Location = new System.Drawing.Point(93, 504);
+            this.guna2GradientTileButton8.Location = new System.Drawing.Point(93, 486);
             this.guna2GradientTileButton8.Name = "guna2GradientTileButton8";
             this.guna2GradientTileButton8.Size = new System.Drawing.Size(36, 36);
             this.guna2GradientTileButton8.TabIndex = 113;
@@ -486,29 +500,10 @@
             this.guna2GradientTileButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientTileButton7.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton7.Image = global::Hotel_Management.Properties.Resources.telephone_call;
-            this.guna2GradientTileButton7.Location = new System.Drawing.Point(93, 426);
+            this.guna2GradientTileButton7.Location = new System.Drawing.Point(93, 209);
             this.guna2GradientTileButton7.Name = "guna2GradientTileButton7";
             this.guna2GradientTileButton7.Size = new System.Drawing.Size(36, 36);
             this.guna2GradientTileButton7.TabIndex = 112;
-            // 
-            // guna2GradientTileButton6
-            // 
-            this.guna2GradientTileButton6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton6.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Image = global::Hotel_Management.Properties.Resources.location__1_1;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(93, 369);
-            this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(36, 36);
-            this.guna2GradientTileButton6.TabIndex = 111;
             // 
             // guna2GradientTileButton5
             // 
@@ -525,30 +520,10 @@
             this.guna2GradientTileButton5.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton5.Image = global::Hotel_Management.Properties.Resources.id_card__1_;
             this.guna2GradientTileButton5.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2GradientTileButton5.Location = new System.Drawing.Point(93, 310);
+            this.guna2GradientTileButton5.Location = new System.Drawing.Point(93, 298);
             this.guna2GradientTileButton5.Name = "guna2GradientTileButton5";
             this.guna2GradientTileButton5.Size = new System.Drawing.Size(36, 36);
             this.guna2GradientTileButton5.TabIndex = 110;
-            // 
-            // guna2GradientTileButton4
-            // 
-            this.guna2GradientTileButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton4.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton4.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton4.Image = global::Hotel_Management.Properties.Resources.genders;
-            this.guna2GradientTileButton4.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2GradientTileButton4.Location = new System.Drawing.Point(93, 260);
-            this.guna2GradientTileButton4.Name = "guna2GradientTileButton4";
-            this.guna2GradientTileButton4.Size = new System.Drawing.Size(36, 36);
-            this.guna2GradientTileButton4.TabIndex = 109;
             // 
             // guna2GradientTileButton3
             // 
@@ -565,14 +540,14 @@
             this.guna2GradientTileButton3.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton3.Image = global::Hotel_Management.Properties.Resources.united_nations__1_;
             this.guna2GradientTileButton3.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2GradientTileButton3.Location = new System.Drawing.Point(93, 216);
+            this.guna2GradientTileButton3.Location = new System.Drawing.Point(544, 294);
             this.guna2GradientTileButton3.Name = "guna2GradientTileButton3";
             this.guna2GradientTileButton3.Size = new System.Drawing.Size(36, 36);
             this.guna2GradientTileButton3.TabIndex = 108;
             // 
             // txb_nameuser
             // 
-            this.txb_nameuser.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txb_nameuser.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_nameuser.BorderRadius = 4;
             this.txb_nameuser.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txb_nameuser.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -592,12 +567,12 @@
             this.txb_nameuser.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txb_nameuser.PlaceholderText = "Enter Name";
             this.txb_nameuser.SelectedText = "";
-            this.txb_nameuser.Size = new System.Drawing.Size(801, 38);
-            this.txb_nameuser.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txb_nameuser.Size = new System.Drawing.Size(801, 44);
             this.txb_nameuser.TabIndex = 81;
             // 
             // txb_useremail
             // 
+            this.txb_useremail.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_useremail.BorderRadius = 4;
             this.txb_useremail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_useremail.DefaultText = "";
@@ -608,19 +583,19 @@
             this.txb_useremail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_useremail.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txb_useremail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_useremail.Location = new System.Drawing.Point(155, 168);
+            this.txb_useremail.Location = new System.Drawing.Point(606, 207);
             this.txb_useremail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_useremail.Name = "txb_useremail";
             this.txb_useremail.PasswordChar = '\0';
             this.txb_useremail.PlaceholderText = "Enter email";
             this.txb_useremail.SelectedText = "";
-            this.txb_useremail.Size = new System.Drawing.Size(801, 38);
-            this.txb_useremail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txb_useremail.Size = new System.Drawing.Size(350, 45);
             this.txb_useremail.TabIndex = 82;
             // 
             // timep_checkin
             // 
             this.timep_checkin.BackColor = System.Drawing.Color.Transparent;
+            this.timep_checkin.BorderRadius = 4;
             this.timep_checkin.Checked = true;
             this.timep_checkin.CustomFormat = "dd/mm/yyyy";
             this.timep_checkin.Enabled = false;
@@ -628,11 +603,11 @@
             this.timep_checkin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timep_checkin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.timep_checkin.IndicateFocus = true;
-            this.timep_checkin.Location = new System.Drawing.Point(150, 498);
+            this.timep_checkin.Location = new System.Drawing.Point(150, 480);
             this.timep_checkin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timep_checkin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.timep_checkin.Name = "timep_checkin";
-            this.timep_checkin.Size = new System.Drawing.Size(355, 38);
+            this.timep_checkin.Size = new System.Drawing.Size(355, 42);
             this.timep_checkin.TabIndex = 84;
             this.timep_checkin.UseTransparentBackground = true;
             this.timep_checkin.Value = new System.DateTime(2024, 3, 15, 22, 22, 14, 23);
@@ -640,6 +615,7 @@
             // timep_checkout
             // 
             this.timep_checkout.BackColor = System.Drawing.Color.Transparent;
+            this.timep_checkout.BorderRadius = 4;
             this.timep_checkout.Checked = true;
             this.timep_checkout.CustomFormat = "dd/mm/yyyy";
             this.timep_checkout.Enabled = false;
@@ -647,17 +623,18 @@
             this.timep_checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timep_checkout.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.timep_checkout.IndicateFocus = true;
-            this.timep_checkout.Location = new System.Drawing.Point(620, 504);
+            this.timep_checkout.Location = new System.Drawing.Point(606, 480);
             this.timep_checkout.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timep_checkout.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.timep_checkout.Name = "timep_checkout";
-            this.timep_checkout.Size = new System.Drawing.Size(336, 38);
+            this.timep_checkout.Size = new System.Drawing.Size(350, 42);
             this.timep_checkout.TabIndex = 90;
             this.timep_checkout.UseTransparentBackground = true;
             this.timep_checkout.Value = new System.DateTime(2024, 3, 15, 22, 22, 14, 23);
             // 
             // txb_phonenumber
             // 
+            this.txb_phonenumber.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_phonenumber.BorderRadius = 4;
             this.txb_phonenumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_phonenumber.DefaultText = "";
@@ -669,15 +646,14 @@
             this.txb_phonenumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txb_phonenumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txb_phonenumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_phonenumber.Location = new System.Drawing.Point(155, 424);
+            this.txb_phonenumber.Location = new System.Drawing.Point(155, 207);
             this.txb_phonenumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_phonenumber.Name = "txb_phonenumber";
             this.txb_phonenumber.PasswordChar = '\0';
             this.txb_phonenumber.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txb_phonenumber.PlaceholderText = "Enter Phone Number";
             this.txb_phonenumber.SelectedText = "";
-            this.txb_phonenumber.Size = new System.Drawing.Size(801, 38);
-            this.txb_phonenumber.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txb_phonenumber.Size = new System.Drawing.Size(350, 45);
             this.txb_phonenumber.TabIndex = 106;
             // 
             // label3
@@ -685,39 +661,16 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(87, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(253, 31);
             this.label3.TabIndex = 95;
             this.label3.Text = "Customer Information";
             // 
-            // txb_address
-            // 
-            this.txb_address.BorderRadius = 4;
-            this.txb_address.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_address.DefaultText = "";
-            this.txb_address.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_address.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_address.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_address.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_address.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txb_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txb_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_address.Location = new System.Drawing.Point(155, 365);
-            this.txb_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_address.Name = "txb_address";
-            this.txb_address.PasswordChar = '\0';
-            this.txb_address.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txb_address.PlaceholderText = "Enter Address";
-            this.txb_address.SelectedText = "";
-            this.txb_address.Size = new System.Drawing.Size(801, 38);
-            this.txb_address.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txb_address.TabIndex = 104;
-            // 
             // txb_national
             // 
+            this.txb_national.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_national.BorderRadius = 4;
             this.txb_national.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_national.DefaultText = "";
@@ -729,19 +682,19 @@
             this.txb_national.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txb_national.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txb_national.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_national.Location = new System.Drawing.Point(155, 214);
+            this.txb_national.Location = new System.Drawing.Point(606, 294);
             this.txb_national.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_national.Name = "txb_national";
             this.txb_national.PasswordChar = '\0';
             this.txb_national.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txb_national.PlaceholderText = "Enter National";
             this.txb_national.SelectedText = "";
-            this.txb_national.Size = new System.Drawing.Size(801, 38);
-            this.txb_national.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txb_national.Size = new System.Drawing.Size(350, 47);
             this.txb_national.TabIndex = 98;
             // 
             // txb_idcardnumber
             // 
+            this.txb_idcardnumber.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_idcardnumber.BorderRadius = 4;
             this.txb_idcardnumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_idcardnumber.DefaultText = "";
@@ -753,40 +706,15 @@
             this.txb_idcardnumber.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txb_idcardnumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txb_idcardnumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_idcardnumber.Location = new System.Drawing.Point(155, 306);
+            this.txb_idcardnumber.Location = new System.Drawing.Point(155, 294);
             this.txb_idcardnumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_idcardnumber.Name = "txb_idcardnumber";
             this.txb_idcardnumber.PasswordChar = '\0';
             this.txb_idcardnumber.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txb_idcardnumber.PlaceholderText = "Enter ID Card ";
             this.txb_idcardnumber.SelectedText = "";
-            this.txb_idcardnumber.Size = new System.Drawing.Size(801, 38);
-            this.txb_idcardnumber.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txb_idcardnumber.Size = new System.Drawing.Size(350, 47);
             this.txb_idcardnumber.TabIndex = 102;
-            // 
-            // txb_gender
-            // 
-            this.txb_gender.BorderRadius = 4;
-            this.txb_gender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_gender.DefaultText = "";
-            this.txb_gender.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_gender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_gender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_gender.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txb_gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txb_gender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_gender.Location = new System.Drawing.Point(155, 260);
-            this.txb_gender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_gender.Name = "txb_gender";
-            this.txb_gender.PasswordChar = '\0';
-            this.txb_gender.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txb_gender.PlaceholderText = "Enter gender";
-            this.txb_gender.SelectedText = "";
-            this.txb_gender.Size = new System.Drawing.Size(801, 38);
-            this.txb_gender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txb_gender.TabIndex = 100;
             // 
             // btn_close
             // 
@@ -819,6 +747,170 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 49);
             this.panel1.TabIndex = 124;
+            // 
+            // txb_gender
+            // 
+            this.txb_gender.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txb_gender.BorderRadius = 4;
+            this.txb_gender.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_gender.DefaultText = "";
+            this.txb_gender.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_gender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_gender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_gender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_gender.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txb_gender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_gender.Location = new System.Drawing.Point(606, 384);
+            this.txb_gender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_gender.Name = "txb_gender";
+            this.txb_gender.PasswordChar = '\0';
+            this.txb_gender.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txb_gender.PlaceholderText = "Enter gender";
+            this.txb_gender.SelectedText = "";
+            this.txb_gender.Size = new System.Drawing.Size(350, 46);
+            this.txb_gender.TabIndex = 100;
+            // 
+            // guna2GradientTileButton4
+            // 
+            this.guna2GradientTileButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton4.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton4.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton4.Image = global::Hotel_Management.Properties.Resources.genders;
+            this.guna2GradientTileButton4.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2GradientTileButton4.Location = new System.Drawing.Point(544, 384);
+            this.guna2GradientTileButton4.Name = "guna2GradientTileButton4";
+            this.guna2GradientTileButton4.Size = new System.Drawing.Size(36, 36);
+            this.guna2GradientTileButton4.TabIndex = 109;
+            // 
+            // txb_address
+            // 
+            this.txb_address.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txb_address.BorderRadius = 4;
+            this.txb_address.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_address.DefaultText = "";
+            this.txb_address.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_address.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_address.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_address.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_address.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txb_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_address.Location = new System.Drawing.Point(155, 384);
+            this.txb_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_address.Name = "txb_address";
+            this.txb_address.PasswordChar = '\0';
+            this.txb_address.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txb_address.PlaceholderText = "Enter Address";
+            this.txb_address.SelectedText = "";
+            this.txb_address.Size = new System.Drawing.Size(350, 46);
+            this.txb_address.TabIndex = 104;
+            // 
+            // guna2GradientTileButton6
+            // 
+            this.guna2GradientTileButton6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton6.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton6.Image = global::Hotel_Management.Properties.Resources.location__1_1;
+            this.guna2GradientTileButton6.Location = new System.Drawing.Point(93, 388);
+            this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
+            this.guna2GradientTileButton6.Size = new System.Drawing.Size(36, 36);
+            this.guna2GradientTileButton6.TabIndex = 111;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(156, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 127;
+            this.label2.Text = "Full Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(156, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 17);
+            this.label6.TabIndex = 128;
+            this.label6.Text = "Phone Number";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(156, 273);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 17);
+            this.label7.TabIndex = 129;
+            this.label7.Text = "ID Card Number";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(156, 363);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 17);
+            this.label8.TabIndex = 130;
+            this.label8.Text = "Address";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(613, 186);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 17);
+            this.label9.TabIndex = 131;
+            this.label9.Text = "Email";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(613, 273);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.TabIndex = 132;
+            this.label10.Text = "National";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(613, 363);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 17);
+            this.label11.TabIndex = 133;
+            this.label11.Text = "Gender";
             // 
             // Book_room
             // 
@@ -869,9 +961,7 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton8;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton7;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton5;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton4;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton3;
         private Guna.UI2.WinForms.Guna2TextBox txb_nameuser;
         private Guna.UI2.WinForms.Guna2TextBox txb_useremail;
@@ -879,14 +969,23 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker timep_checkout;
         private Guna.UI2.WinForms.Guna2TextBox txb_phonenumber;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txb_address;
         private Guna.UI2.WinForms.Guna2TextBox txb_national;
         private Guna.UI2.WinForms.Guna2TextBox txb_idcardnumber;
-        private Guna.UI2.WinForms.Guna2TextBox txb_gender;
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton4;
+        private Guna.UI2.WinForms.Guna2TextBox txb_address;
+        private Guna.UI2.WinForms.Guna2TextBox txb_gender;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
     }
 }

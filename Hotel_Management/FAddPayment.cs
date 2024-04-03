@@ -94,5 +94,13 @@ namespace Hotel_Management
         {
             FBookingInformation.LoadPayment();
         }
+
+        private void txb_amount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

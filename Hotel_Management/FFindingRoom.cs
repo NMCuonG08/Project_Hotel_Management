@@ -46,43 +46,11 @@ namespace Hotel_Management
             }
             HashSet<string> uniqueHotel = GetUniqueHotelLocation();
             cbx_hotelLocation.DataSource = new BindingSource(uniqueHotel, null);
+            cbx_hotelLocation.SelectedItem = null;
+           
         }
 
-        private Room GetHotelByID(int id)
-        {
-            Room room = null;
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;"))
-                {
-                    conn.Open();
-                    string query = "Select * from HotelInformation where HotelID = @HotelID";
-                    SqlCommand sqlCommand = new SqlCommand(query, conn);
-                    sqlCommand.Parameters.Add("@HotelID", SqlDbType.Int).Value = id;
-                    SqlDataReader reader = sqlCommand.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        room = new Room
-                        {
-                            Id = Convert.ToInt32(reader["ID"]),
-                            Name = reader["RoomName"].ToString(),
-                            Type = reader["RoomType"].ToString(),
-                            Bed = reader["RoomBed"].ToString(),
-                            Price = Convert.ToInt32(reader["RoomPrice"]),
-                            Status = reader["Status"].ToString(),
-                            Clients = Convert.ToInt32(reader["Clients"]),
-                            Size = Convert.ToDouble(reader["Size"]),
-                            Image = (byte[])reader["RoomImage"]
-                        };
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            return room;
-        }
+        
 
         private void createItem(DataTable data)
         {
@@ -187,17 +155,34 @@ namespace Hotel_Management
         private void btn_findinghotel_Click(object sender, EventArgs e)
         {
             string selectedLocation = cbx_hotelLocation.Text.Trim();
-            if (!string.IsNullOrEmpty(selectedLocation))
-            {
+           
                 try
                 {
-                    conn.Open();
-                    string sql = "SELECT * FROM HotelInformation WHERE City = @City";
+                    conn.Open();  
+                    string sql = @"SELECT HI.* 
+                           FROM HotelInformation HI 
+                           JOIN Hotel_conveniences HC ON HI.HotelID = HC.HotelID 
+                           WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(selectedLocation))
+                    {
+                    sql += $" AND  HI.City = @City";
+                }
+                    foreach (object item in checkedListBox_convenience.CheckedItems)
+                    {
+                        string checkedItem = item.ToString();
+                        if (!string.IsNullOrEmpty(checkedItem))
+                        {
+                            sql += $" AND HC.[{checkedItem}] = 1";
+                        }
+                    }
+
                     SqlCommand command = new SqlCommand(sql, conn);
                     command.Parameters.AddWithValue("@City", selectedLocation);
                     DataTable data = new DataTable();
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                     dataAdapter.Fill(data);
+
                     flowLayoutPanel1.Controls.Clear();
                     createItem(data);
                 }
@@ -209,12 +194,11 @@ namespace Hotel_Management
                 {
                     conn.Close();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please select a location.");
-            }
+            
+            
         }
+
+
 
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -271,5 +255,9 @@ namespace Hotel_Management
             }
             return convenienceNames;
         }
+
+        
+
+
     }
 }

@@ -246,25 +246,39 @@ namespace Hotel_Management
 
 
         private void btn_add_Click(object sender, EventArgs e)
-        { 
+        {
             byte[] images = null;
-            FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(stream);
-            images = br.ReadBytes((int)stream.Length);
-            string status = "empty"; conn.Open();
-            int roomPrice = Convert.ToInt32(txb_price.Text);
-            int clients = Convert.ToInt32(txb_clients.Text);
-            int size = Convert.ToInt32(txb_size.Text);
-            Room room = new Room(txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, null, null, images, status);
-            addRoom(room);
-            SetConveniences(checklistbox);
-         //   Connection.Openadmin();
-            this.Close(); 
+            int roomPrice, clients, size;
+            if (!string.IsNullOrEmpty(txb_price.Text) && int.TryParse(txb_price.Text, out roomPrice) &&
+                !string.IsNullOrEmpty(txb_clients.Text) && int.TryParse(txb_clients.Text, out clients) &&
+                !string.IsNullOrEmpty(txb_size.Text) && int.TryParse(txb_size.Text, out size) && !string.IsNullOrEmpty(txb_roomtype.Text) && !string.IsNullOrEmpty(txb_bed.Text) && !string.IsNullOrEmpty(imageLocation) && File.Exists(imageLocation))
+            {
+                         
+                FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(stream);
+                images = br.ReadBytes((int)stream.Length);               
+                string status = "empty";
+                conn.Open();
+                Room room = new Room(txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, null, null, images, status);
+                addRoom(room);
+                SetConveniences(checklistbox);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all required fields with valid integer values.");
+            }
+
         }
 
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

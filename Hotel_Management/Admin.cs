@@ -16,12 +16,10 @@ namespace Hotel_Management
         public int HotelID { get; set; }
         public int AdminID { get; set; }
         private Account Adm = new Account();
-        SqlConnection conn = new
-         SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
         public Admin(Account admin)
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+        //    this.WindowState = FormWindowState.Maximized;
             this.HotelID = FindHotelID(admin.Id);
             Adm = admin;
             this.AdminID = Adm.Id;
@@ -40,8 +38,6 @@ namespace Hotel_Management
                     string sql = "SELECT HotelID FROM HotelInformation WHERE AdminID = @AdminID";
                     SqlCommand cmd = new SqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@AdminID", adminID);
-
-                   
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
@@ -56,8 +52,6 @@ namespace Hotel_Management
             {
                 MessageBox.Show(ex.Message);
             }
-
-            // Trả về giá trị HotelID
             return hotelID;
         }
 
@@ -76,10 +70,11 @@ namespace Hotel_Management
             }
             form.MdiParent = this;
             form.Show();
+            form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             form.TopLevel = false;
             form.ControlBox = false;
-            form.FormBorderStyle = FormBorderStyle.None;
+           
         }
 
         private void Main_Load(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace Hotel_Management
         public Room()
         {
         }
-        public Room(int id, string name, string type, string bed, int clients, double size, double price, byte[] image)
+        public Room(int id, string name, string type, string bed, int clients, double size, double price,string status, byte[] image)
         {
             this.Id = id;
             this.Name = name;
@@ -35,6 +35,7 @@ namespace Hotel_Management
             this.Size = size;
             this.Price = price;
             this.Image = image;
+            this.Status = status;
         }
         public Room(int id, string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status, DateTime checkin, DateTime checkout)
         {

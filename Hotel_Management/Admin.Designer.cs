@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_menu = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -281,17 +282,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(250, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1323, 44);
+            this.panel2.Size = new System.Drawing.Size(1532, 46);
             this.panel2.TabIndex = 8;
+            this.panel2.Visible = false;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.guna2GradientTileButton10);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1046, 0);
+            this.panel4.Location = new System.Drawing.Point(1255, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(277, 44);
+            this.panel4.Size = new System.Drawing.Size(277, 46);
             this.panel4.TabIndex = 12;
             // 
             // guna2GradientTileButton10
@@ -318,24 +320,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(74, 3);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(206, 44);
+            this.label1.Size = new System.Drawing.Size(191, 43);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome: admin____";
+            this.label1.Text = "Welcome: admin";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1573, 1055);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.ClientSize = new System.Drawing.Size(1782, 1055);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

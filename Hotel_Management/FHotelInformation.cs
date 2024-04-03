@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -146,6 +147,7 @@ namespace Hotel_Management
                     }
                 }
                 SetConveniences(hotel.Id);
+                SetCount();
             }
             else
             {
@@ -401,6 +403,66 @@ namespace Hotel_Management
             CreateHotel();
             FHotelInformation fHotelInformation = new FHotelInformation(AdminID);
             (this.MdiParent as Admin)?.ShowForm(fHotelInformation);
+        }
+
+        private void txb_capacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
+        private void txb_floor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_feedback_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txb_price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        void SetCount()
+        {
+            HotelInformation hotel = ReadData(AdminID);
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                     string sql2 = string.Format("Select Count(*) from RoomInformation where HotelID = @HotelID ");
+                        SqlCommand command = new SqlCommand(sql2, conn);
+                        command.Parameters.AddWithValue("@HotelID", hotel.Id);
+                        int count = (int)command.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            txb_room.Text += count.ToString();
+                        }
+                        else txb_room.Text += "0";
+
+                    conn.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

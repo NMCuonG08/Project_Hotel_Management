@@ -107,8 +107,19 @@ namespace Hotel_Management
                         command.Parameters.Add(new SqlParameter("HotelID", HotelID));
                         command.Parameters.Add(new SqlParameter("Price", price));
                         command.ExecuteNonQuery();
+                        string sql = "Update UserRegister set Useremail = @email,[National] = @national,Genders = @gender,Idcardnumber = @idcard,[Address] = @address,PhoneNumber = @phone where ID = @UserID";
+                        SqlCommand cmd = new SqlCommand(sql, connection);
+                        cmd.Parameters.Add(new SqlParameter("@email", txb_useremail.Text));
+                        cmd.Parameters.Add(new SqlParameter("@national", txb_national.Text));
+                        cmd.Parameters.Add(new SqlParameter("@gender", txb_gender.Text));
+                        cmd.Parameters.Add(new SqlParameter("@idcard", txb_idcardnumber.Text));
+                        cmd.Parameters.Add(new SqlParameter("@address", txb_address.Text));
+                        cmd.Parameters.Add(new SqlParameter("@phone", txb_phonenumber.Text));
+                        cmd.Parameters.Add(new SqlParameter("@UserID", UserID));
+                        cmd.ExecuteNonQuery();
                         connection.Close();
                         MessageBox.Show("You Booking thanh cong", "Thong bao");
+                        this.Close();
                     }
                 }
                 catch (Exception ex)

@@ -15,6 +15,7 @@ using Hotel_Management.Properties;
 using System.IO;
 using static Guna.UI2.Native.WinApi;
 using System.Collections.ObjectModel;
+using Guna.UI2.WinForms;
 
 namespace Hotel_Management
 {
@@ -44,8 +45,7 @@ namespace Hotel_Management
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM RoomInformation where HotelID = @HotelID ";
-                
+                string sql = "SELECT * FROM RoomInformation where HotelID = @HotelID ";           
                 DataTable data = new DataTable();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
@@ -65,11 +65,98 @@ namespace Hotel_Management
 
         private void ListRoom_Load(object sender, EventArgs e)
         {
-
+            
         }
-       
-           
-            void Fillter()
+
+
+        void SetCount()
+        {
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();                  
+                    List<String> item = new List<String> 
+                    {
+                        "Empty",
+                        "Occupied",
+                        "Booking",
+                        "Checkout",
+                        "Maintenance"
+                    };
+                    foreach (String  s in item )
+                    {
+                        string sql2 = string.Format("Select Count(*) from RoomInformation where HotelID = @HotelID AND  Status = '{0}' ", s);
+                        SqlCommand command = new SqlCommand(sql2, conn);
+                        command.Parameters.AddWithValue("@HotelID", HotelID);
+                        int count = (int)command.ExecuteScalar();
+                        Guna2Button button = this.panel2.Controls["btn_" + s] as Guna2Button;
+                        if (button != null)
+                        {
+                            button.Text = count.ToString();
+                        }
+                        else
+                        {
+                            button.Text = "0";
+                        }
+                    }
+                    conn.Close();
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+               
+            }
+        }
+        void Fillter(string s)
+        {
+            try
+            {
+                using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string sql = string.Format("SELECT * FROM RoomInformation WHERE Status = '{0}' AND HotelID = @HotelID", s);
+                  
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@HotelID", HotelID);
+                    cmd.CommandText = sql;
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    dataAdapter.Fill(data);
+                    gvRoom.DataSource = data;
+                    string sql2 = string.Format("Select Count(*) from RoomInformation where HotelID = @HotelID AND  Status = '{0}' ", s);
+                    SqlCommand command = new SqlCommand(sql2, conn);
+                    command.Parameters.AddWithValue("@HotelID", HotelID);
+                    int count = (int)command.ExecuteScalar();
+                    Guna2Button button = this.panel2.Controls["btn_" + s] as Guna2Button;
+                    if (button != null )
+                    {
+                        button.Text = count.ToString();
+                    }
+                    else
+                    {
+                        button.Text = "0";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        void Fillter()
             {
                 try
                 {
@@ -168,11 +255,23 @@ namespace Hotel_Management
                     {
                         ls[i].Color = Color.LimeGreen;
                     }
+                    else if (ls[i].Status == "Booking")
+                    {
+                        ls[i].Color = Color.Purple;
+                    }
+                    else if (ls[i].Status == "Maintenance")
+                    {
+                        ls[i].Color = Color.Firebrick;
+                    }
+                    else if (ls[i].Status == "Checkout")
+                    {
+                        ls[i].Color = Color.FromArgb(255, 128, 0);
+                    }
                     ls[i].ItemBooking += Btn_Booking_Click;
                     ls[i].Click += ListRoom_Click;
                     ls[i].ItemDelete += FListRoom_ItemDelete;
                     flowLayoutPanel1.Controls.Add(ls[i]);
-                   
+                    SetCount();
                 }
             }
             /*LoadForm(HotelID);
@@ -251,7 +350,7 @@ namespace Hotel_Management
             Room room = null;
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;"))
+                using (SqlConnection conn = Connection.GetSqlConnection())
                 {
                     conn.Open();
                     string query = "Select * from RoomInformation where RoomID = @RoomID";
@@ -322,7 +421,7 @@ namespace Hotel_Management
             {
                 conn.Open();
                
-                string query = "update RoomInformation set  RoomType = @RoomType, RoomBed = @RoomBed,RoomPrice = @RoomPrice,RoomName = @RoomName,RoomImage  = @RoomImage,Clients= @Clients,size = @size where RoomID = @RoomID";
+                string query = "update RoomInformation set  RoomType = @RoomType, RoomBed = @RoomBed,RoomPrice = @RoomPrice,RoomName = @RoomName,RoomImage  = @RoomImage,Clients= @Clients, Status = @Status,size = @size where RoomID = @RoomID";
                 SqlCommand sqlCommand = new SqlCommand(query, conn);
                 sqlCommand.Parameters.Add(new SqlParameter("RoomType", room.Type));
                 sqlCommand.Parameters.Add(new SqlParameter("RoomBed", room.Bed));
@@ -332,6 +431,7 @@ namespace Hotel_Management
                 sqlCommand.Parameters.Add(new SqlParameter("Clients", room.Clients));
                 sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
                 sqlCommand.Parameters.Add(new SqlParameter("RoomID", room.Id));
+                sqlCommand.Parameters.Add(new SqlParameter("Status", room.Status));
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Edit successful");
                 conn.Close();
@@ -397,7 +497,7 @@ namespace Hotel_Management
         {
 
         }
-
+        #region Button
         private void btn_search_Click(object sender, EventArgs e)
         {
             try
@@ -410,5 +510,71 @@ namespace Hotel_Management
                 MessageBox.Show(ex.Message);
             }
         }
-    }   
+
+        private void btn_empty_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Empty");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_occupied_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Occupied");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_booking_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Booking");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Checkout");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Maintenance_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Fillter("Maintenance");
+                createItem();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
     }
+}
