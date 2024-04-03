@@ -51,14 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_load = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_highprice = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_feed = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_lowprice = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucFindingHotel1 = new Hotel_Management.UCFindingHotel();
             this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ucFindingHotel1 = new Hotel_Management.UCFindingHotel();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -360,33 +360,34 @@
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 20;
-            this.guna2Panel4.Controls.Add(this.guna2Button4);
+            this.guna2Panel4.Controls.Add(this.btn_load);
             this.guna2Panel4.Controls.Add(this.label5);
-            this.guna2Panel4.Controls.Add(this.guna2Button3);
-            this.guna2Panel4.Controls.Add(this.guna2Button1);
-            this.guna2Panel4.Controls.Add(this.guna2Button2);
+            this.guna2Panel4.Controls.Add(this.btn_highprice);
+            this.guna2Panel4.Controls.Add(this.btn_feed);
+            this.guna2Panel4.Controls.Add(this.btn_lowprice);
             this.guna2Panel4.FillColor = System.Drawing.Color.White;
             this.guna2Panel4.Location = new System.Drawing.Point(16, 6);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(1405, 80);
             this.guna2Panel4.TabIndex = 2;
             // 
-            // guna2Button4
+            // btn_load
             // 
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.White;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button4.Location = new System.Drawing.Point(938, 8);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(258, 60);
-            this.guna2Button4.TabIndex = 127;
-            this.guna2Button4.Text = "Độ phổ biến";
+            this.btn_load.BackColor = System.Drawing.Color.Transparent;
+            this.btn_load.BorderRadius = 10;
+            this.btn_load.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_load.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_load.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_load.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_load.FillColor = System.Drawing.Color.White;
+            this.btn_load.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_load.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_load.Location = new System.Drawing.Point(938, 8);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(258, 60);
+            this.btn_load.TabIndex = 127;
+            this.btn_load.Text = "Độ phổ biến";
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
             // label5
             // 
@@ -399,58 +400,61 @@
             this.label5.TabIndex = 126;
             this.label5.Text = "Sắp xếp theo:";
             // 
-            // guna2Button3
+            // btn_highprice
             // 
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button3.Location = new System.Drawing.Point(674, 8);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(258, 60);
-            this.guna2Button3.TabIndex = 125;
-            this.guna2Button3.Text = "Giá cao nhất trước";
+            this.btn_highprice.BackColor = System.Drawing.Color.Transparent;
+            this.btn_highprice.BorderRadius = 10;
+            this.btn_highprice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_highprice.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_highprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_highprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_highprice.FillColor = System.Drawing.Color.White;
+            this.btn_highprice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_highprice.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_highprice.Location = new System.Drawing.Point(674, 8);
+            this.btn_highprice.Name = "btn_highprice";
+            this.btn_highprice.Size = new System.Drawing.Size(258, 60);
+            this.btn_highprice.TabIndex = 125;
+            this.btn_highprice.Text = "Giá cao nhất trước";
+            this.btn_highprice.Click += new System.EventHandler(this.btn_highprice_Click);
             // 
-            // guna2Button1
+            // btn_feed
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button1.Location = new System.Drawing.Point(146, 8);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(258, 60);
-            this.guna2Button1.TabIndex = 123;
-            this.guna2Button1.Text = "Được đánh giá cao";
+            this.btn_feed.BackColor = System.Drawing.Color.Transparent;
+            this.btn_feed.BorderRadius = 10;
+            this.btn_feed.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.btn_feed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_feed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_feed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_feed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_feed.FillColor = System.Drawing.Color.White;
+            this.btn_feed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_feed.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_feed.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_feed.Location = new System.Drawing.Point(146, 8);
+            this.btn_feed.Name = "btn_feed";
+            this.btn_feed.Size = new System.Drawing.Size(258, 60);
+            this.btn_feed.TabIndex = 123;
+            this.btn_feed.Text = "Được đánh giá cao";
+            this.btn_feed.Click += new System.EventHandler(this.btn_feed_Click);
             // 
-            // guna2Button2
+            // btn_lowprice
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button2.Location = new System.Drawing.Point(410, 8);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(258, 60);
-            this.guna2Button2.TabIndex = 124;
-            this.guna2Button2.Text = "Giá thấp nhất trước";
+            this.btn_lowprice.BackColor = System.Drawing.Color.Transparent;
+            this.btn_lowprice.BorderRadius = 10;
+            this.btn_lowprice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_lowprice.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_lowprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_lowprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_lowprice.FillColor = System.Drawing.Color.White;
+            this.btn_lowprice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_lowprice.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_lowprice.Location = new System.Drawing.Point(410, 8);
+            this.btn_lowprice.Name = "btn_lowprice";
+            this.btn_lowprice.Size = new System.Drawing.Size(258, 60);
+            this.btn_lowprice.TabIndex = 124;
+            this.btn_lowprice.Text = "Giá thấp nhất trước";
+            this.btn_lowprice.Click += new System.EventHandler(this.btn_lowprice_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -462,24 +466,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1433, 872);
             this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // ucFindingHotel1
-            // 
-            this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
-            this.ucFindingHotel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucFindingHotel1.Convenience = null;
-            this.ucFindingHotel1.Convenience2 = null;
-            this.ucFindingHotel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ucFindingHotel1.HotelName = null;
-            this.ucFindingHotel1.Id = 0;
-            this.ucFindingHotel1.Image = null;
-            this.ucFindingHotel1.Name = "ucFindingHotel1";
-            this.ucFindingHotel1.Point = 0D;
-            this.ucFindingHotel1.Price = 0D;
-            this.ucFindingHotel1.Size = new System.Drawing.Size(1468, 239);
-            this.ucFindingHotel1.TabIndex = 0;
-            this.ucFindingHotel1.Ultilities = null;
-            this.ucFindingHotel1.Visible = false;
             // 
             // gv_hotel
             // 
@@ -535,6 +521,24 @@
             this.gv_hotel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_hotel.Visible = false;
             // 
+            // ucFindingHotel1
+            // 
+            this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
+            this.ucFindingHotel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ucFindingHotel1.Convenience = null;
+            this.ucFindingHotel1.Convenience2 = null;
+            this.ucFindingHotel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ucFindingHotel1.HotelName = null;
+            this.ucFindingHotel1.Id = 0;
+            this.ucFindingHotel1.Image = null;
+            this.ucFindingHotel1.Name = "ucFindingHotel1";
+            this.ucFindingHotel1.Point = 0D;
+            this.ucFindingHotel1.Price = 0D;
+            this.ucFindingHotel1.Size = new System.Drawing.Size(1468, 239);
+            this.ucFindingHotel1.TabIndex = 0;
+            this.ucFindingHotel1.Ultilities = null;
+            this.ucFindingHotel1.Visible = false;
+            // 
             // FFindingRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -584,11 +588,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_highprice;
+        private Guna.UI2.WinForms.Guna2Button btn_lowprice;
+        private Guna.UI2.WinForms.Guna2Button btn_feed;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btn_load;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton13;
         private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;

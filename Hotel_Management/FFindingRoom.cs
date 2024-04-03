@@ -90,17 +90,18 @@ namespace Hotel_Management
                     {
                         ls[i].Convenience = con[0]; 
                         ls[i].Convenience2 = con[1];
+                        foreach (String s in con)
+                        {
+
+                            ls[i].SetPanelVisibility(s);
+                        }
                     }
                     else
                     {
                         ls[i].Convenience = "";
                     }
                     
-                    foreach (String s in con)
-                    {
-                        
-                        ls[i].SetPanelVisibility(s);
-                    }
+                    
                     ls[i].Click += FFindingRoom_Click;
                     flowLayoutPanel1.Controls.Add(ls[i]);
                 }
@@ -256,8 +257,50 @@ namespace Hotel_Management
             return convenienceNames;
         }
 
-        
+        private void btn_lowprice_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            flowLayoutPanel1.Controls.Clear();
+            string sql = "SELECT * FROM HotelInformation ORDER BY Price";
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gv_hotel.DataSource = data;
+            createItem(data);
+            conn.Close();
+        }
 
+        private void btn_highprice_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            flowLayoutPanel1.Controls.Clear();
+            string sql = "SELECT * FROM HotelInformation ORDER BY Price DESC;";
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gv_hotel.DataSource = data;
+            createItem(data);
+            conn.Close();
+        }
 
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            LoadForm();
+            
+        }
+
+        private void btn_feed_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            flowLayoutPanel1.Controls.Clear();
+            string sql = "SELECT * FROM HotelInformation ORDER BY Feedback DESC;";
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gv_hotel.DataSource = data;
+            createItem(data);
+            conn.Close();
+        }
     }
 }

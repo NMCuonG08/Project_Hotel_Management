@@ -64,15 +64,21 @@ namespace Hotel_Management
                     cmd2.Parameters.AddWithValue("@ID", BookingID);
                     double pending = (double)cmd2.ExecuteScalar();
                     double value = pending - total;
-                    if (value >= 0)
+                    if ( total == 0)
                     {
-                        lb_pendingpay.Text = (pending - total).ToString();
-
+                        lb_pendingpay.Text = value.ToString();
+                        combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[0];
                     }
+                    else if (value > 0)
+                    {
+                        lb_pendingpay.Text = value.ToString();
+                        combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[3];
+                    }                  
                     else
                     {
                         lb_pendingpay.Text = "0";
                         Btn_addpayment.Enabled = false;
+                        combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[1];
                     }
                     conn.Close();
                 }

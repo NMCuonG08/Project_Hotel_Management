@@ -198,7 +198,7 @@
             this.combx_paymentstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combx_paymentstatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.combx_paymentstatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combx_paymentstatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combx_paymentstatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F);
             this.combx_paymentstatus.ForeColor = System.Drawing.Color.Black;
             this.combx_paymentstatus.ItemHeight = 30;
             this.combx_paymentstatus.Items.AddRange(new object[] {
