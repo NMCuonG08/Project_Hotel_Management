@@ -38,12 +38,12 @@ namespace Hotel_Management
             string passwords = txb_password.Text;
             if (UserEmail.Trim() == "")
             {
-                MessageBox.Show("Please enter your account name!", "Announcement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                message.Show("Please enter your account name!", "Announcement");
 
             }
             else if (passwords.Trim() == "")
             {
-                MessageBox.Show("Please enter your password!", "Announcement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                message.Show("Please enter your password!", "Announcement");
 
             }
             else
@@ -97,7 +97,7 @@ namespace Hotel_Management
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    message.Show(e.Message);
                 }
 
                 return user;
@@ -140,12 +140,12 @@ namespace Hotel_Management
                             }
                             else
                             {
-                                MessageBox.Show("Incorrect password!");
+                                message.Show("Incorrect password!");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("User not found!");
+                            message.Show("User not found!");
                         }
                     }
                 }

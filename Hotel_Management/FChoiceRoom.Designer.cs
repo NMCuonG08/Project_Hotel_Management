@@ -241,17 +241,17 @@
             // 
             this.cbx_typebed.BackColor = System.Drawing.Color.Transparent;
             this.cbx_typebed.BorderColor = System.Drawing.Color.Silver;
-            this.cbx_typebed.BorderRadius = 5;
+            this.cbx_typebed.BorderRadius = 10;
             this.cbx_typebed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbx_typebed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_typebed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbx_typebed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbx_typebed.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbx_typebed.ForeColor = System.Drawing.Color.Black;
-            this.cbx_typebed.ItemHeight = 30;
-            this.cbx_typebed.Location = new System.Drawing.Point(530, 21);
+            this.cbx_typebed.ItemHeight = 33;
+            this.cbx_typebed.Location = new System.Drawing.Point(533, 12);
             this.cbx_typebed.Name = "cbx_typebed";
-            this.cbx_typebed.Size = new System.Drawing.Size(308, 36);
+            this.cbx_typebed.Size = new System.Drawing.Size(308, 39);
             this.cbx_typebed.TabIndex = 25;
             // 
             // label11
@@ -268,26 +268,26 @@
             // 
             this.cbx_typeroom.BackColor = System.Drawing.Color.Transparent;
             this.cbx_typeroom.BorderColor = System.Drawing.Color.Silver;
-            this.cbx_typeroom.BorderRadius = 5;
+            this.cbx_typeroom.BorderRadius = 10;
             this.cbx_typeroom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbx_typeroom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_typeroom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbx_typeroom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbx_typeroom.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbx_typeroom.ForeColor = System.Drawing.Color.Black;
-            this.cbx_typeroom.ItemHeight = 30;
-            this.cbx_typeroom.Location = new System.Drawing.Point(84, 22);
+            this.cbx_typeroom.ItemHeight = 33;
+            this.cbx_typeroom.Location = new System.Drawing.Point(84, 12);
             this.cbx_typeroom.Name = "cbx_typeroom";
-            this.cbx_typeroom.Size = new System.Drawing.Size(306, 36);
+            this.cbx_typeroom.Size = new System.Drawing.Size(306, 39);
             this.cbx_typeroom.TabIndex = 23;
             // 
             // panel_hide
             // 
             this.panel_hide.BackColor = System.Drawing.Color.White;
             this.panel_hide.Controls.Add(this.label3);
-            this.panel_hide.Location = new System.Drawing.Point(83, 123);
+            this.panel_hide.Location = new System.Drawing.Point(83, 186);
             this.panel_hide.Name = "panel_hide";
-            this.panel_hide.Size = new System.Drawing.Size(1859, 935);
+            this.panel_hide.Size = new System.Drawing.Size(1859, 414);
             this.panel_hide.TabIndex = 3;
             this.panel_hide.Visible = false;
             // 
@@ -295,11 +295,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F);
-            this.label3.Location = new System.Drawing.Point(526, 368);
+            this.label3.Location = new System.Drawing.Point(583, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(792, 38);
+            this.label3.Size = new System.Drawing.Size(422, 38);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Vui Long Nhap thong tin tim kiem phong cho ban";
+            this.label3.Text = "Enter Search Information";
             // 
             // FChoiceRoom
             // 

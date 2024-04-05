@@ -29,11 +29,27 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2GradientTileButton23 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel_Air_conditioner = new Guna.UI2.WinForms.Guna2Panel();
+            this.lb_Air_conditioner = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton12 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel_Private_bathroom = new Guna.UI2.WinForms.Guna2Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton16 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel_Large_mirror = new Guna.UI2.WinForms.Guna2Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton20 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel_Hair_dryer = new Guna.UI2.WinForms.Guna2Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton18 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel_Personal_hygiene_kit = new Guna.UI2.WinForms.Guna2Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton17 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel_Standing_shower = new Guna.UI2.WinForms.Guna2Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton19 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lb_roomType = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton15 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_Desk_workspace = new Guna.UI2.WinForms.Guna2Panel();
             this.lb_Desk_workspace = new System.Windows.Forms.Label();
@@ -47,85 +63,64 @@
             this.panel_Safe_box = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton3 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel_Personal_hygiene_kit = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton17 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel_Ventilation_system = new Guna.UI2.WinForms.Guna2Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton22 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel_Hair_dryer = new Guna.UI2.WinForms.Guna2Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton18 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel_Large_mirror = new Guna.UI2.WinForms.Guna2Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton20 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel_Bluetooth_speaker = new Guna.UI2.WinForms.Guna2Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton21 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel_Standing_shower = new Guna.UI2.WinForms.Guna2Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton19 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel_Coffee_maker = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel_Curtains = new Guna.UI2.WinForms.Guna2Panel();
             this.lb_Curtains = new System.Windows.Forms.Label();
             this.guna2GradientTileButton8 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton5 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton4 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.guna2GradientTileButton11 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.lb_roombed = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txb_capacity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel_Refrigerator = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton9 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel_Air_conditioner = new Guna.UI2.WinForms.Guna2Panel();
-            this.lb_Air_conditioner = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton12 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.panel_Private_bathroom = new Guna.UI2.WinForms.Guna2Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton16 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel_TV = new Guna.UI2.WinForms.Guna2Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton7 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.panel_Refrigerator = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton9 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.txb_capacity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lb_roomType = new System.Windows.Forms.Label();
+            this.guna2GradientTileButton15 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.guna2GradientTileButton11 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.lb_roombed = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_Booking = new Guna.UI2.WinForms.Guna2Button();
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_size = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel_Air_conditioner.SuspendLayout();
+            this.panel_Private_bathroom.SuspendLayout();
+            this.panel_Large_mirror.SuspendLayout();
+            this.panel_Hair_dryer.SuspendLayout();
+            this.panel_Personal_hygiene_kit.SuspendLayout();
+            this.panel_Standing_shower.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel_Desk_workspace.SuspendLayout();
             this.panel_Small_kitchen.SuspendLayout();
             this.panel_Free_bottled_water.SuspendLayout();
             this.panel_Safe_box.SuspendLayout();
-            this.panel_Personal_hygiene_kit.SuspendLayout();
             this.panel_Ventilation_system.SuspendLayout();
-            this.panel_Hair_dryer.SuspendLayout();
-            this.panel_Large_mirror.SuspendLayout();
             this.panel_Bluetooth_speaker.SuspendLayout();
-            this.panel_Standing_shower.SuspendLayout();
             this.panel_Coffee_maker.SuspendLayout();
             this.panel_Curtains.SuspendLayout();
-            this.panel_Refrigerator.SuspendLayout();
-            this.panel_Air_conditioner.SuspendLayout();
-            this.panel_Private_bathroom.SuspendLayout();
             this.panel_TV.SuspendLayout();
+            this.panel_Refrigerator.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -133,21 +128,12 @@
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton23);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.flowLayoutPanel2);
             this.guna2Panel1.Controls.Add(this.label18);
-            this.guna2Panel1.Controls.Add(this.guna2Panel6);
             this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton6);
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton5);
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton4);
-            this.guna2Panel1.Controls.Add(this.guna2GradientTileButton11);
-            this.guna2Panel1.Controls.Add(this.lb_roombed);
-            this.guna2Panel1.Controls.Add(this.label10);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.txb_capacity);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Panel1.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel1.Location = new System.Drawing.Point(451, 22);
@@ -156,24 +142,268 @@
             this.guna2Panel1.TabIndex = 4;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-            // guna2GradientTileButton23
+            // label2
             // 
-            this.guna2GradientTileButton23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton23.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton23.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton23.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton23.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton23.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton23.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton23.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton23.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton23.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton23.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton23.Image = global::Hotel_Management.Properties.Resources.utility_room1;
-            this.guna2GradientTileButton23.Location = new System.Drawing.Point(21, 157);
-            this.guna2GradientTileButton23.Name = "guna2GradientTileButton23";
-            this.guna2GradientTileButton23.Size = new System.Drawing.Size(38, 35);
-            this.guna2GradientTileButton23.TabIndex = 127;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.Location = new System.Drawing.Point(20, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 24);
+            this.label2.TabIndex = 128;
+            this.label2.Text = "Tiện nghi phòng";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.panel_Air_conditioner);
+            this.flowLayoutPanel2.Controls.Add(this.panel_Private_bathroom);
+            this.flowLayoutPanel2.Controls.Add(this.panel_Large_mirror);
+            this.flowLayoutPanel2.Controls.Add(this.panel_Hair_dryer);
+            this.flowLayoutPanel2.Controls.Add(this.panel_Personal_hygiene_kit);
+            this.flowLayoutPanel2.Controls.Add(this.panel_Standing_shower);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(20, 303);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(756, 138);
+            this.flowLayoutPanel2.TabIndex = 119;
+            // 
+            // panel_Air_conditioner
+            // 
+            this.panel_Air_conditioner.Controls.Add(this.lb_Air_conditioner);
+            this.panel_Air_conditioner.Controls.Add(this.guna2GradientTileButton12);
+            this.panel_Air_conditioner.Location = new System.Drawing.Point(3, 3);
+            this.panel_Air_conditioner.Name = "panel_Air_conditioner";
+            this.panel_Air_conditioner.Size = new System.Drawing.Size(360, 35);
+            this.panel_Air_conditioner.TabIndex = 0;
+            this.panel_Air_conditioner.Visible = false;
+            // 
+            // lb_Air_conditioner
+            // 
+            this.lb_Air_conditioner.AutoSize = true;
+            this.lb_Air_conditioner.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Air_conditioner.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Air_conditioner.Location = new System.Drawing.Point(47, 10);
+            this.lb_Air_conditioner.Name = "lb_Air_conditioner";
+            this.lb_Air_conditioner.Size = new System.Drawing.Size(132, 23);
+            this.lb_Air_conditioner.TabIndex = 37;
+            this.lb_Air_conditioner.Text = "Air conditioner";
+            // 
+            // guna2GradientTileButton12
+            // 
+            this.guna2GradientTileButton12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton12.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton12.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton12.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton12.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton12.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton12.Image = global::Hotel_Management.Properties.Resources.air_conditioner;
+            this.guna2GradientTileButton12.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientTileButton12.Name = "guna2GradientTileButton12";
+            this.guna2GradientTileButton12.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton12.TabIndex = 120;
+            // 
+            // panel_Private_bathroom
+            // 
+            this.panel_Private_bathroom.Controls.Add(this.label11);
+            this.panel_Private_bathroom.Controls.Add(this.guna2GradientTileButton16);
+            this.panel_Private_bathroom.Location = new System.Drawing.Point(369, 3);
+            this.panel_Private_bathroom.Name = "panel_Private_bathroom";
+            this.panel_Private_bathroom.Size = new System.Drawing.Size(360, 35);
+            this.panel_Private_bathroom.TabIndex = 125;
+            this.panel_Private_bathroom.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(47, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(150, 23);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Private bathroom";
+            // 
+            // guna2GradientTileButton16
+            // 
+            this.guna2GradientTileButton16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton16.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton16.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton16.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton16.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton16.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton16.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton16.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton16.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton16.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton16.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton16.Image = global::Hotel_Management.Properties.Resources._private;
+            this.guna2GradientTileButton16.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientTileButton16.Name = "guna2GradientTileButton16";
+            this.guna2GradientTileButton16.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton16.TabIndex = 120;
+            // 
+            // panel_Large_mirror
+            // 
+            this.panel_Large_mirror.Controls.Add(this.label15);
+            this.panel_Large_mirror.Controls.Add(this.guna2GradientTileButton20);
+            this.panel_Large_mirror.Location = new System.Drawing.Point(3, 44);
+            this.panel_Large_mirror.Name = "panel_Large_mirror";
+            this.panel_Large_mirror.Size = new System.Drawing.Size(360, 35);
+            this.panel_Large_mirror.TabIndex = 124;
+            this.panel_Large_mirror.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(51, 7);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 23);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Large mirror";
+            // 
+            // guna2GradientTileButton20
+            // 
+            this.guna2GradientTileButton20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton20.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton20.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton20.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton20.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton20.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton20.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton20.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton20.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton20.Image = global::Hotel_Management.Properties.Resources.oval_mirror;
+            this.guna2GradientTileButton20.Location = new System.Drawing.Point(3, 5);
+            this.guna2GradientTileButton20.Name = "guna2GradientTileButton20";
+            this.guna2GradientTileButton20.Size = new System.Drawing.Size(36, 30);
+            this.guna2GradientTileButton20.TabIndex = 118;
+            // 
+            // panel_Hair_dryer
+            // 
+            this.panel_Hair_dryer.Controls.Add(this.label13);
+            this.panel_Hair_dryer.Controls.Add(this.guna2GradientTileButton18);
+            this.panel_Hair_dryer.Location = new System.Drawing.Point(369, 44);
+            this.panel_Hair_dryer.Name = "panel_Hair_dryer";
+            this.panel_Hair_dryer.Size = new System.Drawing.Size(360, 35);
+            this.panel_Hair_dryer.TabIndex = 126;
+            this.panel_Hair_dryer.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(47, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 23);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Hair dryer";
+            // 
+            // guna2GradientTileButton18
+            // 
+            this.guna2GradientTileButton18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton18.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton18.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton18.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton18.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton18.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton18.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton18.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton18.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton18.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton18.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton18.Image = global::Hotel_Management.Properties.Resources.hair_dryer;
+            this.guna2GradientTileButton18.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientTileButton18.Name = "guna2GradientTileButton18";
+            this.guna2GradientTileButton18.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton18.TabIndex = 120;
+            // 
+            // panel_Personal_hygiene_kit
+            // 
+            this.panel_Personal_hygiene_kit.Controls.Add(this.label12);
+            this.panel_Personal_hygiene_kit.Controls.Add(this.guna2GradientTileButton17);
+            this.panel_Personal_hygiene_kit.Location = new System.Drawing.Point(3, 85);
+            this.panel_Personal_hygiene_kit.Name = "panel_Personal_hygiene_kit";
+            this.panel_Personal_hygiene_kit.Size = new System.Drawing.Size(360, 35);
+            this.panel_Personal_hygiene_kit.TabIndex = 125;
+            this.panel_Personal_hygiene_kit.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(47, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 23);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Personal hygiene kit";
+            // 
+            // guna2GradientTileButton17
+            // 
+            this.guna2GradientTileButton17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton17.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton17.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton17.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton17.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton17.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton17.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton17.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton17.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton17.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton17.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton17.Image = global::Hotel_Management.Properties.Resources.hygiene;
+            this.guna2GradientTileButton17.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientTileButton17.Name = "guna2GradientTileButton17";
+            this.guna2GradientTileButton17.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton17.TabIndex = 120;
+            // 
+            // panel_Standing_shower
+            // 
+            this.panel_Standing_shower.Controls.Add(this.label14);
+            this.panel_Standing_shower.Controls.Add(this.guna2GradientTileButton19);
+            this.panel_Standing_shower.Location = new System.Drawing.Point(369, 85);
+            this.panel_Standing_shower.Name = "panel_Standing_shower";
+            this.panel_Standing_shower.Size = new System.Drawing.Size(360, 35);
+            this.panel_Standing_shower.TabIndex = 123;
+            this.panel_Standing_shower.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(51, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(145, 23);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Standing shower";
+            // 
+            // guna2GradientTileButton19
+            // 
+            this.guna2GradientTileButton19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton19.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton19.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton19.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton19.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton19.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton19.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton19.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton19.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton19.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton19.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton19.Image = global::Hotel_Management.Properties.Resources.shower;
+            this.guna2GradientTileButton19.Location = new System.Drawing.Point(7, 5);
+            this.guna2GradientTileButton19.Name = "guna2GradientTileButton19";
+            this.guna2GradientTileButton19.Size = new System.Drawing.Size(36, 30);
+            this.guna2GradientTileButton19.TabIndex = 118;
             // 
             // label18
             // 
@@ -181,51 +411,11 @@
             this.label18.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Green;
-            this.label18.Location = new System.Drawing.Point(63, 168);
+            this.label18.Location = new System.Drawing.Point(21, 276);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(215, 24);
+            this.label18.Size = new System.Drawing.Size(193, 24);
             this.label18.TabIndex = 126;
-            this.label18.Text = "Utilities / Conveniences ";
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.Controls.Add(this.lb_roomType);
-            this.guna2Panel6.Controls.Add(this.guna2GradientTileButton15);
-            this.guna2Panel6.Location = new System.Drawing.Point(392, 42);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(360, 35);
-            this.guna2Panel6.TabIndex = 121;
-            // 
-            // lb_roomType
-            // 
-            this.lb_roomType.AutoSize = true;
-            this.lb_roomType.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_roomType.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_roomType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_roomType.Location = new System.Drawing.Point(42, 12);
-            this.lb_roomType.Name = "lb_roomType";
-            this.lb_roomType.Size = new System.Drawing.Size(99, 23);
-            this.lb_roomType.TabIndex = 37;
-            this.lb_roomType.Text = "RoomType";
-            // 
-            // guna2GradientTileButton15
-            // 
-            this.guna2GradientTileButton15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton15.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton15.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton15.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton15.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton15.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton15.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton15.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton15.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton15.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton15.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton15.Image = global::Hotel_Management.Properties.Resources.suite;
-            this.guna2GradientTileButton15.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton15.Name = "guna2GradientTileButton15";
-            this.guna2GradientTileButton15.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton15.TabIndex = 120;
+            this.label18.Text = "Tiện nghi phòng tắm";
             // 
             // flowLayoutPanel1
             // 
@@ -233,17 +423,15 @@
             this.flowLayoutPanel1.Controls.Add(this.panel_Small_kitchen);
             this.flowLayoutPanel1.Controls.Add(this.panel_Free_bottled_water);
             this.flowLayoutPanel1.Controls.Add(this.panel_Safe_box);
-            this.flowLayoutPanel1.Controls.Add(this.panel_Personal_hygiene_kit);
             this.flowLayoutPanel1.Controls.Add(this.panel_Ventilation_system);
-            this.flowLayoutPanel1.Controls.Add(this.panel_Hair_dryer);
-            this.flowLayoutPanel1.Controls.Add(this.panel_Large_mirror);
             this.flowLayoutPanel1.Controls.Add(this.panel_Bluetooth_speaker);
-            this.flowLayoutPanel1.Controls.Add(this.panel_Standing_shower);
             this.flowLayoutPanel1.Controls.Add(this.panel_Coffee_maker);
             this.flowLayoutPanel1.Controls.Add(this.panel_Curtains);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 210);
+            this.flowLayoutPanel1.Controls.Add(this.panel_TV);
+            this.flowLayoutPanel1.Controls.Add(this.panel_Refrigerator);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 43);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(744, 266);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(756, 215);
             this.flowLayoutPanel1.TabIndex = 125;
             // 
             // panel_Desk_workspace
@@ -406,51 +594,11 @@
             this.guna2GradientTileButton3.Size = new System.Drawing.Size(38, 32);
             this.guna2GradientTileButton3.TabIndex = 120;
             // 
-            // panel_Personal_hygiene_kit
-            // 
-            this.panel_Personal_hygiene_kit.Controls.Add(this.label12);
-            this.panel_Personal_hygiene_kit.Controls.Add(this.guna2GradientTileButton17);
-            this.panel_Personal_hygiene_kit.Location = new System.Drawing.Point(3, 85);
-            this.panel_Personal_hygiene_kit.Name = "panel_Personal_hygiene_kit";
-            this.panel_Personal_hygiene_kit.Size = new System.Drawing.Size(360, 35);
-            this.panel_Personal_hygiene_kit.TabIndex = 125;
-            this.panel_Personal_hygiene_kit.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(47, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 23);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Personal hygiene kit";
-            // 
-            // guna2GradientTileButton17
-            // 
-            this.guna2GradientTileButton17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton17.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton17.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton17.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton17.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton17.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton17.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton17.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton17.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton17.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton17.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton17.Image = global::Hotel_Management.Properties.Resources.hygiene;
-            this.guna2GradientTileButton17.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton17.Name = "guna2GradientTileButton17";
-            this.guna2GradientTileButton17.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton17.TabIndex = 120;
-            // 
             // panel_Ventilation_system
             // 
             this.panel_Ventilation_system.Controls.Add(this.label17);
             this.panel_Ventilation_system.Controls.Add(this.guna2GradientTileButton22);
-            this.panel_Ventilation_system.Location = new System.Drawing.Point(369, 85);
+            this.panel_Ventilation_system.Location = new System.Drawing.Point(3, 85);
             this.panel_Ventilation_system.Name = "panel_Ventilation_system";
             this.panel_Ventilation_system.Size = new System.Drawing.Size(360, 35);
             this.panel_Ventilation_system.TabIndex = 126;
@@ -485,90 +633,11 @@
             this.guna2GradientTileButton22.Size = new System.Drawing.Size(36, 30);
             this.guna2GradientTileButton22.TabIndex = 118;
             // 
-            // panel_Hair_dryer
-            // 
-            this.panel_Hair_dryer.Controls.Add(this.label13);
-            this.panel_Hair_dryer.Controls.Add(this.guna2GradientTileButton18);
-            this.panel_Hair_dryer.Location = new System.Drawing.Point(3, 126);
-            this.panel_Hair_dryer.Name = "panel_Hair_dryer";
-            this.panel_Hair_dryer.Size = new System.Drawing.Size(360, 35);
-            this.panel_Hair_dryer.TabIndex = 126;
-            this.panel_Hair_dryer.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(47, 10);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 23);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Hair dryer";
-            // 
-            // guna2GradientTileButton18
-            // 
-            this.guna2GradientTileButton18.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton18.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton18.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton18.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton18.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton18.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton18.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton18.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton18.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton18.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton18.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton18.Image = global::Hotel_Management.Properties.Resources.hair_dryer;
-            this.guna2GradientTileButton18.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton18.Name = "guna2GradientTileButton18";
-            this.guna2GradientTileButton18.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton18.TabIndex = 120;
-            // 
-            // panel_Large_mirror
-            // 
-            this.panel_Large_mirror.Controls.Add(this.label15);
-            this.panel_Large_mirror.Controls.Add(this.guna2GradientTileButton20);
-            this.panel_Large_mirror.Location = new System.Drawing.Point(369, 126);
-            this.panel_Large_mirror.Name = "panel_Large_mirror";
-            this.panel_Large_mirror.Size = new System.Drawing.Size(360, 35);
-            this.panel_Large_mirror.TabIndex = 124;
-            this.panel_Large_mirror.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(51, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 23);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Large mirror";
-            // 
-            // guna2GradientTileButton20
-            // 
-            this.guna2GradientTileButton20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton20.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton20.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton20.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton20.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton20.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton20.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton20.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton20.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton20.Image = global::Hotel_Management.Properties.Resources.oval_mirror;
-            this.guna2GradientTileButton20.Location = new System.Drawing.Point(3, 5);
-            this.guna2GradientTileButton20.Name = "guna2GradientTileButton20";
-            this.guna2GradientTileButton20.Size = new System.Drawing.Size(36, 30);
-            this.guna2GradientTileButton20.TabIndex = 118;
-            // 
             // panel_Bluetooth_speaker
             // 
             this.panel_Bluetooth_speaker.Controls.Add(this.label16);
             this.panel_Bluetooth_speaker.Controls.Add(this.guna2GradientTileButton21);
-            this.panel_Bluetooth_speaker.Location = new System.Drawing.Point(3, 167);
+            this.panel_Bluetooth_speaker.Location = new System.Drawing.Point(369, 85);
             this.panel_Bluetooth_speaker.Name = "panel_Bluetooth_speaker";
             this.panel_Bluetooth_speaker.Size = new System.Drawing.Size(358, 35);
             this.panel_Bluetooth_speaker.TabIndex = 125;
@@ -603,50 +672,11 @@
             this.guna2GradientTileButton21.Size = new System.Drawing.Size(36, 30);
             this.guna2GradientTileButton21.TabIndex = 118;
             // 
-            // panel_Standing_shower
-            // 
-            this.panel_Standing_shower.Controls.Add(this.label14);
-            this.panel_Standing_shower.Controls.Add(this.guna2GradientTileButton19);
-            this.panel_Standing_shower.Location = new System.Drawing.Point(367, 167);
-            this.panel_Standing_shower.Name = "panel_Standing_shower";
-            this.panel_Standing_shower.Size = new System.Drawing.Size(360, 35);
-            this.panel_Standing_shower.TabIndex = 123;
-            this.panel_Standing_shower.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(51, 7);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 23);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Standing shower";
-            // 
-            // guna2GradientTileButton19
-            // 
-            this.guna2GradientTileButton19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton19.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton19.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton19.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton19.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton19.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton19.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton19.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton19.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton19.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton19.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton19.Image = global::Hotel_Management.Properties.Resources.shower;
-            this.guna2GradientTileButton19.Location = new System.Drawing.Point(7, 5);
-            this.guna2GradientTileButton19.Name = "guna2GradientTileButton19";
-            this.guna2GradientTileButton19.Size = new System.Drawing.Size(36, 30);
-            this.guna2GradientTileButton19.TabIndex = 118;
-            // 
             // panel_Coffee_maker
             // 
             this.panel_Coffee_maker.Controls.Add(this.label5);
             this.panel_Coffee_maker.Controls.Add(this.guna2GradientTileButton1);
-            this.panel_Coffee_maker.Location = new System.Drawing.Point(3, 208);
+            this.panel_Coffee_maker.Location = new System.Drawing.Point(3, 126);
             this.panel_Coffee_maker.Name = "panel_Coffee_maker";
             this.panel_Coffee_maker.Size = new System.Drawing.Size(360, 35);
             this.panel_Coffee_maker.TabIndex = 123;
@@ -686,7 +716,7 @@
             // 
             this.panel_Curtains.Controls.Add(this.lb_Curtains);
             this.panel_Curtains.Controls.Add(this.guna2GradientTileButton8);
-            this.panel_Curtains.Location = new System.Drawing.Point(369, 208);
+            this.panel_Curtains.Location = new System.Drawing.Point(369, 126);
             this.panel_Curtains.Name = "panel_Curtains";
             this.panel_Curtains.Size = new System.Drawing.Size(358, 35);
             this.panel_Curtains.TabIndex = 121;
@@ -722,126 +752,85 @@
             this.guna2GradientTileButton8.Size = new System.Drawing.Size(38, 32);
             this.guna2GradientTileButton8.TabIndex = 120;
             // 
-            // guna2GradientTileButton6
+            // panel_TV
             // 
-            this.guna2GradientTileButton6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton6.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton6.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton6.Image = global::Hotel_Management.Properties.Resources.credit_card;
-            this.guna2GradientTileButton6.Location = new System.Drawing.Point(21, 95);
-            this.guna2GradientTileButton6.Name = "guna2GradientTileButton6";
-            this.guna2GradientTileButton6.Size = new System.Drawing.Size(38, 35);
-            this.guna2GradientTileButton6.TabIndex = 124;
+            this.panel_TV.Controls.Add(this.label19);
+            this.panel_TV.Controls.Add(this.guna2GradientTileButton7);
+            this.panel_TV.Location = new System.Drawing.Point(3, 167);
+            this.panel_TV.Name = "panel_TV";
+            this.panel_TV.Size = new System.Drawing.Size(360, 35);
+            this.panel_TV.TabIndex = 126;
+            this.panel_TV.Visible = false;
             // 
-            // guna2GradientTileButton5
+            // label19
             // 
-            this.guna2GradientTileButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton5.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton5.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton5.Image = global::Hotel_Management.Properties.Resources.wifi;
-            this.guna2GradientTileButton5.Location = new System.Drawing.Point(21, 63);
-            this.guna2GradientTileButton5.Name = "guna2GradientTileButton5";
-            this.guna2GradientTileButton5.Size = new System.Drawing.Size(38, 35);
-            this.guna2GradientTileButton5.TabIndex = 123;
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(47, 10);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 23);
+            this.label19.TabIndex = 37;
+            this.label19.Text = "TV";
             // 
-            // guna2GradientTileButton4
+            // guna2GradientTileButton7
             // 
-            this.guna2GradientTileButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton4.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton4.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton4.Image = global::Hotel_Management.Properties.Resources.money_back;
-            this.guna2GradientTileButton4.Location = new System.Drawing.Point(21, 31);
-            this.guna2GradientTileButton4.Name = "guna2GradientTileButton4";
-            this.guna2GradientTileButton4.Size = new System.Drawing.Size(38, 35);
-            this.guna2GradientTileButton4.TabIndex = 122;
+            this.guna2GradientTileButton7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton7.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton7.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton7.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton7.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton7.Image = global::Hotel_Management.Properties.Resources.smart_tv;
+            this.guna2GradientTileButton7.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientTileButton7.Name = "guna2GradientTileButton7";
+            this.guna2GradientTileButton7.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton7.TabIndex = 120;
             // 
-            // guna2GradientTileButton11
+            // panel_Refrigerator
             // 
-            this.guna2GradientTileButton11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton11.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton11.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton11.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton11.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton11.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton11.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton11.Image = global::Hotel_Management.Properties.Resources.bed__2_;
-            this.guna2GradientTileButton11.Location = new System.Drawing.Point(392, 77);
-            this.guna2GradientTileButton11.Name = "guna2GradientTileButton11";
-            this.guna2GradientTileButton11.Size = new System.Drawing.Size(36, 36);
-            this.guna2GradientTileButton11.TabIndex = 121;
+            this.panel_Refrigerator.Controls.Add(this.label4);
+            this.panel_Refrigerator.Controls.Add(this.guna2GradientTileButton9);
+            this.panel_Refrigerator.Location = new System.Drawing.Point(369, 167);
+            this.panel_Refrigerator.Name = "panel_Refrigerator";
+            this.panel_Refrigerator.Size = new System.Drawing.Size(360, 35);
+            this.panel_Refrigerator.TabIndex = 122;
+            this.panel_Refrigerator.Visible = false;
             // 
-            // lb_roombed
+            // label4
             // 
-            this.lb_roombed.AutoSize = true;
-            this.lb_roombed.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_roombed.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_roombed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_roombed.Location = new System.Drawing.Point(434, 80);
-            this.lb_roombed.Name = "lb_roombed";
-            this.lb_roombed.Size = new System.Drawing.Size(96, 23);
-            this.lb_roombed.TabIndex = 38;
-            this.lb_roombed.Text = "Room bed";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 23);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Refrigerator";
             // 
-            // label10
+            // guna2GradientTileButton9
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(63, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(229, 23);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Đặt không cần thẻ tín dụng";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(63, 75);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(169, 23);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Cafe, Wifi miễn phí ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(63, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 23);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Không hoàn tiền";
+            this.guna2GradientTileButton9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton9.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton9.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton9.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton9.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton9.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton9.Image = global::Hotel_Management.Properties.Resources.fridge;
+            this.guna2GradientTileButton9.Location = new System.Drawing.Point(3, 3);
+            this.guna2GradientTileButton9.Name = "guna2GradientTileButton9";
+            this.guna2GradientTileButton9.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton9.TabIndex = 120;
             // 
             // txb_capacity
             // 
@@ -880,176 +869,76 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Sức chứa";
             // 
-            // label2
+            // guna2Panel6
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 24);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Lựa chọn phòng";
+            this.guna2Panel6.Controls.Add(this.lb_roomType);
+            this.guna2Panel6.Controls.Add(this.guna2GradientTileButton15);
+            this.guna2Panel6.Location = new System.Drawing.Point(3, 48);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(387, 35);
+            this.guna2Panel6.TabIndex = 121;
             // 
-            // panel_Refrigerator
+            // lb_roomType
             // 
-            this.panel_Refrigerator.Controls.Add(this.label4);
-            this.panel_Refrigerator.Controls.Add(this.guna2GradientTileButton9);
-            this.panel_Refrigerator.Location = new System.Drawing.Point(3, 85);
-            this.panel_Refrigerator.Name = "panel_Refrigerator";
-            this.panel_Refrigerator.Size = new System.Drawing.Size(390, 35);
-            this.panel_Refrigerator.TabIndex = 122;
-            this.panel_Refrigerator.Visible = false;
+            this.lb_roomType.AutoSize = true;
+            this.lb_roomType.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_roomType.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_roomType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lb_roomType.Location = new System.Drawing.Point(51, 1);
+            this.lb_roomType.Name = "lb_roomType";
+            this.lb_roomType.Size = new System.Drawing.Size(99, 23);
+            this.lb_roomType.TabIndex = 37;
+            this.lb_roomType.Text = "RoomType";
             // 
-            // label4
+            // guna2GradientTileButton15
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 23);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Refrigerator";
+            this.guna2GradientTileButton15.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton15.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton15.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton15.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton15.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton15.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton15.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton15.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton15.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton15.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton15.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton15.Image = global::Hotel_Management.Properties.Resources.suite;
+            this.guna2GradientTileButton15.Location = new System.Drawing.Point(1, -3);
+            this.guna2GradientTileButton15.Name = "guna2GradientTileButton15";
+            this.guna2GradientTileButton15.Size = new System.Drawing.Size(38, 32);
+            this.guna2GradientTileButton15.TabIndex = 120;
             // 
-            // guna2GradientTileButton9
+            // guna2GradientTileButton11
             // 
-            this.guna2GradientTileButton9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton9.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton9.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton9.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton9.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton9.Image = global::Hotel_Management.Properties.Resources.fridge;
-            this.guna2GradientTileButton9.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton9.Name = "guna2GradientTileButton9";
-            this.guna2GradientTileButton9.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton9.TabIndex = 120;
+            this.guna2GradientTileButton11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton11.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton11.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton11.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton11.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton11.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton11.Image = global::Hotel_Management.Properties.Resources.bed__2_;
+            this.guna2GradientTileButton11.Location = new System.Drawing.Point(3, 84);
+            this.guna2GradientTileButton11.Name = "guna2GradientTileButton11";
+            this.guna2GradientTileButton11.Size = new System.Drawing.Size(36, 36);
+            this.guna2GradientTileButton11.TabIndex = 121;
             // 
-            // panel_Air_conditioner
+            // lb_roombed
             // 
-            this.panel_Air_conditioner.Controls.Add(this.lb_Air_conditioner);
-            this.panel_Air_conditioner.Controls.Add(this.guna2GradientTileButton12);
-            this.panel_Air_conditioner.Location = new System.Drawing.Point(3, 44);
-            this.panel_Air_conditioner.Name = "panel_Air_conditioner";
-            this.panel_Air_conditioner.Size = new System.Drawing.Size(390, 35);
-            this.panel_Air_conditioner.TabIndex = 0;
-            this.panel_Air_conditioner.Visible = false;
-            // 
-            // lb_Air_conditioner
-            // 
-            this.lb_Air_conditioner.AutoSize = true;
-            this.lb_Air_conditioner.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_Air_conditioner.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Air_conditioner.Location = new System.Drawing.Point(47, 10);
-            this.lb_Air_conditioner.Name = "lb_Air_conditioner";
-            this.lb_Air_conditioner.Size = new System.Drawing.Size(132, 23);
-            this.lb_Air_conditioner.TabIndex = 37;
-            this.lb_Air_conditioner.Text = "Air conditioner";
-            // 
-            // guna2GradientTileButton12
-            // 
-            this.guna2GradientTileButton12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton12.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton12.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton12.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton12.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton12.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton12.Image = global::Hotel_Management.Properties.Resources.air_conditioner;
-            this.guna2GradientTileButton12.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton12.Name = "guna2GradientTileButton12";
-            this.guna2GradientTileButton12.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton12.TabIndex = 120;
-            // 
-            // panel_Private_bathroom
-            // 
-            this.panel_Private_bathroom.Controls.Add(this.label11);
-            this.panel_Private_bathroom.Controls.Add(this.guna2GradientTileButton16);
-            this.panel_Private_bathroom.Location = new System.Drawing.Point(3, 167);
-            this.panel_Private_bathroom.Name = "panel_Private_bathroom";
-            this.panel_Private_bathroom.Size = new System.Drawing.Size(390, 35);
-            this.panel_Private_bathroom.TabIndex = 125;
-            this.panel_Private_bathroom.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(47, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(150, 23);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Private bathroom";
-            // 
-            // guna2GradientTileButton16
-            // 
-            this.guna2GradientTileButton16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton16.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton16.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton16.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton16.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton16.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton16.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton16.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton16.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton16.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton16.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton16.Image = global::Hotel_Management.Properties.Resources._private;
-            this.guna2GradientTileButton16.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton16.Name = "guna2GradientTileButton16";
-            this.guna2GradientTileButton16.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton16.TabIndex = 120;
-            // 
-            // panel_TV
-            // 
-            this.panel_TV.Controls.Add(this.label19);
-            this.panel_TV.Controls.Add(this.guna2GradientTileButton7);
-            this.panel_TV.Location = new System.Drawing.Point(3, 126);
-            this.panel_TV.Name = "panel_TV";
-            this.panel_TV.Size = new System.Drawing.Size(390, 35);
-            this.panel_TV.TabIndex = 126;
-            this.panel_TV.Visible = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label19.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(47, 10);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 23);
-            this.label19.TabIndex = 37;
-            this.label19.Text = "TV";
-            // 
-            // guna2GradientTileButton7
-            // 
-            this.guna2GradientTileButton7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton7.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton7.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton7.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton7.Image = global::Hotel_Management.Properties.Resources.smart_tv;
-            this.guna2GradientTileButton7.Location = new System.Drawing.Point(3, 3);
-            this.guna2GradientTileButton7.Name = "guna2GradientTileButton7";
-            this.guna2GradientTileButton7.Size = new System.Drawing.Size(38, 32);
-            this.guna2GradientTileButton7.TabIndex = 120;
+            this.lb_roombed.AutoSize = true;
+            this.lb_roombed.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_roombed.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_roombed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lb_roombed.Location = new System.Drawing.Point(54, 86);
+            this.lb_roombed.Name = "lb_roombed";
+            this.lb_roombed.Size = new System.Drawing.Size(96, 23);
+            this.lb_roombed.TabIndex = 38;
+            this.lb_roombed.Text = "Room bed";
             // 
             // guna2Panel2
             // 
@@ -1124,18 +1013,6 @@
             this.lb_size.TabIndex = 30;
             this.lb_size.Text = "Diện tích phòng:";
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.guna2Panel3);
-            this.flowLayoutPanel2.Controls.Add(this.panel_Air_conditioner);
-            this.flowLayoutPanel2.Controls.Add(this.panel_Refrigerator);
-            this.flowLayoutPanel2.Controls.Add(this.panel_TV);
-            this.flowLayoutPanel2.Controls.Add(this.panel_Private_bathroom);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(31, 263);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(393, 212);
-            this.flowLayoutPanel2.TabIndex = 119;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.lb_size);
@@ -1159,7 +1036,7 @@
             this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
             this.guna2GradientTileButton10.Image = global::Hotel_Management.Properties.Resources.house__2_;
-            this.guna2GradientTileButton10.Location = new System.Drawing.Point(9, 3);
+            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 2);
             this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
             this.guna2GradientTileButton10.Size = new System.Drawing.Size(36, 30);
             this.guna2GradientTileButton10.TabIndex = 118;
@@ -1177,13 +1054,26 @@
             this.picturebox.TabIndex = 3;
             this.picturebox.TabStop = false;
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2Panel4.Controls.Add(this.guna2Panel3);
+            this.guna2Panel4.Controls.Add(this.lb_roombed);
+            this.guna2Panel4.Controls.Add(this.guna2GradientTileButton11);
+            this.guna2Panel4.Controls.Add(this.guna2Panel6);
+            this.guna2Panel4.Location = new System.Drawing.Point(31, 276);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(393, 197);
+            this.guna2Panel4.TabIndex = 123;
+            // 
             // UCRoomInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.picturebox);
@@ -1191,8 +1081,19 @@
             this.Size = new System.Drawing.Size(1816, 501);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel6.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel_Air_conditioner.ResumeLayout(false);
+            this.panel_Air_conditioner.PerformLayout();
+            this.panel_Private_bathroom.ResumeLayout(false);
+            this.panel_Private_bathroom.PerformLayout();
+            this.panel_Large_mirror.ResumeLayout(false);
+            this.panel_Large_mirror.PerformLayout();
+            this.panel_Hair_dryer.ResumeLayout(false);
+            this.panel_Hair_dryer.PerformLayout();
+            this.panel_Personal_hygiene_kit.ResumeLayout(false);
+            this.panel_Personal_hygiene_kit.PerformLayout();
+            this.panel_Standing_shower.ResumeLayout(false);
+            this.panel_Standing_shower.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel_Desk_workspace.ResumeLayout(false);
             this.panel_Desk_workspace.PerformLayout();
@@ -1202,36 +1103,27 @@
             this.panel_Free_bottled_water.PerformLayout();
             this.panel_Safe_box.ResumeLayout(false);
             this.panel_Safe_box.PerformLayout();
-            this.panel_Personal_hygiene_kit.ResumeLayout(false);
-            this.panel_Personal_hygiene_kit.PerformLayout();
             this.panel_Ventilation_system.ResumeLayout(false);
             this.panel_Ventilation_system.PerformLayout();
-            this.panel_Hair_dryer.ResumeLayout(false);
-            this.panel_Hair_dryer.PerformLayout();
-            this.panel_Large_mirror.ResumeLayout(false);
-            this.panel_Large_mirror.PerformLayout();
             this.panel_Bluetooth_speaker.ResumeLayout(false);
             this.panel_Bluetooth_speaker.PerformLayout();
-            this.panel_Standing_shower.ResumeLayout(false);
-            this.panel_Standing_shower.PerformLayout();
             this.panel_Coffee_maker.ResumeLayout(false);
             this.panel_Coffee_maker.PerformLayout();
             this.panel_Curtains.ResumeLayout(false);
             this.panel_Curtains.PerformLayout();
-            this.panel_Refrigerator.ResumeLayout(false);
-            this.panel_Refrigerator.PerformLayout();
-            this.panel_Air_conditioner.ResumeLayout(false);
-            this.panel_Air_conditioner.PerformLayout();
-            this.panel_Private_bathroom.ResumeLayout(false);
-            this.panel_Private_bathroom.PerformLayout();
             this.panel_TV.ResumeLayout(false);
             this.panel_TV.PerformLayout();
+            this.panel_Refrigerator.ResumeLayout(false);
+            this.panel_Refrigerator.PerformLayout();
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel6.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1243,21 +1135,14 @@
         public  System.Windows.Forms.Label label1;
         public  Guna.UI2.WinForms.Guna2TextBox txb_price;
         public  System.Windows.Forms.Label label3;
-        public  System.Windows.Forms.Label label2;
         public Guna.UI2.WinForms.Guna2Button btn_Booking;
         public  Guna.UI2.WinForms.Guna2TextBox txb_capacity;
         public  System.Windows.Forms.Label lb_size;
-        public  System.Windows.Forms.Label label10;
-        public  System.Windows.Forms.Label label9;
-        public  System.Windows.Forms.Label label8;
         public  System.Windows.Forms.Label lb_roombed;
         public  System.Windows.Forms.Label lb_Air_conditioner;
         public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton12;
         public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton11;
         public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
-        public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton6;
-        public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton5;
-        public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton4;
         public  System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public Guna.UI2.WinForms.Guna2Panel panel_Air_conditioner;
         public  Guna.UI2.WinForms.Guna2Panel panel_Refrigerator;
@@ -1308,9 +1193,10 @@
         public  System.Windows.Forms.Label label17;
         public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton22;
         public  System.Windows.Forms.Label label18;
-        public  Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton23;
         public Guna.UI2.WinForms.Guna2Panel panel_TV;
         public System.Windows.Forms.Label label19;
         public Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton7;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        public System.Windows.Forms.Label label2;
     }
 }

@@ -63,6 +63,7 @@
             this.txb_hotelID = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_update = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_create = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.messageHotel = new Guna.UI2.WinForms.Guna2MessageDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -669,10 +670,20 @@
             this.btn_create.Text = "Create Holtel";
             this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
             // 
+            // messageHotel
+            // 
+            this.messageHotel.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.messageHotel.Caption = null;
+            this.messageHotel.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.messageHotel.Parent = null;
+            this.messageHotel.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.messageHotel.Text = null;
+            // 
             // FHotelInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1775, 1008);
             this.Controls.Add(this.btn_create);
@@ -756,5 +767,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_hotelID;
         private Guna.UI2.WinForms.Guna2GradientButton btn_update;
         private Guna.UI2.WinForms.Guna2GradientButton btn_create;
+        private Guna.UI2.WinForms.Guna2MessageDialog messageHotel;
     }
 }

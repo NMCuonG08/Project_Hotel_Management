@@ -284,198 +284,198 @@
             // lbCityy
             // 
             this.lbCityy.AutoSize = true;
-            this.lbCityy.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbCityy.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCityy.ForeColor = System.Drawing.Color.Red;
             this.lbCityy.Location = new System.Drawing.Point(687, 168);
             this.lbCityy.Name = "lbCityy";
-            this.lbCityy.Size = new System.Drawing.Size(48, 23);
+            this.lbCityy.Size = new System.Drawing.Size(44, 24);
             this.lbCityy.TabIndex = 78;
             this.lbCityy.Text = "City";
             // 
             // lbtp
             // 
             this.lbtp.AutoSize = true;
-            this.lbtp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbtp.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbtp.ForeColor = System.Drawing.Color.Red;
             this.lbtp.Location = new System.Drawing.Point(1318, 373);
             this.lbtp.Name = "lbtp";
-            this.lbtp.Size = new System.Drawing.Size(22, 23);
+            this.lbtp.Size = new System.Drawing.Size(21, 24);
             this.lbtp.TabIndex = 77;
             this.lbtp.Text = "0";
             // 
             // lbn
             // 
             this.lbn.AutoSize = true;
-            this.lbn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbn.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbn.ForeColor = System.Drawing.Color.Red;
-            this.lbn.Location = new System.Drawing.Point(1318, 334);
+            this.lbn.Location = new System.Drawing.Point(1318, 332);
             this.lbn.Name = "lbn";
-            this.lbn.Size = new System.Drawing.Size(22, 23);
+            this.lbn.Size = new System.Drawing.Size(21, 24);
             this.lbn.TabIndex = 76;
             this.lbn.Text = "1";
             // 
             // lbg
             // 
             this.lbg.AutoSize = true;
-            this.lbg.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbg.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbg.ForeColor = System.Drawing.Color.Red;
-            this.lbg.Location = new System.Drawing.Point(1318, 295);
+            this.lbg.Location = new System.Drawing.Point(1318, 291);
             this.lbg.Name = "lbg";
-            this.lbg.Size = new System.Drawing.Size(22, 23);
+            this.lbg.Size = new System.Drawing.Size(21, 24);
             this.lbg.TabIndex = 75;
             this.lbg.Text = "1";
             // 
             // lbbs
             // 
             this.lbbs.AutoSize = true;
-            this.lbbs.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbbs.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbbs.ForeColor = System.Drawing.Color.Red;
-            this.lbbs.Location = new System.Drawing.Point(1315, 258);
+            this.lbbs.Location = new System.Drawing.Point(1318, 252);
             this.lbbs.Name = "lbbs";
-            this.lbbs.Size = new System.Drawing.Size(48, 23);
+            this.lbbs.Size = new System.Drawing.Size(44, 24);
             this.lbbs.TabIndex = 74;
             this.lbbs.Text = "City";
             // 
             // lbps
             // 
             this.lbps.AutoSize = true;
-            this.lbps.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbps.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbps.ForeColor = System.Drawing.Color.Red;
-            this.lbps.Location = new System.Drawing.Point(1313, 211);
+            this.lbps.Location = new System.Drawing.Point(1318, 208);
             this.lbps.Name = "lbps";
-            this.lbps.Size = new System.Drawing.Size(48, 23);
+            this.lbps.Size = new System.Drawing.Size(44, 24);
             this.lbps.TabIndex = 73;
             this.lbps.Text = "City";
             // 
             // lbcout
             // 
             this.lbcout.AutoSize = true;
-            this.lbcout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbcout.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbcout.ForeColor = System.Drawing.Color.Red;
-            this.lbcout.Location = new System.Drawing.Point(1316, 173);
+            this.lbcout.Location = new System.Drawing.Point(1318, 170);
             this.lbcout.Name = "lbcout";
-            this.lbcout.Size = new System.Drawing.Size(48, 23);
+            this.lbcout.Size = new System.Drawing.Size(44, 24);
             this.lbcout.TabIndex = 72;
             this.lbcout.Text = "City";
             // 
             // lbcin
             // 
             this.lbcin.AutoSize = true;
-            this.lbcin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbcin.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbcin.ForeColor = System.Drawing.Color.Red;
-            this.lbcin.Location = new System.Drawing.Point(1316, 139);
+            this.lbcin.Location = new System.Drawing.Point(1318, 134);
             this.lbcin.Name = "lbcin";
-            this.lbcin.Size = new System.Drawing.Size(48, 23);
+            this.lbcin.Size = new System.Drawing.Size(44, 24);
             this.lbcin.TabIndex = 71;
             this.lbcin.Text = "City";
             // 
             // lbbn
             // 
             this.lbbn.AutoSize = true;
-            this.lbbn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbbn.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbbn.ForeColor = System.Drawing.Color.Red;
-            this.lbbn.Location = new System.Drawing.Point(1316, 101);
+            this.lbbn.Location = new System.Drawing.Point(1318, 99);
             this.lbbn.Name = "lbbn";
-            this.lbbn.Size = new System.Drawing.Size(48, 23);
+            this.lbbn.Size = new System.Drawing.Size(44, 24);
             this.lbbn.TabIndex = 70;
             this.lbbn.Text = "City";
             // 
             // lbGEmail
             // 
             this.lbGEmail.AutoSize = true;
-            this.lbGEmail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbGEmail.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGEmail.ForeColor = System.Drawing.Color.Red;
-            this.lbGEmail.Location = new System.Drawing.Point(687, 277);
+            this.lbGEmail.Location = new System.Drawing.Point(687, 272);
             this.lbGEmail.Name = "lbGEmail";
-            this.lbGEmail.Size = new System.Drawing.Size(48, 23);
+            this.lbGEmail.Size = new System.Drawing.Size(44, 24);
             this.lbGEmail.TabIndex = 66;
             this.lbGEmail.Text = "City";
             // 
             // lbGPhone
             // 
             this.lbGPhone.AutoSize = true;
-            this.lbGPhone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbGPhone.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGPhone.ForeColor = System.Drawing.Color.Red;
-            this.lbGPhone.Location = new System.Drawing.Point(687, 250);
+            this.lbGPhone.Location = new System.Drawing.Point(687, 239);
             this.lbGPhone.Name = "lbGPhone";
-            this.lbGPhone.Size = new System.Drawing.Size(48, 23);
+            this.lbGPhone.Size = new System.Drawing.Size(44, 24);
             this.lbGPhone.TabIndex = 65;
             this.lbGPhone.Text = "City";
             // 
             // lbGCountry
             // 
             this.lbGCountry.AutoSize = true;
-            this.lbGCountry.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbGCountry.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGCountry.ForeColor = System.Drawing.Color.Red;
             this.lbGCountry.Location = new System.Drawing.Point(687, 204);
             this.lbGCountry.Name = "lbGCountry";
-            this.lbGCountry.Size = new System.Drawing.Size(48, 23);
+            this.lbGCountry.Size = new System.Drawing.Size(44, 24);
             this.lbGCountry.TabIndex = 64;
             this.lbGCountry.Text = "City";
             // 
             // lbgname
             // 
             this.lbgname.AutoSize = true;
-            this.lbgname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbgname.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbgname.ForeColor = System.Drawing.Color.Red;
             this.lbgname.Location = new System.Drawing.Point(687, 134);
             this.lbgname.Name = "lbgname";
-            this.lbgname.Size = new System.Drawing.Size(101, 23);
+            this.lbgname.Size = new System.Drawing.Size(92, 24);
             this.lbgname.TabIndex = 63;
             this.lbgname.Text = "lbGName";
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.ForeColor = System.Drawing.Color.Red;
             this.lbEmail.Location = new System.Drawing.Point(50, 272);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(48, 23);
+            this.lbEmail.Size = new System.Drawing.Size(44, 24);
             this.lbEmail.TabIndex = 62;
             this.lbEmail.Text = "City";
             // 
             // lbPhone
             // 
             this.lbPhone.AutoSize = true;
-            this.lbPhone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbPhone.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.ForeColor = System.Drawing.Color.Red;
-            this.lbPhone.Location = new System.Drawing.Point(50, 233);
+            this.lbPhone.Location = new System.Drawing.Point(52, 239);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(48, 23);
+            this.lbPhone.Size = new System.Drawing.Size(44, 24);
             this.lbPhone.TabIndex = 61;
             this.lbPhone.Text = "City";
             // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
-            this.lbCountry.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbCountry.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCountry.ForeColor = System.Drawing.Color.Red;
-            this.lbCountry.Location = new System.Drawing.Point(50, 199);
+            this.lbCountry.Location = new System.Drawing.Point(50, 204);
             this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(48, 23);
+            this.lbCountry.Size = new System.Drawing.Size(44, 24);
             this.lbCountry.TabIndex = 60;
             this.lbCountry.Text = "City";
             // 
             // lbCity
             // 
             this.lbCity.AutoSize = true;
-            this.lbCity.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.lbCity.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCity.ForeColor = System.Drawing.Color.Red;
-            this.lbCity.Location = new System.Drawing.Point(50, 163);
+            this.lbCity.Location = new System.Drawing.Point(52, 168);
             this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(48, 23);
+            this.lbCity.Size = new System.Drawing.Size(44, 24);
             this.lbCity.TabIndex = 59;
             this.lbCity.Text = "City";
             // 
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.Red;
             this.lbName.Location = new System.Drawing.Point(50, 134);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(48, 23);
+            this.lbName.Size = new System.Drawing.Size(44, 24);
             this.lbName.TabIndex = 58;
             this.lbName.Text = "City";
             // 

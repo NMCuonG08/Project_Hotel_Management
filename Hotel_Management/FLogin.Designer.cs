@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientTileButton2 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.message = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.uc_FG = new Hotel_Management.uc_FGpass();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -258,6 +259,15 @@
             this.guna2GradientTileButton1.Size = new System.Drawing.Size(47, 46);
             this.guna2GradientTileButton1.TabIndex = 96;
             // 
+            // message
+            // 
+            this.message.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.message.Caption = null;
+            this.message.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.message.Parent = this;
+            this.message.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.message.Text = null;
+            // 
             // uc_FG
             // 
             this.uc_FG.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -302,5 +312,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_hipe;
         private Guna.UI2.WinForms.Guna2GradientTileButton btn_eye;
+        private Guna.UI2.WinForms.Guna2MessageDialog message;
     }
 }

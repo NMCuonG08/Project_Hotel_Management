@@ -65,6 +65,7 @@
     <Compile Include="Book_room.Designer.cs">
       <DependentUpon>Book_room.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassCheckout.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="FAddNewBooking.cs">
       <SubType>Form</SubType>
@@ -162,6 +163,12 @@
     <Compile Include="FSignIn.Designer.cs">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FUserInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUserInformation.Designer.cs">
+      <DependentUpon>FUserInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="HotelInformation.cs" />
     <Compile Include="IHotelIDConsumer.cs" />
     <Compile Include="Instance.cs" />
@@ -181,6 +188,12 @@
     </Compile>
     <Compile Include="FRoomInformation.Designer.cs">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sampleupdatecheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sampleupdatecheckout.Designer.cs">
+      <DependentUpon>Sampleupdatecheckout.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="UCFindingHotel.cs">
@@ -278,6 +291,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FUserInformation.resx">
+      <DependentUpon>FUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -290,6 +306,9 @@
     </Compile>
     <EmbeddedResource Include="FRoomInformation.resx">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sampleupdatecheckout.resx">
+      <DependentUpon>Sampleupdatecheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCFindingHotel.resx">
       <DependentUpon>UCFindingHotel.cs</DependentUpon>
@@ -715,6 +734,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feather-pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\couch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-out %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-symbol-of-three-items-with-dots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile %282%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

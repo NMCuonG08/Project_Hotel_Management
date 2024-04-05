@@ -40,34 +40,34 @@ namespace Hotel_Management
             string role = cbx_role.Text; 
             if (checkacout(Password))
             {
-                MessageBox.Show("Please enter a password 6-24 characters long, with alphanumeric characters, uppercase and lowercase letters!");
+                message.Show("Please enter a password 6-24 characters long, with alphanumeric characters, uppercase and lowercase letters!");
                 return;
             }
             if(Checkemail(Useremail))
             {
-                MessageBox.Show("Please enter the correct email format!");
+                message.Show("Please enter the correct email format!");
                 return;
             }
             if (modify.Taikhoans("select*from UserRegister where Useremail='" + Useremail + "'").Count != 0)
             {
-                MessageBox.Show("This email is already registered, please register another email!");
+                message.Show("This email is already registered, please register another email!");
                 return;
             }
             if (Useremail.Trim() == "" || Password.Trim() == "" || National.Trim() == "" || Genders.Trim() == "" || Idcardnumber.Trim() == "" || Address.Trim() == "" || Phonenumber.Trim() == "")
             {
-                MessageBox.Show("Please enter your information register!");
+                message.Show("Please enter your information register!");
 
             }
             else
             {
                 string query = "Insert into UserRegister values('" + Useremail + "','" + Password + "','" + National + "','" + Genders + "','" + Idcardnumber + "','" + Address + "','" + Phonenumber + "', '" + dateTime + "', '" + role + "' )";
                 modify.command(query);
-                if (MessageBox.Show("Registration is successful, do you want to log in?", "Announcement", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                {
+                message.Show("Registration is successful,", "Announcement");
+                
                     this.Close();
                     FLogin fLogin = new FLogin();
                     fLogin.Show();
-                }
+                
             }
         }
        

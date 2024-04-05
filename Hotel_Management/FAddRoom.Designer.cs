@@ -56,6 +56,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.messageadd = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
@@ -136,7 +137,7 @@
             this.txb_price.PasswordChar = '\0';
             this.txb_price.PlaceholderText = "";
             this.txb_price.SelectedText = "";
-            this.txb_price.Size = new System.Drawing.Size(362, 42);
+            this.txb_price.Size = new System.Drawing.Size(399, 50);
             this.txb_price.TabIndex = 52;
             // 
             // txb_size
@@ -158,7 +159,7 @@
             this.txb_size.PasswordChar = '\0';
             this.txb_size.PlaceholderText = "";
             this.txb_size.SelectedText = "";
-            this.txb_size.Size = new System.Drawing.Size(362, 42);
+            this.txb_size.Size = new System.Drawing.Size(399, 48);
             this.txb_size.TabIndex = 51;
             // 
             // txb_clients
@@ -172,7 +173,7 @@
             this.txb_clients.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_clients.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txb_clients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txb_clients.ItemHeight = 30;
+            this.txb_clients.ItemHeight = 33;
             this.txb_clients.Items.AddRange(new object[] {
             "1",
             "2",
@@ -184,9 +185,9 @@
             "8",
             "9",
             "10"});
-            this.txb_clients.Location = new System.Drawing.Point(656, 392);
+            this.txb_clients.Location = new System.Drawing.Point(656, 385);
             this.txb_clients.Name = "txb_clients";
-            this.txb_clients.Size = new System.Drawing.Size(356, 36);
+            this.txb_clients.Size = new System.Drawing.Size(399, 39);
             this.txb_clients.TabIndex = 50;
             // 
             // txb_bed
@@ -200,7 +201,7 @@
             this.txb_bed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_bed.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txb_bed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txb_bed.ItemHeight = 30;
+            this.txb_bed.ItemHeight = 33;
             this.txb_bed.Items.AddRange(new object[] {
             "Single Bed ( 90 - 100 cm)",
             "Double Bed (135 - 150 cm)",
@@ -210,7 +211,7 @@
             "Sofa bed (sofa instead of bed)"});
             this.txb_bed.Location = new System.Drawing.Point(656, 305);
             this.txb_bed.Name = "txb_bed";
-            this.txb_bed.Size = new System.Drawing.Size(356, 36);
+            this.txb_bed.Size = new System.Drawing.Size(399, 39);
             this.txb_bed.TabIndex = 49;
             // 
             // txb_roomtype
@@ -224,15 +225,15 @@
             this.txb_roomtype.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txb_roomtype.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txb_roomtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txb_roomtype.ItemHeight = 30;
+            this.txb_roomtype.ItemHeight = 33;
             this.txb_roomtype.Items.AddRange(new object[] {
             "Standard Room",
             "Business Class Room",
             "Family",
             "VIP Room"});
-            this.txb_roomtype.Location = new System.Drawing.Point(659, 226);
+            this.txb_roomtype.Location = new System.Drawing.Point(659, 211);
             this.txb_roomtype.Name = "txb_roomtype";
-            this.txb_roomtype.Size = new System.Drawing.Size(356, 36);
+            this.txb_roomtype.Size = new System.Drawing.Size(396, 39);
             this.txb_roomtype.TabIndex = 48;
             // 
             // txb_roomname
@@ -255,8 +256,9 @@
             this.txb_roomname.PasswordChar = '\0';
             this.txb_roomname.PlaceholderText = "";
             this.txb_roomname.SelectedText = "";
-            this.txb_roomname.Size = new System.Drawing.Size(362, 42);
+            this.txb_roomname.Size = new System.Drawing.Size(399, 43);
             this.txb_roomname.TabIndex = 47;
+            this.txb_roomname.TextChanged += new System.EventHandler(this.txb_roomname_TextChanged);
             // 
             // label8
             // 
@@ -402,6 +404,7 @@
             "Free_bottled_water",
             "Safe_box"});
             this.checklistbox.Location = new System.Drawing.Point(1101, 128);
+            this.checklistbox.Margin = new System.Windows.Forms.Padding(7);
             this.checklistbox.Name = "checklistbox";
             this.checklistbox.Size = new System.Drawing.Size(402, 242);
             this.checklistbox.TabIndex = 30;
@@ -454,9 +457,9 @@
             this.btn_add.FocusedColor = System.Drawing.Color.White;
             this.btn_add.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Black;
-            this.btn_add.Location = new System.Drawing.Point(752, 676);
+            this.btn_add.Location = new System.Drawing.Point(662, 676);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(180, 55);
+            this.btn_add.Size = new System.Drawing.Size(393, 55);
             this.btn_add.TabIndex = 21;
             this.btn_add.Text = "Add Room";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
@@ -511,6 +514,15 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Add New Room";
             // 
+            // messageadd
+            // 
+            this.messageadd.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.messageadd.Caption = null;
+            this.messageadd.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.messageadd.Parent = null;
+            this.messageadd.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.messageadd.Text = null;
+            // 
             // FAddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,5 +570,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private Guna.UI2.WinForms.Guna2TextBox txb_size;
         public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
+        private Guna.UI2.WinForms.Guna2MessageDialog messageadd;
     }
 }

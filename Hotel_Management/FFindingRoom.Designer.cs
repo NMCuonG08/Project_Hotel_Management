@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2GradientTileButton13 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbx_hotelLocation = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_findinghotel = new Guna.UI2.WinForms.Guna2Button();
@@ -50,28 +48,30 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel_sx = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_load = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_highprice = new Guna.UI2.WinForms.Guna2Button();
             this.btn_feed = new Guna.UI2.WinForms.Guna2Button();
             this.btn_lowprice = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowpanel = new System.Windows.Forms.FlowLayoutPanel();
             this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btn_user = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.ucFindingHotel1 = new Hotel_Management.UCFindingHotel();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.panel_sx.SuspendLayout();
+            this.flowpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_hotel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.guna2GradientTileButton13);
+            this.panel1.Controls.Add(this.btn_user);
             this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.guna2DateTimePicker2);
             this.panel1.Controls.Add(this.cbx_hotelLocation);
@@ -81,50 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 81);
-            this.panel1.TabIndex = 0;
-            // 
-            // guna2GradientTileButton13
-            // 
-            this.guna2GradientTileButton13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton13.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton13.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton13.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton13.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton13.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton13.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton13.Image = global::Hotel_Management.Properties.Resources.profile__1_;
-            this.guna2GradientTileButton13.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2GradientTileButton13.Location = new System.Drawing.Point(1816, 17);
-            this.guna2GradientTileButton13.Name = "guna2GradientTileButton13";
-            this.guna2GradientTileButton13.Size = new System.Drawing.Size(54, 47);
-            this.guna2GradientTileButton13.TabIndex = 123;
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
-            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_close.Location = new System.Drawing.Point(1867, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(57, 81);
-            this.btn_close.TabIndex = 122;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.panel1.TabIndex = 1;
             // 
             // guna2DateTimePicker2
             // 
@@ -152,12 +109,12 @@
             this.cbx_hotelLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbx_hotelLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbx_hotelLocation.ForeColor = System.Drawing.Color.Black;
-            this.cbx_hotelLocation.ItemHeight = 30;
+            this.cbx_hotelLocation.ItemHeight = 33;
             this.cbx_hotelLocation.Items.AddRange(new object[] {
             ""});
             this.cbx_hotelLocation.Location = new System.Drawing.Point(47, 13);
             this.cbx_hotelLocation.Name = "cbx_hotelLocation";
-            this.cbx_hotelLocation.Size = new System.Drawing.Size(444, 36);
+            this.cbx_hotelLocation.Size = new System.Drawing.Size(444, 39);
             this.cbx_hotelLocation.TabIndex = 4;
             // 
             // btn_findinghotel
@@ -217,10 +174,11 @@
             this.guna2Panel3.Controls.Add(this.label2);
             this.guna2Panel3.Controls.Add(this.checkedListBox1);
             this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.FillColor = System.Drawing.Color.Azure;
-            this.guna2Panel3.Location = new System.Drawing.Point(12, 21);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel3.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(473, 829);
+            this.guna2Panel3.Size = new System.Drawing.Size(473, 974);
             this.guna2Panel3.TabIndex = 0;
             // 
             // guna2HScrollBar1
@@ -238,18 +196,21 @@
             // 
             // listcheckbox_start
             // 
-            this.listcheckbox_start.BackColor = System.Drawing.Color.Azure;
+            this.listcheckbox_start.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listcheckbox_start.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listcheckbox_start.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listcheckbox_start.FormattingEnabled = true;
             this.listcheckbox_start.Items.AddRange(new object[] {
             "5",
             "4",
-            "3"});
+            "3",
+            "2",
+            "1"});
             this.listcheckbox_start.Location = new System.Drawing.Point(52, 203);
             this.listcheckbox_start.Name = "listcheckbox_start";
             this.listcheckbox_start.Size = new System.Drawing.Size(329, 168);
             this.listcheckbox_start.TabIndex = 14;
+            this.listcheckbox_start.SelectedIndexChanged += new System.EventHandler(this.listcheckbox_start_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -295,7 +256,7 @@
             // 
             // checkedListBox_convenience
             // 
-            this.checkedListBox_convenience.BackColor = System.Drawing.Color.Azure;
+            this.checkedListBox_convenience.BackColor = System.Drawing.Color.WhiteSmoke;
             this.checkedListBox_convenience.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox_convenience.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox_convenience.FormattingEnabled = true;
@@ -313,6 +274,7 @@
             this.checkedListBox_convenience.Name = "checkedListBox_convenience";
             this.checkedListBox_convenience.Size = new System.Drawing.Size(329, 253);
             this.checkedListBox_convenience.TabIndex = 11;
+            this.checkedListBox_convenience.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_convenience_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -326,7 +288,7 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.Azure;
+            this.checkedListBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
@@ -349,27 +311,28 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
+            this.guna2Panel2.Controls.Add(this.panel_sx);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(491, 81);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1433, 102);
             this.guna2Panel2.TabIndex = 2;
             // 
-            // guna2Panel4
+            // panel_sx
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.BorderRadius = 20;
-            this.guna2Panel4.Controls.Add(this.btn_load);
-            this.guna2Panel4.Controls.Add(this.label5);
-            this.guna2Panel4.Controls.Add(this.btn_highprice);
-            this.guna2Panel4.Controls.Add(this.btn_feed);
-            this.guna2Panel4.Controls.Add(this.btn_lowprice);
-            this.guna2Panel4.FillColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(16, 6);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(1405, 80);
-            this.guna2Panel4.TabIndex = 2;
+            this.panel_sx.BackColor = System.Drawing.Color.Transparent;
+            this.panel_sx.BorderRadius = 20;
+            this.panel_sx.Controls.Add(this.btn_load);
+            this.panel_sx.Controls.Add(this.label5);
+            this.panel_sx.Controls.Add(this.btn_highprice);
+            this.panel_sx.Controls.Add(this.btn_feed);
+            this.panel_sx.Controls.Add(this.btn_lowprice);
+            this.panel_sx.FillColor = System.Drawing.Color.White;
+            this.panel_sx.Location = new System.Drawing.Point(16, 6);
+            this.panel_sx.Name = "panel_sx";
+            this.panel_sx.Size = new System.Drawing.Size(1405, 80);
+            this.panel_sx.TabIndex = 2;
+            this.panel_sx.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_sx_Paint);
             // 
             // btn_load
             // 
@@ -381,7 +344,7 @@
             this.btn_load.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_load.FillColor = System.Drawing.Color.White;
             this.btn_load.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_load.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_load.ForeColor = System.Drawing.Color.Black;
             this.btn_load.Location = new System.Drawing.Point(938, 8);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(258, 60);
@@ -393,7 +356,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(15, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 23);
@@ -410,7 +373,7 @@
             this.btn_highprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_highprice.FillColor = System.Drawing.Color.White;
             this.btn_highprice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_highprice.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_highprice.ForeColor = System.Drawing.Color.Black;
             this.btn_highprice.Location = new System.Drawing.Point(674, 8);
             this.btn_highprice.Name = "btn_highprice";
             this.btn_highprice.Size = new System.Drawing.Size(258, 60);
@@ -430,7 +393,7 @@
             this.btn_feed.FillColor = System.Drawing.Color.White;
             this.btn_feed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_feed.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_feed.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_feed.ForeColor = System.Drawing.Color.Black;
             this.btn_feed.Location = new System.Drawing.Point(146, 8);
             this.btn_feed.Name = "btn_feed";
             this.btn_feed.Size = new System.Drawing.Size(258, 60);
@@ -448,7 +411,7 @@
             this.btn_lowprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_lowprice.FillColor = System.Drawing.Color.White;
             this.btn_lowprice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_lowprice.ForeColor = System.Drawing.Color.DimGray;
+            this.btn_lowprice.ForeColor = System.Drawing.Color.Black;
             this.btn_lowprice.Location = new System.Drawing.Point(410, 8);
             this.btn_lowprice.Name = "btn_lowprice";
             this.btn_lowprice.Size = new System.Drawing.Size(258, 60);
@@ -456,40 +419,40 @@
             this.btn_lowprice.Text = "Giá thấp nhất trước";
             this.btn_lowprice.Click += new System.EventHandler(this.btn_lowprice_Click);
             // 
-            // flowLayoutPanel1
+            // flowpanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.ucFindingHotel1);
-            this.flowLayoutPanel1.Controls.Add(this.gv_hotel);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(491, 183);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1433, 872);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.flowpanel.AutoScroll = true;
+            this.flowpanel.Controls.Add(this.ucFindingHotel1);
+            this.flowpanel.Controls.Add(this.gv_hotel);
+            this.flowpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowpanel.Location = new System.Drawing.Point(491, 183);
+            this.flowpanel.Name = "flowpanel";
+            this.flowpanel.Size = new System.Drawing.Size(1433, 872);
+            this.flowpanel.TabIndex = 0;
             // 
             // gv_hotel
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gv_hotel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gv_hotel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.gv_hotel.BackgroundColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_hotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_hotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gv_hotel.ColumnHeadersHeight = 4;
             this.gv_hotel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_hotel.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_hotel.DefaultCellStyle = dataGridViewCellStyle9;
             this.gv_hotel.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gv_hotel.Location = new System.Drawing.Point(3, 248);
             this.gv_hotel.Name = "gv_hotel";
@@ -521,6 +484,50 @@
             this.gv_hotel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_hotel.Visible = false;
             // 
+            // btn_user
+            // 
+            this.btn_user.BackColor = System.Drawing.Color.Transparent;
+            this.btn_user.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_user.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_user.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_user.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_user.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_user.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_user.FillColor = System.Drawing.Color.Transparent;
+            this.btn_user.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_user.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_user.ForeColor = System.Drawing.Color.White;
+            this.btn_user.Image = global::Hotel_Management.Properties.Resources.profile__1_;
+            this.btn_user.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_user.Location = new System.Drawing.Point(1816, 17);
+            this.btn_user.Name = "btn_user";
+            this.btn_user.Size = new System.Drawing.Size(54, 47);
+            this.btn_user.TabIndex = 123;
+            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1867, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 81);
+            this.btn_close.TabIndex = 122;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // ucFindingHotel1
             // 
             this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
@@ -544,7 +551,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowpanel);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
@@ -558,9 +565,9 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel_sx.ResumeLayout(false);
+            this.panel_sx.PerformLayout();
+            this.flowpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv_hotel)).EndInit();
             this.ResumeLayout(false);
 
@@ -572,7 +579,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowpanel;
         private UCFindingHotel ucFindingHotel1;
         private Guna.UI2.WinForms.Guna2Button btn_findinghotel;
         private Guna.UI2.WinForms.Guna2DataGridView gv_hotel;
@@ -593,8 +600,8 @@
         private Guna.UI2.WinForms.Guna2Button btn_feed;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btn_load;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        public Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton13;
+        private Guna.UI2.WinForms.Guna2Panel panel_sx;
+        public Guna.UI2.WinForms.Guna2GradientTileButton btn_user;
         private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
     }
 }

@@ -233,20 +233,20 @@ namespace Hotel_Management
                             command.ExecuteNonQuery();
                             int hotelID = Convert.ToInt32(txb_hotelID.Text);
                             EditHotelConvenience(hotelID);
-                            MessageBox.Show("Update Successful!");
+                            messageHotel.Show("Update Successful!");
                             conn.Close();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Error");
+                        messageHotel.Show("Error");
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                messageHotel.Show(ex.Message);
             }
         }
 
@@ -381,21 +381,21 @@ namespace Hotel_Management
                             command.Parameters.Add(new SqlParameter("@AdminID", AdminID));
                             command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Tao khach san thanh cong");
+                            messageHotel.Show("Tao khach san thanh cong");
                             CreateHotelConvenience();
                             conn.Close();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Error");
+                        messageHotel.Show("Error");
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                messageHotel.Show(ex.Message);
             }
         }
         private void btn_create_Click(object sender, EventArgs e)

@@ -118,7 +118,7 @@ namespace Hotel_Management
                         cmd.Parameters.Add(new SqlParameter("@UserID", UserID));
                         cmd.ExecuteNonQuery();
                         connection.Close();
-                        MessageBox.Show("You Booking thanh cong", "Thong bao");
+                        MessageBooking.Show("Notification","You Booking Sucessful!");
                         this.Close();
                     }
                 }
@@ -129,7 +129,7 @@ namespace Hotel_Management
             }
             else
             {
-                MessageBox.Show("Error!");
+                MessageBooking.Show("Fail!");
             }
         }
 

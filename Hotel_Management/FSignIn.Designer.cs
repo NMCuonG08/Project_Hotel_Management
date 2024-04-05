@@ -53,6 +53,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.message = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -546,6 +547,15 @@
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox3.TabIndex = 4;
             // 
+            // message
+            // 
+            this.message.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.message.Caption = null;
+            this.message.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.message.Parent = this;
+            this.message.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.message.Text = null;
+            // 
             // FSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -594,5 +604,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2MessageDialog message;
     }
 }

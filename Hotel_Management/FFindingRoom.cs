@@ -103,7 +103,7 @@ namespace Hotel_Management
                     
                     
                     ls[i].Click += FFindingRoom_Click;
-                    flowLayoutPanel1.Controls.Add(ls[i]);
+                    flowpanel.Controls.Add(ls[i]);
                 }
             }
         }
@@ -184,7 +184,7 @@ namespace Hotel_Management
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                     dataAdapter.Fill(data);
 
-                    flowLayoutPanel1.Controls.Clear();
+                    flowpanel.Controls.Clear();
                     createItem(data);
                 }
                 catch (Exception ex)
@@ -260,7 +260,7 @@ namespace Hotel_Management
         private void btn_lowprice_Click(object sender, EventArgs e)
         {
             conn.Open();
-            flowLayoutPanel1.Controls.Clear();
+            flowpanel.Controls.Clear();
             string sql = "SELECT * FROM HotelInformation ORDER BY Price";
             DataTable data = new DataTable();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
@@ -273,7 +273,7 @@ namespace Hotel_Management
         private void btn_highprice_Click(object sender, EventArgs e)
         {
             conn.Open();
-            flowLayoutPanel1.Controls.Clear();
+            flowpanel.Controls.Clear();
             string sql = "SELECT * FROM HotelInformation ORDER BY Price DESC;";
             DataTable data = new DataTable();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
@@ -285,7 +285,7 @@ namespace Hotel_Management
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
+            flowpanel.Controls.Clear();
             LoadForm();
             
         }
@@ -293,7 +293,7 @@ namespace Hotel_Management
         private void btn_feed_Click(object sender, EventArgs e)
         {
             conn.Open();
-            flowLayoutPanel1.Controls.Clear();
+            flowpanel.Controls.Clear();
             string sql = "SELECT * FROM HotelInformation ORDER BY Feedback DESC;";
             DataTable data = new DataTable();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
@@ -301,6 +301,52 @@ namespace Hotel_Management
             gv_hotel.DataSource = data;
             createItem(data);
             conn.Close();
+        }
+
+        private void listcheckbox_start_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int min = 5, max = 0;
+            foreach (object item in listcheckbox_start.CheckedItems)
+            {
+                int checkedItem = Convert.ToInt32(item.ToString());
+                if (checkedItem < min)
+                {
+                    min = checkedItem;
+                }
+                if (checkedItem > max)
+                {
+                    max = checkedItem;
+                }
+            }
+            max = max * 2;
+            min = min * 2;
+            if (max == 10) max = 1000;
+            string sql = String.Format("SELECT * FROM HotelInformation WHERE Feedback <= {0} AND Feedback >= {1}", max, min);
+            conn.Open();
+            flowpanel.Controls.Clear();
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gv_hotel.DataSource = data;
+            createItem(data);
+            conn.Close();
+        }
+
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            FUserInformation userinfo  = new FUserInformation();
+            userinfo.ShowDialog();
+
+        }
+
+        private void panel_sx_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkedListBox_convenience_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

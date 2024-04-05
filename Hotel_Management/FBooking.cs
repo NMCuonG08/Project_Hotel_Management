@@ -16,7 +16,7 @@ namespace Hotel_Management
         private int HotelID;
         SqlConnection conn = new
            SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
-        private FListRoom fListRoom;
+  //      private FListRoom fListRoom;
         public FBooking(int hotelID)
         {
             InitializeComponent();

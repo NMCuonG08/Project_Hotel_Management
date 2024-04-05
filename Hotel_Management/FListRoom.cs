@@ -55,7 +55,7 @@ namespace Hotel_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
             finally
             {
@@ -107,7 +107,7 @@ namespace Hotel_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
             finally
             {
@@ -148,7 +148,7 @@ namespace Hotel_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
             finally
             {
@@ -189,7 +189,7 @@ namespace Hotel_Management
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
                 }
                 finally
                 {
@@ -308,7 +308,7 @@ namespace Hotel_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
 
         }
@@ -321,7 +321,7 @@ namespace Hotel_Management
             if (result == DialogResult.OK)
             {
                 DeleteRoom(id);
-                MessageBox.Show("Delete Successfull!");
+                message.Show("Delete Successfull!");
                 this.Close();
                 Connection.Openadmin();
             }
@@ -379,7 +379,7 @@ namespace Hotel_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
             return room;
         }
@@ -405,14 +405,14 @@ namespace Hotel_Management
                 sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
                 sqlCommand.Parameters.Add(new SqlParameter("HotelID", HotelID));
                 sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Upload successful");
+               
                 conn.Close();
                 LoadForm(HotelID);
                 createItem();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
         }
         private void EditRoom(Room room)
@@ -433,14 +433,14 @@ namespace Hotel_Management
                 sqlCommand.Parameters.Add(new SqlParameter("RoomID", room.Id));
                 sqlCommand.Parameters.Add(new SqlParameter("Status", room.Status));
                 sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Edit successful");
+                message.Show("Edit successful");
                 conn.Close();
                 LoadForm(HotelID);
                 createItem();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                message.Show(ex.Message);
             }
         }
 

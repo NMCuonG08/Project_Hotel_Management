@@ -263,10 +263,11 @@ namespace Hotel_Management
                 addRoom(room);
                 SetConveniences(checklistbox);
                 this.Close();
+                messageadd.Show("Add Successful!");
             }
             else
             {
-                MessageBox.Show("Please fill in all required fields with valid integer values.");
+                messageadd.Show("Please fill in all required fields with valid integer values.");
             }
 
         }
@@ -277,6 +278,11 @@ namespace Hotel_Management
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txb_roomname_TextChanged(object sender, EventArgs e)
         {
 
         }

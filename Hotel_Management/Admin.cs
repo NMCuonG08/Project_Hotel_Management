@@ -131,6 +131,8 @@ namespace Hotel_Management
         private void btn_room_Click(object sender, EventArgs e)
         {
             Main_Load(sender, e);
+            /*btn_room.BackColor = Color.White;
+            btn_room.ForeColor = Color.Black;*/
         }
         private void btn_hotel_Click(object sender, EventArgs e)
         {
@@ -175,7 +177,7 @@ namespace Hotel_Management
         {
             if (fcheckout == null)
             {
-                fcheckout = new Fcheckout();
+                fcheckout = new Fcheckout(HotelID);
                 fcheckout.FormClosed += Fcheckout_FormClosed;
                 ShowForm(fcheckout);
             }
