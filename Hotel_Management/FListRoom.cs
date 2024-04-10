@@ -196,9 +196,6 @@ namespace Hotel_Management
                     conn.Close();
                 }
             }
-        
-        
-        // Tạo list item room trong form 
         private void createItem()
         {
             flowLayoutPanel1.Controls.Clear();
@@ -274,8 +271,6 @@ namespace Hotel_Management
                     SetCount();
                 }
             }
-            /*LoadForm(HotelID);
-            gvRoom.Refresh();*/
         }
         private void DeleteRoom(int roomID)
         {

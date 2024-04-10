@@ -56,7 +56,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txb_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.Feedback = new System.Windows.Forms.Label();
-            this.txb_feedback = new Guna.UI2.WinForms.Guna2TextBox();
             this.checklistbox = new System.Windows.Forms.CheckedListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -64,6 +63,7 @@
             this.btn_update = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_create = new Guna.UI2.WinForms.Guna2GradientButton();
             this.messageHotel = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.txb_feedback = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -537,33 +537,9 @@
             this.Feedback.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Feedback.Location = new System.Drawing.Point(727, 569);
             this.Feedback.Name = "Feedback";
-            this.Feedback.Size = new System.Drawing.Size(86, 25);
+            this.Feedback.Size = new System.Drawing.Size(71, 25);
             this.Feedback.TabIndex = 66;
-            this.Feedback.Text = "Feedback";
-            // 
-            // txb_feedback
-            // 
-            this.txb_feedback.BorderColor = System.Drawing.Color.Black;
-            this.txb_feedback.BorderRadius = 10;
-            this.txb_feedback.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_feedback.DefaultText = "";
-            this.txb_feedback.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_feedback.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_feedback.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_feedback.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_feedback.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_feedback.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txb_feedback.ForeColor = System.Drawing.Color.Black;
-            this.txb_feedback.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_feedback.Location = new System.Drawing.Point(734, 607);
-            this.txb_feedback.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_feedback.Name = "txb_feedback";
-            this.txb_feedback.PasswordChar = '\0';
-            this.txb_feedback.PlaceholderText = "";
-            this.txb_feedback.SelectedText = "";
-            this.txb_feedback.Size = new System.Drawing.Size(288, 51);
-            this.txb_feedback.TabIndex = 65;
-            this.txb_feedback.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_feedback_KeyPress);
+            this.Feedback.Text = "Quality";
             // 
             // checklistbox
             // 
@@ -679,6 +655,29 @@
             this.messageHotel.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.messageHotel.Text = null;
             // 
+            // txb_feedback
+            // 
+            this.txb_feedback.BackColor = System.Drawing.Color.Transparent;
+            this.txb_feedback.BorderColor = System.Drawing.Color.Black;
+            this.txb_feedback.BorderRadius = 10;
+            this.txb_feedback.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txb_feedback.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txb_feedback.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_feedback.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_feedback.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_feedback.ForeColor = System.Drawing.Color.Black;
+            this.txb_feedback.ItemHeight = 33;
+            this.txb_feedback.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.txb_feedback.Location = new System.Drawing.Point(729, 607);
+            this.txb_feedback.Name = "txb_feedback";
+            this.txb_feedback.Size = new System.Drawing.Size(293, 39);
+            this.txb_feedback.TabIndex = 75;
+            // 
             // FHotelInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -686,6 +685,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1775, 1008);
+            this.Controls.Add(this.txb_feedback);
             this.Controls.Add(this.btn_create);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.txb_hotelID);
@@ -694,7 +694,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txb_price);
             this.Controls.Add(this.Feedback);
-            this.Controls.Add(this.txb_feedback);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.picturebox);
@@ -761,12 +760,12 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox txb_price;
         private System.Windows.Forms.Label Feedback;
-        private Guna.UI2.WinForms.Guna2TextBox txb_feedback;
         private System.Windows.Forms.CheckedListBox checklistbox;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txb_hotelID;
         private Guna.UI2.WinForms.Guna2GradientButton btn_update;
         private Guna.UI2.WinForms.Guna2GradientButton btn_create;
         private Guna.UI2.WinForms.Guna2MessageDialog messageHotel;
+        private Guna.UI2.WinForms.Guna2ComboBox txb_feedback;
     }
 }

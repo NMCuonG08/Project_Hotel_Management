@@ -29,11 +29,7 @@ namespace Hotel_Management
             this.User = user;
             this.HotelID = hotelID;
             this.BookingID = bookingID;
-
             InitializeComponent();
-            /*panel_details.Visible = true;
-            panel_payment.Visible = false;
-            panel_room.Visible = false;*/
             ShowDetailsPanel();
             LoadPayment();
             Setlb();
@@ -87,11 +83,8 @@ namespace Hotel_Management
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-           
+            }           
         }
-
-
         private void Btn_addRoom_Click(object sender, EventArgs e)
         {
             FAddPayment fAddPayment = new FAddPayment(BookingID, this);
@@ -103,8 +96,6 @@ namespace Hotel_Management
         {
             Booking booking = Instance.GetBookingByID(BookingID);
             HotelInformation h = Instance.GetHotelInformationByID(HotelID);
-          //  MessageBox.Show($"{booking.Username}");
-           // MessageBox.Show($"{BookingID}");
             lbName.Text = h.Name.ToString();
             lbCity.Text = h.City.ToString(); 
             lbCountry.Text = h.Country.ToString(); ;
@@ -115,7 +106,6 @@ namespace Hotel_Management
             lbGCountry.Text = User.National.ToString(); 
             lbGEmail.Text = User.Useremail.ToString(); 
             lbGPhone.Text = User.Phonenumber.ToString();
-            //   lbbn.Text = Instance.BID.ToString();
             lb_bookingdate.Text = booking.Bookingdate.ToString();
             lbbn.Text = booking.Id.ToString();
             lbcin.Text = booking.Checkin.ToString();
@@ -124,12 +114,12 @@ namespace Hotel_Management
             lbbs.Text = booking.Bookingstatus.ToString();
             lbg.Text = "1";
             lbn.Text = "1";
-            lbtp.Text = booking.Price.ToString() + " $";
-          //  MessageBox.Show($"{ub.RoomID}");
-           
+            lbtp.Text = booking.Price.ToString() + " $";           
             dgv2.Rows[0].Cells[0].Value = Room.Id;
             dgv2.Rows[0].Cells[1].Value = Room.Type.ToString();
             dgv2.Rows[0].Cells[2].Value = Room.Bed;
+            combx_Bookingstatus.Text = booking.Bookingstatus.ToString();
+            combx_paymentstatus.Text = booking.Paymentstatus.ToString();
         }
 
         private void FBookingInformation_Load(object sender, EventArgs e)
@@ -190,6 +180,48 @@ namespace Hotel_Management
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void combx_paymentstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string query = "Update Booking set PaymentStatus = @payment where ID = @id" ;
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.Add("@payment", combx_paymentstatus.Text);
+                    command.Parameters.Add("@id", BookingID);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void combx_Bookingstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string query = "Update Booking set BookingStatus = @booking where ID = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.Add("@booking", combx_Bookingstatus.Text);
+                    command.Parameters.Add("@id", BookingID);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

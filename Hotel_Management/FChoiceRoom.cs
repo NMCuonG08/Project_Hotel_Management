@@ -102,7 +102,11 @@ namespace Hotel_Management
                             ls[i].RoomImage = System.Drawing.Image.FromStream(ms);
                         }
                     }
-                    ls[i].Capacity = "2";
+                    object capacity = data.Rows[i]["Clients"];
+                    if (capacity != null)
+                    {
+                        ls[i].Capacity = capacity.ToString();
+                    }
                     List<String> con = CheckConvenience(ls[i].Id);
                     foreach (String s in con)
                     {

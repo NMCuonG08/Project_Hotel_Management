@@ -348,6 +348,7 @@ namespace Hotel_Management
         {
             return true;
         }
+
         private void CreateHotel()
         {
             try

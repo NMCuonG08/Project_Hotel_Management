@@ -277,6 +277,7 @@
             this.uc_FG.Size = new System.Drawing.Size(654, 629);
             this.uc_FG.TabIndex = 80;
             this.uc_FG.Visible = false;
+            this.uc_FG.Load += new System.EventHandler(this.uc_FG_Load);
             // 
             // FLogin
             // 

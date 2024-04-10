@@ -119,17 +119,18 @@
             this.combx_Bookingstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combx_Bookingstatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.combx_Bookingstatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combx_Bookingstatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combx_Bookingstatus.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F);
             this.combx_Bookingstatus.ForeColor = System.Drawing.Color.Black;
             this.combx_Bookingstatus.ItemHeight = 30;
             this.combx_Bookingstatus.Items.AddRange(new object[] {
-            "Pending",
+            "pending",
             "Success",
             "Canceled"});
             this.combx_Bookingstatus.Location = new System.Drawing.Point(667, 15);
             this.combx_Bookingstatus.Name = "combx_Bookingstatus";
             this.combx_Bookingstatus.Size = new System.Drawing.Size(289, 36);
             this.combx_Bookingstatus.TabIndex = 13;
+            this.combx_Bookingstatus.SelectedIndexChanged += new System.EventHandler(this.combx_Bookingstatus_SelectedIndexChanged);
             // 
             // panel4
             // 
@@ -202,7 +203,7 @@
             this.combx_paymentstatus.ForeColor = System.Drawing.Color.Black;
             this.combx_paymentstatus.ItemHeight = 30;
             this.combx_paymentstatus.Items.AddRange(new object[] {
-            "Pending",
+            "pending",
             "Success",
             "Failed",
             "Partialy paid"});
@@ -210,6 +211,7 @@
             this.combx_paymentstatus.Name = "combx_paymentstatus";
             this.combx_paymentstatus.Size = new System.Drawing.Size(272, 36);
             this.combx_paymentstatus.TabIndex = 15;
+            this.combx_paymentstatus.SelectedIndexChanged += new System.EventHandler(this.combx_paymentstatus_SelectedIndexChanged);
             // 
             // label27
             // 
@@ -297,7 +299,7 @@
             this.lbtp.AutoSize = true;
             this.lbtp.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbtp.ForeColor = System.Drawing.Color.Red;
-            this.lbtp.Location = new System.Drawing.Point(1318, 373);
+            this.lbtp.Location = new System.Drawing.Point(1312, 405);
             this.lbtp.Name = "lbtp";
             this.lbtp.Size = new System.Drawing.Size(21, 24);
             this.lbtp.TabIndex = 77;
@@ -308,7 +310,7 @@
             this.lbn.AutoSize = true;
             this.lbn.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbn.ForeColor = System.Drawing.Color.Red;
-            this.lbn.Location = new System.Drawing.Point(1318, 332);
+            this.lbn.Location = new System.Drawing.Point(1312, 364);
             this.lbn.Name = "lbn";
             this.lbn.Size = new System.Drawing.Size(21, 24);
             this.lbn.TabIndex = 76;
@@ -319,7 +321,7 @@
             this.lbg.AutoSize = true;
             this.lbg.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbg.ForeColor = System.Drawing.Color.Red;
-            this.lbg.Location = new System.Drawing.Point(1318, 291);
+            this.lbg.Location = new System.Drawing.Point(1312, 323);
             this.lbg.Name = "lbg";
             this.lbg.Size = new System.Drawing.Size(21, 24);
             this.lbg.TabIndex = 75;
@@ -330,7 +332,7 @@
             this.lbbs.AutoSize = true;
             this.lbbs.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbbs.ForeColor = System.Drawing.Color.Red;
-            this.lbbs.Location = new System.Drawing.Point(1318, 252);
+            this.lbbs.Location = new System.Drawing.Point(1312, 284);
             this.lbbs.Name = "lbbs";
             this.lbbs.Size = new System.Drawing.Size(44, 24);
             this.lbbs.TabIndex = 74;
@@ -341,7 +343,7 @@
             this.lbps.AutoSize = true;
             this.lbps.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbps.ForeColor = System.Drawing.Color.Red;
-            this.lbps.Location = new System.Drawing.Point(1318, 208);
+            this.lbps.Location = new System.Drawing.Point(1312, 240);
             this.lbps.Name = "lbps";
             this.lbps.Size = new System.Drawing.Size(44, 24);
             this.lbps.TabIndex = 73;
@@ -352,7 +354,7 @@
             this.lbcout.AutoSize = true;
             this.lbcout.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbcout.ForeColor = System.Drawing.Color.Red;
-            this.lbcout.Location = new System.Drawing.Point(1318, 170);
+            this.lbcout.Location = new System.Drawing.Point(1312, 202);
             this.lbcout.Name = "lbcout";
             this.lbcout.Size = new System.Drawing.Size(44, 24);
             this.lbcout.TabIndex = 72;
@@ -363,7 +365,7 @@
             this.lbcin.AutoSize = true;
             this.lbcin.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbcin.ForeColor = System.Drawing.Color.Red;
-            this.lbcin.Location = new System.Drawing.Point(1318, 134);
+            this.lbcin.Location = new System.Drawing.Point(1312, 166);
             this.lbcin.Name = "lbcin";
             this.lbcin.Size = new System.Drawing.Size(44, 24);
             this.lbcin.TabIndex = 71;
@@ -374,7 +376,7 @@
             this.lbbn.AutoSize = true;
             this.lbbn.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F);
             this.lbbn.ForeColor = System.Drawing.Color.Red;
-            this.lbbn.Location = new System.Drawing.Point(1318, 99);
+            this.lbbn.Location = new System.Drawing.Point(1312, 131);
             this.lbbn.Name = "lbbn";
             this.lbbn.Size = new System.Drawing.Size(44, 24);
             this.lbbn.TabIndex = 70;
@@ -483,7 +485,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label24.Location = new System.Drawing.Point(1043, 373);
+            this.label24.Location = new System.Drawing.Point(1037, 405);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(241, 27);
             this.label24.TabIndex = 51;
@@ -503,7 +505,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label22.Location = new System.Drawing.Point(1043, 329);
+            this.label22.Location = new System.Drawing.Point(1037, 361);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(107, 27);
             this.label22.TabIndex = 49;
@@ -513,7 +515,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label21.Location = new System.Drawing.Point(1043, 288);
+            this.label21.Location = new System.Drawing.Point(1037, 320);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(126, 27);
             this.label21.TabIndex = 48;
@@ -523,7 +525,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label18.Location = new System.Drawing.Point(1039, 248);
+            this.label18.Location = new System.Drawing.Point(1033, 280);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(199, 27);
             this.label18.TabIndex = 47;
@@ -533,7 +535,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label17.Location = new System.Drawing.Point(1039, 204);
+            this.label17.Location = new System.Drawing.Point(1033, 236);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(234, 27);
             this.label17.TabIndex = 46;
@@ -543,7 +545,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label16.Location = new System.Drawing.Point(1038, 166);
+            this.label16.Location = new System.Drawing.Point(1032, 198);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(162, 27);
             this.label16.TabIndex = 45;
@@ -554,7 +556,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(1039, 134);
+            this.label15.Location = new System.Drawing.Point(1033, 166);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(152, 27);
             this.label15.TabIndex = 44;
@@ -564,7 +566,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label19.Location = new System.Drawing.Point(1038, 96);
+            this.label19.Location = new System.Drawing.Point(1032, 128);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(223, 27);
             this.label19.TabIndex = 43;
@@ -574,7 +576,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.label20.Location = new System.Drawing.Point(1019, 60);
+            this.label20.Location = new System.Drawing.Point(1013, 78);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(219, 27);
             this.label20.TabIndex = 42;

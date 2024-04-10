@@ -35,13 +35,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_evaluate = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_menu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_hotel = new Guna.UI2.WinForms.Guna2Button();
             this.btn_room = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_booking = new Guna.UI2.WinForms.Guna2Button();
             this.btn_checkout = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_report = new Guna.UI2.WinForms.Guna2Button();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.panel_main.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,9 +59,8 @@
             this.panel_main.Controls.Add(this.btn_menu);
             this.panel_main.Controls.Add(this.btn_hotel);
             this.panel_main.Controls.Add(this.btn_room);
-            this.panel_main.Controls.Add(this.guna2Button1);
+            this.panel_main.Controls.Add(this.btn_booking);
             this.panel_main.Controls.Add(this.btn_checkout);
-            this.panel_main.Controls.Add(this.btn_report);
             this.panel_main.Controls.Add(this.btn_logout);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_main.Location = new System.Drawing.Point(0, 0);
@@ -74,6 +73,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btn_evaluate);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(250, 0);
@@ -106,6 +106,27 @@
             this.label1.Text = "Welcome: admin";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_evaluate
+            // 
+            this.btn_evaluate.BackColor = System.Drawing.Color.Transparent;
+            this.btn_evaluate.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_evaluate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_evaluate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_evaluate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_evaluate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_evaluate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_evaluate.FillColor = System.Drawing.Color.Transparent;
+            this.btn_evaluate.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_evaluate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_evaluate.ForeColor = System.Drawing.Color.White;
+            this.btn_evaluate.Image = global::Hotel_Management.Properties.Resources.assessment__1_;
+            this.btn_evaluate.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_evaluate.Location = new System.Drawing.Point(1198, -1);
+            this.btn_evaluate.Name = "btn_evaluate";
+            this.btn_evaluate.Size = new System.Drawing.Size(54, 47);
+            this.btn_evaluate.TabIndex = 124;
+            this.btn_evaluate.Click += new System.EventHandler(this.btn_evaluate_Click);
+            // 
             // guna2GradientTileButton10
             // 
             this.guna2GradientTileButton10.BackColor = System.Drawing.Color.Transparent;
@@ -135,7 +156,7 @@
             this.btn_menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_menu.ForeColor = System.Drawing.Color.White;
-            this.btn_menu.Image = global::Hotel_Management.Properties.Resources.list_symbol_of_three_items_with_dots;
+            this.btn_menu.Image = global::Hotel_Management.Properties.Resources.menu__1_;
             this.btn_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_menu.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_menu.ImageSize = new System.Drawing.Size(33, 33);
@@ -147,15 +168,16 @@
             // 
             // btn_hotel
             // 
+            this.btn_hotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_hotel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_hotel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_hotel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_hotel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_hotel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_hotel.FillColor = System.Drawing.Color.Transparent;
-            this.btn_hotel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hotel.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_hotel.ForeColor = System.Drawing.Color.White;
-            this.btn_hotel.Image = global::Hotel_Management.Properties.Resources.hotel__4_;
+            this.btn_hotel.Image = global::Hotel_Management.Properties.Resources.hotel__6_;
             this.btn_hotel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_hotel.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_hotel.ImageSize = new System.Drawing.Size(30, 30);
@@ -168,15 +190,16 @@
             // 
             // btn_room
             // 
+            this.btn_room.BackColor = System.Drawing.Color.DarkGray;
             this.btn_room.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_room.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_room.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_room.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_room.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_room.FillColor = System.Drawing.Color.Transparent;
             this.btn_room.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_room.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.btn_room.ForeColor = System.Drawing.Color.White;
-            this.btn_room.Image = global::Hotel_Management.Properties.Resources.couch;
+            this.btn_room.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_room.ForeColor = System.Drawing.Color.Black;
+            this.btn_room.Image = global::Hotel_Management.Properties.Resources.bed__4_;
             this.btn_room.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_room.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_room.ImageSize = new System.Drawing.Size(30, 30);
@@ -187,25 +210,25 @@
             this.btn_room.Text = "       Rooms";
             this.btn_room.Click += new System.EventHandler(this.btn_room_Click);
             // 
-            // guna2Button1
+            // btn_booking
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Hotel_Management.Properties.Resources.booking__1_;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(3, 313);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(243, 88);
-            this.guna2Button1.TabIndex = 16;
-            this.guna2Button1.Text = "         Booking";
-            this.guna2Button1.Click += new System.EventHandler(this.btn_booking_Click);
+            this.btn_booking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_booking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_booking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_booking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_booking.FillColor = System.Drawing.Color.Transparent;
+            this.btn_booking.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_booking.ForeColor = System.Drawing.Color.White;
+            this.btn_booking.Image = global::Hotel_Management.Properties.Resources.booking__2_;
+            this.btn_booking.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_booking.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btn_booking.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_booking.Location = new System.Drawing.Point(3, 313);
+            this.btn_booking.Name = "btn_booking";
+            this.btn_booking.Size = new System.Drawing.Size(243, 88);
+            this.btn_booking.TabIndex = 16;
+            this.btn_booking.Text = "         Booking";
+            this.btn_booking.Click += new System.EventHandler(this.btn_booking_Click);
             // 
             // btn_checkout
             // 
@@ -213,10 +236,10 @@
             this.btn_checkout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_checkout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_checkout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_checkout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_checkout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
+            this.btn_checkout.FillColor = System.Drawing.Color.Transparent;
+            this.btn_checkout.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_checkout.ForeColor = System.Drawing.Color.White;
-            this.btn_checkout.Image = global::Hotel_Management.Properties.Resources.check_out__1_;
+            this.btn_checkout.Image = global::Hotel_Management.Properties.Resources._7324058_ui_interface_check_out_calendar_schedule_icon__1_;
             this.btn_checkout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_checkout.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_checkout.ImageSize = new System.Drawing.Size(30, 30);
@@ -224,28 +247,8 @@
             this.btn_checkout.Name = "btn_checkout";
             this.btn_checkout.Size = new System.Drawing.Size(243, 88);
             this.btn_checkout.TabIndex = 17;
-            this.btn_checkout.Text = "           Check out";
+            this.btn_checkout.Text = "           Checkout";
             this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
-            // 
-            // btn_report
-            // 
-            this.btn_report.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_report.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_report.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_report.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_report.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_report.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
-            this.btn_report.ForeColor = System.Drawing.Color.White;
-            this.btn_report.Image = global::Hotel_Management.Properties.Resources.report;
-            this.btn_report.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_report.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btn_report.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_report.Location = new System.Drawing.Point(3, 501);
-            this.btn_report.Name = "btn_report";
-            this.btn_report.Size = new System.Drawing.Size(243, 88);
-            this.btn_report.TabIndex = 18;
-            this.btn_report.Text = "       Report";
-            this.btn_report.Click += new System.EventHandler(this.btn_service_Click);
             // 
             // btn_logout
             // 
@@ -253,14 +256,14 @@
             this.btn_logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_logout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
+            this.btn_logout.FillColor = System.Drawing.Color.Transparent;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Image = global::Hotel_Management.Properties.Resources.logout__1_;
+            this.btn_logout.Image = global::Hotel_Management.Properties.Resources.log_out;
             this.btn_logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_logout.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_logout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_logout.Location = new System.Drawing.Point(3, 595);
+            this.btn_logout.Location = new System.Drawing.Point(3, 501);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(243, 88);
             this.btn_logout.TabIndex = 19;
@@ -300,10 +303,10 @@
         public Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton10;
         private Guna.UI2.WinForms.Guna2Button btn_hotel;
         private Guna.UI2.WinForms.Guna2Button btn_room;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_booking;
         private Guna.UI2.WinForms.Guna2Button btn_checkout;
-        private Guna.UI2.WinForms.Guna2Button btn_report;
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private Guna.UI2.WinForms.Guna2Button btn_menu;
+        public Guna.UI2.WinForms.Guna2GradientTileButton btn_evaluate;
     }
 }

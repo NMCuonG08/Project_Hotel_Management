@@ -69,6 +69,7 @@
             this.pp = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton6 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.pctbox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.rating = new Guna.UI2.WinForms.Guna2RatingStar();
             this.panel.SuspendLayout();
             this.panel_Free_WiFi.SuspendLayout();
             this.panel_Daily_Housekeeping.SuspendLayout();
@@ -631,11 +632,22 @@
             this.pctbox.TabIndex = 11;
             this.pctbox.TabStop = false;
             // 
+            // rating
+            // 
+            this.rating.BorderColor = System.Drawing.Color.Transparent;
+            this.rating.Location = new System.Drawing.Point(433, 54);
+            this.rating.Name = "rating";
+            this.rating.RatingColor = System.Drawing.Color.Goldenrod;
+            this.rating.ReadOnly = true;
+            this.rating.Size = new System.Drawing.Size(120, 28);
+            this.rating.TabIndex = 131;
+            // 
             // UCFindingHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.rating);
             this.Controls.Add(this.lb1);
             this.Controls.Add(this.pp);
             this.Controls.Add(this.panel);
@@ -712,5 +724,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb1;
+        private Guna.UI2.WinForms.Guna2RatingStar rating;
     }
 }

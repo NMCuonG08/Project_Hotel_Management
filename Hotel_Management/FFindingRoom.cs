@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hotel_Management
 {
@@ -21,13 +22,27 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.User = user;
-        //    txb_email.Text =User.Useremail;
             LoadForm();
-            
+            processbar.Minimum = 0;
+            processbar.Maximum = 10000;
+            processbar.Scroll += Processbar_Scroll;          
+            processbarmax.Maximum = 10000;
+            processbarmax.Scroll += Processbarmax_Scroll;
+        }
+
+        private void Processbarmax_Scroll(object sender, ScrollEventArgs e)
+        {
+            txb_maxvalue.Text = (processbar.Value + processbarmax.Value).ToString();
+        }
+
+        private void Processbar_Scroll(object sender, ScrollEventArgs e)
+        {
+            txb_minvalue.Text = processbar.Value.ToString();
         }
 
         public void LoadForm()
         {
+            
             try
             {
                 conn.Open();
@@ -46,11 +61,36 @@ namespace Hotel_Management
             }
             HashSet<string> uniqueHotel = GetUniqueHotelLocation();
             cbx_hotelLocation.DataSource = new BindingSource(uniqueHotel, null);
-            cbx_hotelLocation.SelectedItem = null;
+           
            
         }
 
-        
+        private double rating(int HotelID)
+        {
+            double rating = 0;
+
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string query = "Select AVG(Rate) from Evaluate where HotelID = @hotelID";
+                    SqlCommand sqlCommand = new SqlCommand(query, connection);
+                    sqlCommand.Parameters.Add("@hotelID", HotelID);
+                    object result = sqlCommand.ExecuteScalar();
+                    if (result != DBNull.Value) 
+                    {
+                        rating = Convert.ToDouble(result);
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return rating;
+        } 
 
         private void createItem(DataTable data)
         {
@@ -83,8 +123,16 @@ namespace Hotel_Management
                     }
 
                     ls[i].Price = (Double)data.Rows[i]["Price"];
-                    ls[i].Point = (Double)data.Rows[i]["Feedback"];
+                    ls[i].Rating = (Double)data.Rows[i]["FeedBack"];
                     ls[i].Id = (Int32)data.Rows[i]["HotelID"];
+                    if (rating(ls[i].Id) != null)
+                    {
+                        ls[i].Point = rating(ls[i].Id);
+                    }
+                    else
+                    {
+                        ls[i].Point = 0;
+                    }
                     List<String> con = CheckConvenience(ls[i].Id);
                     if (con.Count >= 1)
                     {
@@ -334,9 +382,9 @@ namespace Hotel_Management
 
         private void btn_user_Click(object sender, EventArgs e)
         {
-            FUserInformation userinfo  = new FUserInformation();
+            FUserInformation userinfo  = new FUserInformation(User.Id);
             userinfo.ShowDialog();
-
+            if (Instance.Isloggedout) this.Close();
         }
 
         private void panel_sx_Paint(object sender, PaintEventArgs e)

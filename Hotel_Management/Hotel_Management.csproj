@@ -121,6 +121,12 @@
     <Compile Include="FCustomerRegistration.Designer.cs">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEvaluate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEvaluate.Designer.cs">
+      <DependentUpon>FEvaluate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FExtendBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,12 +156,6 @@
     </Compile>
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FReport.Designer.cs">
-      <DependentUpon>FReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FSignIn.cs">
       <SubType>Form</SubType>
@@ -214,12 +214,6 @@
     <Compile Include="UCRoomInformation.Designer.cs">
       <DependentUpon>UCRoomInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucsearch.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucsearch.Designer.cs">
-      <DependentUpon>ucsearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="uc_FGpass.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +261,9 @@
     <EmbeddedResource Include="FCustomerRegistration.resx">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FEvaluate.resx">
+      <DependentUpon>FEvaluate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FExtendBooking.resx">
       <DependentUpon>FExtendBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,9 +278,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FReport.resx">
-      <DependentUpon>FReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
@@ -318,9 +312,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCRoomInformation.resx">
       <DependentUpon>UCRoomInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucsearch.resx">
-      <DependentUpon>ucsearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_FGpass.resx">
       <DependentUpon>uc_FGpass.cs</DependentUpon>
@@ -782,6 +773,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7324058_ui_interface_check out_calendar_schedule_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7324058_ui_interface_check out_calendar_schedule_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessment %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

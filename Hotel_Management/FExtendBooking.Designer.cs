@@ -38,11 +38,12 @@
             this.txb_roomno = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.datetime_checkout = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label7 = new System.Windows.Forms.Label();
+            this.datetime_checkin = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // 
             // txb_guest
             // 
+            this.txb_guest.BorderColor = System.Drawing.Color.Black;
             this.txb_guest.BorderRadius = 20;
             this.txb_guest.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_guest.DefaultText = "";
@@ -74,6 +76,7 @@
             this.txb_guest.Name = "txb_guest";
             this.txb_guest.PasswordChar = '\0';
             this.txb_guest.PlaceholderText = "";
+            this.txb_guest.ReadOnly = true;
             this.txb_guest.SelectedText = "";
             this.txb_guest.Size = new System.Drawing.Size(428, 51);
             this.txb_guest.TabIndex = 9;
@@ -90,6 +93,7 @@
             // 
             // txb_phoneNumber
             // 
+            this.txb_phoneNumber.BorderColor = System.Drawing.Color.Black;
             this.txb_phoneNumber.BorderRadius = 20;
             this.txb_phoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_phoneNumber.DefaultText = "";
@@ -106,6 +110,7 @@
             this.txb_phoneNumber.Name = "txb_phoneNumber";
             this.txb_phoneNumber.PasswordChar = '\0';
             this.txb_phoneNumber.PlaceholderText = "";
+            this.txb_phoneNumber.ReadOnly = true;
             this.txb_phoneNumber.SelectedText = "";
             this.txb_phoneNumber.Size = new System.Drawing.Size(428, 51);
             this.txb_phoneNumber.TabIndex = 11;
@@ -122,6 +127,7 @@
             // 
             // txb_roomtype
             // 
+            this.txb_roomtype.BorderColor = System.Drawing.Color.Black;
             this.txb_roomtype.BorderRadius = 20;
             this.txb_roomtype.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_roomtype.DefaultText = "";
@@ -138,6 +144,7 @@
             this.txb_roomtype.Name = "txb_roomtype";
             this.txb_roomtype.PasswordChar = '\0';
             this.txb_roomtype.PlaceholderText = "";
+            this.txb_roomtype.ReadOnly = true;
             this.txb_roomtype.SelectedText = "";
             this.txb_roomtype.Size = new System.Drawing.Size(428, 51);
             this.txb_roomtype.TabIndex = 15;
@@ -154,6 +161,7 @@
             // 
             // txb_roomno
             // 
+            this.txb_roomno.BorderColor = System.Drawing.Color.Black;
             this.txb_roomno.BorderRadius = 20;
             this.txb_roomno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txb_roomno.DefaultText = "";
@@ -170,6 +178,7 @@
             this.txb_roomno.Name = "txb_roomno";
             this.txb_roomno.PasswordChar = '\0';
             this.txb_roomno.PlaceholderText = "";
+            this.txb_roomno.ReadOnly = true;
             this.txb_roomno.SelectedText = "";
             this.txb_roomno.Size = new System.Drawing.Size(428, 51);
             this.txb_roomno.TabIndex = 13;
@@ -194,28 +203,6 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Check in";
             // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderRadius = 20;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(224, 316);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(428, 51);
-            this.guna2TextBox2.TabIndex = 17;
-            // 
             // btn_save
             // 
             this.btn_save.BorderRadius = 10;
@@ -223,32 +210,35 @@
             this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_save.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_save.ForeColor = System.Drawing.Color.Black;
-            this.btn_save.Location = new System.Drawing.Point(224, 404);
+            this.btn_save.Location = new System.Drawing.Point(224, 420);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(428, 45);
+            this.btn_save.Size = new System.Drawing.Size(428, 53);
             this.btn_save.TabIndex = 21;
             this.btn_save.Text = "Save";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // guna2DateTimePicker1
+            // datetime_checkout
             // 
-            this.guna2DateTimePicker1.BorderRadius = 10;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(940, 316);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(428, 51);
-            this.guna2DateTimePicker1.TabIndex = 22;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 3, 11, 21, 10, 26, 421);
+            this.datetime_checkout.BorderRadius = 20;
+            this.datetime_checkout.Checked = true;
+            this.datetime_checkout.FillColor = System.Drawing.Color.Silver;
+            this.datetime_checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.datetime_checkout.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.datetime_checkout.Location = new System.Drawing.Point(940, 316);
+            this.datetime_checkout.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.datetime_checkout.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datetime_checkout.Name = "datetime_checkout";
+            this.datetime_checkout.Size = new System.Drawing.Size(428, 51);
+            this.datetime_checkout.TabIndex = 22;
+            this.datetime_checkout.Value = new System.DateTime(2024, 3, 11, 21, 10, 26, 421);
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.LightGray;
+            this.guna2Panel1.Controls.Add(this.btn_close);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -256,27 +246,66 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1413, 69);
             this.guna2Panel1.TabIndex = 23;
             // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1356, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 69);
+            this.btn_close.TabIndex = 124;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F);
-            this.label7.Location = new System.Drawing.Point(12, 9);
+            this.label7.Location = new System.Drawing.Point(78, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(373, 39);
+            this.label7.Size = new System.Drawing.Size(361, 38);
             this.label7.TabIndex = 24;
             this.label7.Text = "Extend Booking Form";
+            // 
+            // datetime_checkin
+            // 
+            this.datetime_checkin.BorderRadius = 20;
+            this.datetime_checkin.Checked = true;
+            this.datetime_checkin.Enabled = false;
+            this.datetime_checkin.FillColor = System.Drawing.Color.Silver;
+            this.datetime_checkin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.datetime_checkin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.datetime_checkin.Location = new System.Drawing.Point(224, 325);
+            this.datetime_checkin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.datetime_checkin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datetime_checkin.Name = "datetime_checkin";
+            this.datetime_checkin.Size = new System.Drawing.Size(428, 51);
+            this.datetime_checkin.TabIndex = 24;
+            this.datetime_checkin.Value = new System.DateTime(2024, 3, 11, 21, 10, 26, 421);
             // 
             // FExtendBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1413, 713);
+            this.Controls.Add(this.datetime_checkin);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.datetime_checkout);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.guna2TextBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txb_roomtype);
             this.Controls.Add(this.label4);
@@ -307,10 +336,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txb_roomno;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2Button btn_save;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker datetime_checkout;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2DateTimePicker datetime_checkin;
+        public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
     }
 }

@@ -118,7 +118,7 @@ namespace Hotel_Management
                         cmd.Parameters.Add(new SqlParameter("@UserID", UserID));
                         cmd.ExecuteNonQuery();
                         connection.Close();
-                        MessageBooking.Show("Notification","You Booking Sucessful!");
+                        MessageBooking.Show("You Booking Sucessful!", "Notification");
                         this.Close();
                     }
                 }

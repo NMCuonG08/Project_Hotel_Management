@@ -26,28 +26,24 @@ namespace Hotel_Management
             using (SqlConnection con = Connection.GetSqlConnection())
             {
                 con.Open();
-                string qury = "select ID,CustomerName,CheckIn,CheckOut from Booking where HotelID = @HotelID ";
+                string qury = "select * from Booking where HotelID = @HotelID ";
                 DataTable data = new DataTable();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(qury, con);
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
                 dataAdapter.Fill(data);
                 gv_book.DataSource = data;
-               /* ListBox lb = new ListBox();
-                lb.Items.Add(HlID);
-                lb.Items.Add(CustomerName);
-                lb.Items.Add(CustomerPhone);
-                lb.Items.Add(RoomNo);             
-                lb.Items.Add(Checkin);
-                lb.Items.Add(Checkout);
-               */
-               con.Close();
+
+                gv_book.Columns["UserID"].Visible = false;
+                gv_book.Columns["HotelID"].Visible = false;
+                gv_book.Columns["RoomID"].Visible = false;
+                gv_book.Columns["PaymentStatus"].Visible = false;
+                gv_book.Columns["BookingStatus"].Visible = false;
+                gv_book.Columns["Price"].Visible = false;
+                gv_book.Columns["BookingDate"].Visible = false;
+                con.Close();
             }
         }
-        private void gv_booked_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
+        
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -55,25 +51,64 @@ namespace Hotel_Management
 
         private void gv_book_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gv_book.CurrentCell.OwningColumn.Name == "Hledit")
+            if (gv_book.CurrentCell.OwningColumn.Name == "btn_checkout")
             {
-                Sampleupdatecheckout sam = new Sampleupdatecheckout();
-                sam.id = Convert.ToInt32(gv_book.CurrentRow.Cells["ID"].Value);
-                sam.txb_name.Text = Convert.ToString(gv_book.CurrentRow.Cells["CustomerName"].Value);               
-                sam.datecheckin.Text = Convert.ToString(gv_book.CurrentRow.Cells["CheckIn"].Value);
-                sam.datecheckout.Text = Convert.ToString(gv_book.CurrentRow.Cells["CheckOut"].Value);
-                sam.ShowDialog();
-                Getdata();
+                if (e.RowIndex >= 0)
+                {
+                    DataGridView dgv = sender as DataGridView;
+                    DataGridViewRow selectedRow = dgv.Rows[e.RowIndex];
+                    int bookingId = Convert.ToInt32(selectedRow.Cells["BookingNumber"].Value);
+                    int roomId = Convert.ToInt32(selectedRow.Cells["RoomID"].Value);
+                    int userId = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
+                    Room room = Instance.GetRoomByID(roomId);
+                    Account user = Instance.GetUserByID(userId);
+                    FBookingInformation booking = new FBookingInformation(room, user, HotelID, bookingId);
+                    (this.MdiParent as Admin)?.ShowForm(booking);
+                }
             }
-            if (gv_book.CurrentCell.OwningColumn.Name == "Hldele")
+            if (gv_book.CurrentCell.OwningColumn.Name == "btn_extend")
             {
-                // need confirm before 
-                int id = Convert.ToInt32(gv_book.CurrentRow.Cells["ID"].Value);
-                string qury = "Delete from Booking where ID=" + id + "";
-                Hashtable ht = new Hashtable();
-                ClassCheckout.SQL(qury, ht);
-                MessageBox.Show("Delete successfully");
-                Getdata();
+                if (e.RowIndex >= 0)
+                {
+                    DataGridView dgv = sender as DataGridView;
+                    DataGridViewRow selectedRow = dgv.Rows[e.RowIndex];
+                    int bookingId = Convert.ToInt32(selectedRow.Cells["BookingNumber"].Value);
+                    int roomId = Convert.ToInt32(selectedRow.Cells["RoomID"].Value);
+                    int userId = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
+                    Room room = Instance.GetRoomByID(roomId);
+                    Account user = Instance.GetUserByID(userId);
+                    FExtendBooking booking = new FExtendBooking(room, user, HotelID, bookingId);
+
+                    (this.MdiParent as Admin)?.ShowForm(booking);
+                }
+
+
+            }
+        }
+
+        private void txb_customer_name_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+               using (SqlConnection conn = Connection.GetSqlConnection())
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Booking WHERE HotelID = @HotelID AND CustomerName LIKE @booking";
+                    DataTable data = new DataTable();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@booking", "%" + txb_customer_name.Text + "%");
+                    dataAdapter.Fill(data);
+                    gv_book.DataSource = data;
+                    gv_book.Columns["UserID"].Visible = false;
+                    gv_book.Columns["HotelID"].Visible = false;
+                    gv_book.Columns["RoomID"].Visible = false;
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

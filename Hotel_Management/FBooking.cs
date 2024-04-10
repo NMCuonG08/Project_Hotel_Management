@@ -20,6 +20,9 @@ namespace Hotel_Management
         public FBooking(int hotelID)
         {
             InitializeComponent();
+            DateTime currentDate = DateTime.Now;
+            string dayOfWeek = currentDate.ToString("[ dddd, ", System.Globalization.CultureInfo.GetCultureInfo("en-US"));
+            lb_date.Text = dayOfWeek + " " + currentDate.ToString("dd/MM/yyyy | HH:mm:ss ]");
             this.HotelID = hotelID;
             LoadForm();
         }
@@ -47,19 +50,16 @@ namespace Hotel_Management
         }
         private void gvBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Đảm bảo rằng chỉ khi một dòng được chọn
+            if (e.RowIndex >= 0) 
             {
                 DataGridView dgv = sender as DataGridView;
                 DataGridViewRow selectedRow = dgv.Rows[e.RowIndex];
-
-                // Lấy dữ liệu từ các ô trong dòng đã chọn
                 int bookingId = Convert.ToInt32(selectedRow.Cells["BookingNumber"].Value);
                 int roomId = Convert.ToInt32(selectedRow.Cells["RoomID"].Value);
                 int userId = Convert.ToInt32(selectedRow.Cells["UserID"].Value);     
                 Room room = Instance.GetRoomByID(roomId);
                 Account user = Instance.GetUserByID(userId);
                 FBookingInformation booking = new FBookingInformation(room, user, HotelID, bookingId);
-
                 // Hiển thị form
                 (this.MdiParent as Admin)?.ShowForm(booking);
             }
@@ -79,6 +79,76 @@ namespace Hotel_Management
             {
                 row.DefaultCellStyle.BackColor = Color.White;
             }
+        }
+
+        private void combx_paymentstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM Booking where HotelID = @HotelID AND PaymentStatus = @payment";
+                DataTable data = new DataTable();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@payment", combx_paymentstatus.Text);
+                dataAdapter.Fill(data);
+                gvBooking.DataSource = data;
+                gvBooking.Columns["UserID"].Visible = false;
+                gvBooking.Columns["HotelID"].Visible = false;
+                gvBooking.Columns["RoomID"].Visible = false;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void combx_Bookingstatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM Booking where HotelID = @HotelID AND BookingStatus = @booing";
+                DataTable data = new DataTable();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@booing", combx_Bookingstatus.Text);
+                dataAdapter.Fill(data);
+                gvBooking.DataSource = data;
+                gvBooking.Columns["UserID"].Visible = false;
+                gvBooking.Columns["HotelID"].Visible = false;
+                gvBooking.Columns["RoomID"].Visible = false;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txb_customer_name_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM Booking WHERE HotelID = @HotelID AND CustomerName LIKE @booking";
+                DataTable data = new DataTable();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
+                dataAdapter.SelectCommand.Parameters.AddWithValue("@booking", "%" + txb_customer_name.Text + "%");
+                dataAdapter.Fill(data);
+                gvBooking.DataSource = data;
+                gvBooking.Columns["UserID"].Visible = false;
+                gvBooking.Columns["HotelID"].Visible = false;
+                gvBooking.Columns["RoomID"].Visible = false;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

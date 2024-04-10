@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_user = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cbx_hotelLocation = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_findinghotel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
+            this.processbarmax = new Guna.UI2.WinForms.Guna2HScrollBar();
+            this.txb_maxvalue = new Guna.UI2.WinForms.Guna2TextBox();
+            this.processbar = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.listcheckbox_start = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_minvalue = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkedListBox_convenience = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,10 +59,8 @@
             this.btn_feed = new Guna.UI2.WinForms.Guna2Button();
             this.btn_lowprice = new Guna.UI2.WinForms.Guna2Button();
             this.flowpanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btn_user = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.ucFindingHotel1 = new Hotel_Management.UCFindingHotel();
+            this.gv_hotel = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -82,6 +84,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 81);
             this.panel1.TabIndex = 1;
+            // 
+            // btn_user
+            // 
+            this.btn_user.BackColor = System.Drawing.Color.Transparent;
+            this.btn_user.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_user.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_user.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_user.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_user.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_user.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_user.FillColor = System.Drawing.Color.Transparent;
+            this.btn_user.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_user.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_user.ForeColor = System.Drawing.Color.White;
+            this.btn_user.Image = global::Hotel_Management.Properties.Resources.profile__1_;
+            this.btn_user.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_user.Location = new System.Drawing.Point(1816, 17);
+            this.btn_user.Name = "btn_user";
+            this.btn_user.Size = new System.Drawing.Size(54, 47);
+            this.btn_user.TabIndex = 123;
+            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.close;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1867, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 81);
+            this.btn_close.TabIndex = 122;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // guna2DateTimePicker2
             // 
@@ -165,10 +211,12 @@
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 20;
-            this.guna2Panel3.Controls.Add(this.guna2HScrollBar1);
+            this.guna2Panel3.Controls.Add(this.processbarmax);
+            this.guna2Panel3.Controls.Add(this.txb_maxvalue);
+            this.guna2Panel3.Controls.Add(this.processbar);
             this.guna2Panel3.Controls.Add(this.listcheckbox_start);
             this.guna2Panel3.Controls.Add(this.label4);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox3);
+            this.guna2Panel3.Controls.Add(this.txb_minvalue);
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.checkedListBox_convenience);
             this.guna2Panel3.Controls.Add(this.label2);
@@ -181,18 +229,60 @@
             this.guna2Panel3.Size = new System.Drawing.Size(473, 974);
             this.guna2Panel3.TabIndex = 0;
             // 
-            // guna2HScrollBar1
+            // processbarmax
             // 
-            this.guna2HScrollBar1.BorderRadius = 10;
-            this.guna2HScrollBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2HScrollBar1.InUpdate = false;
-            this.guna2HScrollBar1.LargeChange = 10;
-            this.guna2HScrollBar1.Location = new System.Drawing.Point(52, 112);
-            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
-            this.guna2HScrollBar1.ScrollbarSize = 23;
-            this.guna2HScrollBar1.Size = new System.Drawing.Size(356, 23);
-            this.guna2HScrollBar1.TabIndex = 16;
-            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.Black;
+            this.processbarmax.BorderRadius = 10;
+            this.processbarmax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.processbarmax.InUpdate = false;
+            this.processbarmax.LargeChange = 100;
+            this.processbarmax.Location = new System.Drawing.Point(52, 201);
+            this.processbarmax.Name = "processbarmax";
+            this.processbarmax.ScrollbarSize = 23;
+            this.processbarmax.Size = new System.Drawing.Size(356, 23);
+            this.processbarmax.SmallChange = 10;
+            this.processbarmax.TabIndex = 18;
+            this.processbarmax.ThumbColor = System.Drawing.Color.Black;
+            this.processbarmax.ThumbSize = 25F;
+            // 
+            // txb_maxvalue
+            // 
+            this.txb_maxvalue.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txb_maxvalue.BorderColor = System.Drawing.Color.Black;
+            this.txb_maxvalue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_maxvalue.DefaultText = "";
+            this.txb_maxvalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_maxvalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_maxvalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_maxvalue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_maxvalue.FillColor = System.Drawing.Color.Azure;
+            this.txb_maxvalue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_maxvalue.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_maxvalue.ForeColor = System.Drawing.Color.Black;
+            this.txb_maxvalue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_maxvalue.Location = new System.Drawing.Point(52, 147);
+            this.txb_maxvalue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txb_maxvalue.Name = "txb_maxvalue";
+            this.txb_maxvalue.PasswordChar = '\0';
+            this.txb_maxvalue.PlaceholderText = "";
+            this.txb_maxvalue.SelectedText = "";
+            this.txb_maxvalue.Size = new System.Drawing.Size(169, 46);
+            this.txb_maxvalue.TabIndex = 17;
+            this.txb_maxvalue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // processbar
+            // 
+            this.processbar.BorderRadius = 10;
+            this.processbar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.processbar.InUpdate = false;
+            this.processbar.LargeChange = 100;
+            this.processbar.Location = new System.Drawing.Point(52, 112);
+            this.processbar.Name = "processbar";
+            this.processbar.ScrollbarSize = 23;
+            this.processbar.Size = new System.Drawing.Size(356, 23);
+            this.processbar.SmallChange = 10;
+            this.processbar.TabIndex = 16;
+            this.processbar.ThumbColor = System.Drawing.Color.Black;
+            this.processbar.ThumbSize = 25F;
             // 
             // listcheckbox_start
             // 
@@ -206,7 +296,7 @@
             "3",
             "2",
             "1"});
-            this.listcheckbox_start.Location = new System.Drawing.Point(52, 203);
+            this.listcheckbox_start.Location = new System.Drawing.Point(52, 279);
             this.listcheckbox_start.Name = "listcheckbox_start";
             this.listcheckbox_start.Size = new System.Drawing.Size(329, 168);
             this.listcheckbox_start.TabIndex = 14;
@@ -216,33 +306,36 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 166);
+            this.label4.Location = new System.Drawing.Point(47, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "Hạng sao";
             // 
-            // guna2TextBox3
+            // txb_minvalue
             // 
-            this.guna2TextBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FillColor = System.Drawing.Color.Azure;
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(52, 57);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(356, 48);
-            this.guna2TextBox3.TabIndex = 10;
+            this.txb_minvalue.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txb_minvalue.BorderColor = System.Drawing.Color.Black;
+            this.txb_minvalue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_minvalue.DefaultText = "";
+            this.txb_minvalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_minvalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_minvalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_minvalue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_minvalue.FillColor = System.Drawing.Color.Azure;
+            this.txb_minvalue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_minvalue.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_minvalue.ForeColor = System.Drawing.Color.Black;
+            this.txb_minvalue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_minvalue.Location = new System.Drawing.Point(52, 58);
+            this.txb_minvalue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txb_minvalue.Name = "txb_minvalue";
+            this.txb_minvalue.PasswordChar = '\0';
+            this.txb_minvalue.PlaceholderText = "";
+            this.txb_minvalue.SelectedText = "";
+            this.txb_minvalue.Size = new System.Drawing.Size(169, 46);
+            this.txb_minvalue.TabIndex = 10;
+            this.txb_minvalue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -270,7 +363,7 @@
             "Laundry_Service",
             "Parking_area",
             "Gym"});
-            this.checkedListBox_convenience.Location = new System.Drawing.Point(52, 509);
+            this.checkedListBox_convenience.Location = new System.Drawing.Point(52, 585);
             this.checkedListBox_convenience.Name = "checkedListBox_convenience";
             this.checkedListBox_convenience.Size = new System.Drawing.Size(329, 253);
             this.checkedListBox_convenience.TabIndex = 11;
@@ -280,7 +373,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 481);
+            this.label2.Location = new System.Drawing.Point(47, 557);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 9;
@@ -294,7 +387,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Miễn phí hủy"});
-            this.checkedListBox1.Location = new System.Drawing.Point(52, 411);
+            this.checkedListBox1.Location = new System.Drawing.Point(52, 487);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(329, 48);
             this.checkedListBox1.TabIndex = 8;
@@ -303,7 +396,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 383);
+            this.label1.Location = new System.Drawing.Point(47, 459);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 25);
             this.label1.TabIndex = 7;
@@ -430,29 +523,48 @@
             this.flowpanel.Size = new System.Drawing.Size(1433, 872);
             this.flowpanel.TabIndex = 0;
             // 
+            // ucFindingHotel1
+            // 
+            this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
+            this.ucFindingHotel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ucFindingHotel1.Convenience = null;
+            this.ucFindingHotel1.Convenience2 = null;
+            this.ucFindingHotel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ucFindingHotel1.HotelName = null;
+            this.ucFindingHotel1.Id = 0;
+            this.ucFindingHotel1.Image = null;
+            this.ucFindingHotel1.Name = "ucFindingHotel1";
+            this.ucFindingHotel1.Point = 0D;
+            this.ucFindingHotel1.Price = 0D;
+            this.ucFindingHotel1.Rating = 0D;
+            this.ucFindingHotel1.Size = new System.Drawing.Size(1468, 239);
+            this.ucFindingHotel1.TabIndex = 0;
+            this.ucFindingHotel1.Ultilities = null;
+            this.ucFindingHotel1.Visible = false;
+            // 
             // gv_hotel
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.gv_hotel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gv_hotel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gv_hotel.BackgroundColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_hotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_hotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gv_hotel.ColumnHeadersHeight = 4;
             this.gv_hotel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_hotel.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_hotel.DefaultCellStyle = dataGridViewCellStyle3;
             this.gv_hotel.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gv_hotel.Location = new System.Drawing.Point(3, 248);
             this.gv_hotel.Name = "gv_hotel";
@@ -483,68 +595,6 @@
             this.gv_hotel.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gv_hotel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_hotel.Visible = false;
-            // 
-            // btn_user
-            // 
-            this.btn_user.BackColor = System.Drawing.Color.Transparent;
-            this.btn_user.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.btn_user.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_user.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_user.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_user.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_user.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_user.FillColor = System.Drawing.Color.Transparent;
-            this.btn_user.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_user.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_user.ForeColor = System.Drawing.Color.White;
-            this.btn_user.Image = global::Hotel_Management.Properties.Resources.profile__1_;
-            this.btn_user.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_user.Location = new System.Drawing.Point(1816, 17);
-            this.btn_user.Name = "btn_user";
-            this.btn_user.Size = new System.Drawing.Size(54, 47);
-            this.btn_user.TabIndex = 123;
-            this.btn_user.Click += new System.EventHandler(this.btn_user_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
-            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_close.Location = new System.Drawing.Point(1867, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(57, 81);
-            this.btn_close.TabIndex = 122;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // ucFindingHotel1
-            // 
-            this.ucFindingHotel1.BackgroundColor = System.Drawing.Color.Empty;
-            this.ucFindingHotel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ucFindingHotel1.Convenience = null;
-            this.ucFindingHotel1.Convenience2 = null;
-            this.ucFindingHotel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ucFindingHotel1.HotelName = null;
-            this.ucFindingHotel1.Id = 0;
-            this.ucFindingHotel1.Image = null;
-            this.ucFindingHotel1.Name = "ucFindingHotel1";
-            this.ucFindingHotel1.Point = 0D;
-            this.ucFindingHotel1.Price = 0D;
-            this.ucFindingHotel1.Size = new System.Drawing.Size(1468, 239);
-            this.ucFindingHotel1.TabIndex = 0;
-            this.ucFindingHotel1.Ultilities = null;
-            this.ucFindingHotel1.Visible = false;
             // 
             // FFindingRoom
             // 
@@ -589,7 +639,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.CheckedListBox listcheckbox_start;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txb_minvalue;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox checkedListBox_convenience;
         private System.Windows.Forms.Label label2;
@@ -602,6 +652,8 @@
         private Guna.UI2.WinForms.Guna2Button btn_load;
         private Guna.UI2.WinForms.Guna2Panel panel_sx;
         public Guna.UI2.WinForms.Guna2GradientTileButton btn_user;
-        private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
+        private Guna.UI2.WinForms.Guna2HScrollBar processbar;
+        private Guna.UI2.WinForms.Guna2HScrollBar processbarmax;
+        private Guna.UI2.WinForms.Guna2TextBox txb_maxvalue;
     }
 }

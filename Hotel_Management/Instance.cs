@@ -15,7 +15,7 @@ namespace Hotel_Management
         public static int AID { get; set; }
         public static int HID { get; set; }
         public static int BID { get; set; }
-        
+        public static bool Isloggedout = false;
         public static Room GetRoomByID(int id)
         {
             Room room = null;
@@ -252,9 +252,23 @@ namespace Hotel_Management
             return payment;
         }
 
-     //   public static HotelInformation Hotelinfo { get; set; }
-       // public static Booking Bookinfo { get; set; }
-        
-            
+        public static Account user { get; set; }
+        public static String Getname(int id)
+        {
+            string s = "";
+            using (SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;"))
+            {
+                conn.Open();
+                string query = "Select * from UserFullName where UID = @id";
+                SqlCommand sqlCommand = new SqlCommand(query, conn);
+                sqlCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                if (reader.Read())
+                    s = reader["Name"].ToString();
+            }
+            return s;
+        }
+
+
     }
 }

@@ -139,7 +139,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1265, 33);
+            this.label2.Location = new System.Drawing.Point(1309, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 126;
@@ -149,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(868, 32);
+            this.label1.Location = new System.Drawing.Point(937, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 25);
             this.label1.TabIndex = 125;
@@ -157,13 +157,13 @@
             // 
             // datetime_checkout
             // 
-            this.datetime_checkout.BorderColor = System.Drawing.Color.BlanchedAlmond;
+            this.datetime_checkout.BorderColor = System.Drawing.Color.SeaShell;
             this.datetime_checkout.BorderRadius = 10;
             this.datetime_checkout.Checked = true;
             this.datetime_checkout.FillColor = System.Drawing.Color.White;
             this.datetime_checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datetime_checkout.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datetime_checkout.Location = new System.Drawing.Point(1391, 13);
+            this.datetime_checkout.Location = new System.Drawing.Point(1435, 13);
             this.datetime_checkout.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datetime_checkout.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datetime_checkout.Name = "datetime_checkout";
@@ -173,13 +173,13 @@
             // 
             // datetime_checkin
             // 
-            this.datetime_checkin.BorderColor = System.Drawing.Color.BlanchedAlmond;
+            this.datetime_checkin.BorderColor = System.Drawing.Color.White;
             this.datetime_checkin.BorderRadius = 10;
             this.datetime_checkin.Checked = true;
             this.datetime_checkin.FillColor = System.Drawing.Color.White;
             this.datetime_checkin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datetime_checkin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datetime_checkin.Location = new System.Drawing.Point(987, 13);
+            this.datetime_checkin.Location = new System.Drawing.Point(1056, 13);
             this.datetime_checkin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datetime_checkin.MinDate = new System.DateTime(2024, 4, 2, 0, 0, 0, 0);
             this.datetime_checkin.Name = "datetime_checkin";
@@ -220,6 +220,8 @@
             this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_search.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_search.ForeColor = System.Drawing.Color.Black;
+            this.btn_search.Image = global::Hotel_Management.Properties.Resources.loupe;
+            this.btn_search.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_search.Location = new System.Drawing.Point(1699, 13);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(180, 45);
@@ -251,7 +253,7 @@
             this.cbx_typebed.ItemHeight = 33;
             this.cbx_typebed.Location = new System.Drawing.Point(533, 12);
             this.cbx_typebed.Name = "cbx_typebed";
-            this.cbx_typebed.Size = new System.Drawing.Size(308, 39);
+            this.cbx_typebed.Size = new System.Drawing.Size(398, 39);
             this.cbx_typebed.TabIndex = 25;
             // 
             // label11

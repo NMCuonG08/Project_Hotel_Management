@@ -90,7 +90,7 @@ namespace Hotel_Management
                                     Role = reader["Role"].ToString(),
 
                                 };
-                                /*MessageBox.Show($"User: ID = {user.ID}, FullName = {user.FullName}, BirthDay = {user.BirthDay}");*/
+                                Instance.user = user;
                             }
                         }
                     }
@@ -125,7 +125,7 @@ namespace Hotel_Management
                                 {
                                    if (account.Role == "user")
                                     {
-                                        //    this.Hide();
+                                        Instance.Isloggedout = false;
                                         FFindingRoom fFinding = new FFindingRoom(account);
                                         fFinding.ShowDialog();
                                     }
@@ -216,6 +216,11 @@ namespace Hotel_Management
             {
                 btn_complete.Focus();
             }
+        }
+
+        private void uc_FG_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -211,6 +211,7 @@
             this.picturebox.Location = new System.Drawing.Point(57, 79);
             this.picturebox.Name = "picturebox";
             this.picturebox.Size = new System.Drawing.Size(611, 295);
+            this.picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox.TabIndex = 108;
             this.picturebox.TabStop = false;
             // 
@@ -895,7 +896,7 @@
             this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.close;
             this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_close.Location = new System.Drawing.Point(1867, 0);
             this.btn_close.Name = "btn_close";

@@ -30,7 +30,7 @@ namespace Hotel_Management
 
             if (Useremail.Trim()=="")
             {
-                MessageBox.Show("Please enter your information User !", "announcement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                guna2MessageDialog1.Show("Please enter your information User !", "Announcement");
             }
             else 
             {

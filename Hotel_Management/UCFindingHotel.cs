@@ -30,6 +30,7 @@ namespace Hotel_Management
         private double _point;
         private string convenience;
         private string convenience2;
+        private double _rating;
         [Category("Custom Props")]
         public string HotelName { get => _hotelName; set { _hotelName = value;lb_name.Text = value; } }
 
@@ -53,11 +54,10 @@ namespace Hotel_Management
         public int Id { get => _id; set => _id = value; }
         [Category("Custom Props")]
         public string Convenience { get => convenience; set { convenience = value;lb1.Text = value; } }
-
+        [Category("Custom Props")]
         public string Convenience2 { get => convenience2; set { convenience2 = value; } }
-
-
-
+         [Category("Custom Props")]
+        public double Rating { get => _rating; set { _rating = value; rating.Value = (float)value; } }
 
 
 
