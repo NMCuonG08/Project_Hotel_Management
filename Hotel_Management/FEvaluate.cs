@@ -71,12 +71,13 @@ namespace Hotel_Management
                 using (SqlConnection connection = Connection.GetSqlConnection())
                 {
                     connection.Open();
-                    string query = "Insert into Evaluate values (@rate, @comment, @hotelID, @userID)";
+                    string query = "Insert into Evaluate values (@rate, @comment, @hotelID, @userID, @date)";
                     SqlCommand sqlCommand = new SqlCommand(query, connection);
                     sqlCommand.Parameters.Add("rate", rate);
                     sqlCommand.Parameters.Add("comment", txb_comment.Text);
                     sqlCommand.Parameters.Add("hotelID", HotelID);
                     sqlCommand.Parameters.Add("userID", UserID);
+                    sqlCommand.Parameters.Add("@date", DateTime.Now);
                     sqlCommand.ExecuteNonQuery();
                     connection.Close();
 

@@ -41,9 +41,9 @@
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.datetime_checkout = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.label7 = new System.Windows.Forms.Label();
             this.datetime_checkin = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -237,7 +237,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.LightGray;
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Controls.Add(this.btn_close);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -245,29 +245,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1413, 69);
             this.guna2Panel1.TabIndex = 23;
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_close.FillColor = System.Drawing.Color.Transparent;
-            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
-            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Image = global::Hotel_Management.Properties.Resources.cross;
-            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_close.Location = new System.Drawing.Point(1356, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(57, 69);
-            this.btn_close.TabIndex = 124;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // label7
             // 
@@ -294,6 +271,29 @@
             this.datetime_checkin.Size = new System.Drawing.Size(428, 51);
             this.datetime_checkin.TabIndex = 24;
             this.datetime_checkin.Value = new System.DateTime(2024, 3, 11, 21, 10, 26, 421);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.close;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1356, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 69);
+            this.btn_close.TabIndex = 126;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // FExtendBooking
             // 

@@ -79,17 +79,9 @@ namespace Hotel_Management
 
         private void Main_Load(object sender, EventArgs e)
         {
-            if (listRoom == null)
-            {
-                listRoom = new FListRoom(HotelID);
-                listRoom.FormClosed += ListRoom_FormClosed;
-               
-                ShowForm(listRoom);
-            }
-            else
-            {
-                listRoom.Activate();
-            }
+            listRoom = new FListRoom(HotelID);
+            listRoom.FormClosed += ListRoom_FormClosed;
+            ShowForm(listRoom);
         }
         private void ListRoom_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -137,8 +129,10 @@ namespace Hotel_Management
             btn_room.ForeColor = Color.Black;
             btn_booking.BackColor = Color.FromArgb(0, 64, 64);
             btn_booking.ForeColor = Color.White;
-            btn_checkout.BackColor = Color.FromArgb(0, 64, 64); ;
+            btn_checkout.BackColor = Color.FromArgb(0, 64, 64);
             btn_checkout.ForeColor = Color.White;
+            btn_feedback.ForeColor = Color.White;
+            btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
         }
         private void btn_hotel_Click(object sender, EventArgs e)
         {
@@ -161,6 +155,8 @@ namespace Hotel_Management
             btn_booking.ForeColor = Color.White;
             btn_checkout.BackColor = Color.FromArgb(0, 64, 64); ;
             btn_checkout.ForeColor = Color.White;
+            btn_feedback.ForeColor = Color.White;
+            btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
 
         }
         private void HotelInformation_FormClosed(object sender, FormClosedEventArgs e)
@@ -169,16 +165,9 @@ namespace Hotel_Management
         }
         private void btn_booking_Click(object sender, EventArgs e)
         {
-            if (booking == null)
-            {
-                booking = new FBooking(HotelID);
-                booking.FormClosed += Booking_FormClosed;
-                ShowForm(booking);
-            }
-            else
-            {
-                booking.Activate();
-            }
+            booking = new FBooking(HotelID);
+            booking.FormClosed += Booking_FormClosed;
+            ShowForm(booking);
             btn_hotel.BackColor = Color.FromArgb(0, 64, 64);
             btn_hotel.ForeColor = Color.White;
             btn_room.BackColor = Color.FromArgb(0, 64, 64);
@@ -187,6 +176,8 @@ namespace Hotel_Management
             btn_booking.ForeColor = Color.Black;
             btn_checkout.BackColor = Color.FromArgb(0, 64, 64); ;
             btn_checkout.ForeColor = Color.White;
+            btn_feedback.ForeColor = Color.White;
+            btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
         }
         private void Booking_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -199,16 +190,9 @@ namespace Hotel_Management
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            if (fcheckout == null)
-            {
-                fcheckout = new Fcheckout(HotelID);
-                fcheckout.FormClosed += Fcheckout_FormClosed;
-                ShowForm(fcheckout);
-            }
-            else
-            {
-                fcheckout.Activate();
-            }
+            fcheckout = new Fcheckout(HotelID);
+            fcheckout.FormClosed += Fcheckout_FormClosed;
+            ShowForm(fcheckout);
             btn_hotel.BackColor = Color.FromArgb(0, 64, 64);
             btn_hotel.ForeColor = Color.White;
             btn_room.BackColor = Color.FromArgb(0, 64, 64);
@@ -217,6 +201,8 @@ namespace Hotel_Management
             btn_booking.ForeColor = Color.White;
             btn_checkout.BackColor = Color.DarkGray;
             btn_checkout.ForeColor = Color.Black;
+            btn_feedback.ForeColor = Color.White;
+            btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
         }
         private void Fcheckout_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -231,6 +217,35 @@ namespace Hotel_Management
         private void btn_evaluate_Click(object sender, EventArgs e)
         {
 
+        }
+        FFeedBack fFeedBack; 
+        private void btn_feedback_Click(object sender, EventArgs e)
+        {
+            if (fFeedBack == null)
+            {
+                fFeedBack = new FFeedBack(HotelID);
+                fFeedBack.FormClosed += FFeedBack_FormClosed;
+                ShowForm(fFeedBack);
+            }
+            else
+            {
+                fFeedBack.Activate();
+            }
+            btn_hotel.BackColor = Color.FromArgb(0, 64, 64);
+            btn_hotel.ForeColor = Color.White;
+            btn_room.BackColor = Color.FromArgb(0, 64, 64);
+            btn_room.ForeColor = Color.White;
+            btn_booking.BackColor = Color.FromArgb(0, 64, 64);
+            btn_booking.ForeColor = Color.White;
+            btn_feedback.BackColor = Color.DarkGray;
+            btn_feedback.ForeColor = Color.Black;
+            btn_checkout.ForeColor = Color.White;
+            btn_checkout.BackColor = Color.FromArgb(0, 64, 64);
+        }
+
+        private void FFeedBack_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fFeedBack = null;
         }
 
 

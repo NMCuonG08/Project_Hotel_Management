@@ -26,7 +26,7 @@ namespace Hotel_Management
             using (SqlConnection con = Connection.GetSqlConnection())
             {
                 con.Open();
-                string qury = "select * from Booking where HotelID = @HotelID ";
+                string qury = "select * from Booking where HotelID = @HotelID AND BookingStatus = 'Success'";
                 DataTable data = new DataTable();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(qury, con);
                 dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
@@ -63,6 +63,7 @@ namespace Hotel_Management
                     Room room = Instance.GetRoomByID(roomId);
                     Account user = Instance.GetUserByID(userId);
                     FBookingInformation booking = new FBookingInformation(room, user, HotelID, bookingId);
+                    booking.btn_checkout.Visible = true;
                     (this.MdiParent as Admin)?.ShowForm(booking);
                 }
             }

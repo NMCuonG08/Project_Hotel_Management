@@ -80,3 +80,5 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Sampleupdatecheckout.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FUserInformation.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FEvaluate.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FFeedBack.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCFeedback.resources

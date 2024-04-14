@@ -201,6 +201,16 @@ namespace Hotel_Management
             {
                 MessageBox.Show(ex.Message);
             }
+
+            if (combx_paymentstatus.Text == "Success")
+            {
+                btn_checkout.Enabled = true;
+            }
+            else
+            {
+                btn_checkout.Enabled=false;
+            }
+
         }
 
         private void combx_Bookingstatus_SelectedIndexChanged(object sender, EventArgs e)
@@ -215,6 +225,48 @@ namespace Hotel_Management
                     command.Parameters.Add("@booking", combx_Bookingstatus.Text);
                     command.Parameters.Add("@id", BookingID);
                     command.ExecuteNonQuery();
+
+                    if (combx_Bookingstatus.Text == "Success")
+                    {
+                        string query2 = "Update RoomInformation set [Status] = 'Occupied' where RoomID = @id";
+                        SqlCommand command2 = new SqlCommand(query2, connection);  
+                        command2.Parameters.Add("@id", Room.Id);
+                        command2.ExecuteNonQuery();
+                    }
+                    else 
+                    {
+                        string query2 = "Update RoomInformation set [Status] = 'Empty' where RoomID = @id";
+                        SqlCommand command2 = new SqlCommand(query2, connection);
+                        command2.Parameters.Add("@id", Room.Id);
+                        command2.ExecuteNonQuery();
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string query = "Update Booking set BookingStatus = 'pending' where ID = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.Add("@id", BookingID);
+                    command.ExecuteNonQuery();
+
+                        string query2 = "Update RoomInformation set [Status] = 'Empty' where RoomID = @id";
+                        SqlCommand command2 = new SqlCommand(query2, connection);
+                        command2.Parameters.Add("@id", Room.Id);
+                        command2.ExecuteNonQuery();
+                    MessageBox.Show("Checkout thành công", "Thông báo", MessageBoxButtons.OK);
+                    this.Close();
                     connection.Close();
                 }
             }

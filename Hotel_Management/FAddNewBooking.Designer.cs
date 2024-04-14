@@ -59,6 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.clb_requied = new System.Windows.Forms.CheckedListBox();
             this.rtxb_other = new System.Windows.Forms.RichTextBox();
+            this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.SuspendLayout();
             // 
             // txb_roomid
@@ -520,12 +521,35 @@
             this.rtxb_other.Text = "";
             this.rtxb_other.Visible = false;
             // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.btn_close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_close.FillColor = System.Drawing.Color.Transparent;
+            this.btn_close.FillColor2 = System.Drawing.Color.Transparent;
+            this.btn_close.FocusedColor = System.Drawing.Color.Transparent;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_close.ForeColor = System.Drawing.Color.White;
+            this.btn_close.Image = global::Hotel_Management.Properties.Resources.close;
+            this.btn_close.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_close.Location = new System.Drawing.Point(1680, 1);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(57, 57);
+            this.btn_close.TabIndex = 125;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // FAddNewBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1740, 816);
+            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.rtxb_other);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.clb_requied);
@@ -557,7 +581,7 @@
             this.Controls.Add(this.checklistbathroom);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.checklistbox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAddNewBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAddNewBooking";
@@ -599,5 +623,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckedListBox clb_requied;
         private System.Windows.Forms.RichTextBox rtxb_other;
+        public Guna.UI2.WinForms.Guna2GradientTileButton btn_close;
     }
 }

@@ -40,33 +40,8 @@ namespace Hotel_Management
                     gvBooking.Columns["RoomID"].Visible = false;
                     gvBooking.Columns["CustomerName"].Visible = false;
                     gvBooking.Columns["ID"].Visible = false;
-                    foreach (DataRow row in data.Rows)
-                    {
-                        int hotelID = Convert.ToInt32(row["HotelID"]);
-                        string newquery = "Select count(*) from Evaluate where UserID = @id AND HotelID = @hotelID";
-                        using (SqlCommand command = new SqlCommand(newquery, connection))
-                        {
-                            command.Parameters.AddWithValue("@id", UserID);
-                            command.Parameters.AddWithValue("@hotelID", hotelID);
-                            int count = (int)command.ExecuteScalar();
-                            if (count > 0)
-                            {
-                                int rowIndex = data.Rows.IndexOf(row);
-                                DataGridViewCell cell = gvBooking.Rows[rowIndex].Cells["btn_rate"];
-
-                                if (cell is DataGridViewImageCell)
-                                {
-
-                                    cell.Value = null;
-                                    cell.Style.ForeColor = Color.Gray; // Tùy chỉnh màu sắc để làm nổi bật ô đã vô hiệu hóa
-                                }
-                            }
-                            else
-                            {
-
-                            }
-                        }
-                    }
+                    //gvBooking.Columns["PaymentStatus"].Visible = false;
+                    gvBooking.Columns["BookingStatus"].Visible = false;
 
                     connection.Close();
                 }
@@ -177,37 +152,7 @@ namespace Hotel_Management
 
         private void gvBooking_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == gvBooking.Columns["btn_rate"].Index) // Chỉ xử lý cột chứa image button và không phải hàng header
-            {
-                try
-                {
-                    // Lấy hotelID từ dòng hiện tại
-                    int hotelID = Convert.ToInt32(gvBooking.Rows[e.RowIndex].Cells["HotelID"].Value);
 
-                    // Thực hiện truy vấn đến cơ sở dữ liệu chỉ khi cần thiết
-                    using (SqlConnection connection = Connection.GetSqlConnection())
-                    {
-                        connection.Open();
-                        string newquery = "Select count(*) from Evaluate where UserID = @id AND HotelID = @hotelID";
-                        using (SqlCommand command = new SqlCommand(newquery, connection))
-                        {
-                            command.Parameters.AddWithValue("@id", UserID);
-                            command.Parameters.AddWithValue("@hotelID", hotelID);
-                            int count = (int)command.ExecuteScalar();
-                            if (count > 0)
-                            {
-
-                                e.Value = null;
-                                e.CellStyle.ForeColor = Color.Gray;
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    thongbao.Show(ex.Message);
-                }
-            }
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
@@ -216,11 +161,13 @@ namespace Hotel_Management
             Account user = Instance.user;
             txb_phonenumber.Text = user.Phonenumber;
             txb_useremail.Text = user.Useremail;
+            lb_email.Text = user.Useremail;
             txb_idcardnumber.Text = user.Idcardnumber;
             txb_national.Text = user.National;
             txb_address.Text = user.Address;
             txb_gender.Text = user.Gender;
             txb_nameuser.Text = Instance.Getname(user.Id);
+            lb_fullname.Text = Instance.Getname(user.Id);
         }
         void ReverseSetData()
         {
@@ -236,7 +183,7 @@ namespace Hotel_Management
 
         private void btn_cancel_info_Click(object sender, EventArgs e)
         {
-            SetData();
+            SetData2();
         }
 
         private void btn_save_info_Click(object sender, EventArgs e)
@@ -253,7 +200,7 @@ namespace Hotel_Management
                 user.National, user.Address, user.Gender, user.Id);
             SqlCommand sqlCommand = new SqlCommand(query, conn);
             sqlCommand.ExecuteNonQuery();
-            query = String.Format("IF NOT EXISTS (SELECT * FROM UserFullName WHERE UID = {0} AND Name = '{1}')" +
+            query = String.Format("IF NOT EXISTS (SELECT * FROM UserFullName WHERE UID = {0} )" +
                 "BEGIN " +
                 "   INSERT INTO UserFullName(Name, UID) Values ('{1}',{0})" +
                 "END " +
@@ -265,7 +212,7 @@ namespace Hotel_Management
             sqlCommand.ExecuteNonQuery();
             conn.Close();
             thongbao.Show("Thay đổi thông tin thành công", "Thông báo");
-            SetData2();
+            
         }
 
         private void btn_savepassword_Click(object sender, EventArgs e)
@@ -278,7 +225,7 @@ namespace Hotel_Management
                     string query = String.Format("UPDATE UserRegister SET Password = '{0}' WHERE ID = {1}", txb_newpass.Text, Instance.user.Id);
                     SqlCommand sqlCommand = new SqlCommand(query, conn);
                     sqlCommand.ExecuteNonQuery();
-                    conn.Close();
+                    
                     thongbao.Show("Bạn thay đổi mật khẩu thành công!", "Thông báo");
                 }
             }
@@ -286,6 +233,7 @@ namespace Hotel_Management
             {
                 thongbao.Show("Thông tin bạn nhập sai!", "Thông báo");
             }
+            conn.Close();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -293,5 +241,49 @@ namespace Hotel_Management
             Instance.Isloggedout = true;
             this.Close();
         }
+
+        private void FilterBookingData(string filterExpression)
+        {
+            try
+            {
+               using (SqlConnection connection = Connection.GetSqlConnection())
+                {
+                    connection.Open();
+                    string query = "Select * from Booking where UserID = @id And BookingStatus = @condition";
+                    DataTable data = new DataTable();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@id", UserID);
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@condition", filterExpression);
+                    dataAdapter.Fill(data);
+                    gvBooking.DataSource = data;
+                    gvBooking.Columns["UserID"].Visible = false;
+                    gvBooking.Columns["HotelID"].Visible = false;
+                    gvBooking.Columns["RoomID"].Visible = false;
+                    gvBooking.Columns["CustomerName"].Visible = false;
+                    gvBooking.Columns["ID"].Visible = false;
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                message.Show(ex.Message);
+            }
+        }
+
+        private void btn_pending_Click(object sender, EventArgs e)
+        {
+            FilterBookingData("pending");
+        }
+
+        private void btn_success_Click(object sender, EventArgs e)
+        {
+            FilterBookingData("Success");
+        }
+
+        private void btn_cancel_status_Click(object sender, EventArgs e)
+        {
+            FilterBookingData("Canceled");
+        }
+
     }
 }

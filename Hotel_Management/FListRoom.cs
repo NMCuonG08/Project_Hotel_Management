@@ -196,7 +196,7 @@ namespace Hotel_Management
                     conn.Close();
                 }
             }
-        private void createItem()
+        public void createItem()
         {
             flowLayoutPanel1.Controls.Clear();
             int count = gvRoom.Rows.Count;
@@ -246,7 +246,7 @@ namespace Hotel_Management
                     ls[i].Status = gvRoom.Rows[i].Cells[4].Value.ToString();
                     if (ls[i].Status == "Empty")
                     {
-                        ls[i].btn_Booking.Visible = true;
+                        
                     }
                     else if (ls[i].Status == "Occupied")
                     {
@@ -264,7 +264,7 @@ namespace Hotel_Management
                     {
                         ls[i].Color = Color.FromArgb(255, 128, 0);
                     }
-                    ls[i].ItemBooking += Btn_Booking_Click;
+                   
                     ls[i].Click += ListRoom_Click;
                     ls[i].ItemDelete += FListRoom_ItemDelete;
                     flowLayoutPanel1.Controls.Add(ls[i]);
@@ -326,18 +326,7 @@ namespace Hotel_Management
             }
         }
 
-        private void Btn_Booking_Click(object sender, EventArgs e)
-        {
-            UCListRoom clickBooking = sender as UCListRoom;
-            FAddNewBooking AddNewBooking = new FAddNewBooking();
-            int id = Convert.ToInt32(clickBooking.RoomID);
-            Room room = GetRoomByID(id);
-
-            if (room != null)
-            {
-                (this.MdiParent as Admin)?.ShowForm(AddNewBooking);
-            }
-        }
+        
 
         // Lấy data room bằng id của nó
         private Room GetRoomByID(int id)

@@ -102,6 +102,8 @@ namespace Hotel_Management
             {
                 MessageBox.Show(ex.Message);
             }
+
+           
         }
 
         private void combx_Bookingstatus_SelectedIndexChanged(object sender, EventArgs e)

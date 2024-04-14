@@ -133,6 +133,12 @@
     <Compile Include="FExtendBooking.Designer.cs">
       <DependentUpon>FExtendBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFeedBack.Designer.cs">
+      <DependentUpon>FFeedBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="FFindingRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
       <DependentUpon>Sampleupdatecheckout.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="UCFeedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFeedback.Designer.cs">
+      <DependentUpon>UCFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCFindingHotel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +279,9 @@
     <EmbeddedResource Include="FExtendBooking.resx">
       <DependentUpon>FExtendBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FFeedBack.resx">
+      <DependentUpon>FFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FFindingRoom.resx">
       <DependentUpon>FFindingRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sampleupdatecheckout.resx">
       <DependentUpon>Sampleupdatecheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFeedback.resx">
+      <DependentUpon>UCFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCFindingHotel.resx">
       <DependentUpon>UCFindingHotel.cs</DependentUpon>
@@ -827,6 +845,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pen %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel Booking-bro %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aloe vera-cuate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

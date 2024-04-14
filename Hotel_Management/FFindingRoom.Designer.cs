@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_email = new System.Windows.Forms.Label();
             this.btn_user = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -72,7 +73,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lb_email);
             this.panel1.Controls.Add(this.btn_user);
             this.panel1.Controls.Add(this.btn_close);
             this.panel1.Controls.Add(this.guna2DateTimePicker2);
@@ -84,6 +86,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 81);
             this.panel1.TabIndex = 1;
+            // 
+            // lb_email
+            // 
+            this.lb_email.AutoSize = true;
+            this.lb_email.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_email.Location = new System.Drawing.Point(1724, 33);
+            this.lb_email.Name = "lb_email";
+            this.lb_email.Size = new System.Drawing.Size(55, 23);
+            this.lb_email.TabIndex = 19;
+            this.lb_email.Text = "email";
             // 
             // btn_user
             // 
@@ -100,7 +112,7 @@
             this.btn_user.ForeColor = System.Drawing.Color.White;
             this.btn_user.Image = global::Hotel_Management.Properties.Resources.profile__1_;
             this.btn_user.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_user.Location = new System.Drawing.Point(1816, 17);
+            this.btn_user.Location = new System.Drawing.Point(1664, 13);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(54, 47);
             this.btn_user.TabIndex = 123;
@@ -137,11 +149,11 @@
             this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(1090, 13);
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(998, 12);
             this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(456, 45);
+            this.guna2DateTimePicker2.Size = new System.Drawing.Size(359, 45);
             this.guna2DateTimePicker2.TabIndex = 5;
             this.guna2DateTimePicker2.Value = new System.DateTime(2024, 3, 12, 23, 25, 1, 5);
             // 
@@ -171,12 +183,12 @@
             this.btn_findinghotel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_findinghotel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_findinghotel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_findinghotel.FillColor = System.Drawing.Color.DarkOrange;
+            this.btn_findinghotel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_findinghotel.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_findinghotel.ForeColor = System.Drawing.Color.Black;
-            this.btn_findinghotel.Location = new System.Drawing.Point(1576, 13);
+            this.btn_findinghotel.Location = new System.Drawing.Point(1386, 12);
             this.btn_findinghotel.Name = "btn_findinghotel";
-            this.btn_findinghotel.Size = new System.Drawing.Size(199, 51);
+            this.btn_findinghotel.Size = new System.Drawing.Size(199, 45);
             this.btn_findinghotel.TabIndex = 0;
             this.btn_findinghotel.Text = "Tìm khách sạn";
             this.btn_findinghotel.Click += new System.EventHandler(this.btn_findinghotel_Click);
@@ -193,7 +205,7 @@
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(456, 45);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(376, 45);
             this.guna2DateTimePicker1.TabIndex = 1;
             this.guna2DateTimePicker1.Value = new System.DateTime(2024, 3, 12, 23, 25, 1, 5);
             // 
@@ -228,6 +240,7 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(473, 974);
             this.guna2Panel3.TabIndex = 0;
+            this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
             // processbarmax
             // 
@@ -249,7 +262,7 @@
             this.txb_maxvalue.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_maxvalue.BorderColor = System.Drawing.Color.Black;
             this.txb_maxvalue.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_maxvalue.DefaultText = "";
+            this.txb_maxvalue.DefaultText = "0";
             this.txb_maxvalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txb_maxvalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txb_maxvalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -268,6 +281,7 @@
             this.txb_maxvalue.Size = new System.Drawing.Size(169, 46);
             this.txb_maxvalue.TabIndex = 17;
             this.txb_maxvalue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_maxvalue.TextChanged += new System.EventHandler(this.txb_maxvalue_TextChanged);
             // 
             // processbar
             // 
@@ -283,6 +297,7 @@
             this.processbar.TabIndex = 16;
             this.processbar.ThumbColor = System.Drawing.Color.Black;
             this.processbar.ThumbSize = 25F;
+            this.processbar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.processbar_Scroll_1);
             // 
             // listcheckbox_start
             // 
@@ -317,7 +332,7 @@
             this.txb_minvalue.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txb_minvalue.BorderColor = System.Drawing.Color.Black;
             this.txb_minvalue.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_minvalue.DefaultText = "";
+            this.txb_minvalue.DefaultText = "0";
             this.txb_minvalue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txb_minvalue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txb_minvalue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -336,6 +351,7 @@
             this.txb_minvalue.Size = new System.Drawing.Size(169, 46);
             this.txb_minvalue.TabIndex = 10;
             this.txb_minvalue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txb_minvalue.TextChanged += new System.EventHandler(this.txb_minvalue_TextChanged);
             // 
             // label3
             // 
@@ -544,27 +560,27 @@
             // 
             // gv_hotel
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gv_hotel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.gv_hotel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gv_hotel.BackgroundColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_hotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_hotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gv_hotel.ColumnHeadersHeight = 4;
             this.gv_hotel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_hotel.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_hotel.DefaultCellStyle = dataGridViewCellStyle6;
             this.gv_hotel.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gv_hotel.Location = new System.Drawing.Point(3, 248);
             this.gv_hotel.Name = "gv_hotel";
@@ -611,6 +627,7 @@
             this.Text = "FFindingRoom";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -655,5 +672,6 @@
         private Guna.UI2.WinForms.Guna2HScrollBar processbar;
         private Guna.UI2.WinForms.Guna2HScrollBar processbarmax;
         private Guna.UI2.WinForms.Guna2TextBox txb_maxvalue;
+        private System.Windows.Forms.Label lb_email;
     }
 }

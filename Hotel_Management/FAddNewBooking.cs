@@ -28,5 +28,10 @@ namespace Hotel_Management
                 rtxb_other.Visible=false;
             }
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

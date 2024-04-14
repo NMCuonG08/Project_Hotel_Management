@@ -28,6 +28,7 @@ namespace Hotel_Management
             processbar.Scroll += Processbar_Scroll;          
             processbarmax.Maximum = 10000;
             processbarmax.Scroll += Processbarmax_Scroll;
+            lb_email.Text = user.Useremail;
         }
 
         private void Processbarmax_Scroll(object sender, ScrollEventArgs e)
@@ -366,9 +367,9 @@ namespace Hotel_Management
                     max = checkedItem;
                 }
             }
-            max = max * 2;
-            min = min * 2;
-            if (max == 10) max = 1000;
+            max = max;
+            min = min - 1;
+           
             string sql = String.Format("SELECT * FROM HotelInformation WHERE Feedback <= {0} AND Feedback >= {1}", max, min);
             conn.Open();
             flowpanel.Controls.Clear();
@@ -393,6 +394,43 @@ namespace Hotel_Management
         }
 
         private void checkedListBox_convenience_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txb_minvalue_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+            flowpanel.Controls.Clear();
+            string sql = String.Format("SELECT * FROM HotelInformation WHERE Price <= {0} AND Price >= {1}", txb_maxvalue.Text.ToString(), txb_minvalue.Text.ToString());
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gv_hotel.DataSource = data;
+            createItem(data);
+            
+            conn.Close();
+        }
+
+        private void txb_maxvalue_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+            flowpanel.Controls.Clear();
+            string sql = String.Format("SELECT * FROM HotelInformation WHERE Price <= {0} AND Price >= {1}", txb_maxvalue.Text.ToString(), txb_minvalue.Text.ToString());
+            DataTable data = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
+            dataAdapter.Fill(data);
+            gv_hotel.DataSource = data;
+            createItem(data);
+            conn.Close();
+        }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void processbar_Scroll_1(object sender, ScrollEventArgs e)
         {
 
         }

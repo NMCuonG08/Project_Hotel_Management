@@ -34,21 +34,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gv_book = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txb_customer_name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Search = new System.Windows.Forms.Label();
             this.BookingNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Checkin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Checkout = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_checkout = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_extend = new System.Windows.Forms.DataGridViewImageColumn();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txb_customer_name = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Search = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_book)).BeginInit();
+            this.btn_checkout = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_extend = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_book)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewImageColumn2
@@ -70,6 +70,14 @@
             this.dataGridViewImageColumn1.MinimumWidth = 50;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.gv_book);
+            this.guna2Panel1.Location = new System.Drawing.Point(44, 179);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1690, 534);
+            this.guna2Panel1.TabIndex = 19;
             // 
             // gv_book
             // 
@@ -108,7 +116,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gv_book.DefaultCellStyle = dataGridViewCellStyle3;
             this.gv_book.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gv_book.Location = new System.Drawing.Point(-1, -1);
+            this.gv_book.Location = new System.Drawing.Point(4, 10);
             this.gv_book.Name = "gv_book";
             this.gv_book.ReadOnly = true;
             this.gv_book.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -123,8 +131,8 @@
             this.gv_book.RowHeadersVisible = false;
             this.gv_book.RowHeadersWidth = 51;
             this.gv_book.RowTemplate.Height = 40;
-            this.gv_book.Size = new System.Drawing.Size(1691, 515);
-            this.gv_book.TabIndex = 1;
+            this.gv_book.Size = new System.Drawing.Size(1682, 515);
+            this.gv_book.TabIndex = 34;
             this.gv_book.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gv_book.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gv_book.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -147,70 +155,6 @@
             this.gv_book.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gv_book.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_book.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_book_CellContentClick);
-            // 
-            // BookingNumber
-            // 
-            this.BookingNumber.DataPropertyName = "ID";
-            this.BookingNumber.HeaderText = "ID";
-            this.BookingNumber.MinimumWidth = 6;
-            this.BookingNumber.Name = "BookingNumber";
-            this.BookingNumber.ReadOnly = true;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer Name";
-            this.CustomerName.MinimumWidth = 6;
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            // 
-            // Checkin
-            // 
-            this.Checkin.DataPropertyName = "CheckIn";
-            this.Checkin.HeaderText = "Check in Date";
-            this.Checkin.MinimumWidth = 6;
-            this.Checkin.Name = "Checkin";
-            this.Checkin.ReadOnly = true;
-            // 
-            // Checkout
-            // 
-            this.Checkout.DataPropertyName = "CheckOut";
-            this.Checkout.HeaderText = "Checkout Date";
-            this.Checkout.MinimumWidth = 6;
-            this.Checkout.Name = "Checkout";
-            this.Checkout.ReadOnly = true;
-            // 
-            // btn_checkout
-            // 
-            this.btn_checkout.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btn_checkout.FillWeight = 50F;
-            this.btn_checkout.HeaderText = "Checkout";
-            this.btn_checkout.Image = global::Hotel_Management.Properties.Resources.logout__2_;
-            this.btn_checkout.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btn_checkout.MinimumWidth = 50;
-            this.btn_checkout.Name = "btn_checkout";
-            this.btn_checkout.ReadOnly = true;
-            this.btn_checkout.Width = 125;
-            // 
-            // btn_extend
-            // 
-            this.btn_extend.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.btn_extend.FillWeight = 50F;
-            this.btn_extend.HeaderText = "Extend";
-            this.btn_extend.Image = global::Hotel_Management.Properties.Resources.plus__2_;
-            this.btn_extend.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btn_extend.MinimumWidth = 50;
-            this.btn_extend.Name = "btn_extend";
-            this.btn_extend.ReadOnly = true;
-            this.btn_extend.Width = 85;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.gv_book);
-            this.guna2Panel1.Location = new System.Drawing.Point(44, 179);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1690, 534);
-            this.guna2Panel1.TabIndex = 19;
             // 
             // label1
             // 
@@ -257,6 +201,38 @@
             this.Search.TabIndex = 18;
             this.Search.Text = "Search:";
             // 
+            // BookingNumber
+            // 
+            this.BookingNumber.DataPropertyName = "ID";
+            this.BookingNumber.HeaderText = "ID";
+            this.BookingNumber.MinimumWidth = 6;
+            this.BookingNumber.Name = "BookingNumber";
+            this.BookingNumber.ReadOnly = true;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer Name";
+            this.CustomerName.MinimumWidth = 6;
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            // 
+            // Checkin
+            // 
+            this.Checkin.DataPropertyName = "CheckIn";
+            this.Checkin.HeaderText = "Check in Date";
+            this.Checkin.MinimumWidth = 6;
+            this.Checkin.Name = "Checkin";
+            this.Checkin.ReadOnly = true;
+            // 
+            // Checkout
+            // 
+            this.Checkout.DataPropertyName = "CheckOut";
+            this.Checkout.HeaderText = "Checkout Date";
+            this.Checkout.MinimumWidth = 6;
+            this.Checkout.Name = "Checkout";
+            this.Checkout.ReadOnly = true;
+            // 
             // dataGridViewImageColumn3
             // 
             this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -281,6 +257,30 @@
             this.dataGridViewImageColumn4.ReadOnly = true;
             this.dataGridViewImageColumn4.Width = 50;
             // 
+            // btn_checkout
+            // 
+            this.btn_checkout.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btn_checkout.FillWeight = 50F;
+            this.btn_checkout.HeaderText = "Checkout";
+            this.btn_checkout.Image = global::Hotel_Management.Properties.Resources.logout__3_;
+            this.btn_checkout.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btn_checkout.MinimumWidth = 50;
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.ReadOnly = true;
+            this.btn_checkout.Width = 125;
+            // 
+            // btn_extend
+            // 
+            this.btn_extend.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.btn_extend.FillWeight = 50F;
+            this.btn_extend.HeaderText = "Extend";
+            this.btn_extend.Image = global::Hotel_Management.Properties.Resources.expand;
+            this.btn_extend.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btn_extend.MinimumWidth = 50;
+            this.btn_extend.Name = "btn_extend";
+            this.btn_extend.ReadOnly = true;
+            this.btn_extend.Width = 85;
+            // 
             // Fcheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,8 +293,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Fcheckout";
             this.Text = "Fcheckout";
-            ((System.ComponentModel.ISupportInitialize)(this.gv_book)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gv_book)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,13 +304,13 @@
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private Guna.UI2.WinForms.Guna2DataGridView gv_book;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
         private Guna.UI2.WinForms.Guna2TextBox txb_customer_name;
         private System.Windows.Forms.Label Search;
+        private Guna.UI2.WinForms.Guna2DataGridView gv_book;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookingNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Checkin;

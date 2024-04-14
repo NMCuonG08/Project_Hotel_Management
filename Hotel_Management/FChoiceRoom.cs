@@ -113,7 +113,7 @@ namespace Hotel_Management
                         ls[i].SetPanelVisibility(s);
                     }
                     ls[i].ItemBooking += FChoiceRoom_ItemBooking;
-                    flowLayoutPanel1.Controls.Add(ls[i]);
+                    panel_room.Controls.Add(ls[i]);
                     
                 }
             }
@@ -410,7 +410,7 @@ namespace Hotel_Management
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
-            panel_hide.Visible = false;
+           
             string selectedType = cbx_typeroom.Text.Trim();
             string selectedTypeBed = cbx_typebed.Text.Trim();
             DateTime checkin = datetime_checkin.Value;
@@ -451,7 +451,7 @@ namespace Hotel_Management
                     DataTable data = new DataTable();
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                     dataAdapter.Fill(data);
-                    flowLayoutPanel1.Controls.Clear();
+                    panel_room.Controls.Clear();
                     createItem(data);
                 }
                 catch (Exception ex)

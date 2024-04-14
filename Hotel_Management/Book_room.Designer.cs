@@ -356,7 +356,7 @@
             this.panel.FillColor = System.Drawing.Color.Transparent;
             this.panel.Location = new System.Drawing.Point(95, 66);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1083, 964);
+            this.panel.Size = new System.Drawing.Size(1134, 964);
             this.panel.TabIndex = 119;
             // 
             // label11
@@ -927,12 +927,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Hotel_Management.Properties.Resources.architecture_3824660_1280;
             this.ClientSize = new System.Drawing.Size(1924, 1102);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.panel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Book_room";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

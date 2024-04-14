@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pctbox = new System.Windows.Forms.PictureBox();
             this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_Booking = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,30 +200,11 @@
             this.btn_delete.TextFormatNoPrefix = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click_1);
             // 
-            // btn_Booking
-            // 
-            this.btn_Booking.BorderRadius = 10;
-            this.btn_Booking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Booking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Booking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Booking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Booking.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Booking.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Booking.ForeColor = System.Drawing.Color.Black;
-            this.btn_Booking.Location = new System.Drawing.Point(350, 115);
-            this.btn_Booking.Name = "btn_Booking";
-            this.btn_Booking.Size = new System.Drawing.Size(180, 45);
-            this.btn_Booking.TabIndex = 26;
-            this.btn_Booking.Text = "Booking";
-            this.btn_Booking.Visible = false;
-            this.btn_Booking.Click += new System.EventHandler(this.btn_Booking_Click);
-            // 
             // UCListRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.btn_Booking);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.pctbox);
             this.Controls.Add(this.label2);
@@ -260,6 +240,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pctbox;
         private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
-        public Guna.UI2.WinForms.Guna2Button btn_Booking;
     }
 }

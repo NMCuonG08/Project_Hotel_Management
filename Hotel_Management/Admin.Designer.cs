@@ -35,13 +35,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_evaluate = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_menu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_hotel = new Guna.UI2.WinForms.Guna2Button();
             this.btn_room = new Guna.UI2.WinForms.Guna2Button();
             this.btn_booking = new Guna.UI2.WinForms.Guna2Button();
             this.btn_checkout = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_feedback = new Guna.UI2.WinForms.Guna2Button();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
             this.panel_main.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +61,7 @@
             this.panel_main.Controls.Add(this.btn_room);
             this.panel_main.Controls.Add(this.btn_booking);
             this.panel_main.Controls.Add(this.btn_checkout);
+            this.panel_main.Controls.Add(this.btn_feedback);
             this.panel_main.Controls.Add(this.btn_logout);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_main.Location = new System.Drawing.Point(0, 0);
@@ -73,7 +74,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.btn_evaluate);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(250, 0);
@@ -90,7 +90,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(277, 46);
             this.panel4.TabIndex = 12;
-            this.panel4.Visible = false;
             // 
             // label1
             // 
@@ -105,27 +104,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome: admin";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_evaluate
-            // 
-            this.btn_evaluate.BackColor = System.Drawing.Color.Transparent;
-            this.btn_evaluate.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.btn_evaluate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_evaluate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_evaluate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_evaluate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_evaluate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_evaluate.FillColor = System.Drawing.Color.Transparent;
-            this.btn_evaluate.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_evaluate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_evaluate.ForeColor = System.Drawing.Color.White;
-            this.btn_evaluate.Image = global::Hotel_Management.Properties.Resources.assessment__1_;
-            this.btn_evaluate.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_evaluate.Location = new System.Drawing.Point(1198, -1);
-            this.btn_evaluate.Name = "btn_evaluate";
-            this.btn_evaluate.Size = new System.Drawing.Size(54, 47);
-            this.btn_evaluate.TabIndex = 124;
-            this.btn_evaluate.Click += new System.EventHandler(this.btn_evaluate_Click);
+            this.label1.Visible = false;
             // 
             // guna2GradientTileButton10
             // 
@@ -146,6 +125,7 @@
             this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
             this.guna2GradientTileButton10.Size = new System.Drawing.Size(65, 41);
             this.guna2GradientTileButton10.TabIndex = 119;
+            this.guna2GradientTileButton10.Visible = false;
             // 
             // btn_menu
             // 
@@ -250,6 +230,26 @@
             this.btn_checkout.Text = "           Checkout";
             this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             // 
+            // btn_feedback
+            // 
+            this.btn_feedback.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_feedback.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_feedback.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_feedback.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_feedback.FillColor = System.Drawing.Color.Transparent;
+            this.btn_feedback.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_feedback.ForeColor = System.Drawing.Color.White;
+            this.btn_feedback.Image = global::Hotel_Management.Properties.Resources.chat;
+            this.btn_feedback.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_feedback.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btn_feedback.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_feedback.Location = new System.Drawing.Point(3, 501);
+            this.btn_feedback.Name = "btn_feedback";
+            this.btn_feedback.Size = new System.Drawing.Size(243, 88);
+            this.btn_feedback.TabIndex = 21;
+            this.btn_feedback.Text = "           Feedback";
+            this.btn_feedback.Click += new System.EventHandler(this.btn_feedback_Click);
+            // 
             // btn_logout
             // 
             this.btn_logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -263,7 +263,7 @@
             this.btn_logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_logout.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_logout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_logout.Location = new System.Drawing.Point(3, 501);
+            this.btn_logout.Location = new System.Drawing.Point(3, 595);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(243, 88);
             this.btn_logout.TabIndex = 19;
@@ -307,6 +307,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_checkout;
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private Guna.UI2.WinForms.Guna2Button btn_menu;
-        public Guna.UI2.WinForms.Guna2GradientTileButton btn_evaluate;
+        private Guna.UI2.WinForms.Guna2Button btn_feedback;
     }
 }

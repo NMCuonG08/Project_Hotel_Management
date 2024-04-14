@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvRoom = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucListRoom1 = new Hotel_Management.UCListRoom();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radio_btn_clear = new System.Windows.Forms.RadioButton();
             this.radio_btn_checkall = new System.Windows.Forms.RadioButton();
@@ -54,16 +53,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Maintenance = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.btn_Checkout = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Booking = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Occupied = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Empty = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.message = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.ucListRoom1 = new Hotel_Management.UCListRoom();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_Checkout = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvRoom)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -75,23 +75,23 @@
             this.gvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvRoom.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gvRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gvRoom.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvRoom.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gvRoom.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvRoom.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.gvRoom.Location = new System.Drawing.Point(1007, 13);
             this.gvRoom.Name = "gvRoom";
@@ -110,22 +110,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1751, 607);
             this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // ucListRoom1
-            // 
-            this.ucListRoom1.Checkin = new System.DateTime(((long)(0)));
-            this.ucListRoom1.Checkout = new System.DateTime(((long)(0)));
-            this.ucListRoom1.Color = System.Drawing.Color.Empty;
-            this.ucListRoom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ucListRoom1.Image = null;
-            this.ucListRoom1.Location = new System.Drawing.Point(3, 3);
-            this.ucListRoom1.Name = "ucListRoom1";
-            this.ucListRoom1.Price = 0D;
-            this.ucListRoom1.RoomID = null;
-            this.ucListRoom1.Size = new System.Drawing.Size(879, 179);
-            this.ucListRoom1.Status = null;
-            this.ucListRoom1.TabIndex = 0;
-            this.ucListRoom1.Visible = false;
             // 
             // panel1
             // 
@@ -454,24 +438,6 @@
             this.label12.TabIndex = 8;
             this.label12.Text = ":Maintenance";
             // 
-            // btn_Checkout
-            // 
-            this.btn_Checkout.BorderRadius = 5;
-            this.btn_Checkout.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.btn_Checkout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Checkout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Checkout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Checkout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Checkout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Checkout.ForeColor = System.Drawing.Color.White;
-            this.btn_Checkout.Location = new System.Drawing.Point(1129, 5);
-            this.btn_Checkout.Name = "btn_Checkout";
-            this.btn_Checkout.Size = new System.Drawing.Size(56, 49);
-            this.btn_Checkout.TabIndex = 7;
-            this.btn_Checkout.Text = "0";
-            this.btn_Checkout.Click += new System.EventHandler(this.btn_checkout_Click);
-            // 
             // btn_Booking
             // 
             this.btn_Booking.BorderRadius = 5;
@@ -526,16 +492,6 @@
             this.btn_Empty.Text = "0";
             this.btn_Empty.Click += new System.EventHandler(this.btn_empty_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1191, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 27);
-            this.label5.TabIndex = 3;
-            this.label5.Text = ":Check out";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -585,6 +541,50 @@
             this.message.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.message.Text = null;
             // 
+            // ucListRoom1
+            // 
+            this.ucListRoom1.Checkin = new System.DateTime(((long)(0)));
+            this.ucListRoom1.Checkout = new System.DateTime(((long)(0)));
+            this.ucListRoom1.Color = System.Drawing.Color.Empty;
+            this.ucListRoom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ucListRoom1.Image = null;
+            this.ucListRoom1.Location = new System.Drawing.Point(3, 3);
+            this.ucListRoom1.Name = "ucListRoom1";
+            this.ucListRoom1.Price = 0D;
+            this.ucListRoom1.RoomID = null;
+            this.ucListRoom1.Size = new System.Drawing.Size(879, 179);
+            this.ucListRoom1.Status = null;
+            this.ucListRoom1.TabIndex = 0;
+            this.ucListRoom1.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1191, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 27);
+            this.label5.TabIndex = 3;
+            this.label5.Text = ":Check out";
+            // 
+            // btn_Checkout
+            // 
+            this.btn_Checkout.BorderRadius = 5;
+            this.btn_Checkout.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.btn_Checkout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Checkout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Checkout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Checkout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Checkout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Checkout.ForeColor = System.Drawing.Color.White;
+            this.btn_Checkout.Location = new System.Drawing.Point(1129, 5);
+            this.btn_Checkout.Name = "btn_Checkout";
+            this.btn_Checkout.Size = new System.Drawing.Size(56, 49);
+            this.btn_Checkout.TabIndex = 7;
+            this.btn_Checkout.Text = "0";
+            this.btn_Checkout.Click += new System.EventHandler(this.btn_checkout_Click);
+            // 
             // FListRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -616,13 +616,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_date;
         private Guna.UI2.WinForms.Guna2Button Btn_addRoom;
-        private Guna.UI2.WinForms.Guna2Button btn_Checkout;
         private Guna.UI2.WinForms.Guna2Button btn_Booking;
         private Guna.UI2.WinForms.Guna2Button btn_Occupied;
         private Guna.UI2.WinForms.Guna2Button btn_Empty;
@@ -644,5 +642,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_Maintenance;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2MessageDialog message;
+        private Guna.UI2.WinForms.Guna2Button btn_Checkout;
+        private System.Windows.Forms.Label label5;
     }
 }
