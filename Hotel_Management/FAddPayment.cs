@@ -14,6 +14,7 @@ namespace Hotel_Management
     public partial class FAddPayment : Form
     {
         private int BookingID;
+        BookingDAO bookingDAO = new BookingDAO();
         public FAddPayment(int bookingID, FBookingInformation fBooking)
         {
             InitializeComponent();
@@ -21,34 +22,9 @@ namespace Hotel_Management
             FBookingInformation = fBooking;
         }
 
-        private int InvoceNumber()
-        {
-            int number = 0;
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string sql = "Select MAX(ID) from Payment ";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        object result = command.ExecuteScalar();
-                        number = result != DBNull.Value ? Convert.ToInt32(result) : 0;
-                    }
-                    connection.Close();
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            return ++number;
-        }
-
         public void SetData()
         {
-            txb_invoce_number.Text = InvoceNumber().ToString();
+            txb_invoce_number.Text = bookingDAO.SetInvoceNumber().ToString();
             txb_add_date.Text = DateTime.Now.ToString();
             txb_amount.Text = "0";
             combx_pymethod.SelectedItem = combx_pymethod.Items[2];
@@ -61,28 +37,16 @@ namespace Hotel_Management
 
         private void Save()
         {
-            try
+            Payinfo payinfo = new Payinfo
             {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string sql = "Insert into Payment values (@AddDate, @PaymentMethod, @Amount, @BookingID)  ";
-                    using (SqlCommand command = new SqlCommand (sql, connection))
-                    {
-                        command.Parameters.Add("@AddDate", SqlDbType.DateTime).Value = txb_add_date.Text;
-                        command.Parameters.Add("@PaymentMethod", SqlDbType.NVarChar).Value = combx_pymethod.Text;
-                        command.Parameters.Add("@Amount", SqlDbType.Float).Value = txb_amount.Text;
-                        command.Parameters.Add("@BookingID", SqlDbType.Int).Value = BookingID;
-                        command.ExecuteNonQuery();
-                    }
-                    connection.Close ();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+                AddDate = DateTime.Now,
+                PaymentMethod = combx_pymethod.Text,
+                Amount = Convert.ToInt32(txb_amount.Text),
+                BookingID = BookingID
+            };
+            bookingDAO.SavePayment(payinfo);
+        }       
+           
         private FBookingInformation FBookingInformation  ;
         private void btn_save_Click(object sender, EventArgs e)
         {

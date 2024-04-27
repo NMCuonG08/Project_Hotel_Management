@@ -68,7 +68,7 @@ namespace Hotel_Management
             double rate = (rating_food.Value + rating_location.Value+ rating_sachse.Value + rating_service.Value + rating_thoaimai.Value )/2.5;
             try
             {
-                using (SqlConnection connection = Connection.GetSqlConnection())
+                using (SqlConnection connection = DB_Connection.GetSqlConnection())
                 {
                     connection.Open();
                     string query = "Insert into Evaluate values (@rate, @comment, @hotelID, @userID, @date)";

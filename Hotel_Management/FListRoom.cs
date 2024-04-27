@@ -12,10 +12,11 @@ using System.Windows.Forms;
 using System.Data.Common;
 using System.Web.UI.WebControls;
 using Hotel_Management.Properties;
-using System.IO;
+using System.IO;    
 using static Guna.UI2.Native.WinApi;
 using System.Collections.ObjectModel;
 using Guna.UI2.WinForms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hotel_Management
 {
@@ -24,7 +25,7 @@ namespace Hotel_Management
         private int HotelID  ;
         SqlConnection conn = new
            SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
-
+        RoomDAO roomDAO = new RoomDAO();
         public FListRoom(int hotelID)
         {            
             InitializeComponent();
@@ -36,31 +37,11 @@ namespace Hotel_Management
             createItem();
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = true;
-           
-          
         }
 
         public void LoadForm(int HotelID)
-        {
-            try
-            {
-                conn.Open();
-                string sql = "SELECT * FROM RoomInformation where HotelID = @HotelID ";           
-                DataTable data = new DataTable();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
-                dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
-                dataAdapter.Fill(data);
-                gvRoom.DataSource = data;
-
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+        {         
+            gvRoom.DataSource=  roomDAO.Load(HotelID);
         }
 
         private void ListRoom_Load(object sender, EventArgs e)
@@ -68,14 +49,8 @@ namespace Hotel_Management
             
         }
 
-
         void SetCount()
-        {
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();                  
+        {    
                     List<String> item = new List<String> 
                     {
                         "Empty",
@@ -85,11 +60,8 @@ namespace Hotel_Management
                         "Maintenance"
                     };
                     foreach (String  s in item )
-                    {
-                        string sql2 = string.Format("Select Count(*) from RoomInformation where HotelID = @HotelID AND  Status = '{0}' ", s);
-                        SqlCommand command = new SqlCommand(sql2, conn);
-                        command.Parameters.AddWithValue("@HotelID", HotelID);
-                        int count = (int)command.ExecuteScalar();
+                    {                      
+                        int count = roomDAO.SetCount(s,HotelID);
                         Guna2Button button = this.panel2.Controls["btn_" + s] as Guna2Button;
                         if (button != null)
                         {
@@ -100,67 +72,25 @@ namespace Hotel_Management
                             button.Text = "0";
                         }
                     }
-                    conn.Close();
-                }
-                
-
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
-            finally
-            {
-               
-            }
         }
         void Fillter(string s)
         {
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string sql = string.Format("SELECT * FROM RoomInformation WHERE Status = '{0}' AND HotelID = @HotelID", s);
-                  
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@HotelID", HotelID);
-                    cmd.CommandText = sql;
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                    DataTable data = new DataTable();
-                    dataAdapter.Fill(data);
-                    gvRoom.DataSource = data;
-                    string sql2 = string.Format("Select Count(*) from RoomInformation where HotelID = @HotelID AND  Status = '{0}' ", s);
-                    SqlCommand command = new SqlCommand(sql2, conn);
-                    command.Parameters.AddWithValue("@HotelID", HotelID);
-                    int count = (int)command.ExecuteScalar();
-                    Guna2Button button = this.panel2.Controls["btn_" + s] as Guna2Button;
-                    if (button != null )
-                    {
-                        button.Text = count.ToString();
-                    }
-                    else
-                    {
-                        button.Text = "0";
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            gvRoom.DataSource = roomDAO.Filler(s, HotelID);
+            int count = roomDAO.SetCount(s, HotelID);
+             Guna2Button button = this.panel2.Controls["btn_" + s] as Guna2Button;
+            if (button != null )
+             {
+                 button.Text = count.ToString();
+              }
+            else
+             {
+               button.Text = "0";
+             }
         }
 
         void Fillter()
             {
-                try
-                {
-                    conn.Open();
+                
                     string sql = "SELECT * FROM RoomInformation WHERE HotelID = @HotelID";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@HotelID", HotelID);
@@ -179,22 +109,12 @@ namespace Hotel_Management
                         sql += " AND RoomBed = @RoomBed";
                         cmd.Parameters.AddWithValue("@RoomBed", cb_typebed.Text);
                     }
-
-                    // Thực thi câu lệnh truy vấn
                     cmd.CommandText = sql;
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                     DataTable data = new DataTable();
                     dataAdapter.Fill(data);
                     gvRoom.DataSource = data;
-                }
-                catch (Exception ex)
-                {
-                message.Show(ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+             
             }
         public void createItem()
         {
@@ -272,162 +192,44 @@ namespace Hotel_Management
                 }
             }
         }
-        private void DeleteRoom(int roomID)
+        private void DeleteRoom(Room room)
         {
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string query = "Delete from RoomInformation where RoomID = @RoomID";
-                    SqlCommand sqlCommand = new SqlCommand(query, conn);
-                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
-                    sqlCommand.ExecuteNonQuery();
-                }
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string query = "Delete from RoomConveniences where RoomID = @RoomID";
-                    SqlCommand sqlCommand = new SqlCommand(query, conn);
-                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
-                    sqlCommand.ExecuteNonQuery();
-                }
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string query = "Delete from Bathroomconveniences where RoomID = @RoomID";
-                    SqlCommand sqlCommand = new SqlCommand(query, conn);
-                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = roomID;
-                    sqlCommand.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
-
+            roomDAO.DeleteRoom(room);
+            LoadForm(HotelID);
+            createItem();
         }
         private void FListRoom_ItemDelete(object sender, EventArgs e)
         {
             UCListRoom clickBooking = sender as UCListRoom;     
             int id = Convert.ToInt32(clickBooking.RoomID);
-
-            DialogResult result = MessageBox.Show("Ban muon xoa no khong", "Thong bao", MessageBoxButtons.OKCancel);
+            Room room = GetRoomByID(id);
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa phòng này không?", "Thong bao", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                DeleteRoom(id);
+                DeleteRoom(room);
                 message.Show("Delete Successfull!");
-                this.Close();
-                Connection.Openadmin();
-            }
-            else if (result == DialogResult.Cancel)
-            {
-
             }
         }
 
-        
-
-        // Lấy data room bằng id của nó
         private Room GetRoomByID(int id)
         {
-            Room room = null;
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string query = "Select * from RoomInformation where RoomID = @RoomID";
-                    SqlCommand sqlCommand = new SqlCommand(query, conn);
-                    sqlCommand.Parameters.Add("@RoomID", SqlDbType.Int).Value = id;
-                    SqlDataReader reader = sqlCommand.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        room = new Room
-                        {
-                            Id = id,
-                            Name = reader["RoomName"].ToString(),
-                            Type = reader["RoomType"].ToString(),
-                            Bed = reader["RoomBed"].ToString(),
-                            Price = Convert.ToInt32(reader["RoomPrice"]),
-                            Status = reader["Status"].ToString(),
-                            Clients = Convert.ToInt32(reader["Clients"]),
-                            Size = Convert.ToDouble(reader["Size"]),
-                            Image = (byte[])reader["RoomImage"],
-                            Checkin = (DateTime)reader["Checkin"],
-                            Checkout = (DateTime)reader["Checkout"],
-
-                        };
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
-            return room;
+            return roomDAO.GetRoomByID(id); 
         }
 
-
        void AddRoom(Room room)
-        {
-            try
-            {         
-                conn.Open();
-                string status = "Empty";
-                string query = "Insert into RoomInformation values (@RoomType, @RoomBed,@RoomPrice,@Status,@RoomName,@Checkin,@Checkout,@RoomImage,@Clients,@size,@HotelID)";
-                SqlCommand sqlCommand = new SqlCommand(query, conn);
-                sqlCommand.Parameters.Add(new SqlParameter("RoomType",room.Type));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomBed", room.Bed));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomPrice", room.Price));
-                sqlCommand.Parameters.Add(new SqlParameter("Status", status));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomName", room.Name));
-                sqlCommand.Parameters.Add(new SqlParameter("Checkin", DateTime.Now));
-                sqlCommand.Parameters.Add(new SqlParameter("Checkout", DateTime.Now));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomImage", room.Image));
-                sqlCommand.Parameters.Add(new SqlParameter("Clients", room.Clients));
-                sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
-                sqlCommand.Parameters.Add(new SqlParameter("HotelID", HotelID));
-                sqlCommand.ExecuteNonQuery();
-               
-                conn.Close();
-                LoadForm(HotelID);
-                createItem();
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
+        {    
+            Room newroom = new Room(room.Name, room.Type, room.Bed, room.Clients, room.Size, room.Price, room.Image, room.Status, DateTime.Now, DateTime.Now, HotelID);
+            roomDAO.AddRoom(newroom);
+            LoadForm(HotelID);
+            createItem();
         }
         private void EditRoom(Room room)
         {
-            try
-            {
-                conn.Open();
-               
-                string query = "update RoomInformation set  RoomType = @RoomType, RoomBed = @RoomBed,RoomPrice = @RoomPrice,RoomName = @RoomName,RoomImage  = @RoomImage,Clients= @Clients, Status = @Status,size = @size where RoomID = @RoomID";
-                SqlCommand sqlCommand = new SqlCommand(query, conn);
-                sqlCommand.Parameters.Add(new SqlParameter("RoomType", room.Type));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomBed", room.Bed));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomPrice", room.Price));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomName", room.Name));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomImage", room.Image));
-                sqlCommand.Parameters.Add(new SqlParameter("Clients", room.Clients));
-                sqlCommand.Parameters.Add(new SqlParameter("size", room.Size));
-                sqlCommand.Parameters.Add(new SqlParameter("RoomID", room.Id));
-                sqlCommand.Parameters.Add(new SqlParameter("Status", room.Status));
-                sqlCommand.ExecuteNonQuery();
-                message.Show("Edit successful");
-                conn.Close();
-                LoadForm(HotelID);
-                createItem();
-            }
-            catch (Exception ex)
-            {
-                message.Show(ex.Message);
-            }
+            Room newroom = new Room(room.Id,room.Name, room.Type, room.Bed, room.Clients, room.Size, room.Price, room.Image, room.Status, DateTime.Now, DateTime.Now, HotelID);
+            roomDAO.EditRoom(newroom);
+            LoadForm(HotelID);
+            createItem();
         }
-
 
         private void ListRoom_Click(object sender, EventArgs e)
         {

@@ -58,7 +58,7 @@ namespace Hotel_Management
         {
             Account user = new Account();
 
-            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            using (SqlConnection sqlConnection = DB_Connection.GetSqlConnection())
             {
                 string query = "SELECT * FROM UserRegister WHERE Useremail = @Useremail AND Password = @Password";
 
@@ -107,7 +107,7 @@ namespace Hotel_Management
         private void CheckLogin(string email, string password)
         {
             string query = "SELECT [password] from UserRegister where Useremail = @Email";
-            using (SqlConnection connection = Connection.GetSqlConnection())
+            using (SqlConnection connection = DB_Connection.GetSqlConnection())
             {
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -132,9 +132,9 @@ namespace Hotel_Management
                                    else if (account.Role == "admin")
                                     {
                                         //   this.Hide();
-                                        Connection.fad = new Admin(account);
-                                        Connection.admin = account;
-                                        Connection.fad.ShowDialog();
+                                        DB_Connection.fad = new Admin(account);
+                                        DB_Connection.admin = account;
+                                        DB_Connection.fad.ShowDialog();
                                     }
                                 }
                             }

@@ -33,6 +33,12 @@ namespace Hotel_Management
             this.HotelID = hotelID;
             this.Price = price;
         }
+        public Booking(int id,DateTime checkout, double price)
+        {
+            this.id = id;
+            this.Checkout = checkout;
+            this.Price = price;
+        }
 
         public int Id { get => id; set => id = value; }
         public string Username { get => username; set => username = value; }

@@ -53,7 +53,7 @@ namespace Hotel_Management
                 message.Show("This email is already registered, please register another email!");
                 return;
             }
-            if (Useremail.Trim() == "" || Password.Trim() == "" || National.Trim() == "" || Genders.Trim() == "" || Idcardnumber.Trim() == "" || Address.Trim() == "" || Phonenumber.Trim() == "")
+            if (Useremail.Trim() == "" || Password.Trim() == "" || National.Trim() == "" || Genders.Trim() == "" || Idcardnumber.Trim() == "" || Address.Trim() == "" || Phonenumber.Trim() == "" || role.Trim() == "" )
             {
                 message.Show("Please enter your information register!");
 

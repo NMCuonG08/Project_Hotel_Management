@@ -176,7 +176,7 @@ namespace Hotel_Management
         {
             int adminID = AID;
             HotelInformation hotel = null;
-            using (SqlConnection connection = Connection.GetSqlConnection())
+            using (SqlConnection connection = DB_Connection.GetSqlConnection())
             {
                 string query = "select * from HotelInformation where AdminID =@adminID ";
                 try

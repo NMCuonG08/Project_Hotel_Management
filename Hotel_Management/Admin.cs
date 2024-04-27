@@ -32,7 +32,7 @@ namespace Hotel_Management
 
             try
             {
-                using (SqlConnection connection = Connection.GetSqlConnection())
+                using (SqlConnection connection = DB_Connection.GetSqlConnection())
                 {
                     connection.Open();
                     string sql = "SELECT HotelID FROM HotelInformation WHERE AdminID = @AdminID";

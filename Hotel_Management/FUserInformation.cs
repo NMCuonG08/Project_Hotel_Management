@@ -14,6 +14,7 @@ namespace Hotel_Management
     public partial class FUserInformation : Form
     {
         int UserID;
+        BookingDAO bookingDAO = new BookingDAO();
         public FUserInformation(int userID)
         {
             InitializeComponent();
@@ -23,33 +24,14 @@ namespace Hotel_Management
         }
 
         private void SetData()
-        {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "Select * from Booking where UserID = @id";
-                    DataTable data = new DataTable();
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                    dataAdapter.SelectCommand.Parameters.AddWithValue("@id", UserID);
-                    dataAdapter.Fill(data);
-                    gvBooking.DataSource = data;
+        {  
+                    gvBooking.DataSource = bookingDAO.LoadBookingByUserID(UserID);
                     gvBooking.Columns["UserID"].Visible = false;
                     gvBooking.Columns["HotelID"].Visible = false;
                     gvBooking.Columns["RoomID"].Visible = false;
                     gvBooking.Columns["CustomerName"].Visible = false;
                     gvBooking.Columns["ID"].Visible = false;
-                    //gvBooking.Columns["PaymentStatus"].Visible = false;
                     gvBooking.Columns["BookingStatus"].Visible = false;
-
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                thongbao.Show(ex.Message);
-            }
         }
 
         private void FUserInformation_Load(object sender, EventArgs e)
@@ -110,16 +92,7 @@ namespace Hotel_Management
                         DataGridView dgv = sender as DataGridView;
                         DataGridViewRow selectedRow = dgv.Rows[e.RowIndex];
                         int bookingId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
-                        using (SqlConnection connection = Connection.GetSqlConnection())
-                        {
-                            connection.Open();
-                            string query = "Delete from Booking where ID = @id";
-                            SqlCommand sqlCommand = new SqlCommand(query, connection);
-                            sqlCommand.Parameters.Add("@id", bookingId);
-                            sqlCommand.ExecuteNonQuery();
-                            connection.Close();
-                        }
-
+                         bookingDAO.CancelBooking(bookingId);
                         thongbao.Show($"Hủy thành công!", "Thông báo");
                         SetData();
                     }
@@ -139,7 +112,6 @@ namespace Hotel_Management
                     int hotelID = Convert.ToInt32(selectedRow.Cells["HotelID"].Value);
                     int price = Convert.ToInt32(selectedRow.Cells["Price"].Value);
                     FEvaluate fEvaluate = new FEvaluate(hotelID, roomID, UserID, price);
-
                     fEvaluate.ShowDialog();
                 }
             }
@@ -246,7 +218,7 @@ namespace Hotel_Management
         {
             try
             {
-               using (SqlConnection connection = Connection.GetSqlConnection())
+               using (SqlConnection connection = DB_Connection.GetSqlConnection())
                 {
                     connection.Open();
                     string query = "Select * from Booking where UserID = @id And BookingStatus = @condition";

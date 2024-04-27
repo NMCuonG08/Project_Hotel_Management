@@ -14,10 +14,10 @@ namespace Hotel_Management
 {
     public partial class FRoomInformation : Form
     {
-        SqlConnection conn = new
-          SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=RoomManagement;Integrated Security=True;Encrypt=False;");
+       
         int hotelID ;
         string imageLocation = "";
+        RoomDAO roomDAO = new RoomDAO();
         public FRoomInformation()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace Hotel_Management
 
         private void RoomInformation_FormClosed(object sender, FormClosedEventArgs e)
         {
-            conn.Close();
+            
         }
        
         private void btn_upload_Click(object sender, EventArgs e)
@@ -134,15 +134,7 @@ namespace Hotel_Management
         }
         public void SetConveniences( int RoomID)
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string getRoomConveniencesQuery = $"SELECT * FROM RoomConveniences WHERE RoomID = {RoomID}";
-                    using (SqlCommand getRoomConveniencesCmd = new SqlCommand(getRoomConveniencesQuery, connection))
-                    {
-                        using (SqlDataReader reader = getRoomConveniencesCmd.ExecuteReader())
+            SqlDataReader reader = roomDAO.SetConveniences(RoomID);
                         {
                             if (reader.Read())
                             {
@@ -160,81 +152,27 @@ namespace Hotel_Management
                                     }
                                 }
                             }
-                        }
-                    }
-                    string getBathroomConveniencesQuery = $"SELECT * FROM Bathroomconveniences WHERE RoomID = {RoomID}";
-                    using (SqlCommand getBathroomConveniencesCmd = new SqlCommand(getBathroomConveniencesQuery, connection))
+                        }                   
+                SqlDataReader reader2 = roomDAO.SetBathroomconveniences(RoomID);
+                
+                    if (reader2.Read())
                     {
-                        using (SqlDataReader reader = getBathroomConveniencesCmd.ExecuteReader())
+                        for (int i = 1; i < reader2.FieldCount; i++)
                         {
-                            if (reader.Read())
+                            string columnName = reader2.GetName(i);
+                            bool value = Convert.ToBoolean(reader2[columnName]);
+                            if (value)
                             {
-                                for (int i = 1; i < reader.FieldCount; i++)
+                                int index = checklistbathroom.Items.IndexOf(columnName);
+                                if (index != -1)
                                 {
-                                    string columnName = reader.GetName(i);
-                                    bool value = Convert.ToBoolean(reader[columnName]);
-                                    if (value)
-                                    {
-                                        int index = checklistbathroom.Items.IndexOf(columnName);
-                                        if (index != -1)
-                                        {
-                                            checklistbathroom.SetItemChecked(index, true);
-                                        }
-                                    }
+                                    checklistbathroom.SetItemChecked(index, true);
                                 }
                             }
                         }
                     }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
-
-        public void EditConveniences(int roomID)
-        {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string updateRoomConveniencesQuery = "UPDATE RoomConveniences SET ";
-                    for (int i = 0; i < checklistbox.Items.Count; i++)
-                    {
-                        string columnName = checklistbox.Items[i].ToString();
-                        bool isChecked = checklistbox.GetItemChecked(i);
-                        updateRoomConveniencesQuery += $"{columnName} = {(isChecked ? 1 : 0)}, ";
-                    }
-                    updateRoomConveniencesQuery = updateRoomConveniencesQuery.TrimEnd(',', ' ') + $" WHERE RoomID = {roomID}";
-
-                    using (SqlCommand cmd = new SqlCommand(updateRoomConveniencesQuery, connection))
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                    string updateBathroomConveniencesQuery = "UPDATE Bathroomconveniences SET ";
-                    for (int i = 0; i < checklistbathroom.Items.Count; i++)
-                    {
-                        string columnName = checklistbathroom.Items[i].ToString();
-                        bool isChecked = checklistbathroom.GetItemChecked(i);
-                        updateBathroomConveniencesQuery += $"{columnName} = {(isChecked ? 1 : 0)}, ";
-                    }
-
-                    updateBathroomConveniencesQuery = updateBathroomConveniencesQuery.TrimEnd(',', ' ') + $" WHERE RoomID = {roomID}";
-
-                    using (SqlCommand cmd = new SqlCommand(updateBathroomConveniencesQuery, connection))
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
+       
         public delegate void EditRoomDelegate(Room room);
         public EditRoomDelegate editRoom;
         private void btn_complete_Click(object sender, EventArgs e)
@@ -250,7 +188,6 @@ namespace Hotel_Management
                     }
                 }
             }
-            conn.Open();
             int roomPrice = Convert.ToInt32(txb_price.Text);
             int roomID = Convert.ToInt32(txb_roomid.Text);
             int clients = Convert.ToInt32(txb_clients.Text);
@@ -262,7 +199,7 @@ namespace Hotel_Management
             {
                 Room room = new Room(roomID, txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, combobox_status.Text, image);
                 editRoom(room);
-                EditConveniences(roomID);
+                roomDAO.EditConveniences(roomID,checklistbox,checklistbathroom);
                 this.Close();
             }
             else

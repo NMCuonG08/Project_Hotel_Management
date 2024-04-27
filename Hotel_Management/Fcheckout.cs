@@ -15,6 +15,7 @@ namespace Hotel_Management
     public partial class Fcheckout : Form
     {
         private int HotelID;
+        BookingDAO bookingDAO = new BookingDAO();
         public Fcheckout(int hotelID)
         {
             InitializeComponent();
@@ -23,16 +24,7 @@ namespace Hotel_Management
         }
         public void Getdata()
         {
-            using (SqlConnection con = Connection.GetSqlConnection())
-            {
-                con.Open();
-                string qury = "select * from Booking where HotelID = @HotelID AND BookingStatus = 'Success'";
-                DataTable data = new DataTable();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(qury, con);
-                dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
-                dataAdapter.Fill(data);
-                gv_book.DataSource = data;
-
+                gv_book.DataSource = bookingDAO.GetCheckOutInformation(this.HotelID);
                 gv_book.Columns["UserID"].Visible = false;
                 gv_book.Columns["HotelID"].Visible = false;
                 gv_book.Columns["RoomID"].Visible = false;
@@ -40,15 +32,7 @@ namespace Hotel_Management
                 gv_book.Columns["BookingStatus"].Visible = false;
                 gv_book.Columns["Price"].Visible = false;
                 gv_book.Columns["BookingDate"].Visible = false;
-                con.Close();
-            }
         }
-        
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void gv_book_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (gv_book.CurrentCell.OwningColumn.Name == "btn_checkout")
@@ -82,35 +66,15 @@ namespace Hotel_Management
 
                     (this.MdiParent as Admin)?.ShowForm(booking);
                 }
-
-
             }
         }
 
         private void txb_customer_name_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-               using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string sql = "SELECT * FROM Booking WHERE HotelID = @HotelID AND CustomerName LIKE @booking";
-                    DataTable data = new DataTable();
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
-                    dataAdapter.SelectCommand.Parameters.AddWithValue("@HotelID", HotelID);
-                    dataAdapter.SelectCommand.Parameters.AddWithValue("@booking", "%" + txb_customer_name.Text + "%");
-                    dataAdapter.Fill(data);
-                    gv_book.DataSource = data;
+                    gv_book.DataSource = bookingDAO.Seacrch(HotelID, txb_customer_name);
                     gv_book.Columns["UserID"].Visible = false;
                     gv_book.Columns["HotelID"].Visible = false;
-                    gv_book.Columns["RoomID"].Visible = false;
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                    gv_book.Columns["RoomID"].Visible = false;         
         }
     }
 }

@@ -17,11 +17,12 @@ namespace Hotel_Management
     {
 
         public int AdminID { get; set; }
+        HotelInformationDAO hotelInformationDAO  = new HotelInformationDAO();
         public FHotelInformation(int adminID)
         {
             InitializeComponent();
             this.AdminID = adminID;
-            if (CheckHotelExist())
+            if (hotelInformationDAO.CheckHotelExist(adminID))
             {
                 btn_create.Visible = false;
                 btn_update.Visible = true;
@@ -34,94 +35,32 @@ namespace Hotel_Management
             setDataHotel();
         }
 
-        private HotelInformation ReadData(int adminID)
-        {
-            HotelInformation hotel = null;
-            using (SqlConnection connection = Connection.GetSqlConnection())
-            {
-                string query = "select * from HotelInformation where AdminID =@adminID ";
-                try
-                {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.Add("@adminID", adminID);
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                hotel = new HotelInformation
-                                {
-                                    Id = reader.IsDBNull(reader.GetOrdinal("HotelID")) ? 0 : (Int32)reader["HotelID"],
-                                    Name = reader.IsDBNull(reader.GetOrdinal("HotelName")) ? "" : (String)reader["HotelName"],
-                                    PhoneNumber = reader.IsDBNull(reader.GetOrdinal("PhoneNumber")) ? "" : reader["PhoneNumber"].ToString(),
-                                    Email = reader.IsDBNull(reader.GetOrdinal("email")) ? "" : reader["email"].ToString(),
-                                    Country = reader.IsDBNull(reader.GetOrdinal("Country")) ? "" : reader["Country"].ToString(),
-                                    City = reader.IsDBNull(reader.GetOrdinal("City")) ? "" : reader["City"].ToString(),
-                                    Street = reader.IsDBNull(reader.GetOrdinal("Street")) ? "" : reader["Street"].ToString(),
-                                    Capacity = reader.IsDBNull(reader.GetOrdinal("Capacity")) ? 0 : (Int32)reader["Capacity"],
-                                    Floors = reader.IsDBNull(reader.GetOrdinal("FloorsNumber")) ? 0 : (Int32)reader["FloorsNumber"],
-                                    Zipcode = reader.IsDBNull(reader.GetOrdinal("zipcode")) ? "" : reader["zipcode"].ToString(),
-                                    Description = reader.IsDBNull(reader.GetOrdinal("Descriptions")) ? "" : reader["Descriptions"].ToString(),
-                                    Score = reader.IsDBNull(reader.GetOrdinal("Feedback")) ? 0.0 : (Double)reader["Feedback"],
-                                    Price = reader.IsDBNull(reader.GetOrdinal("Price")) ? 0.0 : (Double)reader["Price"],
-                                    HotelImage = (byte[])reader["HotelImage"]
-                                };
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex) 
-                {
-                    MessageBox.Show(ex.Message );
-                }
-            }
-            return hotel;
-        }
+       
 
         private void SetConveniences(int HotelID)
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string getHotelConvenienceQuery = $"SELECT * FROM Hotel_conveniences WHERE HotelID = {HotelID}";
-                    using (SqlCommand getHotelConveniencesCmd = new SqlCommand(getHotelConvenienceQuery, connection))
+            SqlDataReader reader = hotelInformationDAO.SetConveniences(HotelID);               
+                    if (reader.Read())
                     {
-                        using (SqlDataReader reader = getHotelConveniencesCmd.ExecuteReader())
+                        for (int i = 1; i < reader.FieldCount; i++)
                         {
-                            if (reader.Read())
+                            string columnName = reader.GetName(i);
+                            bool value = Convert.ToBoolean(reader[columnName]);
+                            if (value)
                             {
-                                for (int i = 1; i < reader.FieldCount; i++)
+                                int index = checklistbox.Items.IndexOf(columnName);
+                                if (index != -1)
                                 {
-                                    string columnName = reader.GetName(i);
-                                    bool value = Convert.ToBoolean(reader[columnName]);
-                                    if (value)
-                                    {
-                                        int index = checklistbox.Items.IndexOf(columnName);
-                                        if (index != -1)
-                                        {
-                                            checklistbox.SetItemChecked(index, true);
-                                        }
-                                    }
+                                    checklistbox.SetItemChecked(index, true);
                                 }
                             }
                         }
-                    }
-                    
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
         private void setDataHotel()
         {
-            HotelInformation hotel = ReadData(AdminID);
+            HotelInformation hotel = hotelInformationDAO.GETHotelInformation(AdminID);
             if (hotel != null)
             {
                 txb_hotelID.Text = hotel.Id.ToString();
@@ -137,7 +76,6 @@ namespace Hotel_Management
                 txb_zip.Text = hotel.Zipcode;
                 txb_decription.Text = hotel.Description;
                 txb_city.Text = hotel.City;
-
                 byte[] image = hotel.HotelImage;
                 if (image != null)
                 {
@@ -147,7 +85,7 @@ namespace Hotel_Management
                     }
                 }
                 SetConveniences(hotel.Id);
-                SetCount();
+                txb_room.Text += hotelInformationDAO.SetCount(hotel).ToString();
             }
             else
             {
@@ -173,86 +111,37 @@ namespace Hotel_Management
         }
         public void EditHotelConvenience(int HotelID)
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string updateRoomConveniencesQuery = "UPDATE Hotel_conveniences SET ";
-                    for (int i = 0; i < checklistbox.Items.Count; i++)
-                    {
-                        string columnName = checklistbox.Items[i].ToString();
-                        bool isChecked = checklistbox.GetItemChecked(i);
-                        updateRoomConveniencesQuery += $"[{columnName}] = {(isChecked ? 1 : 0)}, ";
-                    }
-                    updateRoomConveniencesQuery = updateRoomConveniencesQuery.TrimEnd(',', ' ') + $" WHERE HotelID = {HotelID}";
-
-                    using (SqlCommand cmd = new SqlCommand(updateRoomConveniencesQuery, connection))
-                    {
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-        private void UpdateHotel() 
-        {
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    if (CheckDataEmpty())
-                    {
-                        string query = "update HotelInformation set HotelName = @HotelName,City = @City,Street= @Street,FeedBack= @FeedBack,Price= @Price,HotelImage= @HotelImage,email= @email,zipcode= @zipcode,FloorsNumber=  @FloorsNumber,Capacity= @Capacity,PhoneNumber= @PhoneNumber,Country= @Country, Descriptions=@Descriptions  where AdminID = @AdminID";
-                        using (SqlCommand command = new SqlCommand(query, conn))
-                        {
-                            command.Parameters.Add(new SqlParameter("@HotelName", txb_name.Text));
-                            command.Parameters.Add(new SqlParameter("@City", txb_city.Text));
-                            command.Parameters.Add(new SqlParameter("@Street", txb_street.Text));
-                            command.Parameters.Add(new SqlParameter("@FeedBack", txb_feedback.Text));
-                            command.Parameters.Add(new SqlParameter("@Price", txb_price.Text));
-                            byte[] imageBytes;
-                            using (MemoryStream stream = new MemoryStream())
-                            {
-                                picturebox.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-                                imageBytes = stream.ToArray();
-                            }
-                            command.Parameters.Add(new SqlParameter("@HotelImage", imageBytes));
-                            command.Parameters.Add(new SqlParameter("@email", txb_email.Text));
-                            command.Parameters.Add(new SqlParameter("@zipcode", txb_zip.Text));
-                            command.Parameters.Add(new SqlParameter("@FloorsNumber", txb_floor.Text));
-                            command.Parameters.Add(new SqlParameter("@Capacity", txb_capacity.Text));
-                            command.Parameters.Add(new SqlParameter("@PhoneNumber", txb_phoneNumber.Text));
-                            command.Parameters.Add(new SqlParameter("@Country", txb_country.Text));
-                            command.Parameters.Add(new SqlParameter("@AdminID", AdminID));
-                            command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
-                            command.ExecuteNonQuery();
-                            int hotelID = Convert.ToInt32(txb_hotelID.Text);
-                            EditHotelConvenience(hotelID);
-                            messageHotel.Show("Update Successful!");
-                            conn.Close();
-                        }
-                    }
-                    else
-                    {
-                        messageHotel.Show("Error");
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                messageHotel.Show(ex.Message);
-            }
+          hotelInformationDAO.EditHotelConvenience(HotelID, checklistbox);
         }
 
         private void tbn_update_Click(object sender, EventArgs e)
         {
-            UpdateHotel();
+            int hotelID = Convert.ToInt32(txb_hotelID.Text);
+            HotelInformation hotel = new HotelInformation
+            {
+                Id = hotelID,
+                Name = txb_name.Text,
+                City = txb_city.Text,
+                Street = txb_street.Text,
+                Score = float.Parse(txb_feedback.Text),
+                Price = float.Parse(txb_price.Text),
+                Email = txb_email.Text,
+                Zipcode = txb_zip.Text,
+                Floors = int.Parse(txb_floor.Text),
+                Capacity = int.Parse(txb_capacity.Text),
+                PhoneNumber = txb_phoneNumber.Text,
+                Country = txb_country.Text,
+                Description = txb_decription.Text
+            };
+
+            using (MemoryStream stream = new MemoryStream())
+            {
+                picturebox.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                hotel.HotelImage = stream.ToArray();
+            }
+            hotelInformationDAO.EditHotelConvenience(hotelID, checklistbox);
+            hotelInformationDAO.UpdateHotel(hotel);
+            messageHotel.Show("Update Successful!");
             FHotelInformation fHotelInformation = new FHotelInformation(AdminID);
             (this.MdiParent as Admin)?.ShowForm(fHotelInformation);
 
@@ -274,136 +163,50 @@ namespace Hotel_Management
         {
             picturebox.Image = null;
         }
-        private bool CheckHotelExist()
-        {
-            bool exists = false; 
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "SELECT COUNT(*) FROM HotelInformation WHERE AdminID = @AdminID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {                   
-                        command.Parameters.AddWithValue("@AdminID", AdminID);
-                        int count = Convert.ToInt32(command.ExecuteScalar());
-                        if (count > 0)
-                        {
-                            exists = true;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);               
-            }
-
-            return exists;
-        }
-        private void CreateHotelConvenience()
-        {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    int maxHotelID;
-                    string getMaxHotelIDQuery = "SELECT MAX(HotelID) FROM HotelInformation";
-                    using (SqlCommand getMaxRoomIDCmd = new SqlCommand(getMaxHotelIDQuery, connection))
-                    {
-                        object result = getMaxRoomIDCmd.ExecuteScalar();
-                        maxHotelID = result != DBNull.Value ? Convert.ToInt32(result) : 0;
-                    }
-                    int newHotelID = maxHotelID;
-
-                    string addHotelConvenienceQuery = "INSERT INTO Hotel_conveniences (HotelID) VALUES (@HotelID)";
-                    using (SqlCommand addHotelConvenienceCmd = new SqlCommand(addHotelConvenienceQuery, connection))
-                    {
-                        addHotelConvenienceCmd.Parameters.AddWithValue("@HotelID", newHotelID);
-                        addHotelConvenienceCmd.ExecuteNonQuery();
-                    }
-                   
-                    foreach (object itemChecked in checklistbox.CheckedItems)
-                    {
-                        string updateQuery = "UPDATE Hotel_conveniences SET ";
-                        string itemName = itemChecked.ToString();
-                        updateQuery += $"[{itemName}] = 1 WHERE HotelID = @HotelID";
-
-                        using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
-                        {
-                            cmd.Parameters.AddWithValue("@HotelID", newHotelID);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-                   
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
+       
         private bool CheckDataEmpty()
         {
+            if (string.IsNullOrEmpty(txb_capacity.Text) || string.IsNullOrEmpty(txb_city.Text) || string.IsNullOrEmpty(txb_country.Text) || string.IsNullOrEmpty(txb_capacity.Text) || string.IsNullOrEmpty(txb_feedback.Text) || string.IsNullOrEmpty(txb_floor.Text) || string.IsNullOrEmpty(txb_email.Text) || string.IsNullOrEmpty(txb_price.Text) || string.IsNullOrEmpty(txb_phoneNumber.Text) || string.IsNullOrEmpty(txb_room.Text) || picturebox.Image == null)
+            {
+                return false;
+            }
             return true;
         }
 
-        private void CreateHotel()
-        {
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    if (CheckDataEmpty())
-                    {
-                        string query = "Insert into HotelInformation values (@HotelName, @City, @Street, @FeedBack, @Price, @HotelImage, @email, @zipcode, @FloorsNumber, @Capacity, @PhoneNumber, @Country, @AdminID, @Descriptions) ";
-                        using (SqlCommand command = new SqlCommand(query, conn))
-                        {
-                            command.Parameters.Add(new SqlParameter("@HotelName", txb_name.Text));
-                            command.Parameters.Add(new SqlParameter("@City", txb_city.Text));
-                            command.Parameters.Add(new SqlParameter("@Street", txb_street.Text));
-                            command.Parameters.Add(new SqlParameter("@FeedBack", txb_feedback.Text));
-                            command.Parameters.Add(new SqlParameter("@Price", txb_price.Text));
-                            byte[] imageBytes;
-                            using (MemoryStream stream = new MemoryStream())
-                            {
-                                picturebox.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png); 
-                                imageBytes = stream.ToArray();
-                            }
-                            command.Parameters.Add(new SqlParameter("@HotelImage", imageBytes));
-                            command.Parameters.Add(new SqlParameter("@email", txb_email.Text));
-                            command.Parameters.Add(new SqlParameter("@zipcode", txb_zip.Text));
-                            command.Parameters.Add(new SqlParameter("@FloorsNumber", txb_floor.Text));
-                            command.Parameters.Add(new SqlParameter("@Capacity", txb_capacity.Text));
-                            command.Parameters.Add(new SqlParameter("@PhoneNumber", txb_phoneNumber.Text));
-                            command.Parameters.Add(new SqlParameter("@Country", txb_country.Text));
-                            command.Parameters.Add(new SqlParameter("@AdminID", AdminID));
-                            command.Parameters.Add(new SqlParameter("@Descriptions", txb_decription.Text));
-                            command.ExecuteNonQuery();
-                            messageHotel.Show("Tao khach san thanh cong");
-                            CreateHotelConvenience();
-                            conn.Close();
-                        }
-                    }
-                    else
-                    {
-                        messageHotel.Show("Error");
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                messageHotel.Show(ex.Message);
-            }
-        }
+       
         private void btn_create_Click(object sender, EventArgs e)
         {
-            CreateHotel();
-            FHotelInformation fHotelInformation = new FHotelInformation(AdminID);
-            (this.MdiParent as Admin)?.ShowForm(fHotelInformation);
+           if (CheckDataEmpty())
+            {
+                HotelInformation hotel = new HotelInformation
+                {
+                    Name = txb_name.Text,
+                    City = txb_city.Text,
+                    Street = txb_street.Text,
+                    Score = float.Parse(txb_feedback.Text),
+                    Price = float.Parse(txb_price.Text),
+                    Email = txb_email.Text,
+                    Zipcode = txb_zip.Text,
+                    Floors = int.Parse(txb_floor.Text),
+                    Capacity = int.Parse(txb_capacity.Text),
+                    PhoneNumber = txb_phoneNumber.Text,
+                    Country = txb_country.Text,
+                    Description = txb_decription.Text
+                };
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    picturebox.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                    hotel.HotelImage = stream.ToArray();
+                }
+                hotelInformationDAO.CreateHotel(hotel, AdminID);
+                hotelInformationDAO.CreateHotelConvenience(checklistbox);
+                FHotelInformation fHotelInformation = new FHotelInformation(AdminID);
+                (this.MdiParent as Admin)?.ShowForm(fHotelInformation);
+            }
+           else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
         }
 
         private void txb_capacity_KeyPress(object sender, KeyPressEventArgs e)
@@ -437,33 +240,6 @@ namespace Hotel_Management
                 e.Handled = true;
             }
         }
-        void SetCount()
-        {
-            HotelInformation hotel = ReadData(AdminID);
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                     string sql2 = string.Format("Select Count(*) from RoomInformation where HotelID = @HotelID ");
-                        SqlCommand command = new SqlCommand(sql2, conn);
-                        command.Parameters.AddWithValue("@HotelID", hotel.Id);
-                        int count = (int)command.ExecuteScalar();
-                        if (count > 0)
-                        {
-                            txb_room.Text += count.ToString();
-                        }
-                        else txb_room.Text += "0";
-
-                    conn.Close();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
+       
     }
 }

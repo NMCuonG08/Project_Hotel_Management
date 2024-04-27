@@ -59,49 +59,6 @@ namespace Hotel_Management
 
         
 
-       /* private void btn_view_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                String sql = "Select htImage from HotelImage where id = '" + txb_id.Text + "' ";
-
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand(sql, conn); 
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    reader.Read();
-                    
-                    if (reader.HasRows)
-                    {
-                        byte[] img = (byte[])(reader[0]);
-                        if (img == null) {
-                            picturebox.Image = null;
-                        }
-                        else
-                        {
-                            MemoryStream imageStream = new MemoryStream(img);
-                            picturebox.Image = Image.FromStream(imageStream);
-
-                        }
-
-                    }
-                    else
-                    {
-                       
-                        MessageBox.Show("Not exist");
-                    }
-
-                }
-                conn.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error");
-            }
-        }*/
-
         private void btn_clear_Click(object sender, EventArgs e)
         {
             picturebox.Image = null ;
@@ -154,30 +111,7 @@ namespace Hotel_Management
         {
 
         }
-        /*private void btn_save_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                byte[] images = null;
-                FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(stream);
-                images = br.ReadBytes((int)stream.Length);
-
-                conn.Open();
-                string sql = "Insert into HotelImage(htImage) values( @images )";
-                SqlCommand sqlCommand = new SqlCommand(sql, conn);
-                sqlCommand.Parameters.Add(new SqlParameter("@images", images));
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Upload successful");
-                conn.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-*/
+        
 
         public delegate void AddRoomDelegate(Room room);
         public AddRoomDelegate addRoom;
@@ -186,7 +120,7 @@ namespace Hotel_Management
         {
             try
             {
-                using (SqlConnection connection = Connection.GetSqlConnection())
+                using (SqlConnection connection = DB_Connection.GetSqlConnection())
                 {
                     connection.Open();
                     int maxRoomID;
@@ -257,7 +191,7 @@ namespace Hotel_Management
                 FileStream stream = new FileStream(imageLocation, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(stream);
                 images = br.ReadBytes((int)stream.Length);               
-                string status = "empty";
+                string status = "Empty";
                 conn.Open();
                 Room room = new Room(txb_roomname.Text, txb_roomtype.Text, txb_bed.Text, clients, size, roomPrice, null, null, images, status);
                 addRoom(room);

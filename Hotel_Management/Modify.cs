@@ -17,7 +17,7 @@ namespace Hotel_Management
         public List<Taikhoan> Taikhoans(string query) // check tai khoan email
         {
             List<Taikhoan> taikhoans = new List<Taikhoan>();
-            using (SqlConnection connection = Connection.GetSqlConnection())
+            using (SqlConnection connection = DB_Connection.GetSqlConnection())
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -32,7 +32,7 @@ namespace Hotel_Management
         }
         public void command(string query) // dung de dang ki tai khoan
         {
-            using (SqlConnection connection=Connection.GetSqlConnection())
+            using (SqlConnection connection=DB_Connection.GetSqlConnection())
             {
                 connection.Open();
                 sqlcommand = new SqlCommand(query, connection);

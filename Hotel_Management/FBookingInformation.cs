@@ -18,6 +18,7 @@ namespace Hotel_Management
         Account User { get; set; }
         int HotelID { get; set; }
         int BookingID { get; set; }
+        BookingDAO bookingDAO = new BookingDAO();
         public FBookingInformation()
         {
             InitializeComponent();
@@ -37,53 +38,28 @@ namespace Hotel_Management
 
         public void LoadPayment()
         {
-            try
-            {
-                using (SqlConnection conn = Connection.GetSqlConnection())
-                {
-                    conn.Open();
-                    string sql = "SELECT * FROM Payment where BookingID = @BookingID ";
-                    DataTable data = new DataTable();
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, conn);
-                    dataAdapter.SelectCommand.Parameters.AddWithValue("@BookingID", BookingID);
-                    dataAdapter.Fill(data);
-                    dgv.DataSource = data;
+            dgv.DataSource = bookingDAO.Setpayment(BookingID);
                     dgv.Columns["BookingID"].Visible = false;
-                    string sqltotal = " SELECT ISNULL(SUM(Amount), 0) FROM Payment where BookingID = @BookingID";
-                    SqlCommand cmd = new SqlCommand(sqltotal, conn);
-                    cmd.Parameters.AddWithValue("@BookingID", BookingID);
-                    double total = (double)cmd.ExecuteScalar();
+                    double total = bookingDAO.SetTotalPayment(BookingID);
                     lbtpaid.Text = total.ToString();
-
-                    string sqlpending = " SELECT ISNULL(Price, 0) FROM Booking where ID = @ID";
-                    SqlCommand cmd2 = new SqlCommand(sqlpending, conn);
-                    cmd2.Parameters.AddWithValue("@ID", BookingID);
-                    double pending = (double)cmd2.ExecuteScalar();
+                    double pending = bookingDAO.SetPendingPayment(BookingID);
                     double value = pending - total;
-                    if ( total == 0)
-                    {
-                        lb_pendingpay.Text = value.ToString();
-                        combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[0];
-                    }
-                    else if (value > 0)
-                    {
-                        lb_pendingpay.Text = value.ToString();
-                        combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[3];
-                    }                  
-                    else
-                    {
-                        lb_pendingpay.Text = "0";
-                        Btn_addpayment.Enabled = false;
-                        combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[1];
-                    }
-                    conn.Close();
-                }
-
-            }
-            catch (Exception ex)
+            if (total == 0)
             {
-                MessageBox.Show(ex.Message);
-            }           
+                lb_pendingpay.Text = value.ToString();
+                combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[0];
+            }
+            else if (value > 0)
+            {
+                lb_pendingpay.Text = value.ToString();
+                combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[3];
+            }
+            else
+            {
+                lb_pendingpay.Text = "0";
+                Btn_addpayment.Enabled = false;
+                combx_paymentstatus.SelectedItem = combx_paymentstatus.Items[1];
+            }
         }
         private void Btn_addRoom_Click(object sender, EventArgs e)
         {
@@ -184,24 +160,7 @@ namespace Hotel_Management
 
         private void combx_paymentstatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "Update Booking set PaymentStatus = @payment where ID = @id" ;
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.Add("@payment", combx_paymentstatus.Text);
-                    command.Parameters.Add("@id", BookingID);
-                    command.ExecuteNonQuery();
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            bookingDAO.UpdateBooking(BookingID, combx_paymentstatus.Text, "PaymentStatus");
             if (combx_paymentstatus.Text == "Success")
             {
                 btn_checkout.Enabled = true;
@@ -210,70 +169,26 @@ namespace Hotel_Management
             {
                 btn_checkout.Enabled=false;
             }
-
         }
 
         private void combx_Bookingstatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
+        {         
+             bookingDAO.UpdateBooking(BookingID, combx_Bookingstatus.Text, "BookingStatus");
+             if (combx_Bookingstatus.Text == "Success")
             {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "Update Booking set BookingStatus = @booking where ID = @id";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.Add("@booking", combx_Bookingstatus.Text);
-                    command.Parameters.Add("@id", BookingID);
-                    command.ExecuteNonQuery();
-
-                    if (combx_Bookingstatus.Text == "Success")
-                    {
-                        string query2 = "Update RoomInformation set [Status] = 'Occupied' where RoomID = @id";
-                        SqlCommand command2 = new SqlCommand(query2, connection);  
-                        command2.Parameters.Add("@id", Room.Id);
-                        command2.ExecuteNonQuery();
-                    }
-                    else 
-                    {
-                        string query2 = "Update RoomInformation set [Status] = 'Empty' where RoomID = @id";
-                        SqlCommand command2 = new SqlCommand(query2, connection);
-                        command2.Parameters.Add("@id", Room.Id);
-                        command2.ExecuteNonQuery();
-                    }
-                    connection.Close();
-                }
+                bookingDAO.UpdateRoom(Room.Id, "Occupied");
             }
-            catch (Exception ex)
+             else 
             {
-                MessageBox.Show(ex.Message);
+                bookingDAO.UpdateRoom(Room.Id, "Empty");
             }
         }
-
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "Update Booking set BookingStatus = 'pending' where ID = @id";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.Add("@id", BookingID);
-                    command.ExecuteNonQuery();
-
-                        string query2 = "Update RoomInformation set [Status] = 'Empty' where RoomID = @id";
-                        SqlCommand command2 = new SqlCommand(query2, connection);
-                        command2.Parameters.Add("@id", Room.Id);
-                        command2.ExecuteNonQuery();
-                    MessageBox.Show("Checkout thành công", "Thông báo", MessageBoxButtons.OK);
-                    this.Close();
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            bookingDAO.UpdateBooking(BookingID, "pening", "BookingStatus");
+            bookingDAO.UpdateRoom(Room.Id, "Empty");
+            MessageBox.Show("Checkout thành công", "Thông báo", MessageBoxButtons.OK);
+            this.Close();
         }
     }
 }

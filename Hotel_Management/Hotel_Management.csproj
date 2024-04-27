@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountDAO.cs" />
     <Compile Include="AddRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -59,14 +60,15 @@
       <DependentUpon>AddRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Booking.cs" />
-    <Compile Include="Book_room.cs">
+    <Compile Include="BookingDAO.cs" />
+    <Compile Include="FBook_room.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Book_room.Designer.cs">
-      <DependentUpon>Book_room.cs</DependentUpon>
+    <Compile Include="FBook_room.Designer.cs">
+      <DependentUpon>FBook_room.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassCheckout.cs" />
-    <Compile Include="Connection.cs" />
+    <Compile Include="DB_Connection.cs" />
     <Compile Include="FAddNewBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +178,7 @@
       <DependentUpon>FUserInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="HotelInformation.cs" />
+    <Compile Include="HotelInformationDAO.cs" />
     <Compile Include="IHotelIDConsumer.cs" />
     <Compile Include="Instance.cs" />
     <Compile Include="Admin.cs">
@@ -195,12 +198,7 @@
     <Compile Include="FRoomInformation.Designer.cs">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sampleupdatecheckout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sampleupdatecheckout.Designer.cs">
-      <DependentUpon>Sampleupdatecheckout.cs</DependentUpon>
-    </Compile>
+    <Compile Include="RoomDAO.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="UCFeedback.cs">
       <SubType>UserControl</SubType>
@@ -243,8 +241,8 @@
     <EmbeddedResource Include="AddRoom.resx">
       <DependentUpon>AddRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Book_room.resx">
-      <DependentUpon>Book_room.cs</DependentUpon>
+    <EmbeddedResource Include="FBook_room.resx">
+      <DependentUpon>FBook_room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAddNewBooking.resx">
       <DependentUpon>FAddNewBooking.cs</DependentUpon>
@@ -315,9 +313,6 @@
     </Compile>
     <EmbeddedResource Include="FRoomInformation.resx">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sampleupdatecheckout.resx">
-      <DependentUpon>Sampleupdatecheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCFeedback.resx">
       <DependentUpon>UCFeedback.cs</DependentUpon>

@@ -21,6 +21,7 @@ namespace Hotel_Management
            private List<String> bathroom_facilities;
         private DateTime checkin;
         private DateTime checkout;
+        private int hotelID;
            private Byte[] image;
         public Room()
         {
@@ -68,6 +69,39 @@ namespace Hotel_Management
             this.checkin = checkin;
             this.checkout = checkout;
         }
+        public Room(string name, string type, string bed, int clients, double size, double price, byte[] image, string status, DateTime checkin, DateTime checkout,int hotelID)
+        {
+            this.Name = name;
+            this.Type = type;
+            this.Bed = bed;
+            this.Clients = clients;
+            this.Size = size;
+            this.Price = price;
+            this.Room_facilities = room_facilities;
+            this.Bathroom_facilities = bathroom_facilities;
+            this.Image = image;
+            this.status = status;
+            this.checkin = checkin;
+            this.checkout = checkout;
+            this.hotelID = hotelID;
+        }
+        public Room(int id,string name, string type, string bed, int clients, double size, double price, byte[] image, string status, DateTime checkin, DateTime checkout, int hotelID)
+        {
+            this.id = id;
+            this.Name = name;
+            this.Type = type;
+            this.Bed = bed;
+            this.Clients = clients;
+            this.Size = size;
+            this.Price = price;
+            this.Room_facilities = room_facilities;
+            this.Bathroom_facilities = bathroom_facilities;
+            this.Image = image;
+            this.status = status;
+            this.checkin = checkin;
+            this.checkout = checkout;
+            this.hotelID = hotelID;
+        }
         public Room(string name, string type, string bed, int clients, double size, double price, List<string> room_facilities, List<string> bathroom_facilities, byte[] image, string status)
         {
             this.Name = name;
@@ -95,5 +129,6 @@ namespace Hotel_Management
         public string Status { get => status; set => status = value; }
         public DateTime Checkin { get => checkin; set => checkin = value; }
         public DateTime Checkout { get => checkout; set => checkout = value; }
+        public int HotelID { get => hotelID; set => hotelID = value; }
     }
 }

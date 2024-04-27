@@ -15,6 +15,7 @@ namespace Hotel_Management
     public partial class FFeedBack : Form
     {
         int HotelID;
+        HotelInformationDAO hotelInformationDAO = new HotelInformationDAO();
         public FFeedBack(int hotelID)
         {
             InitializeComponent();
@@ -25,35 +26,8 @@ namespace Hotel_Management
 
         private void SetData()
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-
-                    string query = "Select * from Evaluate where HotelID = @hotelID";
-                    DataTable data = new DataTable();
-                    SqlDataAdapter sqlData  = new SqlDataAdapter(query, connection);
-                    sqlData.SelectCommand.Parameters.AddWithValue("@hotelID", HotelID);
-                    sqlData.Fill(data);
-                    gv_feedback.DataSource = data;
-
-                    string query2 = "Select AVG(Rate) from Evaluate where HotelID = @hotelID";
-                    SqlCommand sqlCommand = new SqlCommand(query2, connection);
-                    sqlCommand.Parameters.Add("@hotelID", HotelID);
-                    object result = sqlCommand.ExecuteScalar();
-                    if (result != DBNull.Value)
-                    {
-                        btn_point.Text = result.ToString();
-                    }
-                    connection.Close();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+             gv_feedback.DataSource = hotelInformationDAO.SetFeedBack(HotelID);
+             btn_point.Text = hotelInformationDAO.SetAVG(HotelID).ToString(); 
         }
         private void CreateItem()
         {
@@ -91,14 +65,9 @@ namespace Hotel_Management
                         Account UserG = Instance.GetUserByID(userID);
                         ls[i].Email = UserG.Useremail;
                     }
-
                     flow.Controls.Add(ls[i]);
-
                 }
-
             }
         }
-
-
     }
 }

@@ -20,6 +20,7 @@ namespace Hotel_Management
         double priceroom;
         double oldprice;
         DateTime old_checkout;
+        BookingDAO bookingDAO = new BookingDAO();
         public FExtendBooking(Room room, Account user, int hotelID, int bookingID)
         {
             this.Room = room;
@@ -52,27 +53,11 @@ namespace Hotel_Management
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (SqlConnection connection = Connection.GetSqlConnection())
-                {
-                    connection.Open();
-                    string query = "Update Booking set CheckOut = @checkout, Price = @price where ID= @id";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.Add("checkout", datetime_checkout.Value);
                     double price = (datetime_checkout.Value.Day - old_checkout.Day)*priceroom + oldprice;
-                    command.Parameters.Add("price", price);
-                    command.Parameters.Add("id", BookingID);
-                    command.ExecuteNonQuery();
-                    connection.Close();
+                    Booking booking = new Booking(BookingID,datetime_checkout.Value, price);
+                    bookingDAO.SaveExtendBooking(booking);
                     MessageBox.Show("Extend Booking Successful!", "Notification", MessageBoxButtons.OK);
                     this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }

@@ -37,6 +37,16 @@ namespace Hotel_Management
             _birthday = birthday;
             _role = role;
         }
+        public Account(int id, string useremail, string national, string gender, string idcardnumber, string address, string phonenumber)
+        {
+            _id = id;
+            _useremail = useremail;
+            _national = national;
+            _gender = gender;
+            _idcardnumber = idcardnumber;
+            _address = address;
+            _phonenumber = phonenumber;
+        }
 
         public int Id { get => _id; set => _id = value; }
         public string Useremail { get => _useremail; set => _useremail = value; }
