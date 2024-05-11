@@ -43,7 +43,9 @@ namespace Hotel_Management
                     Description = reader.IsDBNull(reader.GetOrdinal("Descriptions")) ? "" : reader["Descriptions"].ToString(),
                     Score = reader.IsDBNull(reader.GetOrdinal("Feedback")) ? 0.0 : (Double)reader["Feedback"],
                     Price = reader.IsDBNull(reader.GetOrdinal("Price")) ? 0.0 : (Double)reader["Price"],
-                    HotelImage = (byte[])reader["HotelImage"]
+                    HotelImage = (byte[])reader["HotelImage"],
+                    Lng_point = reader.IsDBNull(reader.GetOrdinal("LngPoint")) ? 0.0 : (Double)reader["LngPoint"],
+                    Lat_point = reader.IsDBNull(reader.GetOrdinal("LatPoint")) ? 0.0 : (Double)reader["LatPoint"],
                 };
             }
             return hotelInformation;
@@ -75,7 +77,9 @@ namespace Hotel_Management
                     Description = reader.IsDBNull(reader.GetOrdinal("Descriptions")) ? "" : reader["Descriptions"].ToString(),
                     Score = reader.IsDBNull(reader.GetOrdinal("Feedback")) ? 0.0 : (Double)reader["Feedback"],
                     Price = reader.IsDBNull(reader.GetOrdinal("Price")) ? 0.0 : (Double)reader["Price"],
-                    HotelImage = (byte[])reader["HotelImage"]
+                    HotelImage = (byte[])reader["HotelImage"],
+                    Lat_point = reader.IsDBNull(reader.GetOrdinal("LatPoint")) ? 0.0 : (Double)reader["LatPoint"],
+                    Lng_point = reader.IsDBNull(reader.GetOrdinal("LngPoint")) ? 0.0 : (Double)reader["LngPoint"],
                 };
             }
             return hotel;
@@ -108,7 +112,7 @@ namespace Hotel_Management
 
         public void UpdateHotel( HotelInformation hotelInfo)
         {
-            string query = "UPDATE HotelInformation SET HotelName = @HotelName, City = @City, Street = @Street, FeedBack = @FeedBack, Price = @Price, HotelImage = @HotelImage, email = @Email, zipcode = @Zipcode, FloorsNumber = @FloorsNumber, Capacity = @Capacity, PhoneNumber = @PhoneNumber, Country = @Country, Descriptions = @Descriptions WHERE HotelID = @HotelID";
+            string query = "UPDATE HotelInformation SET HotelName = @HotelName, City = @City, Street = @Street, FeedBack = @FeedBack, Price = @Price, HotelImage = @HotelImage, email = @Email, zipcode = @Zipcode, FloorsNumber = @FloorsNumber, Capacity = @Capacity, PhoneNumber = @PhoneNumber, Country = @Country, Descriptions = @Descriptions, LatPoint = @LatPoint, LngPoint = @LngPoint WHERE HotelID = @HotelID";
            
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -125,7 +129,9 @@ namespace Hotel_Management
                 new SqlParameter("@Capacity", SqlDbType.Int) { Value = hotelInfo.Capacity },
                 new SqlParameter("@PhoneNumber", SqlDbType.NVarChar) { Value = hotelInfo.PhoneNumber },
                 new SqlParameter("@Country", SqlDbType.NVarChar) { Value = hotelInfo.Country },
-                new SqlParameter("@Descriptions", SqlDbType.NVarChar) { Value = hotelInfo.Description }
+                new SqlParameter("@Descriptions", SqlDbType.NVarChar) { Value = hotelInfo.Description },
+                 new SqlParameter("@LatPoint", SqlDbType.Float) { Value = hotelInfo.Lat_point },
+                  new SqlParameter("@LngPoint", SqlDbType.Float) { Value = hotelInfo.Lng_point },
             };
 
             BDconnection.MyExecuteNonQuery(query, parameters);
@@ -146,7 +152,7 @@ namespace Hotel_Management
 
         public void CreateHotel(HotelInformation hotelInfo, int adminID)
         {
-            string query = "Insert into HotelInformation values (@HotelName, @City, @Street, @FeedBack, @Price, @HotelImage, @email, @zipcode, @FloorsNumber, @Capacity, @PhoneNumber, @Country, @AdminID, @Descriptions) ";
+            string query = "Insert into HotelInformation values (@HotelName, @City, @Street, @FeedBack, @Price, @HotelImage, @email, @zipcode, @FloorsNumber, @Capacity, @PhoneNumber, @Country, @AdminID, @Descriptions, @LatPoint, @LngPoint) ";
             SqlParameter[] parameters = new SqlParameter[]
            {
                 new SqlParameter("@AdminID", SqlDbType.Int) { Value = adminID},
@@ -162,7 +168,9 @@ namespace Hotel_Management
                 new SqlParameter("@Capacity", SqlDbType.Int) { Value = hotelInfo.Capacity },
                 new SqlParameter("@PhoneNumber", SqlDbType.NVarChar) { Value = hotelInfo.PhoneNumber },
                 new SqlParameter("@Country", SqlDbType.NVarChar) { Value = hotelInfo.Country },
-                new SqlParameter("@Descriptions", SqlDbType.NVarChar) { Value = hotelInfo.Description }
+                new SqlParameter("@Descriptions", SqlDbType.NVarChar) { Value = hotelInfo.Description },
+                 new SqlParameter("@LatPoint", SqlDbType.Float) { Value = hotelInfo.Lat_point },
+                  new SqlParameter("@LngPoint", SqlDbType.Float) { Value = hotelInfo.Lng_point },
            };
 
             BDconnection.MyExecuteNonQuery(query, parameters);
@@ -214,17 +222,17 @@ namespace Hotel_Management
             DataTable data = BDconnection.ExecuteQueryDataTable(query);
             return data;
         }
-        public int SetAVG(int HotelID)
+        public double SetAVG(int HotelID)
         {
             string query = $"Select AVG(Rate) from Evaluate where HotelID = {HotelID}";
             object result = BDconnection.MyExecuteScalar(query, null);
-            if (result != null && int.TryParse(result.ToString(), out int total))
+            if (result != null && double.TryParse(result.ToString(), out double total))
             {
                 return total;
             }
             else
             {
-                return -1;
+                return 8;
             }
         }
 
@@ -308,7 +316,7 @@ namespace Hotel_Management
             }
             return listHotel;
         }
-        public int SetRating( int hotelID)
+        public double SetRating( int hotelID)
         {
             string query = "Select AVG(Rate) from Evaluate where HotelID = @hotelID";
             SqlParameter[] parameters = new SqlParameter[]
@@ -316,7 +324,7 @@ namespace Hotel_Management
                 new SqlParameter("@HotelID", SqlDbType.Int) { Value = hotelID }, 
             };
             object result = BDconnection.MyExecuteScalar(query, parameters);
-            if (result != null && int.TryParse(result.ToString(), out int total))
+            if (result != null && double.TryParse(result.ToString(), out double total))
             {
                 return total;
             }

@@ -78,6 +78,7 @@
             // 
             // flow
             // 
+            this.flow.AutoScroll = true;
             this.flow.Location = new System.Drawing.Point(73, 304);
             this.flow.Name = "flow";
             this.flow.Size = new System.Drawing.Size(1672, 648);

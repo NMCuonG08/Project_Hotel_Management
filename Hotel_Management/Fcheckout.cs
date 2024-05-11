@@ -32,6 +32,7 @@ namespace Hotel_Management
                 gv_book.Columns["BookingStatus"].Visible = false;
                 gv_book.Columns["Price"].Visible = false;
                 gv_book.Columns["BookingDate"].Visible = false;
+                gv_book.Columns["isCheckOut"].Visible = false;
         }
         private void gv_book_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

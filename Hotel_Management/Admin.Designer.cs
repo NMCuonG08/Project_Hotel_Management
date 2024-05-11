@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.main_transaction = new System.Windows.Forms.Timer(this.components);
             this.panel_main = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btn_menu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_hotel = new Guna.UI2.WinForms.Guna2Button();
             this.btn_room = new Guna.UI2.WinForms.Guna2Button();
@@ -43,6 +39,11 @@
             this.btn_checkout = new Guna.UI2.WinForms.Guna2Button();
             this.btn_feedback = new Guna.UI2.WinForms.Guna2Button();
             this.btn_logout = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2GradientTileButton10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_static = new Guna.UI2.WinForms.Guna2Button();
             this.panel_main.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -62,6 +63,7 @@
             this.panel_main.Controls.Add(this.btn_booking);
             this.panel_main.Controls.Add(this.btn_checkout);
             this.panel_main.Controls.Add(this.btn_feedback);
+            this.panel_main.Controls.Add(this.btn_static);
             this.panel_main.Controls.Add(this.btn_logout);
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_main.Location = new System.Drawing.Point(0, 0);
@@ -70,62 +72,6 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(250, 1055);
             this.panel_main.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(250, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1532, 46);
-            this.panel2.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.guna2GradientTileButton10);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1255, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(277, 46);
-            this.panel4.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(74, 3);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(191, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome: admin";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
-            // 
-            // guna2GradientTileButton10
-            // 
-            this.guna2GradientTileButton10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton10.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
-            this.guna2GradientTileButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton10.Image = global::Hotel_Management.Properties.Resources.admin;
-            this.guna2GradientTileButton10.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 0);
-            this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
-            this.guna2GradientTileButton10.Size = new System.Drawing.Size(65, 41);
-            this.guna2GradientTileButton10.TabIndex = 119;
-            this.guna2GradientTileButton10.Visible = false;
             // 
             // btn_menu
             // 
@@ -263,12 +209,88 @@
             this.btn_logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_logout.ImageOffset = new System.Drawing.Point(15, 0);
             this.btn_logout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_logout.Location = new System.Drawing.Point(3, 595);
+            this.btn_logout.Location = new System.Drawing.Point(3, 689);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(243, 88);
             this.btn_logout.TabIndex = 19;
             this.btn_logout.Text = "       Log out";
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(250, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1532, 46);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.guna2GradientTileButton10);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1255, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(277, 46);
+            this.panel4.TabIndex = 12;
+            // 
+            // guna2GradientTileButton10
+            // 
+            this.guna2GradientTileButton10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton10.BackgroundImage = global::Hotel_Management.Properties.Resources.user__1_3;
+            this.guna2GradientTileButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientTileButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientTileButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientTileButton10.FillColor = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton10.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2GradientTileButton10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientTileButton10.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientTileButton10.Image = global::Hotel_Management.Properties.Resources.admin;
+            this.guna2GradientTileButton10.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2GradientTileButton10.Location = new System.Drawing.Point(3, 0);
+            this.guna2GradientTileButton10.Name = "guna2GradientTileButton10";
+            this.guna2GradientTileButton10.Size = new System.Drawing.Size(65, 41);
+            this.guna2GradientTileButton10.TabIndex = 119;
+            this.guna2GradientTileButton10.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(74, 3);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(10);
+            this.label1.Size = new System.Drawing.Size(191, 43);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome: admin";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Visible = false;
+            // 
+            // btn_static
+            // 
+            this.btn_static.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_static.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_static.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_static.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_static.FillColor = System.Drawing.Color.Transparent;
+            this.btn_static.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_static.ForeColor = System.Drawing.Color.White;
+            this.btn_static.Image = global::Hotel_Management.Properties.Resources.statistic;
+            this.btn_static.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_static.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btn_static.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_static.Location = new System.Drawing.Point(3, 595);
+            this.btn_static.Name = "btn_static";
+            this.btn_static.Size = new System.Drawing.Size(243, 88);
+            this.btn_static.TabIndex = 22;
+            this.btn_static.Text = "         Statistic";
+            this.btn_static.Click += new System.EventHandler(this.btn_static_Click);
             // 
             // Admin
             // 
@@ -308,5 +330,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_logout;
         private Guna.UI2.WinForms.Guna2Button btn_menu;
         private Guna.UI2.WinForms.Guna2Button btn_feedback;
+        private Guna.UI2.WinForms.Guna2Button btn_static;
     }
 }

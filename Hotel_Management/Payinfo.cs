@@ -13,13 +13,15 @@ namespace Hotel_Management
         private string paymentMethod;
         private double amount;
         private int bookingID;
+        private int hotelID;
         public Payinfo() { }
-        public Payinfo( DateTime addDate, string paymentMethod, double amount, int bookingID)
+        public Payinfo( DateTime addDate, string paymentMethod, double amount, int bookingID, int hotelID)
         {          
             this.AddDate = addDate;
             this.PaymentMethod = paymentMethod;
             this.Amount = amount;
             this.BookingID = bookingID;
+            this.HotelID = hotelID;
         }
 
         public int Id { get => id; set => id = value; }
@@ -27,5 +29,6 @@ namespace Hotel_Management
         public string PaymentMethod { get => paymentMethod; set => paymentMethod = value; }
         public double Amount { get => amount; set => amount = value; }
         public int BookingID { get => bookingID; set => bookingID = value; }
+        public int HotelID { get => hotelID; set => hotelID = value; }
     }
 }

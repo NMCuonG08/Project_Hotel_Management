@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FUserInformation));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FUserInformation));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_email = new System.Windows.Forms.Label();
             this.lb_fullname = new System.Windows.Forms.Label();
@@ -85,6 +85,13 @@
             this.btn_success = new Guna.UI2.WinForms.Guna2Button();
             this.btn_pending = new Guna.UI2.WinForms.Guna2Button();
             this.gvBooking = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Checkin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Checkout = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_cancel = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_rate = new System.Windows.Forms.DataGridViewImageColumn();
             this.label16 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_mybooking = new Guna.UI2.WinForms.Guna2Button();
@@ -98,13 +105,6 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btn_close = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Checkin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Checkout = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_cancel = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_rate = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -995,6 +995,79 @@
             this.gvBooking.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gvBooking.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvBooking_CellContentClick);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 32.08556F;
+            this.ID.HeaderText = "";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // BookingDate
+            // 
+            this.BookingDate.DataPropertyName = "BookingDate";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.BookingDate.DefaultCellStyle = dataGridViewCellStyle11;
+            this.BookingDate.FillWeight = 150F;
+            this.BookingDate.HeaderText = "Booking Date";
+            this.BookingDate.MinimumWidth = 6;
+            this.BookingDate.Name = "BookingDate";
+            this.BookingDate.ReadOnly = true;
+            // 
+            // Checkin
+            // 
+            this.Checkin.DataPropertyName = "CheckIn";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Checkin.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Checkin.FillWeight = 113.5829F;
+            this.Checkin.HeaderText = "Check in";
+            this.Checkin.MinimumWidth = 6;
+            this.Checkin.Name = "Checkin";
+            this.Checkin.ReadOnly = true;
+            // 
+            // Checkout
+            // 
+            this.Checkout.DataPropertyName = "CheckOut";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Checkout.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Checkout.FillWeight = 113.5829F;
+            this.Checkout.HeaderText = "Checkout";
+            this.Checkout.MinimumWidth = 6;
+            this.Checkout.Name = "Checkout";
+            this.Checkout.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.FillWeight = 60F;
+            this.btn_cancel.HeaderText = "Hủy";
+            this.btn_cancel.Image = global::Hotel_Management.Properties.Resources.cancel;
+            this.btn_cancel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btn_cancel.MinimumWidth = 6;
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.ReadOnly = true;
+            // 
+            // btn_rate
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.NullValue = "System.Drawing.Bitmap";
+            this.btn_rate.DefaultCellStyle = dataGridViewCellStyle14;
+            this.btn_rate.FillWeight = 60F;
+            this.btn_rate.HeaderText = "Đánh giá";
+            this.btn_rate.Image = global::Hotel_Management.Properties.Resources.pen__1_;
+            this.btn_rate.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btn_rate.MinimumWidth = 6;
+            this.btn_rate.Name = "btn_rate";
+            this.btn_rate.ReadOnly = true;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -1160,79 +1233,6 @@
             this.btn_close.Size = new System.Drawing.Size(57, 52);
             this.btn_close.TabIndex = 124;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.FillWeight = 32.08556F;
-            this.ID.HeaderText = "";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // BookingDate
-            // 
-            this.BookingDate.DataPropertyName = "BookingDate";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.BookingDate.DefaultCellStyle = dataGridViewCellStyle11;
-            this.BookingDate.FillWeight = 150F;
-            this.BookingDate.HeaderText = "Booking Date";
-            this.BookingDate.MinimumWidth = 6;
-            this.BookingDate.Name = "BookingDate";
-            this.BookingDate.ReadOnly = true;
-            // 
-            // Checkin
-            // 
-            this.Checkin.DataPropertyName = "CheckIn";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Checkin.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Checkin.FillWeight = 113.5829F;
-            this.Checkin.HeaderText = "Check in";
-            this.Checkin.MinimumWidth = 6;
-            this.Checkin.Name = "Checkin";
-            this.Checkin.ReadOnly = true;
-            // 
-            // Checkout
-            // 
-            this.Checkout.DataPropertyName = "CheckOut";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Checkout.DefaultCellStyle = dataGridViewCellStyle13;
-            this.Checkout.FillWeight = 113.5829F;
-            this.Checkout.HeaderText = "Checkout";
-            this.Checkout.MinimumWidth = 6;
-            this.Checkout.Name = "Checkout";
-            this.Checkout.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "Price";
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.FillWeight = 60F;
-            this.btn_cancel.HeaderText = "Hủy";
-            this.btn_cancel.Image = global::Hotel_Management.Properties.Resources.cancel;
-            this.btn_cancel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btn_cancel.MinimumWidth = 6;
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.ReadOnly = true;
-            // 
-            // btn_rate
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.NullValue = "System.Drawing.Bitmap";
-            this.btn_rate.DefaultCellStyle = dataGridViewCellStyle14;
-            this.btn_rate.FillWeight = 60F;
-            this.btn_rate.HeaderText = "Đánh giá";
-            this.btn_rate.Image = global::Hotel_Management.Properties.Resources.pen__1_;
-            this.btn_rate.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btn_rate.MinimumWidth = 6;
-            this.btn_rate.Name = "btn_rate";
-            this.btn_rate.ReadOnly = true;
             // 
             // FUserInformation
             // 

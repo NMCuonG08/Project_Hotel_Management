@@ -161,6 +161,7 @@ namespace Hotel_Management
                             HotelID = (Int32)reader["HotelID"],
                             Price = (Double)reader["Price"]
                             //  Night = reader["Night"].ToString(),
+                            ,IsCheckOut = (bool)reader["isCheckOut"]
                         };
 
                     }

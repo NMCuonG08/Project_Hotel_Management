@@ -19,7 +19,7 @@ namespace Hotel_Management
         public BookingDAO() { }
         public DataTable Load(int HotelID)
         {
-            string query = $"SELECT * FROM Booking where HotelID = {HotelID}";
+            string query = $"SELECT * FROM Booking where HotelID = {HotelID} AND isCheckOut = 0";
             DataTable data = BDconnection.ExecuteQueryDataTable(query);
             return data;
         }
@@ -31,13 +31,13 @@ namespace Hotel_Management
         }
         public DataTable Finding(int hotelID,ComboBox combox, string condition)
         {
-            string query = $"SELECT * FROM Booking where HotelID = {hotelID} AND {condition} = '{combox.Text}'";
+            string query = $"SELECT * FROM Booking where HotelID = {hotelID} AND {condition} = '{combox.Text}' AND isCheckOut = 0";
             DataTable data = BDconnection.ExecuteQueryDataTable(query);
             return data;
         }
         public DataTable Seacrch(int hotelID, Guna2TextBox textBox)
         {
-            string query = $"SELECT * FROM Booking WHERE HotelID = {hotelID} AND CustomerName LIKE '%{textBox.Text}%'";
+            string query = $"SELECT * FROM Booking WHERE HotelID = {hotelID} AND CustomerName LIKE '%{textBox.Text}%' AND isCheckOut = 0";
             DataTable data = BDconnection.ExecuteQueryDataTable(query);
             return data;
         }
@@ -75,10 +75,15 @@ namespace Hotel_Management
         }
         public void UpdateBooking(int bookingID, string value, string status)
         {
-            string query = $"Update Booking set {status} = '{value}' where ID ={bookingID} ";
+            string query = $"Update Booking set {status} = '{value}'  where ID ={bookingID} ";
             BDconnection.MyExecuteNonQuery(query, null);
         }
-      
+        public void UpdateBooking(int bookingID, string value, string status, bool x)
+        {
+            string query = $"Update Booking set {status} = '{value}' , isCheckOut = 1, CheckIn = null, CheckOut = null where ID ={bookingID} ";
+            BDconnection.MyExecuteNonQuery(query, null);
+        }
+
         public void UpdateRoom(int roomID, string status)
         {
             string query = $"Update RoomInformation set [Status] = '{status}' where RoomID = {roomID}";
@@ -99,13 +104,14 @@ namespace Hotel_Management
         }
         public void SavePayment(Payinfo payinfo)
         {
-            string query = "Insert into Payment values (@AddDate, @PaymentMethod, @Amount, @BookingID)  ";
+            string query = "Insert into Payment values (@AddDate, @PaymentMethod, @Amount, @BookingID, @HotelID)  ";
             SqlParameter[] parameters = new SqlParameter[]
           {
                 new SqlParameter("@AddDate", SqlDbType.DateTime) { Value = payinfo.AddDate },
                 new SqlParameter("@PaymentMethod", SqlDbType.NVarChar) { Value = payinfo.PaymentMethod },
                 new SqlParameter("@Amount", SqlDbType.Float) { Value = payinfo.Amount },
-                new SqlParameter("@BookingID", SqlDbType.Int) { Value = payinfo.BookingID }, 
+                new SqlParameter("@BookingID", SqlDbType.Int) { Value = payinfo.BookingID },
+                 new SqlParameter("@HotelID", SqlDbType.Int) { Value = payinfo.HotelID },
            };
             BDconnection.MyExecuteNonQuery(query, parameters);
         }
@@ -128,7 +134,7 @@ namespace Hotel_Management
         }
        public void BookRoom(Booking booking, Account user)
         {    
-            string query = "Insert into Booking values (@CustomerName, @Checkin,@CheckOut, @BookingDate,@PaymentStatus,@BookingStatus,@UserID,@RoomID,@HotelID,@Price)";
+            string query = "Insert into Booking values (@CustomerName, @Checkin,@CheckOut, @BookingDate,@PaymentStatus,@BookingStatus,@UserID,@RoomID,@HotelID,@Price,0)";
             SqlParameter[] parameters = new SqlParameter[]
           {
                 new SqlParameter("@CustomerName", SqlDbType.NChar) { Value = booking.Username },

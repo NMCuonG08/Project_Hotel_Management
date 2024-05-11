@@ -22,11 +22,14 @@ namespace Hotel_Management
         public FChoiceRoom(int hotelID, int userID)
         {
             InitializeComponent();
+           
+            
             this.HotelID = hotelID;
             this.UserID = userID;
             LoadForm(HotelID);
             datetime_checkin.MinDate =  DateTime.Today.AddDays(1);
             datetime_checkout.MinDate = datetime_checkin.Value.AddDays(1);
+            SetData();
         }
         void LoadForm(int HotelID)
         {
@@ -37,6 +40,68 @@ namespace Hotel_Management
             cbx_typeroom.DataSource = new BindingSource(uniqueRoomType, null);
             HashSet<string> uniqueRoomBed =roomDAO.GetUniqueOfRoom("RoomBed");
             cbx_typebed.DataSource = new BindingSource(uniqueRoomBed, null);
+        }
+
+        public void SetData()
+        {
+            HotelInformation hotel = hotelInformationDAO.GetHotelInformationByID(this.HotelID);
+            lb_hotelname.Text = hotel.Name;
+            InitializeMap(hotel.Lng_point, hotel.Lat_point);
+            rating_hotel.Value = (float)hotel.Score;
+            lb_location.Text = hotel.City;
+            byte[] image = hotel.HotelImage;
+            if (image != null)
+            {
+                using (MemoryStream ms = new MemoryStream(image))
+                {
+                    pctbox.Image = System.Drawing.Image.FromStream(ms);
+                }
+            }
+            gv_feedback.DataSource = hotelInformationDAO.SetFeedBack(HotelID);
+            btn_point.Text = hotelInformationDAO.SetAVG(HotelID).ToString();
+            CreateItemFeedBack();
+            
+
+        }
+        private void CreateItemFeedBack()
+        {
+            int count = gv_feedback.Rows.Count;
+            if (count > 0)
+            {
+                UCFeedback[] ls = new UCFeedback[count];
+                for (int i = 0; i < count - 1; i++)
+                {
+                    ls[i] = new UCFeedback();
+                    object rate = gv_feedback.Rows[i].Cells[1].Value;
+                    double ratee;
+                    if (rate != null && Double.TryParse(rate.ToString(), out ratee))
+                    {
+                        ls[i].Rate = ratee;
+                    }
+
+                    object comment = gv_feedback.Rows[i].Cells[2].Value;
+                    if (comment != null)
+                    {
+                        ls[i].Comment = comment.ToString();
+                    }
+
+                    DateTime date;
+                    object dt = gv_feedback.Rows[i].Cells[5].Value;
+                    if (dt != null && DateTime.TryParse(dt.ToString(), out date))
+                    {
+                        ls[i].Date = date;
+                    }
+                    object user = gv_feedback.Rows[i].Cells[4].Value;
+                    int userID;
+                    if (user != null && int.TryParse(user.ToString(), out userID))
+                    {
+
+                        Account UserG = Instance.GetUserByID(userID);
+                        ls[i].Email = UserG.Useremail;
+                    }
+                    flow.Controls.Add(ls[i]);
+                }
+            }
         }
 
         private void createItem(DataTable data)
@@ -141,6 +206,42 @@ namespace Hotel_Management
         private void datetime_checkin_ValueChanged(object sender, EventArgs e)
         {
             datetime_checkout.MinDate = datetime_checkin.Value.AddDays(1);
+        }
+
+        private void panel_room_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_details_Click(object sender, EventArgs e)
+        {
+            
+            flow_main.Visible = true;
+            panel_room.Visible = false;
+            btn_changeroom.FillColor = Color.DarkSalmon;
+            btn_details.FillColor = Color.White;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            flow_main.Visible = false;
+            panel_room.Visible = true;
+            btn_changeroom.FillColor = Color.White;
+            btn_details.FillColor = Color.DarkSalmon;
+        }
+        private void InitializeMap(double lng, double lat)
+        {
+            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+            gmap.Position = new GMap.NET.PointLatLng(lng, lat);
+            gmap.MinZoom = 5;
+            gmap.MaxZoom = 100;
+            gmap.Zoom = 15;
+        }
+
+        private void flow_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

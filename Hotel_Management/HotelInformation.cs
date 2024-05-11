@@ -23,11 +23,13 @@ namespace Hotel_Management
         private double _price;
         private string _description;
         private byte[] _hotelImage;
+        private double lng_point;
+        private double lat_point;
         public HotelInformation()
         {
         }
 
-        public HotelInformation(int id, string name, string phoneNumber, string email, int floors, int capacity, string zipcode, string city, string street, string country, double score, double price, string description, Byte[] hotelImage)
+        public HotelInformation(int id, string name, string phoneNumber, string email, int floors, int capacity, string zipcode, string city, string street, string country, double score, double price, string description, Byte[] hotelImage, double lng_point, double lat_point)
         {
             Id = id;
             Name = name;
@@ -43,6 +45,8 @@ namespace Hotel_Management
             Price = price;
             Description = description;
             HotelImage = hotelImage;
+            Lat_point = lat_point;
+            Lng_point = lng_point;
         }
 
         public int Id { get => _id; set => _id = value; }
@@ -59,5 +63,7 @@ namespace Hotel_Management
         public double Price { get => _price; set => _price = value; }
         public string Description { get => _description; set => _description = value; }
         public byte[] HotelImage { get => _hotelImage; set => _hotelImage = value; }
+        public double Lng_point { get => lng_point; set => lng_point = value; }
+        public double Lat_point { get => lat_point; set => lat_point = value; }
     }
 }

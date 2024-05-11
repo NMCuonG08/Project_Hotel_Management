@@ -81,3 +81,7 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FFeedBack.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCFeedback.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FBook_room.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\GMap.NET.Core.dll
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FMap.resources
+C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fstatistical.resources

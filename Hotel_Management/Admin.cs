@@ -133,6 +133,10 @@ namespace Hotel_Management
             btn_checkout.ForeColor = Color.White;
             btn_feedback.ForeColor = Color.White;
             btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
+            btn_static.ForeColor = Color.White;
+            btn_static.BackColor = Color.FromArgb(0, 64, 64);
+            btn_static.ForeColor = Color.White;
+            btn_static.BackColor = Color.FromArgb(0, 64, 64);
         }
         private void btn_hotel_Click(object sender, EventArgs e)
         {
@@ -178,6 +182,8 @@ namespace Hotel_Management
             btn_checkout.ForeColor = Color.White;
             btn_feedback.ForeColor = Color.White;
             btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
+            btn_static.ForeColor = Color.White;
+            btn_static.BackColor = Color.FromArgb(0, 64, 64);
         }
         private void Booking_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -203,6 +209,8 @@ namespace Hotel_Management
             btn_checkout.ForeColor = Color.Black;
             btn_feedback.ForeColor = Color.White;
             btn_feedback.BackColor = Color.FromArgb(0, 64, 64);
+            btn_static.ForeColor = Color.White;
+            btn_static.BackColor = Color.FromArgb(0, 64, 64);
         }
         private void Fcheckout_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -241,11 +249,44 @@ namespace Hotel_Management
             btn_feedback.ForeColor = Color.Black;
             btn_checkout.ForeColor = Color.White;
             btn_checkout.BackColor = Color.FromArgb(0, 64, 64);
+            btn_static.ForeColor = Color.White;
+            btn_static.BackColor = Color.FromArgb(0, 64, 64);
         }
 
         private void FFeedBack_FormClosed(object sender, FormClosedEventArgs e)
         {
             fFeedBack = null;
+        }
+        Fstatistical fstatistical;
+        private void btn_static_Click(object sender, EventArgs e)
+        {
+            if (fstatistical == null)
+            {
+                fstatistical = new Fstatistical(HotelID);
+                fstatistical.FormClosed += Fstatistical_FormClosed; ;
+                ShowForm(fstatistical);
+            }
+            else
+            {
+                fstatistical.Activate();
+            }
+            btn_hotel.BackColor = Color.FromArgb(0, 64, 64);
+            btn_hotel.ForeColor = Color.White;
+            btn_room.BackColor = Color.FromArgb(0, 64, 64);
+            btn_room.ForeColor = Color.White;
+            btn_booking.BackColor = Color.FromArgb(0, 64, 64);
+            btn_booking.ForeColor = Color.White;
+            btn_feedback.BackColor = Color.FromArgb(0, 64, 64); 
+            btn_feedback.ForeColor = Color.White;
+            btn_checkout.ForeColor = Color.White;
+            btn_checkout.BackColor = Color.FromArgb(0, 64, 64);
+            btn_static.ForeColor = Color.Black;
+            btn_static.BackColor = Color.DarkGray;
+        }
+
+        private void Fstatistical_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fstatistical = null;
         }
 
 

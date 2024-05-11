@@ -63,7 +63,7 @@ namespace Hotel_Management
         }
         private void Btn_addRoom_Click(object sender, EventArgs e)
         {
-            FAddPayment fAddPayment = new FAddPayment(BookingID, this);
+            FAddPayment fAddPayment = new FAddPayment(BookingID, this, this.HotelID);
             fAddPayment.SetData();
             fAddPayment.ShowDialog();
            
@@ -185,7 +185,7 @@ namespace Hotel_Management
         }
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            bookingDAO.UpdateBooking(BookingID, "pening", "BookingStatus");
+            bookingDAO.UpdateBooking(BookingID, "pening", "BookingStatus", true);
             bookingDAO.UpdateRoom(Room.Id, "Empty");
             MessageBox.Show("Checkout thành công", "Thông báo", MessageBoxButtons.OK);
             this.Close();

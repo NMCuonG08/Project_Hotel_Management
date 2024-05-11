@@ -14,12 +14,14 @@ namespace Hotel_Management
     public partial class FAddPayment : Form
     {
         private int BookingID;
+        private int HotelID;
         BookingDAO bookingDAO = new BookingDAO();
-        public FAddPayment(int bookingID, FBookingInformation fBooking)
+        public FAddPayment(int bookingID, FBookingInformation fBooking, int hotelID)
         {
             InitializeComponent();
             this.BookingID = bookingID;
             FBookingInformation = fBooking;
+            this.HotelID = hotelID;
         }
 
         public void SetData()
@@ -42,7 +44,8 @@ namespace Hotel_Management
                 AddDate = DateTime.Now,
                 PaymentMethod = combx_pymethod.Text,
                 Amount = Convert.ToInt32(txb_amount.Text),
-                BookingID = BookingID
+                BookingID = BookingID,
+                HotelID = HotelID
             };
             bookingDAO.SavePayment(payinfo);
         }       
@@ -65,6 +68,11 @@ namespace Hotel_Management
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

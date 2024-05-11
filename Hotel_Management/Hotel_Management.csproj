@@ -33,14 +33,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -165,11 +176,23 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMap.Designer.cs">
+      <DependentUpon>FMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FSignIn.Designer.cs">
       <DependentUpon>FSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fstatistical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fstatistical.Designer.cs">
+      <DependentUpon>Fstatistical.cs</DependentUpon>
     </Compile>
     <Compile Include="FUserInformation.cs">
       <SubType>Form</SubType>
@@ -292,11 +315,17 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FMap.resx">
+      <DependentUpon>FMap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fstatistical.resx">
+      <DependentUpon>Fstatistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FUserInformation.resx">
       <DependentUpon>FUserInformation.cs</DependentUpon>
@@ -855,6 +884,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\aloe vera-cuate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

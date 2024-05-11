@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using GMap.NET;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,8 @@ namespace Hotel_Management
 {
     public partial class FHotelInformation : Form
     {
-
+        double lng_point = 0;
+        double lat_point = 0;
         public int AdminID { get; set; }
         HotelInformationDAO hotelInformationDAO  = new HotelInformationDAO();
         public FHotelInformation(int adminID)
@@ -86,6 +88,10 @@ namespace Hotel_Management
                 }
                 SetConveniences(hotel.Id);
                 txb_room.Text += hotelInformationDAO.SetCount(hotel).ToString();
+                lat_point = hotel.Lat_point;
+                lng_point = hotel.Lng_point;
+                InitializeMap(hotel.Lng_point, hotel.Lat_point);
+                
             }
             else
             {
@@ -103,15 +109,31 @@ namespace Hotel_Management
                 txb_city.Text = "";
             }
         }
+        private void InitializeMap(double lng, double lat)
+        {
+
+            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
 
 
-        private void HotelInformation_Load(object sender, EventArgs e)
+            gmap.Position = new GMap.NET.PointLatLng(lng, lat);
+
+            // Thiết lập các thuộc tính zoom
+            gmap.MinZoom = 5;
+            gmap.MaxZoom = 100;
+            gmap.Zoom = 15;
+            lng_point = lng;
+            lat_point = lat;
+        }
+
+            private void HotelInformation_Load(object sender, EventArgs e)
         {
 
         }
         public void EditHotelConvenience(int HotelID)
         {
           hotelInformationDAO.EditHotelConvenience(HotelID, checklistbox);
+
         }
 
         private void tbn_update_Click(object sender, EventArgs e)
@@ -131,7 +153,9 @@ namespace Hotel_Management
                 Capacity = int.Parse(txb_capacity.Text),
                 PhoneNumber = txb_phoneNumber.Text,
                 Country = txb_country.Text,
-                Description = txb_decription.Text
+                Description = txb_decription.Text,
+                Lng_point = lng_point,
+                Lat_point = lat_point,
             };
 
             using (MemoryStream stream = new MemoryStream())
@@ -191,7 +215,9 @@ namespace Hotel_Management
                     Capacity = int.Parse(txb_capacity.Text),
                     PhoneNumber = txb_phoneNumber.Text,
                     Country = txb_country.Text,
-                    Description = txb_decription.Text
+                    Description = txb_decription.Text,
+                    Lng_point = lng_point,
+                    Lat_point = lat_point,
                 };
                 using (MemoryStream stream = new MemoryStream())
                 {
@@ -240,6 +266,13 @@ namespace Hotel_Management
                 e.Handled = true;
             }
         }
-       
+
+        private void btn_map_Click(object sender, EventArgs e)
+        {
+            FMap fMap = new FMap();
+            fMap.setMap += InitializeMap;
+            fMap.ShowDialog();
+
+        }
     }
 }

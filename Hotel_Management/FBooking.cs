@@ -26,9 +26,13 @@ namespace Hotel_Management
             LoadForm();
         }
 
+
+
         void LoadForm()
         {
             gvBooking.DataSource = bookingDAO.Load(HotelID);
+            Hide();
+
         }
         private void gvBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -64,25 +68,26 @@ namespace Hotel_Management
         private void combx_paymentstatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             gvBooking.DataSource = bookingDAO.Finding(HotelID, combx_paymentstatus, "PaymentStatus");
-                gvBooking.Columns["UserID"].Visible = false;
-                gvBooking.Columns["HotelID"].Visible = false;
-                gvBooking.Columns["RoomID"].Visible = false;
+            Hide();
         }
 
         private void combx_Bookingstatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             gvBooking.DataSource = bookingDAO.Finding(HotelID, combx_Bookingstatus, "BookingStatus");
-                gvBooking.Columns["UserID"].Visible = false;
-                gvBooking.Columns["HotelID"].Visible = false;
-                gvBooking.Columns["RoomID"].Visible = false;
+            Hide();
         }
 
         private void txb_customer_name_TextChanged(object sender, EventArgs e)
         {
             gvBooking.DataSource = bookingDAO.Seacrch(HotelID, txb_customer_name);
-                gvBooking.Columns["UserID"].Visible = false;
-                gvBooking.Columns["HotelID"].Visible = false;
-                gvBooking.Columns["RoomID"].Visible = false;
+            Hide();
+        }
+        private void Hide()
+        {
+            gvBooking.Columns["UserID"].Visible = false;
+            gvBooking.Columns["HotelID"].Visible = false;
+            gvBooking.Columns["RoomID"].Visible = false;
+            gvBooking.Columns["isCheckOut"].Visible = false;
         }
     }
 }

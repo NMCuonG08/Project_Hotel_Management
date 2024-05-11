@@ -59,11 +59,16 @@
             this.checklistbox = new System.Windows.Forms.CheckedListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.picturebox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txb_hotelID = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_update = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_create = new Guna.UI2.WinForms.Guna2GradientButton();
             this.messageHotel = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.txb_feedback = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txb_hotelID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_map = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.gmap = new GMap.NET.WindowsForms.GMapControl();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txb_lat = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txb_lng = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -584,30 +589,6 @@
             this.picturebox.TabIndex = 62;
             this.picturebox.TabStop = false;
             // 
-            // txb_hotelID
-            // 
-            this.txb_hotelID.BorderColor = System.Drawing.Color.Gray;
-            this.txb_hotelID.BorderRadius = 20;
-            this.txb_hotelID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txb_hotelID.DefaultText = "";
-            this.txb_hotelID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txb_hotelID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txb_hotelID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_hotelID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txb_hotelID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_hotelID.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.txb_hotelID.ForeColor = System.Drawing.Color.Black;
-            this.txb_hotelID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txb_hotelID.Location = new System.Drawing.Point(1449, 451);
-            this.txb_hotelID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txb_hotelID.Name = "txb_hotelID";
-            this.txb_hotelID.PasswordChar = '\0';
-            this.txb_hotelID.PlaceholderText = "";
-            this.txb_hotelID.SelectedText = "";
-            this.txb_hotelID.Size = new System.Drawing.Size(47, 51);
-            this.txb_hotelID.TabIndex = 72;
-            this.txb_hotelID.Visible = false;
-            // 
             // btn_update
             // 
             this.btn_update.BorderRadius = 20;
@@ -678,6 +659,135 @@
             this.txb_feedback.Size = new System.Drawing.Size(293, 39);
             this.txb_feedback.TabIndex = 75;
             // 
+            // txb_hotelID
+            // 
+            this.txb_hotelID.BorderColor = System.Drawing.Color.Gray;
+            this.txb_hotelID.BorderRadius = 20;
+            this.txb_hotelID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_hotelID.DefaultText = "";
+            this.txb_hotelID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_hotelID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_hotelID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_hotelID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_hotelID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_hotelID.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_hotelID.ForeColor = System.Drawing.Color.Black;
+            this.txb_hotelID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_hotelID.Location = new System.Drawing.Point(611, 176);
+            this.txb_hotelID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_hotelID.Name = "txb_hotelID";
+            this.txb_hotelID.PasswordChar = '\0';
+            this.txb_hotelID.PlaceholderText = "";
+            this.txb_hotelID.SelectedText = "";
+            this.txb_hotelID.Size = new System.Drawing.Size(47, 51);
+            this.txb_hotelID.TabIndex = 72;
+            this.txb_hotelID.Visible = false;
+            // 
+            // btn_map
+            // 
+            this.btn_map.BorderRadius = 20;
+            this.btn_map.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_map.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_map.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_map.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_map.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_map.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(130)))), ((int)(((byte)(72)))));
+            this.btn_map.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(111)))));
+            this.btn_map.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btn_map.ForeColor = System.Drawing.Color.White;
+            this.btn_map.Location = new System.Drawing.Point(1431, 706);
+            this.btn_map.Name = "btn_map";
+            this.btn_map.Size = new System.Drawing.Size(332, 51);
+            this.btn_map.TabIndex = 80;
+            this.btn_map.Text = "Choose location";
+            this.btn_map.Click += new System.EventHandler(this.btn_map_Click);
+            // 
+            // gmap
+            // 
+            this.gmap.Bearing = 0F;
+            this.gmap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gmap.CanDragMap = false;
+            this.gmap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gmap.Enabled = false;
+            this.gmap.GrayScaleMode = true;
+            this.gmap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gmap.LevelsKeepInMemmory = 5;
+            this.gmap.Location = new System.Drawing.Point(1431, 385);
+            this.gmap.MarkersEnabled = false;
+            this.gmap.MaxZoom = 2;
+            this.gmap.MinZoom = 2;
+            this.gmap.MouseWheelZoomEnabled = true;
+            this.gmap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionWithoutCenter;
+            this.gmap.Name = "gmap";
+            this.gmap.NegativeMode = false;
+            this.gmap.PolygonsEnabled = true;
+            this.gmap.RetryLoadTile = 0;
+            this.gmap.RoutesEnabled = true;
+            this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gmap.ShowTileGridLines = false;
+            this.gmap.Size = new System.Drawing.Size(332, 273);
+            this.gmap.TabIndex = 81;
+            this.gmap.Zoom = 0D;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1426, 347);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(224, 25);
+            this.label13.TabIndex = 82;
+            this.label13.Text = "Location from google map";
+            // 
+            // txb_lat
+            // 
+            this.txb_lat.BorderColor = System.Drawing.Color.Gray;
+            this.txb_lat.BorderRadius = 20;
+            this.txb_lat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_lat.DefaultText = "";
+            this.txb_lat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_lat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_lat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_lat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_lat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_lat.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_lat.ForeColor = System.Drawing.Color.Black;
+            this.txb_lat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_lat.Location = new System.Drawing.Point(626, 480);
+            this.txb_lat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_lat.Name = "txb_lat";
+            this.txb_lat.PasswordChar = '\0';
+            this.txb_lat.PlaceholderText = "";
+            this.txb_lat.SelectedText = "";
+            this.txb_lat.Size = new System.Drawing.Size(47, 51);
+            this.txb_lat.TabIndex = 83;
+            this.txb_lat.Visible = false;
+            // 
+            // txb_lng
+            // 
+            this.txb_lng.BorderColor = System.Drawing.Color.Gray;
+            this.txb_lng.BorderRadius = 20;
+            this.txb_lng.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txb_lng.DefaultText = "";
+            this.txb_lng.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txb_lng.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txb_lng.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_lng.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txb_lng.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_lng.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txb_lng.ForeColor = System.Drawing.Color.Black;
+            this.txb_lng.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txb_lng.Location = new System.Drawing.Point(626, 385);
+            this.txb_lng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txb_lng.Name = "txb_lng";
+            this.txb_lng.PasswordChar = '\0';
+            this.txb_lng.PlaceholderText = "";
+            this.txb_lng.SelectedText = "";
+            this.txb_lng.Size = new System.Drawing.Size(47, 51);
+            this.txb_lng.TabIndex = 84;
+            this.txb_lng.Visible = false;
+            // 
             // FHotelInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -685,6 +795,11 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1775, 1008);
+            this.Controls.Add(this.txb_lng);
+            this.Controls.Add(this.txb_lat);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.gmap);
+            this.Controls.Add(this.btn_map);
             this.Controls.Add(this.txb_feedback);
             this.Controls.Add(this.btn_create);
             this.Controls.Add(this.btn_update);
@@ -762,10 +877,15 @@
         private System.Windows.Forms.Label Feedback;
         private System.Windows.Forms.CheckedListBox checklistbox;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox txb_hotelID;
         private Guna.UI2.WinForms.Guna2GradientButton btn_update;
         private Guna.UI2.WinForms.Guna2GradientButton btn_create;
         private Guna.UI2.WinForms.Guna2MessageDialog messageHotel;
         private Guna.UI2.WinForms.Guna2ComboBox txb_feedback;
+        private Guna.UI2.WinForms.Guna2TextBox txb_hotelID;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_map;
+        private GMap.NET.WindowsForms.GMapControl gmap;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2TextBox txb_lat;
+        private Guna.UI2.WinForms.Guna2TextBox txb_lng;
     }
 }

@@ -32,6 +32,7 @@ namespace Hotel_Management
                     gvBooking.Columns["CustomerName"].Visible = false;
                     gvBooking.Columns["ID"].Visible = false;
                     gvBooking.Columns["BookingStatus"].Visible = false;
+                    gvBooking.Columns["isCheckOut"].Visible = false;
         }
 
         private void FUserInformation_Load(object sender, EventArgs e)
@@ -233,6 +234,7 @@ namespace Hotel_Management
                     gvBooking.Columns["RoomID"].Visible = false;
                     gvBooking.Columns["CustomerName"].Visible = false;
                     gvBooking.Columns["ID"].Visible = false;
+                    gvBooking.Columns["isCheckOut"].Visible = false;
                     connection.Close();
                 }
             }
