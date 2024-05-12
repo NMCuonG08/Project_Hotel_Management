@@ -63,271 +63,247 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountDAO.cs" />
-    <Compile Include="AddRoom.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AddRoom.Designer.cs">
-      <DependentUpon>AddRoom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Booking.cs" />
-    <Compile Include="BookingDAO.cs" />
-    <Compile Include="FBook_room.cs">
+    <Compile Include="User\AccountDAO.cs" />
+    <Compile Include="Booking\Booking.cs" />
+    <Compile Include="Booking\BookingDAO.cs" />
+    <Compile Include="Booking\FBook_room.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FBook_room.Designer.cs">
+    <Compile Include="Booking\FBook_room.Designer.cs">
       <DependentUpon>FBook_room.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassCheckout.cs" />
     <Compile Include="DB_Connection.cs" />
-    <Compile Include="FAddNewBooking.cs">
+    <Compile Include="Booking\FAddNewBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAddNewBooking.Designer.cs">
+    <Compile Include="Booking\FAddNewBooking.Designer.cs">
       <DependentUpon>FAddNewBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="FBookingInformation.cs">
+    <Compile Include="Booking\FBookingInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FBookingInformation.Designer.cs">
+    <Compile Include="Booking\FBookingInformation.Designer.cs">
       <DependentUpon>FBookingInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerRegistration.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CustomerRegistration.Designer.cs">
-      <DependentUpon>CustomerRegistration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FAddPayment.cs">
+    <Compile Include="Booking\FAddPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAddPayment.Designer.cs">
+    <Compile Include="Booking\FAddPayment.Designer.cs">
       <DependentUpon>FAddPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="FAddRoom.cs">
+    <Compile Include="Rooms\FAddRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAddRoom.Designer.cs">
+    <Compile Include="Rooms\FAddRoom.Designer.cs">
       <DependentUpon>FAddRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="FBooking.cs">
+    <Compile Include="Booking\FBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FBooking.Designer.cs">
+    <Compile Include="Booking\FBooking.Designer.cs">
       <DependentUpon>FBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fcheckout.cs">
+    <Compile Include="Booking\Fcheckout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fcheckout.Designer.cs">
+    <Compile Include="Booking\Fcheckout.Designer.cs">
       <DependentUpon>Fcheckout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FChoiceRoom.cs">
+    <Compile Include="Rooms\FChoiceRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FChoiceRoom.Designer.cs">
+    <Compile Include="Rooms\FChoiceRoom.Designer.cs">
       <DependentUpon>FChoiceRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCustomerRegistration.cs">
+    <Compile Include="User\FCustomerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCustomerRegistration.Designer.cs">
+    <Compile Include="User\FCustomerRegistration.Designer.cs">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEvaluate.cs">
+    <Compile Include="User\FEvaluate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEvaluate.Designer.cs">
+    <Compile Include="User\FEvaluate.Designer.cs">
       <DependentUpon>FEvaluate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FExtendBooking.cs">
+    <Compile Include="Booking\FExtendBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FExtendBooking.Designer.cs">
+    <Compile Include="Booking\FExtendBooking.Designer.cs">
       <DependentUpon>FExtendBooking.cs</DependentUpon>
     </Compile>
-    <Compile Include="FFeedBack.cs">
+    <Compile Include="Hotel\FFeedBack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FFeedBack.Designer.cs">
+    <Compile Include="Hotel\FFeedBack.Designer.cs">
       <DependentUpon>FFeedBack.cs</DependentUpon>
     </Compile>
-    <Compile Include="FFindingRoom.cs">
+    <Compile Include="Rooms\FFindingRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FFindingRoom.Designer.cs">
+    <Compile Include="Rooms\FFindingRoom.Designer.cs">
       <DependentUpon>FFindingRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="FHotelInformation.cs">
+    <Compile Include="Hotel\FHotelInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FHotelInformation.Designer.cs">
+    <Compile Include="Hotel\FHotelInformation.Designer.cs">
       <DependentUpon>FHotelInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FListRoom.cs">
+    <Compile Include="Rooms\FListRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FListRoom.Designer.cs">
+    <Compile Include="Rooms\FListRoom.Designer.cs">
       <DependentUpon>FListRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
+    <Compile Include="User\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLogin.Designer.cs">
+    <Compile Include="User\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMap.cs">
+    <Compile Include="Hotel\FMap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FMap.Designer.cs">
+    <Compile Include="Hotel\FMap.Designer.cs">
       <DependentUpon>FMap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSignIn.cs">
+    <Compile Include="User\FSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSignIn.Designer.cs">
+    <Compile Include="User\FSignIn.Designer.cs">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fstatistical.cs">
+    <Compile Include="Hotel\Fstatistical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fstatistical.Designer.cs">
+    <Compile Include="Hotel\Fstatistical.Designer.cs">
       <DependentUpon>Fstatistical.cs</DependentUpon>
     </Compile>
-    <Compile Include="FUserInformation.cs">
+    <Compile Include="User\FUserInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FUserInformation.Designer.cs">
+    <Compile Include="User\FUserInformation.Designer.cs">
       <DependentUpon>FUserInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotelInformation.cs" />
-    <Compile Include="HotelInformationDAO.cs" />
-    <Compile Include="IHotelIDConsumer.cs" />
+    <Compile Include="Hotel\HotelInformation.cs" />
+    <Compile Include="Hotel\HotelInformationDAO.cs" />
+    <Compile Include="Hotel\IHotelIDConsumer.cs" />
     <Compile Include="Instance.cs" />
-    <Compile Include="Admin.cs">
+    <Compile Include="User\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
+    <Compile Include="User\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modify.cs" />
-    <Compile Include="Payinfo.cs" />
+    <Compile Include="User\Modify.cs" />
+    <Compile Include="Booking\Payinfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room.cs" />
-    <Compile Include="FRoomInformation.cs">
+    <Compile Include="Rooms\Room.cs" />
+    <Compile Include="Rooms\FRoomInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRoomInformation.Designer.cs">
+    <Compile Include="Rooms\FRoomInformation.Designer.cs">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoomDAO.cs" />
-    <Compile Include="TaiKhoan.cs" />
-    <Compile Include="UCFeedback.cs">
+    <Compile Include="Rooms\RoomDAO.cs" />
+    <Compile Include="User\TaiKhoan.cs" />
+    <Compile Include="Hotel\UCFeedback.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCFeedback.Designer.cs">
+    <Compile Include="Hotel\UCFeedback.Designer.cs">
       <DependentUpon>UCFeedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCFindingHotel.cs">
+    <Compile Include="Hotel\UCFindingHotel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCFindingHotel.Designer.cs">
+    <Compile Include="Hotel\UCFindingHotel.Designer.cs">
       <DependentUpon>UCFindingHotel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCListRoom.cs">
+    <Compile Include="Rooms\UCListRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCListRoom.Designer.cs">
+    <Compile Include="Rooms\UCListRoom.Designer.cs">
       <DependentUpon>UCListRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCRoomInformation.cs">
+    <Compile Include="Rooms\UCRoomInformation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCRoomInformation.Designer.cs">
+    <Compile Include="Rooms\UCRoomInformation.Designer.cs">
       <DependentUpon>UCRoomInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="uc_FGpass.cs">
+    <Compile Include="User\uc_FGpass.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_FGpass.Designer.cs">
+    <Compile Include="User\uc_FGpass.Designer.cs">
       <DependentUpon>uc_FGpass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Account.cs" />
-    <Compile Include="UserBooking.cs" />
-    <Compile Include="UserMainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserMainForm.Designer.cs">
-      <DependentUpon>UserMainForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AddRoom.resx">
-      <DependentUpon>AddRoom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FBook_room.resx">
+    <Compile Include="User\Account.cs" />
+    <Compile Include="Booking\UserBooking.cs" />
+    <EmbeddedResource Include="Booking\FBook_room.resx">
       <DependentUpon>FBook_room.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAddNewBooking.resx">
+    <EmbeddedResource Include="Booking\FAddNewBooking.resx">
       <DependentUpon>FAddNewBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FBookingInformation.resx">
+    <EmbeddedResource Include="Booking\FBookingInformation.resx">
       <DependentUpon>FBookingInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerRegistration.resx">
-      <DependentUpon>CustomerRegistration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FAddPayment.resx">
+    <EmbeddedResource Include="Booking\FAddPayment.resx">
       <DependentUpon>FAddPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAddRoom.resx">
+    <EmbeddedResource Include="Rooms\FAddRoom.resx">
       <DependentUpon>FAddRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FBooking.resx">
+    <EmbeddedResource Include="Booking\FBooking.resx">
       <DependentUpon>FBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fcheckout.resx">
+    <EmbeddedResource Include="Booking\Fcheckout.resx">
       <DependentUpon>Fcheckout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FChoiceRoom.resx">
+    <EmbeddedResource Include="Rooms\FChoiceRoom.resx">
       <DependentUpon>FChoiceRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCustomerRegistration.resx">
+    <EmbeddedResource Include="User\FCustomerRegistration.resx">
       <DependentUpon>FCustomerRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEvaluate.resx">
+    <EmbeddedResource Include="User\FEvaluate.resx">
       <DependentUpon>FEvaluate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FExtendBooking.resx">
+    <EmbeddedResource Include="Booking\FExtendBooking.resx">
       <DependentUpon>FExtendBooking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FFeedBack.resx">
+    <EmbeddedResource Include="Hotel\FFeedBack.resx">
       <DependentUpon>FFeedBack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FFindingRoom.resx">
+    <EmbeddedResource Include="Rooms\FFindingRoom.resx">
       <DependentUpon>FFindingRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FHotelInformation.resx">
+    <EmbeddedResource Include="Hotel\FHotelInformation.resx">
       <DependentUpon>FHotelInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FListRoom.resx">
+    <EmbeddedResource Include="Rooms\FListRoom.resx">
       <DependentUpon>FListRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
+    <EmbeddedResource Include="User\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FMap.resx">
+    <EmbeddedResource Include="Hotel\FMap.resx">
       <DependentUpon>FMap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSignIn.resx">
+    <EmbeddedResource Include="User\FSignIn.resx">
       <DependentUpon>FSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin.resx">
+    <EmbeddedResource Include="User\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fstatistical.resx">
+    <EmbeddedResource Include="Hotel\Fstatistical.resx">
       <DependentUpon>Fstatistical.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FUserInformation.resx">
+    <EmbeddedResource Include="User\FUserInformation.resx">
       <DependentUpon>FUserInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -340,26 +316,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FRoomInformation.resx">
+    <EmbeddedResource Include="Rooms\FRoomInformation.resx">
       <DependentUpon>FRoomInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCFeedback.resx">
+    <EmbeddedResource Include="Hotel\UCFeedback.resx">
       <DependentUpon>UCFeedback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCFindingHotel.resx">
+    <EmbeddedResource Include="Hotel\UCFindingHotel.resx">
       <DependentUpon>UCFindingHotel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCListRoom.resx">
+    <EmbeddedResource Include="Rooms\UCListRoom.resx">
       <DependentUpon>UCListRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCRoomInformation.resx">
+    <EmbeddedResource Include="Rooms\UCRoomInformation.resx">
       <DependentUpon>UCRoomInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uc_FGpass.resx">
+    <EmbeddedResource Include="User\uc_FGpass.resx">
       <DependentUpon>uc_FGpass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserMainForm.resx">
-      <DependentUpon>UserMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

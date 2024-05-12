@@ -36,8 +36,6 @@ C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\bin\Debug\Guna.UI2.dll
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FAddRoom.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FCustomerRegistration.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.AddRoom.resources
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.CustomerRegistration.resources
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe.config
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.exe
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\bin\Debug\Hotel_Management.pdb
@@ -58,7 +56,6 @@ D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Manag
 D:\WINFORM#C\MC2\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.Fcheckout.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Ma.0EC9D88C.Up2Date
-C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UserMainForm.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FLogin.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.FSignIn.resources
 C:\Users\ASUS\Desktop\Project_Hotel_Management\Hotel_Management\obj\Debug\Hotel_Management.UCListRoom.resources
